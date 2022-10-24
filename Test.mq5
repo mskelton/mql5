@@ -31,42 +31,42 @@
 // #include <Canvas/DX/DXTexture.mqh>
 // #include <Canvas/DX/DXUtils.mqh>
 // #include <Canvas/FlameCanvas.mqh>
-// #include <ChartObjects/ChartObject.mqh>
-// #include <ChartObjects/ChartObjectPanel.mqh>
-// #include <ChartObjects/ChartObjectSubChart.mqh>
-// #include <ChartObjects/ChartObjectsArrows.mqh>
-// #include <ChartObjects/ChartObjectsBmpControls.mqh>
-// #include <ChartObjects/ChartObjectsChannels.mqh>
-// #include <ChartObjects/ChartObjectsElliott.mqh>
-// #include <ChartObjects/ChartObjectsFibo.mqh>
-// #include <ChartObjects/ChartObjectsGann.mqh>
-// #include <ChartObjects/ChartObjectsLines.mqh>
-// #include <ChartObjects/ChartObjectsShapes.mqh>
-// #include <ChartObjects/ChartObjectsTxtControls.mqh>
-// #include <Charts/Chart.mqh>
-// #include <Controls/BmpButton.mqh>
-// #include <Controls/Button.mqh>
-// #include <Controls/CheckBox.mqh>
-// #include <Controls/CheckGroup.mqh>
-// #include <Controls/ComboBox.mqh>
-// #include <Controls/DateDropList.mqh>
-// #include <Controls/DatePicker.mqh>
-// #include <Controls/Defines.mqh>
-// #include <Controls/Dialog.mqh>
-// #include <Controls/Edit.mqh>
-// #include <Controls/Label.mqh>
-// #include <Controls/ListView.mqh>
-// #include <Controls/Panel.mqh>
-// #include <Controls/Picture.mqh>
-// #include <Controls/RadioButton.mqh>
-// #include <Controls/RadioGroup.mqh>
-// #include <Controls/Rect.mqh>
-// #include <Controls/Scrolls.mqh>
-// #include <Controls/SpinEdit.mqh>
-// #include <Controls/Wnd.mqh>
-// #include <Controls/WndClient.mqh>
-// #include <Controls/WndContainer.mqh>
-// #include <Controls/WndObj.mqh>
+#include <ChartObjects/ChartObject.mqh>
+#include <ChartObjects/ChartObjectPanel.mqh>
+#include <ChartObjects/ChartObjectSubChart.mqh>
+#include <ChartObjects/ChartObjectsArrows.mqh>
+#include <ChartObjects/ChartObjectsBmpControls.mqh>
+#include <ChartObjects/ChartObjectsChannels.mqh>
+#include <ChartObjects/ChartObjectsElliott.mqh>
+#include <ChartObjects/ChartObjectsFibo.mqh>
+#include <ChartObjects/ChartObjectsGann.mqh>
+#include <ChartObjects/ChartObjectsLines.mqh>
+#include <ChartObjects/ChartObjectsShapes.mqh>
+#include <ChartObjects/ChartObjectsTxtControls.mqh>
+#include <Charts/Chart.mqh>
+#include <Controls/BmpButton.mqh>
+#include <Controls/Button.mqh>
+#include <Controls/CheckBox.mqh>
+#include <Controls/CheckGroup.mqh>
+#include <Controls/ComboBox.mqh>
+#include <Controls/DateDropList.mqh>
+#include <Controls/DatePicker.mqh>
+#include <Controls/Defines.mqh>
+#include <Controls/Dialog.mqh>
+#include <Controls/Edit.mqh>
+#include <Controls/Label.mqh>
+#include <Controls/ListView.mqh>
+#include <Controls/Panel.mqh>
+#include <Controls/Picture.mqh>
+#include <Controls/RadioButton.mqh>
+#include <Controls/RadioGroup.mqh>
+#include <Controls/Rect.mqh>
+#include <Controls/Scrolls.mqh>
+#include <Controls/SpinEdit.mqh>
+#include <Controls/Wnd.mqh>
+#include <Controls/WndClient.mqh>
+#include <Controls/WndContainer.mqh>
+#include <Controls/WndObj.mqh>
 #include <Expert/Expert.mqh>
 #include <Expert/ExpertBase.mqh>
 #include <Expert/ExpertMoney.mqh>

@@ -52,10 +52,4 @@ protected:
   virtual bool OnClickList(void);
 };
 
-EVENT_MAP_BEGIN(CDateDropList)
-ON_EVENT(ON_CLICK, m_dec, OnClickDec)
-ON_EVENT(ON_CLICK, m_inc, OnClickInc)
-ON_EVENT(ON_CLICK, m_list, OnClickList)
-EVENT_MAP_END(CWndContainer)
-
 #endif

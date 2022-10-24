@@ -22,8 +22,8 @@ public:
   ENUM_ANCHOR_POINT Anchor(void) const;
   bool Anchor(const ENUM_ANCHOR_POINT anchor) const;
 
-  virtual bool Save(const int file_handle);
-  virtual bool Load(const int file_handle);
+  virtual bool Save(const int file_handle) override;
+  virtual bool Load(const int file_handle) override;
 };
 
 class CChartObjectLabel : public CChartObjectText {
@@ -81,8 +81,8 @@ public:
   bool Angle(const double angle) const;
   double Angle(void) const;
 
-  virtual bool Save(const int file_handle);
-  virtual bool Load(const int file_handle);
+  virtual bool Save(const int file_handle) override;
+  virtual bool Load(const int file_handle) override;
 };
 
 class CChartObjectButton : public CChartObjectEdit {
@@ -95,8 +95,8 @@ public:
   bool State(void) const;
   bool State(const bool state) const;
 
-  virtual bool Save(const int file_handle);
-  virtual bool Load(const int file_handle);
+  virtual bool Save(const int file_handle) override;
+  virtual bool Load(const int file_handle) override;
 };
 
 class CChartObjectRectLabel : public CChartObjectLabel {

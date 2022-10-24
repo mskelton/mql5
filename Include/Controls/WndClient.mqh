@@ -57,15 +57,4 @@ protected:
   virtual bool Rebound(const CRect &rect);
 };
 
-EVENT_MAP_BEGIN(CWndClient)
-ON_NAMED_EVENT(ON_SHOW, m_scroll_v, OnVScrollShow)
-ON_NAMED_EVENT(ON_HIDE, m_scroll_v, OnVScrollHide)
-ON_EVENT(ON_SCROLL_DEC, m_scroll_v, OnScrollLineUp)
-ON_EVENT(ON_SCROLL_INC, m_scroll_v, OnScrollLineDown)
-ON_NAMED_EVENT(ON_SHOW, m_scroll_h, OnHScrollShow)
-ON_NAMED_EVENT(ON_HIDE, m_scroll_h, OnHScrollHide)
-ON_EVENT(ON_SCROLL_DEC, m_scroll_h, OnScrollLineLeft)
-ON_EVENT(ON_SCROLL_INC, m_scroll_h, OnScrollLineRight)
-EVENT_MAP_END(CWndContainer)
-
 #endif

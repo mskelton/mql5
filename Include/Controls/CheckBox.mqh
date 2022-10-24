@@ -44,9 +44,4 @@ protected:
   virtual bool OnClickLabel(void);
 };
 
-EVENT_MAP_BEGIN(CCheckBox)
-ON_EVENT(ON_CLICK, m_button, OnClickButton)
-ON_EVENT(ON_CLICK, m_label, OnClickLabel)
-EVENT_MAP_END(CWndContainer)
-
 #endif

@@ -69,14 +69,6 @@ protected:
   virtual bool OnDialogDragEnd(void);
 };
 
-EVENT_MAP_BEGIN(CDialog)
-ON_EVENT(ON_CLICK, m_button_close, OnClickButtonClose)
-ON_EVENT(ON_CLICK, m_caption, OnClickCaption)
-ON_EVENT(ON_DRAG_START, m_caption, OnDialogDragStart)
-ON_EVENT_PTR(ON_DRAG_PROCESS, m_drag_object, OnDialogDragProcess)
-ON_EVENT_PTR(ON_DRAG_END, m_drag_object, OnDialogDragEnd)
-EVENT_MAP_END(CWndContainer)
-
 class CAppDialog : public CDialog {
 private:
   CBmpButton m_button_minmax;
@@ -141,10 +133,5 @@ protected:
   string ProgramName(void) const;
   void SubwinOff(void);
 };
-
-EVENT_MAP_BEGIN(CAppDialog)
-ON_EVENT(ON_CLICK, m_button_minmax, OnClickButtonMinMax)
-ON_EXTERNAL_EVENT(ON_APP_CLOSE, OnAnotherApplicationClose)
-EVENT_MAP_END(CDialog)
 
 #endif

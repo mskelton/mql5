@@ -63,12 +63,4 @@ protected:
   void CheckListHide(const int id, int x, int y);
 };
 
-EVENT_MAP_BEGIN(CComboBox)
-ON_EVENT(ON_CLICK, m_edit, OnClickEdit)
-ON_EVENT(ON_CLICK, m_drop, OnClickButton)
-ON_EVENT(ON_CHANGE, m_list, OnChangeList)
-CheckListHide(id, (int)lparam, (int)dparam);
-
-EVENT_MAP_END(CWndContainer)
-
 #endif

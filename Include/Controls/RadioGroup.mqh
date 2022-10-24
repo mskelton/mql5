@@ -54,8 +54,4 @@ protected:
   void Select(const int index);
 };
 
-EVENT_MAP_BEGIN(CRadioGroup)
-ON_INDEXED_EVENT(ON_CHANGE, m_rows, OnChangeItem)
-EVENT_MAP_END(CWndClient)
-
 #endif

@@ -57,8 +57,4 @@ protected:
   bool RowState(const int index, const bool select);
 };
 
-EVENT_MAP_BEGIN(CCheckGroup)
-ON_INDEXED_EVENT(ON_CHANGE, m_rows, OnChangeItem)
-EVENT_MAP_END(CWndClient)
-
 #endif

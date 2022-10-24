@@ -20,5 +20,6 @@ struct DXInputScene {
     float specular_power;
     float dummy[3];
   };
+};
 
 #endif

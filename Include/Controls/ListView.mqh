@@ -68,8 +68,4 @@ protected:
   bool CheckView(void);
 };
 
-EVENT_MAP_BEGIN(CListView)
-ON_INDEXED_EVENT(ON_CLICK, m_rows, OnItemClick)
-EVENT_MAP_END(CWndClient)
-
 #endif

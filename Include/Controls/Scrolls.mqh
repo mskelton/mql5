@@ -55,14 +55,6 @@ protected:
   virtual int CalcPos(const int coord);
 };
 
-EVENT_MAP_BEGIN(CScroll)
-ON_EVENT(ON_CLICK, m_inc, OnClickInc)
-ON_EVENT(ON_CLICK, m_dec, OnClickDec)
-ON_EVENT(ON_DRAG_START, m_thumb, OnThumbDragStart)
-ON_EVENT_PTR(ON_DRAG_PROCESS, m_drag_object, OnThumbDragProcess)
-ON_EVENT_PTR(ON_DRAG_END, m_drag_object, OnThumbDragEnd)
-EVENT_MAP_END(CWndContainer)
-
 class CScrollV : public CScroll {
 public:
   CScrollV(void);

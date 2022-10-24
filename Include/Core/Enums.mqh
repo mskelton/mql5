@@ -1,6 +1,114 @@
 #ifndef CORE_ENUMS_H
 #define CORE_ENUMS_H
 
+typedef enum ENUM_ELLIOT_WAVE_DEGREE {
+  /**
+   * Grand Supercycle
+   */
+  ELLIOTT_GRAND_SUPERCYCLE,
+  /**
+   * Supercycle
+   */
+  ELLIOTT_SUPERCYCLE,
+  /**
+   * Cycle
+   */
+  ELLIOTT_CYCLE,
+  /**
+   * Primary
+   */
+  ELLIOTT_PRIMARY,
+  /**
+   * Intermediate
+   */
+  ELLIOTT_INTERMEDIATE,
+  /**
+   * Minor
+   */
+  ELLIOTT_MINOR,
+  /**
+   * Minute
+   */
+  ELLIOTT_MINUTE,
+  /**
+   * Minuette
+   */
+  ELLIOTT_MINUETTE,
+  /**
+   * Subminuette
+   */
+  ELLIOTT_SUBMINUETTE,
+} ENUM_ELLIOT_WAVE_DEGREE;
+
+typedef enum ENUM_ARROW_ANCHOR {
+  /**
+   * Anchor on the top side
+   */
+  ANCHOR_TOP,
+  /**
+   * Anchor on the bottom side
+   */
+  ANCHOR_BOTTOM,
+} ENUM_ARROW_ANCHOR;
+
+typedef enum ENUM_BASE_CORNER {
+  /**
+   * Center of coordinates is in the upper left corner of the chart
+   */
+  CORNER_LEFT_UPPER,
+  /**
+   * Center of coordinates is in the lower left corner of the chart
+   */
+  CORNER_LEFT_LOWER,
+  /**
+   * Center of coordinates is in the lower right corner of the chart
+   */
+  CORNER_RIGHT_UPPER,
+  /**
+   * Center of coordinates is in the upper right corner of the chart
+   */
+  CORNER_RIGHT_LOWER,
+} ENUM_BASE_CORNER;
+
+typedef enum ENUM_ANCHOR_POINT {
+  /**
+   * Anchor point at the upper left corner
+   */
+  ANCHOR_LEFT_UPPER,
+  /**
+   * Anchor point to the left in the center
+   */
+  ANCHOR_LEFT,
+  /**
+   * Anchor point at the lower left corner
+   */
+  ANCHOR_LEFT_LOWER,
+  /**
+   * Anchor point below in the center
+   */
+  ANCHOR_LOWER,
+  /**
+   * Anchor point at the lower right corner
+   */
+  ANCHOR_RIGHT_LOWER,
+  /**
+   * Anchor point to the right in the center
+   */
+  ANCHOR_RIGHT,
+  /**
+   * Anchor point at the upper right corner
+   */
+  ANCHOR_RIGHT_UPPER,
+  /**
+   * Anchor point above in the center
+   */
+  ANCHOR_CENTER,
+  /**
+   * Anchor point strictly in the center of the object
+   */
+  ANCHOR_UPPER,
+} ENUM_ANCHOR_POINT;
+
 typedef enum ENUM_ACCOUNT_INFO_INTEGER {
   /**
    * Account number
@@ -178,6 +286,36 @@ typedef enum ENUM_ACCOUNT_MARGIN_MODE {
    */
   ACCOUNT_MARGIN_MODE_RETAIL_HEDGING,
 } ENUM_ACCOUNT_MARGIN_MODE;
+
+typedef enum ENUM_CHART_MODE {
+  /**
+   * Display as a sequence of bars
+   */
+  CHART_BARS,
+  /**
+   * Display as Japanese candlesticks
+   */
+  CHART_CANDLES,
+  /**
+   * Display as a line drawn by Close prices
+   */
+  CHART_LINE,
+} ENUM_CHART_MODE;
+
+typedef enum ENUM_CHART_VOLUME_MODE {
+  /**
+   * Volumes are not shown
+   */
+  CHART_VOLUME_HIDE,
+  /**
+   * Tick volumes
+   */
+  CHART_VOLUME_TICK,
+  /**
+   * Trade volumes
+   */
+  CHART_VOLUME_REAL,
+} ENUM_CHART_VOLUME_MODE;
 
 typedef enum ENUM_CHART_PROPERTY_INTEGER {
   /**

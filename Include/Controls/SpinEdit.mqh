@@ -48,9 +48,4 @@ protected:
   virtual bool OnChangeValue(void);
 };
 
-EVENT_MAP_BEGIN(CSpinEdit)
-ON_EVENT(ON_CLICK, m_inc, OnClickInc)
-ON_EVENT(ON_CLICK, m_dec, OnClickDec)
-EVENT_MAP_END(CWndContainer)
-
 #endif
