@@ -1,0 +1,5 @@
+-IInclude
+--include=MQL5.mqh
+-std=c++11
+-xc++
+-Wno-write-strings
