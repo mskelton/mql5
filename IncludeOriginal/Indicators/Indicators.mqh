@@ -31,8 +31,7 @@ CIndicators::CIndicators(void) {
   m_prev_time.min = -1;
 }
 
-CIndicators::~CIndicators(void) {
-}
+CIndicators::~CIndicators(void) {}
 
 CIndicator *CIndicators::Create(const string symbol,
                                 const ENUM_TIMEFRAMES period,

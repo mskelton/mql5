@@ -1579,7 +1579,6 @@ struct DISPLAYCONFIG_MODE_INFO {
   DISPLAYCONFIG_MODE mode;
 };
 
-#import "gdi32.dll"
 int AbortDoc(HANDLE hdc);
 int AbortPath(HANDLE hdc);
 HANDLE AddFontMemResourceEx(PVOID file_view, uint size, PVOID resrved,
@@ -1938,9 +1937,7 @@ int UpdateColors(HANDLE hdc);
 int UpdateICMRegKeyW(uint reserved, string lpszCMID, string file_name,
                      uint command);
 int WidenPath(HANDLE hdc);
-#import
 
-#import "Opengl32.dll"
 int wglCopyContext(HANDLE, HANDLE, uint);
 HANDLE wglCreateContext(HANDLE);
 HANDLE wglCreateLayerContext(HANDLE, int);
@@ -1959,6 +1956,5 @@ uint wglSwapMultipleBuffers(uint, WGLSWAP &);
 int wglUseFontBitmapsW(HANDLE, uint, uint, uint);
 int wglUseFontOutlinesW(HANDLE, uint, uint, uint, float, float, int,
                         GLYPHMETRICSFLOAT &);
-#import
 
 #endif

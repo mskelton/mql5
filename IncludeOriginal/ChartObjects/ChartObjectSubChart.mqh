@@ -53,11 +53,9 @@ public:
   virtual bool Load(const int file_handle);
 };
 
-CChartObjectSubChart::CChartObjectSubChart(void) {
-}
+CChartObjectSubChart::CChartObjectSubChart(void) {}
 
-CChartObjectSubChart::~CChartObjectSubChart(void) {
-}
+CChartObjectSubChart::~CChartObjectSubChart(void) {}
 
 bool CChartObjectSubChart::Create(long chart_id, const string name,
                                   const int window, const int X, const int Y,

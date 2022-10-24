@@ -36,11 +36,9 @@ public:
   string InfoString(const ENUM_TERMINAL_INFO_STRING prop_id) const;
 };
 
-CTerminalInfo::CTerminalInfo(void) {
-}
+CTerminalInfo::CTerminalInfo(void) {}
 
-CTerminalInfo::~CTerminalInfo(void) {
-}
+CTerminalInfo::~CTerminalInfo(void) {}
 
 int CTerminalInfo::Build(void) const {
   return ((int)TerminalInfoInteger(TERMINAL_BUILD));
@@ -135,8 +133,8 @@ long CTerminalInfo::InfoInteger(
   return (TerminalInfoInteger(prop_id));
 }
 
-string CTerminalInfo::InfoString(
-    const ENUM_TERMINAL_INFO_STRING prop_id) const {
+string
+CTerminalInfo::InfoString(const ENUM_TERMINAL_INFO_STRING prop_id) const {
   return (TerminalInfoString(prop_id));
 }
 

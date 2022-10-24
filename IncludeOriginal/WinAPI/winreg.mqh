@@ -13,7 +13,6 @@ struct VALENTW {
   uchar offset2[4];
 };
 
-#import "advapi32.dll"
 int AbortSystemShutdownW(string machine_name);
 uint CheckForHiberboot(uchar &hiberboot, uchar clear_flag);
 uint InitiateShutdownW(string machine_name, string message, uint grace_period,
@@ -112,6 +111,5 @@ int RegSetValueExW(HANDLE key, const string value_name, PVOID reserved,
 int RegSetValueW(HANDLE key, const string sub_key, uint type,
                  const ushort &data[], uint data_size);
 int RegUnLoadKeyW(HANDLE key, const string sub_key);
-#import
 
 #endif

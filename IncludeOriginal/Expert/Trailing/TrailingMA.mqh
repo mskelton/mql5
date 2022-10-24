@@ -40,11 +40,9 @@ public:
 
 void CTrailingMA::CTrailingMA(void)
     : m_MA(NULL), m_ma_period(12), m_ma_shift(0), m_ma_method(MODE_SMA),
-      m_ma_applied(PRICE_CLOSE) {
-}
+      m_ma_applied(PRICE_CLOSE) {}
 
-void CTrailingMA::~CTrailingMA(void) {
-}
+void CTrailingMA::~CTrailingMA(void) {}
 
 bool CTrailingMA::ValidationSettings(void) {
   if (!CExpertTrailing::ValidationSettings())

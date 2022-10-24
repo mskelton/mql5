@@ -54,11 +54,11 @@ public:
 
 class CIDWInt {
 private:
-  static double IDWCalcQ(CIDWInterpolant z, double &x[], const int k);
+  static double IDWCalcQ(CIDWInterpolant &z, double x[], const int k);
   static void IDWInit1(const int n, const int nx, const int d, int nq, int nw,
                        CIDWInterpolant &z);
   static void IDWInternalSolver(double y[], double w[],
-                                CMatrixDouble fmatrix, double &temp[],
+                                CMatrixDouble &fmatrix, double temp[],
                                 const int n, const int m, int &info,
                                 double x[], double &taskrcond);
 
@@ -69,7 +69,7 @@ public:
   CIDWInt(void);
   ~CIDWInt(void);
 
-  static double IDWCalc(CIDWInterpolant z, double &x[]);
+  static double IDWCalc(CIDWInterpolant &z, double x[]);
   static void IDWBuildModifiedShepard(CMatrixDouble &xy, const int n,
                                       const int nx, const int d, int nq, int nw,
                                       CIDWInterpolant &z);
@@ -79,6 +79,7 @@ public:
   static void IDWBuildNoisy(CMatrixDouble &xy, const int n, const int nx,
                             const int d, int nq, int nw, CIDWInterpolant &z);
 };
+
 
 
 
@@ -140,7 +141,7 @@ public:
                                    const double cb);
   static void BarycentricLinTransY(CBarycentricInterpolant &b, const double ca,
                                    const double cb);
-  static void BarycentricUnpack(CBarycentricInterpolant b, int &n, double &x[],
+  static void BarycentricUnpack(CBarycentricInterpolant &b, int &n, double x[],
                                 double y[], double w[]);
   static void BarycentricBuildXYW(double x[], double y[], double w[],
                                   const int n, CBarycentricInterpolant &b);
@@ -672,7 +673,7 @@ private:
                                   CSpline1DFitReport &rep);
   static void LSFitLinearInternal(double y[], double w[],
                                   CMatrixDouble &fmatrix, const int n,
-                                  const int m, int info, double &c[],
+                                  const int m, int &info, double c[],
                                   CLSFitReport &rep);
   static void LSFitClearRequestFields(CLSFitState &state);
   static void BarycentricCalcBasis(CBarycentricInterpolant &b, const double t,
@@ -680,7 +681,7 @@ private:
   static void InternalChebyshevFit(double x[], double y[], double w[],
                                    const int n, double cxc[], double cyc[],
                                    int dc[], const int k, const int m,
-                                   int info, double &c[], CLSFitReport &rep);
+                                   int &info, double c[], CLSFitReport &rep);
   static void BarycentricFitWCFixedD(double cx[], double cy[], double cw[],
                                      const int n, double cxc[], double cyc[],
                                      int dc[], const int k, const int m,
@@ -759,44 +760,44 @@ public:
                                  CSpline1DInterpolant &s,
                                  CSpline1DFitReport &rep);
   static void LSFitLinearW(double y[], double w[], CMatrixDouble &fmatrix,
-                           const int n, const int m, int info, double &c[],
+                           const int n, const int m, int &info, double c[],
                            CLSFitReport &rep);
   static void LSFitLinearWC(double cy[], double w[], CMatrixDouble &fmatrix,
                             CMatrixDouble &ccmatrix, const int n, const int m,
-                            const int k, int info, double &c[],
+                            const int k, int &info, double c[],
                             CLSFitReport &rep);
   static void LSFitLinear(double y[], CMatrixDouble &fmatrix, const int n,
-                          const int m, int info, double &c[],
+                          const int m, int &info, double c[],
                           CLSFitReport &rep);
   static void LSFitLinearC(double cy[], CMatrixDouble &fmatrix,
                            CMatrixDouble &cmatrix, const int n, const int m,
-                           const int k, int info, double &c[],
+                           const int k, int &info, double c[],
                            CLSFitReport &rep);
-  static void LSFitCreateWF(CMatrixDouble x, double &y[], double w[],
+  static void LSFitCreateWF(CMatrixDouble &x, double y[], double w[],
                             double c[], const int n, const int m, const int k,
                             const double diffstep, CLSFitState &state);
-  static void LSFitCreateF(CMatrixDouble x, double &y[], double c[],
+  static void LSFitCreateF(CMatrixDouble &x, double y[], double c[],
                            const int n, const int m, const int k,
                            const double diffstep, CLSFitState &state);
-  static void LSFitCreateWFG(CMatrixDouble x, double &y[], double w[],
+  static void LSFitCreateWFG(CMatrixDouble &x, double y[], double w[],
                              double c[], const int n, const int m, const int k,
                              bool cheapfg, CLSFitState &state);
-  static void LSFitCreateFG(CMatrixDouble x, double &y[], double c[],
+  static void LSFitCreateFG(CMatrixDouble &x, double y[], double c[],
                             const int n, const int m, const int k,
                             const bool cheapfg, CLSFitState &state);
-  static void LSFitCreateWFGH(CMatrixDouble x, double &y[], double w[],
+  static void LSFitCreateWFGH(CMatrixDouble &x, double y[], double w[],
                               double c[], const int n, const int m,
                               const int k, CLSFitState &state);
-  static void LSFitCreateFGH(CMatrixDouble x, double &y[], double c[],
+  static void LSFitCreateFGH(CMatrixDouble &x, double y[], double c[],
                              const int n, const int m, const int k,
                              CLSFitState &state);
   static void LSFitSetCond(CLSFitState &state, const double epsf,
                            const double epsx, const int maxits);
   static void LSFitSetStpMax(CLSFitState &state, const double stpmax);
   static void LSFitSetXRep(CLSFitState &state, const bool needxrep);
-  static void LSFitSetScale(CLSFitState state, double &s[]);
-  static void LSFitSetBC(CLSFitState state, double &bndl[], double bndu[]);
-  static void LSFitResults(CLSFitState state, int &info, double &c[],
+  static void LSFitSetScale(CLSFitState &state, double s[]);
+  static void LSFitSetBC(CLSFitState &state, double bndl[], double bndu[]);
+  static void LSFitResults(CLSFitState &state, int &info, double c[],
                            CLSFitReport &rep);
   static void LSFitScaleXY(double x[], double y[], double w[], const int n,
                            double xc[], double yc[], int dc[], const int k,
@@ -804,6 +805,7 @@ public:
                            double xoriginal[], double yoriginal[]);
   static bool LSFitIteration(CLSFitState &state);
 };
+
 
 
 
@@ -1024,7 +1026,7 @@ public:
 
 class CSpline2D {
 private:
-  static void BicubicCalcDerivatives(CMatrixDouble a, double &x[], double y[],
+  static void BicubicCalcDerivatives(CMatrixDouble &a, double x[], double y[],
                                      const int m, const int n,
                                      CMatrixDouble &dx, CMatrixDouble &dy,
                                      CMatrixDouble &dxy);

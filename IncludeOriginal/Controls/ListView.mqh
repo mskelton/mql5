@@ -80,11 +80,9 @@ EVENT_MAP_END(CWndClient)
 
 CListView::CListView(void)
     : m_offset(0), m_total_view(0), m_item_height(CONTROLS_LIST_ITEM_HEIGHT),
-      m_current(CONTROLS_INVALID_INDEX), m_height_variable(false) {
-}
+      m_current(CONTROLS_INVALID_INDEX), m_height_variable(false) {}
 
-CListView::~CListView(void) {
-}
+CListView::~CListView(void) {}
 
 bool CListView::Create(const long chart, const string name, const int subwin,
                        const int x1, const int y1, const int x2, const int y2) {

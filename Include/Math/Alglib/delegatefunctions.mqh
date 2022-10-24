@@ -20,7 +20,7 @@ public:
   CNDimensional_Grad(void);
   ~CNDimensional_Grad(void);
 
-  virtual void Grad(double x[], double func, double &grad[], CObject &obj);
+  virtual void Grad(double x[], double &func, double grad[], CObject &obj);
 };
 
 
@@ -31,7 +31,7 @@ public:
   CNDimensional_Hess(void);
   ~CNDimensional_Hess(void);
 
-  virtual void Hess(double x[], double func, double &grad[],
+  virtual void Hess(double x[], double &func, double grad[],
                     CMatrixDouble &hess, CObject &obj);
 };
 
@@ -76,7 +76,7 @@ public:
   CNDimensional_PGrad(void);
   ~CNDimensional_PGrad(void);
 
-  virtual void PGrad(double c[], double x[], double func, double &grad[],
+  virtual void PGrad(double c[], double x[], double &func, double grad[],
                      CObject &obj);
 };
 
@@ -88,7 +88,7 @@ public:
   CNDimensional_PHess(void);
   ~CNDimensional_PHess(void);
 
-  virtual void PHess(double c[], double x[], double func, double &grad[],
+  virtual void PHess(double c[], double x[], double &func, double grad[],
                      CMatrixDouble &hess, CObject &obj);
 };
 

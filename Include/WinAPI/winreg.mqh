@@ -13,7 +13,6 @@ struct VALENTW {
   uchar offset2[4];
 };
 
-#import "advapi32.dll"
 int AbortSystemShutdownW(string machine_name);
 uint CheckForHiberboot(uchar &hiberboot, uchar clear_flag);
 uint InitiateShutdownW(string machine_name, string message, uint grace_period,
@@ -64,7 +63,7 @@ int RegGetKeySecurity(HANDLE key, uint SecurityInformation,
                       SECURITY_DESCRIPTOR &security_descriptor,
                       uint &security_descriptor_size);
 int RegGetValueW(HANDLE key, const string sub_key, const string value,
-                 uint flags, uint type, uchar &data[], uint &data_size);
+                 uint flags, uint &type, uchar data[], uint &data_size);
 int RegLoadAppKeyW(const string file, HANDLE &result, uint desired,
                    uint options, PVOID reserved);
 int RegLoadKeyW(HANDLE key, const string sub_key, const string file);
@@ -92,7 +91,7 @@ int RegQueryMultipleValuesW(HANDLE key, VALENTW val_list[], uint num_vals,
                             ushort value_buf[], uint &totsize);
 int RegQueryReflectionKey(HANDLE base, int &is_reflection_disabled);
 int RegQueryValueExW(HANDLE key, const string value_name, PVOID reserved,
-                     uint type, uchar &data[], uint &data_size);
+                     uint &type, uchar data[], uint &data_size);
 int RegQueryValueW(HANDLE key, const string sub_key, uchar data[],
                    uint &data_size);
 int RegRenameKey(HANDLE key, const string sub_key_name,
@@ -112,6 +111,5 @@ int RegSetValueExW(HANDLE key, const string value_name, PVOID reserved,
 int RegSetValueW(HANDLE key, const string sub_key, uint type,
                  const ushort data[], uint data_size);
 int RegUnLoadKeyW(HANDLE key, const string sub_key);
-#import
 
 #endif

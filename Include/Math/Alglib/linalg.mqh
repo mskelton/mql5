@@ -171,11 +171,11 @@ private:
   static void CMatrixLQBaseCase(CMatrixComplex &a, const int m, const int n,
                                 al_complex work[], al_complex t[],
                                 al_complex tau[]);
-  static void RMatrixBlockReflector(CMatrixDouble a, double &tau[],
+  static void RMatrixBlockReflector(CMatrixDouble &a, double tau[],
                                     const bool columnwisea, const int lengtha,
                                     const int blocksize, CMatrixDouble &t,
                                     double work[]);
-  static void CMatrixBlockReflector(CMatrixComplex a, al_complex &tau[],
+  static void CMatrixBlockReflector(CMatrixComplex &a, al_complex tau[],
                                     const bool columnwisea, const int lengtha,
                                     const int blocksize, CMatrixComplex &t,
                                     al_complex work[]);
@@ -217,9 +217,9 @@ public:
                                    const bool fromtheright,
                                    const bool dotranspose);
   static void RMatrixBDUnpackDiagonals(CMatrixDouble &b, const int m,
-                                       const int n, bool isupper, double &d[],
+                                       const int n, bool &isupper, double d[],
                                        double e[]);
-  static void RMatrixHessenberg(CMatrixDouble a, const int n, double &tau[]);
+  static void RMatrixHessenberg(CMatrixDouble &a, const int n, double tau[]);
   static void RMatrixHessenbergUnpackQ(CMatrixDouble &a, const int n,
                                        double tau[], CMatrixDouble &q);
   static void RMatrixHessenbergUnpackH(CMatrixDouble &a, const int n,
@@ -297,11 +297,11 @@ private:
   static bool InternalBisectionEigenValues(
       double cd[], double ce[], const int n, int irange, const int iorder,
       const double vl, const double vu, const int il, const int iu,
-      const double abstol, double w[], int m, int &nsplit, int &iblock[],
+      const double abstol, double w[], int &m, int &nsplit, int iblock[],
       int isplit[], int &errorcode);
   static void InternalDStein(const int n, double d[], double ce[],
                              const int m, double cw[], int iblock[],
-                             int isplit[], CMatrixDouble z, int &ifail[],
+                             int isplit[], CMatrixDouble &z, int ifail[],
                              int &info);
   static void TdIninternalDLAGTF(const int n, double a[], const double lambdav,
                                  double b[], double c[], double tol,
@@ -323,15 +323,15 @@ private:
   static void InternalHsEVDLALN2(
       const bool ltrans, const int na, const int nw, const double smin,
       const double ca, CMatrixDouble &a, const double d1, const double d2,
-      CMatrixDouble b, const double wr, const double wi, bool &rswap4[],
-      bool zswap4[], CMatrixInt ipivot44, double &civ4[], double crv4[],
+      CMatrixDouble &b, const double wr, const double wi, bool rswap4[],
+      bool zswap4[], CMatrixInt &ipivot44, double civ4[], double crv4[],
       CMatrixDouble &x, double &scl, double &xnorm, int &info);
   static void InternalHsEVDLADIV(const double a, const double b, const double c,
                                  const double d, double &p, double &q);
   static bool NonSymmetricEVD(CMatrixDouble &ca, const int n, const int vneeded,
                               double wr[], double wi[], CMatrixDouble &vl,
                               CMatrixDouble &vr);
-  static void ToUpperHessenberg(CMatrixDouble a, const int n, double &tau[]);
+  static void ToUpperHessenberg(CMatrixDouble &a, const int n, double tau[]);
   static void UnpackQFromUpperHessenberg(CMatrixDouble &a, const int n,
                                          double tau[], CMatrixDouble &q);
 
@@ -343,7 +343,7 @@ public:
                          const bool isupper, double d[], CMatrixDouble &z);
   static bool SMatrixEVDR(CMatrixDouble &ca, const int n, const int zneeded,
                           const bool isupper, const double b1, const double b2,
-                          int m, double &w[], CMatrixDouble &z);
+                          int &m, double w[], CMatrixDouble &z);
   static bool SMatrixEVDI(CMatrixDouble &ca, const int n, const int zneeded,
                           const bool isupper, const int i1, const int i2,
                           double w[], CMatrixDouble &z);
@@ -351,7 +351,7 @@ public:
                          const bool isupper, double d[], CMatrixComplex &z);
   static bool HMatrixEVDR(CMatrixComplex &ca, const int n, int zneeded,
                           bool isupper, const double b1, const double b2,
-                          int m, double &w[], CMatrixComplex &z);
+                          int &m, double w[], CMatrixComplex &z);
   static bool HMatrixEVDI(CMatrixComplex &ca, const int n, int zneeded,
                           const bool isupper, const int i1, const int i2,
                           double w[], CMatrixComplex &z);
@@ -541,7 +541,7 @@ private:
   static void RMatrixEstimateNorm(const int n, double v[], double x[],
                                   int isgn[], double &est, int &kase);
   static void CMatrixEstimateNorm(const int n, al_complex v[], al_complex x[],
-                                  double est, int &kase, int &isave[],
+                                  double &est, int &kase, int isave[],
                                   double rsave[]);
   static double InternalComplexRCondScSum1(al_complex x[], const int n);
   static int InternalComplexRCondIcMax1(al_complex x[], const int n);
@@ -674,7 +674,7 @@ public:
   CMatInv(void);
   ~CMatInv(void);
 
-  static void RMatrixLUInverse(CMatrixDouble a, int &pivots[], const int n,
+  static void RMatrixLUInverse(CMatrixDouble &a, int pivots[], const int n,
                                int &info, CMatInvReport &rep);
   static void RMatrixInverse(CMatrixDouble &a, const int n, int &info,
                              CMatInvReport &rep);
@@ -687,7 +687,7 @@ public:
   static void RMatrixTrInverse(CMatrixDouble &a, const int n,
                                const bool isupper, const bool isunit, int &info,
                                CMatInvReport &rep);
-  static void CMatrixLUInverse(CMatrixComplex a, int &pivots[], const int n,
+  static void CMatrixLUInverse(CMatrixComplex &a, int pivots[], const int n,
                                int &info, CMatInvReport &rep);
   static void CMatrixInverse(CMatrixComplex &a, const int n, int &info,
                              CMatInvReport &rep);
@@ -836,12 +836,12 @@ public:
   CMatDet(void);
   ~CMatDet(void);
 
-  static double RMatrixLUDet(CMatrixDouble a, int &pivots[], const int n);
+  static double RMatrixLUDet(CMatrixDouble &a, int pivots[], const int n);
   static double RMatrixDet(CMatrixDouble &ca, const int n);
   static double SPDMatrixCholeskyDet(CMatrixDouble &a, const int n);
   static double SPDMatrixDet(CMatrixDouble &ca, const int n,
                              const bool isupper);
-  static al_complex CMatrixLUDet(CMatrixComplex a, int &pivots[], const int n);
+  static al_complex CMatrixLUDet(CMatrixComplex &a, int pivots[], const int n);
   static al_complex CMatrixDet(CMatrixComplex &ca, const int n);
 };
 
@@ -884,7 +884,7 @@ public:
                                   const int updrow, double v[]);
   static void RMatrixInvUpdateColumn(CMatrixDouble &inva, const int n,
                                      const int updcolumn, double u[]);
-  static void RMatrixInvUpdateUV(CMatrixDouble inva, const int n, double &u[],
+  static void RMatrixInvUpdateUV(CMatrixDouble &inva, const int n, double u[],
                                  double v[]);
 };
 

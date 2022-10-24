@@ -31,11 +31,9 @@ protected:
                   const ENUM_APPLIED_VOLUME applied);
 };
 
-CiAD::CiAD(void) : m_applied(WRONG_VALUE) {
-}
+CiAD::CiAD(void) : m_applied(WRONG_VALUE) {}
 
-CiAD::~CiAD(void) {
-}
+CiAD::~CiAD(void) {}
 
 bool CiAD::Create(const string symbol, const ENUM_TIMEFRAMES period,
                   const ENUM_APPLIED_VOLUME applied) {
@@ -123,11 +121,9 @@ protected:
                   const int ma_period, const ENUM_APPLIED_VOLUME applied);
 };
 
-CiMFI::CiMFI(void) : m_ma_period(-1), m_applied(WRONG_VALUE) {
-}
+CiMFI::CiMFI(void) : m_ma_period(-1), m_applied(WRONG_VALUE) {}
 
-CiMFI::~CiMFI(void) {
-}
+CiMFI::~CiMFI(void) {}
 
 bool CiMFI::Create(const string symbol, const ENUM_TIMEFRAMES period,
                    const int ma_period, const ENUM_APPLIED_VOLUME applied) {
@@ -213,11 +209,9 @@ protected:
                   const ENUM_APPLIED_VOLUME applied);
 };
 
-CiOBV::CiOBV(void) : m_applied(WRONG_VALUE) {
-}
+CiOBV::CiOBV(void) : m_applied(WRONG_VALUE) {}
 
-CiOBV::~CiOBV(void) {
-}
+CiOBV::~CiOBV(void) {}
 
 bool CiOBV::Create(const string symbol, const ENUM_TIMEFRAMES period,
                    const ENUM_APPLIED_VOLUME applied) {
@@ -302,11 +296,9 @@ protected:
                   const ENUM_APPLIED_VOLUME applied);
 };
 
-CiVolumes::CiVolumes(void) : m_applied(WRONG_VALUE) {
-}
+CiVolumes::CiVolumes(void) : m_applied(WRONG_VALUE) {}
 
-CiVolumes::~CiVolumes(void) {
-}
+CiVolumes::~CiVolumes(void) {}
 
 bool CiVolumes::Create(const string symbol, const ENUM_TIMEFRAMES period,
                        const ENUM_APPLIED_VOLUME applied) {

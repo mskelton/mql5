@@ -15,11 +15,9 @@ public:
   }
 };
 
-void CMoneyFixedRisk::CMoneyFixedRisk(void) {
-}
+void CMoneyFixedRisk::CMoneyFixedRisk(void) {}
 
-void CMoneyFixedRisk::~CMoneyFixedRisk(void) {
-}
+void CMoneyFixedRisk::~CMoneyFixedRisk(void) {}
 
 double CMoneyFixedRisk::CheckOpenLong(double price, double sl) {
   if (m_symbol == NULL)

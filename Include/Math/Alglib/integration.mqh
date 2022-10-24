@@ -12,22 +12,22 @@ public:
   ~CGaussQ(void);
 
   static void GQGenerateRec(double alpha[], double beta[], const double mu0,
-                            const int n, int info, double &x[], double w[]);
+                            const int n, int &info, double x[], double w[]);
   static void GQGenerateGaussLobattoRec(double calpha[], double cbeta[],
                                         const double mu0, const double a,
                                         const double b, int n, int &info,
                                         double x[], double w[]);
   static void GQGenerateGaussRadauRec(double calpha[], double cbeta[],
                                       const double mu0, const double a, int n,
-                                      int info, double &x[], double w[]);
-  static void GQGenerateGaussLegendre(const int n, int info, double &x[],
+                                      int &info, double x[], double w[]);
+  static void GQGenerateGaussLegendre(const int n, int &info, double x[],
                                       double w[]);
   static void GQGenerateGaussJacobi(const int n, const double alpha,
-                                    const double beta, int info, double &x[],
+                                    const double beta, int &info, double x[],
                                     double w[]);
   static void GQGenerateGaussLaguerre(const int n, const double alpha,
-                                      int info, double &x[], double w[]);
-  static void GQGenerateGaussHermite(const int n, int info, double &x[],
+                                      int &info, double x[], double w[]);
+  static void GQGenerateGaussHermite(const int n, int &info, double x[],
                                      double w[]);
 };
 
@@ -46,14 +46,14 @@ public:
   ~CGaussKronrodQ(void);
 
   static void GKQGenerateRec(double calpha[], double cbeta[],
-                             const double mu0, int n, int info, double &x[],
+                             const double mu0, int n, int &info, double x[],
                              double wkronrod[], double wgauss[]);
-  static void GKQGenerateGaussLegendre(const int n, int info, double &x[],
+  static void GKQGenerateGaussLegendre(const int n, int &info, double x[],
                                        double wkronrod[], double wgauss[]);
   static void GKQGenerateGaussJacobi(const int n, const double alpha,
-                                     const double beta, int info, double &x[],
+                                     const double beta, int &info, double x[],
                                      double wkronrod[], double wgauss[]);
-  static void GKQLegendreCalc(const int n, int info, double &x[],
+  static void GKQLegendreCalc(const int n, int &info, double x[],
                               double wkronrod[], double wgauss[]);
   static void GKQLegendreTbl(const int n, double x[], double wkronrod[],
                              double wgauss[], double &eps);
@@ -292,6 +292,7 @@ public:
   static void AutoGKResults(CAutoGKState &state, double &v, CAutoGKReport &rep);
   static bool AutoGKIteration(CAutoGKState &state);
 };
+
 
 
 

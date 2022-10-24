@@ -85,64 +85,64 @@ public:
   CGraphic(void);
   ~CGraphic(void);
 
-  int Width(void) const ;
-  int Height(void) const ;
+  int Width(void) const;
+  int Height(void) const;
 
-  int IndentUp(void) const ;
-  void IndentUp(const int up) ;
-  int IndentDown(void) const ;
-  void IndentDown(const int down) ;
-  int IndentLeft(void) const ;
-  void IndentLeft(const int left) ;
-  int IndentRight(void) const ;
-  void IndentRight(const int right) ;
+  int IndentUp(void) const;
+  void IndentUp(const int up);
+  int IndentDown(void) const;
+  void IndentDown(const int down);
+  int IndentLeft(void) const;
+  void IndentLeft(const int left);
+  int IndentRight(void) const;
+  void IndentRight(const int right);
 
-  int GapSize(void) const ;
-  void GapSize(const int size) ;
+  int GapSize(void) const;
+  void GapSize(const int size);
 
-  int MajorMarkSize(void) const ;
-  void MajorMarkSize(const int size) ;
+  int MajorMarkSize(void) const;
+  void MajorMarkSize(const int size);
 
-  CAxis *XAxis(void) ;
-  CAxis *YAxis(void) ;
+  CAxis *XAxis(void);
+  CAxis *YAxis(void);
 
-  int HistoryNameWidth(void) const ;
-  int HistoryNameSize(void) const ;
-  int HistorySymbolSize(void) const ;
+  int HistoryNameWidth(void) const;
+  int HistoryNameSize(void) const;
+  int HistorySymbolSize(void) const;
 
-  void HistoryNameWidth(const int width) ;
-  void HistoryNameSize(const int size) ;
-  void HistorySymbolSize(const int size) ;
+  void HistoryNameWidth(const int width);
+  void HistoryNameSize(const int size);
+  void HistorySymbolSize(const int size);
 
-  uint GridLineColor(void) const ;
-  uint GridAxisLineColor(void) const ;
-  uint GridBackgroundColor(void) const ;
-  int GridCircleRadius(void) const ;
-  uint GridCircleColor(void) const ;
-  bool GridHasCircle(void) const ;
+  uint GridLineColor(void) const;
+  uint GridAxisLineColor(void) const;
+  uint GridBackgroundColor(void) const;
+  int GridCircleRadius(void) const;
+  uint GridCircleColor(void) const;
+  bool GridHasCircle(void) const;
 
-  void GridLineColor(const uint clr) ;
-  void GridAxisLineColor(const uint clr) ;
-  void GridBackgroundColor(const uint clr) ;
-  void GridCircleRadius(const int r) ;
-  void GridCircleColor(const uint clr) ;
-  void GridHasCircle(const bool has) ;
+  void GridLineColor(const uint clr);
+  void GridAxisLineColor(const uint clr);
+  void GridBackgroundColor(const uint clr);
+  void GridCircleRadius(const int r);
+  void GridCircleColor(const uint clr);
+  void GridHasCircle(const bool has);
 
-  uint BackgroundColor(void) const ;
-  uint BackgroundMainColor(void) const ;
-  uint BackgroundSubColor(void) const ;
-  string BackgroundMain(void) const ;
-  string BackgroundSub(void) const ;
-  int BackgroundMainSize(void) const ;
-  int BackgroundSubSize(void) const ;
+  uint BackgroundColor(void) const;
+  uint BackgroundMainColor(void) const;
+  uint BackgroundSubColor(void) const;
+  string BackgroundMain(void) const;
+  string BackgroundSub(void) const;
+  int BackgroundMainSize(void) const;
+  int BackgroundSubSize(void) const;
 
-  void BackgroundColor(const uint clr) ;
-  void BackgroundMainColor(const uint clr) ;
-  void BackgroundSubColor(const uint clr) ;
-  void BackgroundMain(const string main) ;
-  void BackgroundSub(const string sub) ;
-  void BackgroundMainSize(const int size) ;
-  void BackgroundSubSize(const int size) ;
+  void BackgroundColor(const uint clr);
+  void BackgroundMainColor(const uint clr);
+  void BackgroundSubColor(const uint clr);
+  void BackgroundMain(const string main);
+  void BackgroundSub(const string sub);
+  void BackgroundMainSize(const int size);
+  void BackgroundSubSize(const int size);
 
   bool Create(const long chart, const string name, const int subwin,
               const int x1, const int y1, const int x2, const int y2);
@@ -151,8 +151,8 @@ public:
               const int height);
   void Destroy(void);
 
-  string ChartObjectName(void) const ;
-  string ResourceName(void) const ;
+  string ChartObjectName(void) const;
+  string ResourceName(void) const;
 
   bool Redraw(const bool rescale = false);
 
@@ -198,8 +198,8 @@ public:
                const uint style);
 
   bool FontSet(const string name, const int size, const uint flags = 0,
-               const uint angle = 0) ;
-  void FontGet(string &name, int &size, uint &flags, uint &angle) ;
+               const uint angle = 0);
+  void FontGet(string &name, int &size, uint &flags, uint &angle);
 
   virtual int ScaleX(double x);
   virtual int ScaleY(double y);
@@ -234,92 +234,41 @@ protected:
                                     const double step);
 };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 string GraphPlot(const double y[], ENUM_CURVE_TYPE type = CURVE_POINTS,
-                 string objname = NULL) ;
+                 string objname = NULL);
 
 string GraphPlot(const double x[], const double y[],
-                 ENUM_CURVE_TYPE type = CURVE_POINTS, string objname = NULL) ;
+                 ENUM_CURVE_TYPE type = CURVE_POINTS, string objname = NULL);
 
 string GraphPlot(const double x1[], const double y1[], const double x2[],
                  const double y2[], ENUM_CURVE_TYPE type = CURVE_POINTS,
-                 string objname = NULL) ;
+                 string objname = NULL);
 
 string GraphPlot(const double x1[], const double y1[], const double x2[],
                  const double y2[], const double x3[], const double y3[],
-                 ENUM_CURVE_TYPE type = CURVE_POINTS, string objname = NULL) ;
+                 ENUM_CURVE_TYPE type = CURVE_POINTS, string objname = NULL);
 
 string GraphPlot(const CPoint2D points[], ENUM_CURVE_TYPE type = CURVE_POINTS,
-                 string objname = NULL) ;
+                 string objname = NULL);
 
 string GraphPlot(const CPoint2D points1[], const CPoint2D points2[],
-                 ENUM_CURVE_TYPE type = CURVE_POINTS, string objname = NULL) ;
+                 ENUM_CURVE_TYPE type = CURVE_POINTS, string objname = NULL);
 
 string GraphPlot(const CPoint2D points1[], const CPoint2D points2[],
                  const CPoint2D points3[], ENUM_CURVE_TYPE type = CURVE_POINTS,
-                 string objname = NULL) ;
+                 string objname = NULL);
 
 string GraphPlot(CurveFunction function, const double from, const double to,
                  const double step, ENUM_CURVE_TYPE type = CURVE_POINTS,
-                 string objname = NULL) ;
+                 string objname = NULL);
 
 string GraphPlot(CurveFunction function1, CurveFunction function2,
                  const double from, const double to, const double step,
-                 ENUM_CURVE_TYPE type = CURVE_POINTS, string objname = NULL) ;
+                 ENUM_CURVE_TYPE type = CURVE_POINTS, string objname = NULL);
 
 string GraphPlot(CurveFunction function1, CurveFunction function2,
                  CurveFunction function3, const double from, const double to,
                  const double step, ENUM_CURVE_TYPE type = CURVE_POINTS,
-                 string objname = NULL) ;
+                 string objname = NULL);
 
 #endif

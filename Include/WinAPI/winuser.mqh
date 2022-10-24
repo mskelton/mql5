@@ -1046,7 +1046,11 @@ struct RAWHID {
   uchar bRawData[1];
 };
 
-union RAWFORMAT ;
+union RAWFORMAT {
+  RAWMOUSE mouse;
+  RAWKEYBOARD keyboard;
+  RAWHID hid;
+};
 
 struct RAWINPUT {
   RAWINPUTHEADER header;
@@ -1086,14 +1090,17 @@ struct MENUITEMINFO {
   uint cch;
 };
 
-union INPUT_TYPE ;
+union INPUT_TYPE {
+  MOUSEINPUT mi;
+  KEYBDINPUT ki;
+  HARDWAREINPUT hi;
+};
 
 struct INPUT {
   uint type;
   INPUT_TYPE in;
 };
 
-#import "user32.dll"
 HANDLE ActivateKeyboardLayout(HANDLE hkl, uint Flags);
 int AddClipboardFormatListener(HANDLE hwnd);
 int AdjustWindowRect(RECT &rect, uint style, int menu);
@@ -1423,18 +1430,18 @@ int GetPointerDeviceCursors(HANDLE device, uint &count,
 int GetPointerDeviceProperties(HANDLE device, uint &count,
                                POINTER_DEVICE_PROPERTY properties[]);
 int GetPointerDeviceRects(HANDLE device, RECT &device_rect, RECT &rect);
-int GetPointerDevices(uint count, POINTER_DEVICE_INFO &devices[]);
-int GetPointerFrameInfo(uint id, uint count, POINTER_INFO &info[]);
+int GetPointerDevices(uint &count, POINTER_DEVICE_INFO devices[]);
+int GetPointerFrameInfo(uint id, uint &count, POINTER_INFO info[]);
 int GetPointerFrameInfoHistory(uint id, uint &count, uint &count,
                                POINTER_INFO info[]);
-int GetPointerFramePenInfo(uint id, uint count, POINTER_PEN_INFO &info[]);
+int GetPointerFramePenInfo(uint id, uint &count, POINTER_PEN_INFO info[]);
 int GetPointerFramePenInfoHistory(uint id, uint &count, uint &count,
                                   POINTER_PEN_INFO info[]);
-int GetPointerFrameTouchInfo(uint id, uint count, POINTER_TOUCH_INFO &info[]);
+int GetPointerFrameTouchInfo(uint id, uint &count, POINTER_TOUCH_INFO info[]);
 int GetPointerFrameTouchInfoHistory(uint id, uint &count, uint &count,
                                     POINTER_TOUCH_INFO info[]);
 int GetPointerInfo(uint id, POINTER_INFO info[]);
-int GetPointerInfoHistory(uint id, uint count, POINTER_INFO &info[]);
+int GetPointerInfoHistory(uint id, uint &count, POINTER_INFO info[]);
 int GetPointerInputTransform(uint id, uint count, INPUT_TRANSFORM &transform);
 int GetPointerPenInfo(uint id, POINTER_PEN_INFO &info);
 int GetPointerPenInfoHistory(uint id, uint &count, POINTER_PEN_INFO &info);
@@ -1830,7 +1837,6 @@ HANDLE WindowFromDC(HANDLE hDC);
 HANDLE WindowFromPhysicalPoint(long point);
 HANDLE WindowFromPoint(long point);
 int WinHelpW(HANDLE wnd_main, const string help, uint command, ulong data);
-int wvsprintfW(ushort [], const string, PVOID &arglist[]);
-#import
+int wvsprintfW(ushort &[], const string, PVOID arglist[]);
 
 #endif

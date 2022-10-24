@@ -47,11 +47,9 @@ public:
 protected:
 };
 
-void CChartObjectPanel::CChartObjectPanel(void) : m_expanded(true) {
-}
+void CChartObjectPanel::CChartObjectPanel(void) : m_expanded(true) {}
 
-void CChartObjectPanel::~CChartObjectPanel(void) {
-}
+void CChartObjectPanel::~CChartObjectPanel(void) {}
 
 bool CChartObjectPanel::Attach(CChartObjectLabel *chart_object) {
   if (m_attachment.Add(chart_object)) {

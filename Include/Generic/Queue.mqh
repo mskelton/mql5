@@ -42,25 +42,4 @@ public:
   T Peek(void) const;
 };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #endif

@@ -4,7 +4,6 @@
 #include <WinAPI/windef.mqh>
 #include <WinAPI/winnt.mqh>
 
-#import "advapi32.dll"
 int AccessCheck(SECURITY_DESCRIPTOR &security_descriptor, HANDLE client_token,
                 uint desired_access, GENERIC_MAPPING &generic_mapping,
                 PRIVILEGE_SET &privilege_set, uint &privilege_set_length,
@@ -260,9 +259,7 @@ int SetTokenInformation(HANDLE token_handle,
                         TOKEN_INFORMATION_CLASS token_information_class,
                         PVOID token_information, uint token_information_length);
 int CveEventWrite(const string cve_id, const string additional_details);
-#import
 
-#import "kernel32.dll"
 int AddResourceAttributeAce(
     ACL &acl, uint ace_revision, uint ace_flags, uint access_mask, SID &sid,
     CLAIM_SECURITY_ATTRIBUTES_INFORMATION &attribute_info, uint &return_length);
@@ -279,6 +276,5 @@ int SetCachedSigningLevel(HANDLE &source_files, uint source_file_count,
 int GetCachedSigningLevel(HANDLE file, ulong flags, ulong signing_level,
                           uchar thumbprint[], ulong thumbprint_size,
                           ulong thumbprint_algorithm);
-#import
 
 #endif

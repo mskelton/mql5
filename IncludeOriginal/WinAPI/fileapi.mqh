@@ -54,7 +54,6 @@ struct FIND_DATAW {
   short cAlternateFileName[14];
 };
 
-#import "kernel32.dll"
 int AreFileApisANSI(void);
 int CompareFileTime(FILETIME &file_time1, FILETIME &file_time2);
 int CreateDirectoryW(const string path_name, PVOID security_attributes);
@@ -196,6 +195,5 @@ int WriteFileGather(HANDLE file, FILE_SEGMENT_ELEMENT &segment_array[],
 int WriteFileGather(HANDLE file, FILE_SEGMENT_ELEMENT &segment_array[],
                     uint number_of_bytes_to_write, uint &reserved,
                     PVOID overlapped);
-#import
 
 #endif

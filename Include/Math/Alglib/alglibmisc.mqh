@@ -67,23 +67,23 @@ public:
 
   static void KDTreeBuild(CMatrixDouble &xy, const int n, const int nx,
                           const int ny, const int normtype, CKDTree &kdt);
-  static void KDTreeBuildTagged(CMatrixDouble xy, int &tags[], const int n,
+  static void KDTreeBuildTagged(CMatrixDouble &xy, int tags[], const int n,
                                 const int nx, const int ny, const int normtype,
                                 CKDTree &kdt);
-  static int KDTreeQueryKNN(CKDTree kdt, double &x[], const int k,
+  static int KDTreeQueryKNN(CKDTree &kdt, double x[], const int k,
                             const bool selfmatch);
-  static int KDTreeQueryRNN(CKDTree kdt, double &x[], const double r,
+  static int KDTreeQueryRNN(CKDTree &kdt, double x[], const double r,
                             const bool selfmatch);
-  static int KDTreeQueryAKNN(CKDTree kdt, double &x[], int k,
+  static int KDTreeQueryAKNN(CKDTree &kdt, double x[], int k,
                              const bool selfmatch, const double eps);
   static void KDTreeQueryResultsX(CKDTree &kdt, CMatrixDouble &x);
   static void KDTreeQueryResultsXY(CKDTree &kdt, CMatrixDouble &xy);
-  static void KDTreeQueryResultsTags(CKDTree kdt, int &tags[]);
-  static void KDTreeQueryResultsDistances(CKDTree kdt, double &r[]);
+  static void KDTreeQueryResultsTags(CKDTree &kdt, int tags[]);
+  static void KDTreeQueryResultsDistances(CKDTree &kdt, double r[]);
   static void KDTreeQueryResultsXI(CKDTree &kdt, CMatrixDouble &x);
   static void KDTreeQueryResultsXYI(CKDTree &kdt, CMatrixDouble &xy);
-  static void KDTreeQueryResultsTagsI(CKDTree kdt, int &tags[]);
-  static void KDTreeQueryResultsDistancesI(CKDTree kdt, double &r[]);
+  static void KDTreeQueryResultsTagsI(CKDTree &kdt, int tags[]);
+  static void KDTreeQueryResultsDistancesI(CKDTree &kdt, double r[]);
 
   static void KDTreeAlloc(CSerializer &s, CKDTree &tree);
   static void KDTreeSerialize(CSerializer &s, CKDTree &tree);
@@ -96,7 +96,7 @@ private:
                                     int &splitsoffs, const int i1, const int i2,
                                     const int maxleafsize);
   static void KDTreeQueryNNRec(CKDTree &kdt, const int offs);
-  static void KDTreeInitBox(CKDTree kdt, double &x[]);
+  static void KDTreeInitBox(CKDTree &kdt, double x[]);
   static void KDTreeAllocDataSetIndependent(CKDTree &kdt, const int nx,
                                             const int ny);
   static void KDTreeAllocDataSetDependent(CKDTree &kdt, const int n,
@@ -104,6 +104,7 @@ private:
   static void KDTreeAllocTemporaries(CKDTree &kdt, const int n, const int nx,
                                      const int ny);
 };
+
 
 
 

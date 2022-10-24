@@ -62,7 +62,6 @@ private:
 
 CDXShader *
 
-template <typename TVertex>
 
 
 

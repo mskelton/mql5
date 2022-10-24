@@ -12,6 +12,4 @@ public:
   static int ExpandPrime(const int old_size);
 };
 
-
-
 #endif

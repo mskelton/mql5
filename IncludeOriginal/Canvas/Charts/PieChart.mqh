@@ -41,8 +41,7 @@ CPieChart::CPieChart(void) {
   ShowFlags(flags);
 }
 
-CPieChart::~CPieChart(void) {
-}
+CPieChart::~CPieChart(void) {}
 
 bool CPieChart::Create(const string name, const int width, const int height,
                        ENUM_COLOR_FORMAT clrfmt) {

@@ -34,19 +34,4 @@ public:
   T Pop(void);
 };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #endif

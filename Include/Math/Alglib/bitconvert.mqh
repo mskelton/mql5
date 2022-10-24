@@ -38,7 +38,13 @@ double MathCosh(const double x) ;
 double MathTanh(const double x) ;
 #endif
 
-union UDoubleValue ;
+union UDoubleValue {
+  double value;
+  long bits;
+
+  UDoubleValue(double dbl) ;
+  UDoubleValue(long bit_value) ;
+};
 
 class CInfOrNaN {
 public:

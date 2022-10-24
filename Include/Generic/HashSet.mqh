@@ -6,7 +6,13 @@
 #include <Generic/Internal/DefaultEqualityComparer.mqh>
 #include <Generic/Internal/PrimeGenerator.mqh>
 
-template <typename T> struct Slot ;
+template <typename T> struct Slot {
+public:
+  int hash_code;
+  T value;
+  int next;
+  Slot(void) ;
+};
 
 template <typename T> class CHashSet : public ISet<T> {
 protected:

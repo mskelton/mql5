@@ -37,16 +37,16 @@ public:
   static void DSErrAccumulate(double buf[], double y[], double desiredy[]);
   static void DSErrFinish(double buf[]);
   static void DSNormalize(CMatrixDouble &xy, const int npoints, const int nvars,
-                          int info, double &means[], double sigmas[]);
+                          int &info, double means[], double sigmas[]);
   static void DSNormalizeC(CMatrixDouble &xy, const int npoints,
-                           const int nvars, int info, double &means[],
+                           const int nvars, int &info, double means[],
                            double sigmas[]);
   static double DSGetMeanMindIstance(CMatrixDouble &xy, const int npoints,
                                      const int nvars);
   static void DSTie(double a[], const int n, int ties[], int &tiecount,
                     int p1[], int p2[]);
   static void DSTieFastI(double a[], int b[], const int n, int ties[],
-                         int tiecount, double &bufr[], int bufi[]);
+                         int &tiecount, double bufr[], int bufi[]);
   static void DSOptimalSplit2(double ca[], int cc[], const int n, int &info,
                               double &threshold, double &pal, double &pbl,
                               double &par, double &pbr, double &cve);
@@ -56,7 +56,7 @@ public:
                                   int &info, double &threshold, double &rms,
                                   double &cvrms);
   static void DSSplitK(double ca[], int cc[], const int n, const int nc,
-                       int kmax, int info, double &thresholds[], int &ni,
+                       int kmax, int &info, double thresholds[], int &ni,
                        double &cve);
   static void DSOptimalSplitK(double ca[], int cc[], const int n,
                               const int nc, int kmax, int &info,
@@ -230,7 +230,7 @@ private:
                              const int idx2, CDFInternalBuffers &bufs);
   static void DFSplitC(double x[], int c[], int cntbuf[], const int n,
                        const int nc, const int flags, int &info,
-                       double threshold, double &e, double &sortrbuf[],
+                       double &threshold, double &e, double sortrbuf[],
                        int sortibuf[]);
   static void DFSplitR(double x[], double y[], const int n, const int flags,
                        int &info, double &threshold, double &e,
@@ -260,8 +260,8 @@ public:
                               const int ntrees, const int samplesize,
                               const int nfeatures, const int flags, int &info,
                               CDecisionForest &df, CDFReport &rep);
-  static void DFProcess(CDecisionForest df, double &x[], double y[]);
-  static void DFProcessI(CDecisionForest df, double &x[], double y[]);
+  static void DFProcess(CDecisionForest &df, double x[], double y[]);
+  static void DFProcessI(CDecisionForest &df, double x[], double y[]);
   static double DFRelClsError(CDecisionForest &df, CMatrixDouble &xy,
                               const int npoints);
   static double DFAvgCE(CDecisionForest &df, CMatrixDouble &xy,
@@ -300,6 +300,7 @@ public:
 
 
 
+
 class CKMeans {
 private:
   static bool SelectCenterPP(CMatrixDouble &xy, const int npoints,
@@ -313,7 +314,7 @@ public:
 
   static void KMeansGenerate(CMatrixDouble &xy, const int npoints,
                              const int nvars, const int k, const int restarts,
-                             int info, CMatrixDouble &c, int &xyc[]);
+                             int &info, CMatrixDouble &c, int xyc[]);
 };
 
 
@@ -326,7 +327,7 @@ public:
   ~CLDA(void);
 
   static void FisherLDA(CMatrixDouble &xy, const int npoints, const int nvars,
-                        const int nclasses, int info, double &w[]);
+                        const int nclasses, int &info, double w[]);
   static void FisherLDAN(CMatrixDouble &xy, const int npoints, const int nvars,
                          const int nclasses, int &info, CMatrixDouble &w);
 };
@@ -433,7 +434,7 @@ public:
 
 class CLinReg {
 private:
-  static void LRInternal(CMatrixDouble xy, double &s[], const int npoints,
+  static void LRInternal(CMatrixDouble &xy, double s[], const int npoints,
                          const int nvars, int &info, CLinearModel &lm,
                          CLRReport &ar);
 
@@ -445,17 +446,17 @@ public:
 
   static void LRBuild(CMatrixDouble &xy, const int npoints, const int nvars,
                       int &info, CLinearModel &lm, CLRReport &ar);
-  static void LRBuildS(CMatrixDouble xy, double &s[], const int npoints,
+  static void LRBuildS(CMatrixDouble &xy, double s[], const int npoints,
                        const int nvars, int &info, CLinearModel &lm,
                        CLRReport &ar);
-  static void LRBuildZS(CMatrixDouble xy, double &s[], const int npoints,
+  static void LRBuildZS(CMatrixDouble &xy, double s[], const int npoints,
                         const int nvars, int &info, CLinearModel &lm,
                         CLRReport &ar);
   static void LRBuildZ(CMatrixDouble &xy, const int npoints, const int nvars,
                        int &info, CLinearModel &lm, CLRReport &ar);
-  static void LRUnpack(CLinearModel lm, double &v[], int &nvars);
+  static void LRUnpack(CLinearModel &lm, double v[], int &nvars);
   static void LRPack(double v[], const int nvars, CLinearModel &lm);
-  static double LRProcess(CLinearModel lm, double &x[]);
+  static double LRProcess(CLinearModel &lm, double x[]);
   static double LRRMSError(CLinearModel &lm, CMatrixDouble &xy,
                            const int npoints);
   static double LRAvgError(CLinearModel &lm, CMatrixDouble &xy,
@@ -463,12 +464,13 @@ public:
   static double LRAvgRelError(CLinearModel &lm, CMatrixDouble &xy,
                               const int npoints);
   static void LRCopy(CLinearModel &lm1, CLinearModel &lm2);
-  static void LRLines(CMatrixDouble xy, double &s[], const int n, int &info,
+  static void LRLines(CMatrixDouble &xy, double s[], const int n, int &info,
                       double &a, double &b, double &vara, double &varb,
                       double &covab, double &corrab, double &p);
   static void LRLine(CMatrixDouble &xy, const int n, int &info, double &a,
                      double &b);
 };
+
 
 
 
@@ -575,7 +577,7 @@ private:
                                            const bool naturalerrorfunc);
   static void MLPChunkedGradient(CMultilayerPerceptron &network,
                                  CMatrixDouble &xy, const int cstart,
-                                 const int csize, double e, double &grad[],
+                                 const int csize, double &e, double grad[],
                                  const bool naturalerrorfunc);
   static double SafeCrossEntropy(const double t, const double z);
 
@@ -620,7 +622,7 @@ public:
                           const int nout, CMultilayerPerceptron &network);
   static void MLPCopy(CMultilayerPerceptron &network1,
                       CMultilayerPerceptron &network2);
-  static void MLPSerializeOld(CMultilayerPerceptron network, double &ra[],
+  static void MLPSerializeOld(CMultilayerPerceptron &network, double ra[],
                               int &rlen);
   static void MLPUnserializeOld(double ra[], CMultilayerPerceptron &network);
   static void MLPRandomize(CMultilayerPerceptron &network);
@@ -652,9 +654,9 @@ public:
                            const double w);
   static void MLPActivationFunction(double net, const int k, double &f,
                                     double &df, double &d2f);
-  static void MLPProcess(CMultilayerPerceptron network, double &x[],
+  static void MLPProcess(CMultilayerPerceptron &network, double x[],
                          double y[]);
-  static void MLPProcessI(CMultilayerPerceptron network, double &x[],
+  static void MLPProcessI(CMultilayerPerceptron &network, double x[],
                           double y[]);
   static double MLPError(CMultilayerPerceptron &network, CMatrixDouble &xy,
                          const int ssize);
@@ -672,19 +674,19 @@ public:
                             const int npoints);
   static double MLPAvgRelError(CMultilayerPerceptron &network,
                                CMatrixDouble &xy, const int npoints);
-  static void MLPGrad(CMultilayerPerceptron network, double &x[],
-                      double desiredy[], double e, double &grad[]);
-  static void MLPGradN(CMultilayerPerceptron network, double &x[],
-                       double desiredy[], double e, double &grad[]);
+  static void MLPGrad(CMultilayerPerceptron &network, double x[],
+                      double desiredy[], double &e, double grad[]);
+  static void MLPGradN(CMultilayerPerceptron &network, double x[],
+                       double desiredy[], double &e, double grad[]);
   static void MLPGradBatch(CMultilayerPerceptron &network, CMatrixDouble &xy,
-                           const int ssize, double e, double &grad[]);
+                           const int ssize, double &e, double grad[]);
   static void MLPGradNBatch(CMultilayerPerceptron &network, CMatrixDouble &xy,
-                            const int ssize, double e, double &grad[]);
+                            const int ssize, double &e, double grad[]);
   static void MLPHessianNBatch(CMultilayerPerceptron &network,
                                CMatrixDouble &xy, const int ssize, double &e,
                                double grad[], CMatrixDouble &h);
   static void MLPHessianBatch(CMultilayerPerceptron &network, CMatrixDouble &xy,
-                              const int ssize, double e, double &grad[],
+                              const int ssize, double &e, double grad[],
                               CMatrixDouble &h);
   static void MLPInternalProcessVector(int structinfo[], double weights[],
                                        double columnmeans[],
@@ -695,6 +697,7 @@ public:
   static void MLPSerialize(CSerializer &s, CMultilayerPerceptron &network);
   static void MLPUnserialize(CSerializer &s, CMultilayerPerceptron &network);
 };
+
 
 
 
@@ -870,7 +873,7 @@ private:
   static void MNLAllErrors(CLogitModel &lm, CMatrixDouble &xy,
                            const int npoints, double &relcls, double &avgce,
                            double &rms, double &avg, double &avgrel);
-  static void MNLMCSrch(const int n, double x[], double f, double &g[],
+  static void MNLMCSrch(const int n, double x[], double &f, double g[],
                         double s[], double &stp, int &info, int &nfev,
                         double wa[], CLogitMCState &state, int &stage);
   static void MNLMCStep(double &stx, double &fx, double &dx, double &sty,
@@ -893,8 +896,8 @@ public:
   static void MNLTrainH(CMatrixDouble &xy, const int npoints, const int nvars,
                         const int nclasses, int &info, CLogitModel &lm,
                         CMNLReport &rep);
-  static void MNLProcess(CLogitModel lm, double &x[], double y[]);
-  static void MNLProcessI(CLogitModel lm, double &x[], double y[]);
+  static void MNLProcess(CLogitModel &lm, double x[], double y[]);
+  static void MNLProcessI(CLogitModel &lm, double x[], double y[]);
   static void MNLUnpack(CLogitModel &lm, CMatrixDouble &a, int &nvars,
                         int &nclasses);
   static void MNLPack(CMatrixDouble &a, const int nvars, const int nclasses,
@@ -911,6 +914,7 @@ public:
                                const int ssize);
   static int MNLClsError(CLogitModel &lm, CMatrixDouble &xy, const int npoints);
 };
+
 
 
 
@@ -1059,14 +1063,15 @@ public:
                         CMatrixDouble &bndu);
   static void MCPDAddBC(CMCPDState &s, const int i, const int j, double bndl,
                         double bndu);
-  static void MCPDSetLC(CMCPDState s, CMatrixDouble &c, int &ct[],
+  static void MCPDSetLC(CMCPDState &s, CMatrixDouble &c, int ct[],
                         const int k);
   static void MCPDSetTikhonovRegularizer(CMCPDState &s, const double v);
   static void MCPDSetPrior(CMCPDState &s, CMatrixDouble &cpp);
-  static void MCPDSetPredictionWeights(CMCPDState s, double &pw[]);
+  static void MCPDSetPredictionWeights(CMCPDState &s, double pw[]);
   static void MCPDSolve(CMCPDState &s);
   static void MCPDResults(CMCPDState &s, CMatrixDouble &p, CMCPDReport &rep);
 };
+
 
 
 
@@ -1231,6 +1236,7 @@ public:
 
 
 
+
 class CMLPEnsemble {
 public:
   int m_ensemblesize;
@@ -1333,13 +1339,13 @@ public:
                                     const int ensemblesize,
                                     CMLPEnsemble &ensemble);
   static void MLPECopy(CMLPEnsemble &ensemble1, CMLPEnsemble &ensemble2);
-  static void MLPESerialize(CMLPEnsemble ensemble, double &ra[], int &rlen);
+  static void MLPESerialize(CMLPEnsemble &ensemble, double ra[], int &rlen);
   static void MLPEUnserialize(double ra[], CMLPEnsemble &ensemble);
   static void MLPERandomize(CMLPEnsemble &ensemble);
   static void MLPEProperties(CMLPEnsemble &ensemble, int &nin, int &nout);
   static bool MLPEIsSoftMax(CMLPEnsemble &ensemble);
-  static void MLPEProcess(CMLPEnsemble ensemble, double &x[], double y[]);
-  static void MLPEProcessI(CMLPEnsemble ensemble, double &x[], double y[]);
+  static void MLPEProcess(CMLPEnsemble &ensemble, double x[], double y[]);
+  static void MLPEProcessI(CMLPEnsemble &ensemble, double x[], double y[]);
   static double MLPERelClsError(CMLPEnsemble &ensemble, CMatrixDouble &xy,
                                 const int npoints);
   static double MLPEAvgCE(CMLPEnsemble &ensemble, CMatrixDouble &xy,
@@ -1397,13 +1403,14 @@ public:
 
 
 
+
 class CPCAnalysis {
 public:
   CPCAnalysis(void);
   ~CPCAnalysis(void);
 
   static void PCABuildBasis(CMatrixDouble &x, const int npoints,
-                            const int nvars, int info, double &s2[],
+                            const int nvars, int &info, double s2[],
                             CMatrixDouble &v);
 };
 

@@ -91,7 +91,6 @@ struct PROCESS_PROTECTION_LEVEL_INFORMATION {
   uint ProtectionLevel;
 };
 
-#import "kernel32.dll"
 uint QueueUserAPC(PVOID apc, HANDLE thread, ulong data);
 int GetProcessTimes(HANDLE process, FILETIME &creation_time,
                     FILETIME &exit_time, FILETIME &kernel_time,
@@ -213,8 +212,7 @@ int SetThreadSelectedCpuSets(HANDLE thread, const uint &cpu_set_ids,
 int GetProcessShutdownParameters(uint &level, uint &flags);
 int SetThreadDescription(HANDLE thread, const string thread_description);
 int GetThreadDescription(HANDLE thread, string &thread_description);
-#import
-#import "advapi32.dll"
+
 int CreateProcessAsUserW(HANDLE token, const string application_name,
                          string command_line, PVOID process_attributes,
                          PVOID thread_attributes, int inherit_handles,
@@ -227,6 +225,5 @@ int OpenProcessToken(HANDLE process_handle, uint desired_access,
                      HANDLE &token_handle);
 int OpenThreadToken(HANDLE thread_handle, uint desired_access, int open_as_self,
                     HANDLE &token_handle);
-#import
 
 #endif

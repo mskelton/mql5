@@ -39,8 +39,7 @@ CLabel::CLabel(void) {
   m_color = CONTROLS_LABEL_COLOR;
 }
 
-CLabel::~CLabel(void) {
-}
+CLabel::~CLabel(void) {}
 
 bool CLabel::Create(const long chart, const string name, const int subwin,
                     const int x1, const int y1, const int x2, const int y2) {

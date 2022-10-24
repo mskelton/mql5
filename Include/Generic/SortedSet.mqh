@@ -19,18 +19,18 @@ public:
   CSortedSet(T array[], IComparer<T> *comparer);
   ~CSortedSet(void);
 
-  bool Add(T value) ;
+  bool Add(T value);
 
-  int Count(void) ;
-  bool Contains(T item) ;
-  IComparer<T> *Comparer(void) const ;
-  bool TryGetMin(T &min) ;
-  bool TryGetMax(T &max) ;
+  int Count(void);
+  bool Contains(T item);
+  IComparer<T> *Comparer(void) const;
+  bool TryGetMin(T &min);
+  bool TryGetMax(T &max);
 
   int CopyTo(T dst_array[], const int dst_start = 0);
 
-  void Clear(void) ;
-  bool Remove(T item) ;
+  void Clear(void);
+  bool Remove(T item);
 
   void ExceptWith(ICollection<T> *collection);
   void ExceptWith(T array[]);
@@ -57,35 +57,5 @@ public:
   bool GetViewBetween(T array[], T lower_value, T upper_value);
   bool GetReverse(T array[]);
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #endif

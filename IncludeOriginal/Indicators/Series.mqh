@@ -47,8 +47,7 @@ public:
 
   virtual bool BufferResize(const int size);
 
-  virtual void Refresh(const int flags) {
-  }
+  virtual void Refresh(const int flags) {}
 
 protected:
   bool SetSymbolPeriod(const string symbol, const ENUM_TIMEFRAMES period);
@@ -61,11 +60,9 @@ protected:
 
 void CSeries::CSeries(void)
     : m_name(""), m_timeframe_flags(0), m_buffers_total(0), m_buffer_size(0),
-      m_symbol(""), m_period(WRONG_VALUE), m_refresh_current(true) {
-}
+      m_symbol(""), m_period(WRONG_VALUE), m_refresh_current(true) {}
 
-CSeries::~CSeries(void) {
-}
+CSeries::~CSeries(void) {}
 
 bool CSeries::BufferResize(const int size) {
 
@@ -235,8 +232,7 @@ CDoubleBuffer::CDoubleBuffer(void)
   ArraySetAsSeries(m_data, true);
 }
 
-CDoubleBuffer::~CDoubleBuffer(void) {
-}
+CDoubleBuffer::~CDoubleBuffer(void) {}
 
 double CDoubleBuffer::At(const int index) const {
 

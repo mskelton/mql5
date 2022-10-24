@@ -58,8 +58,7 @@ CSignalSAR::CSignalSAR(void)
   m_used_series = USE_SERIES_CLOSE;
 }
 
-CSignalSAR::~CSignalSAR(void) {
-}
+CSignalSAR::~CSignalSAR(void) {}
 
 bool CSignalSAR::ValidationSettings(void) {
 

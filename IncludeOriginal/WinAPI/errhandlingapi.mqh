@@ -4,7 +4,6 @@
 #include <WinAPI\windef.mqh>
 #include <WinAPI\winnt.mqh>
 
-#import "kernel32.dll"
 void RaiseException(uint exception_code, uint exception_flags,
                     uint number_of_arguments, const ulong &arguments[]);
 int UnhandledExceptionFilter(EXCEPTION_POINTERS &exception_info);
@@ -23,6 +22,5 @@ void RaiseFailFastException(EXCEPTION_RECORD &exception_record,
 void FatalAppExitW(uint action, const string message_text);
 uint GetThreadErrorMode(void);
 int SetThreadErrorMode(uint new_mode, uint &old_mode);
-#import
 
 #endif

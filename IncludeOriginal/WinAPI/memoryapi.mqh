@@ -23,7 +23,6 @@ struct WIN32_MEMORY_RANGE_ENTRY {
   ulong NumberOfBytes;
 };
 
-#import "kernel32.dll"
 int AllocateUserPhysicalPages(HANDLE hProcess, ulong &NumberOfPages,
                               ulong &PageArray[]);
 int AllocateUserPhysicalPagesNuma(HANDLE hProcess, ulong &NumberOfPages,
@@ -113,6 +112,5 @@ int WriteProcessMemory(HANDLE hProcess, uchar &lpBaseAddress[], PVOID lpBuffer,
 int WriteProcessMemory(HANDLE hProcess, uchar &lpBaseAddress[],
                        uchar &lpBuffer[], ulong nSize,
                        ulong &lpNumberOfBytesWritten);
-#import
 
 #endif

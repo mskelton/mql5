@@ -90,8 +90,7 @@ CArrayList::CArrayList(ICollection<T> *collection)
     m_size = collection.CopyTo(m_items, 0);
 }
 
-template <typename T> CArrayList::~CArrayList(void) {
-}
+template <typename T> CArrayList::~CArrayList(void) {}
 
 template <typename T> int CArrayList::Capacity(void) {
   return ArraySize(m_items);

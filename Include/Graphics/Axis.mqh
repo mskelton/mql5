@@ -38,50 +38,50 @@ public:
   CAxis(void);
   ~CAxis(void);
 
-  double Step(void) const ;
-  double Min(void) const ;
-  void Min(const double min) ;
-  double Max(void) const ;
-  void Max(const double max) ;
-  string Name(void) const ;
-  void Name(const string name) ;
-  ENUM_AXIS_TYPE Type(void) const ;
-  void Type(ENUM_AXIS_TYPE type) ;
+  double Step(void) const;
+  double Min(void) const;
+  void Min(const double min);
+  double Max(void) const;
+  void Max(const double max);
+  string Name(void) const;
+  void Name(const string name);
+  ENUM_AXIS_TYPE Type(void) const;
+  void Type(ENUM_AXIS_TYPE type);
 
-  uint Color(void) const ;
-  void Color(const uint clr) ;
-  bool AutoScale(void) const ;
-  void AutoScale(const bool auto) ;
-  int ValuesSize(void) const ;
-  void ValuesSize(const int size) ;
-  int ValuesWidth(void) const ;
-  void ValuesWidth(const int width) ;
-  string ValuesFormat(void) const ;
-  void ValuesFormat(const string format) ;
-  int ValuesDateTimeMode(void) const ;
-  void ValuesDateTimeMode(const int mode) ;
-  DoubleToStringFunction ValuesFunctionFormat(void) const ;
-  void ValuesFunctionFormat(DoubleToStringFunction func) ;
-  void *ValuesFunctionFormatCBData(void) const ;
-  void ValuesFunctionFormatCBData(void *cbdata) ;
-  string ValuesFontName(void) const ;
-  void ValuesFontName(const string fontname) ;
-  uint ValuesFontAngle(void) const ;
-  void ValuesFontAngle(const uint fontangle) ;
-  uint ValuesFontFlags(void) const ;
-  void ValuesFontFlags(const uint fontflags) ;
-  int NameSize(void) const ;
-  void NameSize(const int size) ;
-  double ZeroLever(void) const ;
-  void ZeroLever(const double value) ;
-  double DefaultStep(void) const ;
-  void DefaultStep(const double value) ;
-  double MaxLabels(void) const ;
-  void MaxLabels(const double value) ;
-  double MinGrace(void) const ;
-  void MinGrace(const double value) ;
-  double MaxGrace(void) const ;
-  void MaxGrace(const double value) ;
+  uint Color(void) const;
+  void Color(const uint clr);
+  bool AutoScale(void) const;
+  void AutoScale(const bool);
+  int ValuesSize(void) const;
+  void ValuesSize(const int size);
+  int ValuesWidth(void) const;
+  void ValuesWidth(const int width);
+  string ValuesFormat(void) const;
+  void ValuesFormat(const string format);
+  int ValuesDateTimeMode(void) const;
+  void ValuesDateTimeMode(const int mode);
+  DoubleToStringFunction ValuesFunctionFormat(void) const;
+  void ValuesFunctionFormat(DoubleToStringFunction func);
+  void *ValuesFunctionFormatCBData(void) const;
+  void ValuesFunctionFormatCBData(void *cbdata);
+  string ValuesFontName(void) const;
+  void ValuesFontName(const string fontname);
+  uint ValuesFontAngle(void) const;
+  void ValuesFontAngle(const uint fontangle);
+  uint ValuesFontFlags(void) const;
+  void ValuesFontFlags(const uint fontflags);
+  int NameSize(void) const;
+  void NameSize(const int size);
+  double ZeroLever(void) const;
+  void ZeroLever(const double value);
+  double DefaultStep(void) const;
+  void DefaultStep(const double value);
+  double MaxLabels(void) const;
+  void MaxLabels(const double value);
+  double MinGrace(void) const;
+  void MinGrace(const double value);
+  double MaxGrace(void) const;
+  void MaxGrace(const double value);
 
   void SelectAxisScale(void);
 
@@ -91,12 +91,5 @@ private:
   double Mod(const double x, const double y);
   double CalcBoundedStepSize(const double range, const double max_steps);
 };
-
-
-
-
-
-
-
 
 #endif

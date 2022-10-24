@@ -97,11 +97,9 @@ bool CWndContainer::OnMouseEvent(const int x, const int y, const int flags) {
   return (CWnd::OnMouseEvent(x, y, flags));
 }
 
-CWndContainer::CWndContainer(void) {
-}
+CWndContainer::CWndContainer(void) {}
 
-CWndContainer::~CWndContainer(void) {
-}
+CWndContainer::~CWndContainer(void) {}
 
 void CWndContainer::Destroy(const int reason) {
 

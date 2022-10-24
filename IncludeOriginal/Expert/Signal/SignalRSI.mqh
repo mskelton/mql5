@@ -81,8 +81,7 @@ CSignalRSI::CSignalRSI(void)
   m_used_series = USE_SERIES_HIGH + USE_SERIES_LOW;
 }
 
-CSignalRSI::~CSignalRSI(void) {
-}
+CSignalRSI::~CSignalRSI(void) {}
 
 bool CSignalRSI::ValidationSettings(void) {
 

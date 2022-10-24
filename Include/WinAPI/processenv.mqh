@@ -3,7 +3,6 @@
 
 #include <WinAPI/windef.mqh>
 
-#import "kernel32.dll"
 int SetEnvironmentStringsW(string new_environment);
 HANDLE GetStdHandle(uint std_handle);
 int SetStdHandle(uint std_handle, HANDLE handle);
@@ -21,6 +20,5 @@ uint SearchPathW(const string path, const string file_name,
                  const string extension, uint buffer_length, ushort buffer[],
                  string &file_part);
 int NeedCurrentDirectoryForExePathW(const string exe_name);
-#import
 
 #endif

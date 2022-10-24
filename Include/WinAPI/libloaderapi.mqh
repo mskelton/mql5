@@ -9,7 +9,6 @@ struct ENUMUILANG {
   PVOID EnumUIBuffer;
 };
 
-#import "kernel32.dll"
 int DisableThreadLibraryCalls(HANDLE lib_module);
 HANDLE FindResourceExW(HANDLE module, const string type, const string name,
                        ushort language);
@@ -41,10 +40,7 @@ HANDLE FindResourceW(HANDLE module, const string name, const string type);
 HANDLE LoadLibraryW(const string lib_file_name);
 int EnumResourceNamesW(HANDLE module, const string type, PVOID enum_func,
                        long param);
-#import
 
-#import "user32.dll"
 int LoadStringW(HANDLE instance, uint id, string buffer, int buffer_max);
-#import
 
 #endif

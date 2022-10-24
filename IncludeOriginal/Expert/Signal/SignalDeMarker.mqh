@@ -68,8 +68,7 @@ CSignalDeM::CSignalDeM(void)
   m_used_series = USE_SERIES_HIGH + USE_SERIES_LOW;
 }
 
-CSignalDeM::~CSignalDeM(void) {
-}
+CSignalDeM::~CSignalDeM(void) {}
 
 bool CSignalDeM::ValidationSettings(void) {
 

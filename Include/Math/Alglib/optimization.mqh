@@ -158,9 +158,9 @@ public:
 class CMinCG {
 private:
   static void ClearRequestFields(CMinCGState &state);
-  static void PreconditionedMultiply(CMinCGState state, double &x[],
+  static void PreconditionedMultiply(CMinCGState &state, double x[],
                                      double work0[], double work1[]);
-  static double PreconditionedMultiply2(CMinCGState state, double &x[],
+  static double PreconditionedMultiply2(CMinCGState &state, double x[],
                                         double y[], double work0[],
                                         double work1[]);
   static void MinCGInitInternal(const int n, const double diffstep,
@@ -205,26 +205,27 @@ public:
                            CMinCGState &state);
   static void MinCGSetCond(CMinCGState &state, const double epsg,
                            const double epsf, double epsx, const int maxits);
-  static void MinCGSetScale(CMinCGState state, double &s[]);
+  static void MinCGSetScale(CMinCGState &state, double s[]);
   static void MinCGSetXRep(CMinCGState &state, const bool needxrep);
   static void MinCGSetDRep(CMinCGState &state, const bool needdrep);
   static void MinCGSetCGType(CMinCGState &state, int cgtype);
   static void MinCGSetStpMax(CMinCGState &state, const double stpmax);
   static void MinCGSuggestStep(CMinCGState &state, const double stp);
   static void MinCGSetPrecDefault(CMinCGState &state);
-  static void MinCGSetPrecDiag(CMinCGState state, double &d[]);
+  static void MinCGSetPrecDiag(CMinCGState &state, double d[]);
   static void MinCGSetPrecScale(CMinCGState &state);
-  static void MinCGResults(CMinCGState state, double &x[], CMinCGReport &rep);
-  static void MinCGResultsBuf(CMinCGState state, double &x[],
+  static void MinCGResults(CMinCGState &state, double x[], CMinCGReport &rep);
+  static void MinCGResultsBuf(CMinCGState &state, double x[],
                               CMinCGReport &rep);
-  static void MinCGRestartFrom(CMinCGState state, double &x[]);
-  static void MinCGSetPrecDiagFast(CMinCGState state, double &d[]);
-  static void MinCGSetPrecLowRankFast(CMinCGState state, double &d1[],
+  static void MinCGRestartFrom(CMinCGState &state, double x[]);
+  static void MinCGSetPrecDiagFast(CMinCGState &state, double d[]);
+  static void MinCGSetPrecLowRankFast(CMinCGState &state, double d1[],
                                       double c[], CMatrixDouble &v,
                                       const int vcnt);
-  static void MinCGSetPrecVarPart(CMinCGState state, double &d2[]);
+  static void MinCGSetPrecVarPart(CMinCGState &state, double d2[]);
   static bool MinCGIteration(CMinCGState &state);
 };
+
 
 
 
@@ -461,20 +462,20 @@ public:
 class CMinBLEIC {
 private:
   static void ClearRequestFields(CMinBLEICState &state);
-  static void UnscalePoint(CMinBLEICState state, double &xscaled[],
+  static void UnscalePoint(CMinBLEICState &state, double xscaled[],
                            double xunscaled[]);
-  static void ProjectPointAndUnscale(CMinBLEICState state, double &xscaled[],
+  static void ProjectPointAndUnscale(CMinBLEICState &state, double xscaled[],
                                      double xunscaled[], double rscaled[],
                                      double &rnorm2);
-  static void ScaleGradientAndExpand(CMinBLEICState state, double &gunscaled[],
+  static void ScaleGradientAndExpand(CMinBLEICState &state, double gunscaled[],
                                      double gscaled[]);
-  static void ModifyTargetFunction(CMinBLEICState state, double &x[],
+  static void ModifyTargetFunction(CMinBLEICState &state, double x[],
                                    double r[], const double rnorm2, double &f,
                                    double g[], double &gnorm, double &mpgnorm);
-  static bool AdditionalCheckForConstraints(CMinBLEICState state, double &x[]);
+  static bool AdditionalCheckForConstraints(CMinBLEICState &state, double x[]);
   static void RebuildCEXE(CMinBLEICState &state);
-  static void MakeGradientProjection(CMinBLEICState state, double &pg[]);
-  static bool PrepareConstraintMatrix(CMinBLEICState state, double &x[],
+  static void MakeGradientProjection(CMinBLEICState &state, double pg[]);
+  static bool PrepareConstraintMatrix(CMinBLEICState &state, double x[],
                                       double g[], double px[], double pg[]);
   static void MinBLEICInitInternal(const int n, double x[],
                                    const double diffstep,
@@ -520,28 +521,29 @@ public:
   static void MinBLEICCreate(const int n, double x[], CMinBLEICState &state);
   static void MinBLEICCreateF(const int n, double x[], const double diffstep,
                               CMinBLEICState &state);
-  static void MinBLEICSetBC(CMinBLEICState state, double &bndl[],
+  static void MinBLEICSetBC(CMinBLEICState &state, double bndl[],
                             double bndu[]);
-  static void MinBLEICSetLC(CMinBLEICState state, CMatrixDouble &c, int &ct[],
+  static void MinBLEICSetLC(CMinBLEICState &state, CMatrixDouble &c, int ct[],
                             const int k);
   static void MinBLEICSetInnerCond(CMinBLEICState &state, const double epsg,
                                    const double epsf, const double epsx);
   static void MinBLEICSetOuterCond(CMinBLEICState &state, const double epsx,
                                    const double epsi);
-  static void MinBLEICSetScale(CMinBLEICState state, double &s[]);
+  static void MinBLEICSetScale(CMinBLEICState &state, double s[]);
   static void MinBLEICSetPrecDefault(CMinBLEICState &state);
-  static void MinBLEICSetPrecDiag(CMinBLEICState state, double &d[]);
+  static void MinBLEICSetPrecDiag(CMinBLEICState &state, double d[]);
   static void MinBLEICSetPrecScale(CMinBLEICState &state);
   static void MinBLEICSetMaxIts(CMinBLEICState &state, const int maxits);
   static void MinBLEICSetXRep(CMinBLEICState &state, const bool needxrep);
   static void MinBLEICSetStpMax(CMinBLEICState &state, const double stpmax);
-  static void MinBLEICResults(CMinBLEICState state, double &x[],
+  static void MinBLEICResults(CMinBLEICState &state, double x[],
                               CMinBLEICReport &rep);
-  static void MinBLEICResultsBuf(CMinBLEICState state, double &x[],
+  static void MinBLEICResultsBuf(CMinBLEICState &state, double x[],
                                  CMinBLEICReport &rep);
-  static void MinBLEICRestartFrom(CMinBLEICState state, double &x[]);
+  static void MinBLEICRestartFrom(CMinBLEICState &state, double x[]);
   static bool MinBLEICIteration(CMinBLEICState &state);
 };
+
 
 
 
@@ -749,21 +751,22 @@ public:
                               const double epsf, double epsx, const int maxits);
   static void MinLBFGSSetXRep(CMinLBFGSState &state, const bool needxrep);
   static void MinLBFGSSetStpMax(CMinLBFGSState &state, const double stpmax);
-  static void MinLBFGSSetScale(CMinLBFGSState state, double &s[]);
+  static void MinLBFGSSetScale(CMinLBFGSState &state, double s[]);
   static void MinLBFGSCreateX(const int n, const int m, double x[], int flags,
                               const double diffstep, CMinLBFGSState &state);
   static void MinLBFGSSetPrecDefault(CMinLBFGSState &state);
   static void MinLBFGSSetPrecCholesky(CMinLBFGSState &state, CMatrixDouble &p,
                                       const bool isupper);
-  static void MinLBFGSSetPrecDiag(CMinLBFGSState state, double &d[]);
+  static void MinLBFGSSetPrecDiag(CMinLBFGSState &state, double d[]);
   static void MinLBFGSSetPrecScale(CMinLBFGSState &state);
-  static void MinLBFGSResults(CMinLBFGSState state, double &x[],
+  static void MinLBFGSResults(CMinLBFGSState &state, double x[],
                               CMinLBFGSReport &rep);
-  static void MinLBFGSresultsbuf(CMinLBFGSState state, double &x[],
+  static void MinLBFGSresultsbuf(CMinLBFGSState &state, double x[],
                                  CMinLBFGSReport &rep);
-  static void MinLBFGSRestartFrom(CMinLBFGSState state, double &x[]);
+  static void MinLBFGSRestartFrom(CMinLBFGSState &state, double x[]);
   static bool MinLBFGSIteration(CMinLBFGSState &state);
 };
+
 
 
 
@@ -909,30 +912,30 @@ public:
 class CMinQP {
 private:
   static void MinQPGrad(CMinQPState &state);
-  static double MinQPXTAX(CMinQPState state, double &x[]);
+  static double MinQPXTAX(CMinQPState &state, double x[]);
 
 public:
   CMinQP(void);
   ~CMinQP(void);
 
   static void MinQPCreate(const int n, CMinQPState &state);
-  static void MinQPSetLinearTerm(CMinQPState state, double &b[]);
+  static void MinQPSetLinearTerm(CMinQPState &state, double b[]);
   static void MinQPSetQuadraticTerm(CMinQPState &state, CMatrixDouble &a,
                                     const bool isupper);
-  static void MinQPSetStartingPoint(CMinQPState state, double &x[]);
-  static void MinQPSetOrigin(CMinQPState state, double &xorigin[]);
+  static void MinQPSetStartingPoint(CMinQPState &state, double x[]);
+  static void MinQPSetOrigin(CMinQPState &state, double xorigin[]);
   static void MinQPSetAlgoCholesky(CMinQPState &state);
-  static void MinQPSetBC(CMinQPState state, double &bndl[], double bndu[]);
+  static void MinQPSetBC(CMinQPState &state, double bndl[], double bndu[]);
   static void MinQPOptimize(CMinQPState &state);
-  static void MinQPResults(CMinQPState state, double &x[], CMinQPReport &rep);
-  static void MinQPResultsBuf(CMinQPState state, double &x[],
+  static void MinQPResults(CMinQPState &state, double x[], CMinQPReport &rep);
+  static void MinQPResultsBuf(CMinQPState &state, double x[],
                               CMinQPReport &rep);
-  static void MinQPSetLinearTermFast(CMinQPState state, double &b[]);
+  static void MinQPSetLinearTermFast(CMinQPState &state, double b[]);
   static void MinQPSetQuadraticTermFast(CMinQPState &state, CMatrixDouble &a,
                                         const bool isupper, const double s);
-  static void MinQPRewriteDiagonal(CMinQPState state, double &s[]);
-  static void MinQPSetStartingPointFast(CMinQPState state, double &x[]);
-  static void MinQPSetOriginFast(CMinQPState state, double &xorigin[]);
+  static void MinQPRewriteDiagonal(CMinQPState &state, double s[]);
+  static void MinQPSetStartingPointFast(CMinQPState &state, double x[]);
+  static void MinQPSetOriginFast(CMinQPState &state, double xorigin[]);
 };
 
 
@@ -1147,7 +1150,7 @@ private:
   static void ClearRequestFields(CMinLMState &state);
   static bool IncreaseLambda(double &lambdav, double &nu);
   static void DecreaseLambda(double &lambdav, double &nu);
-  static double BoundedScaledAntigradNorm(CMinLMState state, double &x[],
+  static double BoundedScaledAntigradNorm(CMinLMState &state, double x[],
                                           double g[]);
 
   static void Func_lbl_rcomm(CMinLMState &state, int n, int m, int iflag, int i,
@@ -1225,13 +1228,13 @@ public:
                            const double epsf, double epsx, const int maxits);
   static void MinLMSetXRep(CMinLMState &state, const bool needxrep);
   static void MinLMSetStpMax(CMinLMState &state, const double stpmax);
-  static void MinLMSetScale(CMinLMState state, double &s[]);
-  static void MinLMSetBC(CMinLMState state, double &bndl[], double bndu[]);
+  static void MinLMSetScale(CMinLMState &state, double s[]);
+  static void MinLMSetBC(CMinLMState &state, double bndl[], double bndu[]);
   static void MinLMSetAccType(CMinLMState &state, int acctype);
-  static void MinLMResults(CMinLMState state, double &x[], CMinLMReport &rep);
-  static void MinLMResultsBuf(CMinLMState state, double &x[],
+  static void MinLMResults(CMinLMState &state, double x[], CMinLMReport &rep);
+  static void MinLMResultsBuf(CMinLMState &state, double x[],
                               CMinLMReport &rep);
-  static void MinLMRestartFrom(CMinLMState state, double &x[]);
+  static void MinLMRestartFrom(CMinLMState &state, double x[]);
   static void MinLMCreateVGJ(const int n, const int m, double x[],
                              CMinLMState &state);
   static void MinLMCreateFGJ(const int n, const int m, double x[],
@@ -1240,6 +1243,7 @@ public:
                             CMinLMState &state);
   static bool MinLMIteration(CMinLMState &state);
 };
+
 
 
 
@@ -1511,14 +1515,15 @@ public:
   static void MinASASetXRep(CMinASAState &state, const bool needxrep);
   static void MinASASetAlgorithm(CMinASAState &state, int algotype);
   static void MinASASetStpMax(CMinASAState &state, const double stpmax);
-  static void MinASAResults(CMinASAState state, double &x[],
+  static void MinASAResults(CMinASAState &state, double x[],
                             CMinASAReport &rep);
-  static void MinASAResultsBuf(CMinASAState state, double &x[],
+  static void MinASAResultsBuf(CMinASAState &state, double x[],
                                CMinASAReport &rep);
-  static void MinASARestartFrom(CMinASAState state, double &x[],
+  static void MinASARestartFrom(CMinASAState &state, double x[],
                                 double bndl[], double bndu[]);
   static bool MinASAIteration(CMinASAState &state);
 };
+
 
 
 

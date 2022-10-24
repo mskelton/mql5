@@ -21,7 +21,7 @@ public:
   CDXSurface();
   ~CDXSurface();
 
-  bool Create(CDXDispatcher dispatcher, CDXInput *buffer_scene, double &data[],
+  bool Create(CDXDispatcher &dispatcher, CDXInput *buffer_scene, double data[],
               uint m_data_widht, uint m_data_height, float data_range,
               const DXVector3 &from, const DXVector3 &to,
               DXVector2 &texture_size, uint flags = SF_NONE,

@@ -25,26 +25,21 @@ public:
   CRedBlackTreeNode(T value);
   ~CRedBlackTreeNode(void);
 
-  T Value(void) ;
-  void Value(T value) ;
-  CRedBlackTreeNode<T> *Parent(void) ;
-  void Parent(CRedBlackTreeNode<T> *node) ;
-  CRedBlackTreeNode<T> *Left(void) ;
-  void Left(CRedBlackTreeNode<T> *node) ;
-  CRedBlackTreeNode<T> *Right(void) ;
-  void Right(CRedBlackTreeNode<T> *node) ;
-  ENUM_RED_BLACK_TREE_NODE_TYPE Color(void) ;
-  void Color(ENUM_RED_BLACK_TREE_NODE_TYPE clr) ;
+  T Value(void);
+  void Value(T value);
+  CRedBlackTreeNode<T> *Parent(void);
+  void Parent(CRedBlackTreeNode<T> *node);
+  CRedBlackTreeNode<T> *Left(void);
+  void Left(CRedBlackTreeNode<T> *node);
+  CRedBlackTreeNode<T> *Right(void);
+  void Right(CRedBlackTreeNode<T> *node);
+  ENUM_RED_BLACK_TREE_NODE_TYPE Color(void);
+  void Color(ENUM_RED_BLACK_TREE_NODE_TYPE clr);
 
   bool IsLeaf(void);
 
   static CRedBlackTreeNode<T> *CreateEmptyNode(void);
 };
-
-
-
-
-
 
 template <typename T> class CRedBlackTree : public ICollection<T> {
 protected:
@@ -65,10 +60,10 @@ public:
 
   bool Add(T value);
 
-  CRedBlackTreeNode<T> *Root(void) ;
-  int Count(void) ;
+  CRedBlackTreeNode<T> *Root(void);
+  int Count(void);
   bool Contains(T item);
-  IComparer<T> *Comparer(void) const ;
+  IComparer<T> *Comparer(void) const;
   bool TryGetMin(T &min);
   bool TryGetMax(T &max);
 
@@ -91,30 +86,5 @@ private:
   void BalanceTreeAfterDelete(CRedBlackTreeNode<T> *linked_node);
   static void WalkNextLevel(CRedBlackTreeNode<T> *node, T array[], int &index);
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #endif

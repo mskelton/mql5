@@ -261,7 +261,7 @@ bout[]); void  DXSHEvalDirection(float out[],int order,const DXVector3 &dir);
 int   DXSHEvalDirectionalLight(int order,const DXVector3 &dir,float
 Rintensity,float Gintensity,float Bintensity,float rout[],float gout[],float
 bout[]); int   DXSHEvalHemisphereLight(int order,const DXVector3 &dir,DXColor
-top,DXColor &bottom,float &rout[],float gout[],float bout[]); int
+&top,DXColor &bottom,float rout[],float gout[],float bout[]); int
 DXSHEvalSphericalLight(int order,const DXVector3 &dir,float radius,float
 Rintensity,float Gintensity,float Bintensity,float rout[],float gout[],float
 bout[]); void  DXSHMultiply2(float out[],const float a[],const float b[]);
@@ -622,7 +622,7 @@ int DXSHEvalDirectionalLight(int order, const DXVector3 &dir, float Rintensity,
                              float gout[], float bout[]) ;
 
 int DXSHEvalHemisphereLight(int order, const DXVector3 &dir, DXColor &top,
-                            DXColor bottom, float &rout[], float gout[],
+                            DXColor &bottom, float rout[], float gout[],
                             float bout[]) ;
 
 int DXSHEvalSphericalLight(int order, const DXVector3 &dir, float radius,

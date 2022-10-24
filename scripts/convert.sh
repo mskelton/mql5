@@ -22,6 +22,7 @@ for i in $(find IncludeOriginal -name '*.mqh'); do
 
 	# Remove resources and properties
 	sed -i '' 's/^#resource .*//' $i
+	sed -i '' 's/^#import .*//' $i
 	sed -i '' 's/^#property .*//' $i
 
 	# Add #ifndef

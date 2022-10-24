@@ -52,8 +52,7 @@ public:
 };
 
 CNormalCombinationMembershipFunction::CNormalCombinationMembershipFunction(
-    void) {
-}
+    void) {}
 
 CNormalCombinationMembershipFunction::CNormalCombinationMembershipFunction(
     const double b1, const double sigma1, const double b2,
@@ -65,8 +64,7 @@ CNormalCombinationMembershipFunction::CNormalCombinationMembershipFunction(
 }
 
 CNormalCombinationMembershipFunction::~CNormalCombinationMembershipFunction(
-    void) {
-}
+    void) {}
 
 double CNormalCombinationMembershipFunction::GetValue(const double x) {
   if (m_b1 <= m_b2) {
@@ -133,8 +131,7 @@ public:
 };
 
 CGeneralizedBellShapedMembershipFunction::
-    CGeneralizedBellShapedMembershipFunction(void) {
-}
+    CGeneralizedBellShapedMembershipFunction(void) {}
 
 CGeneralizedBellShapedMembershipFunction::
     CGeneralizedBellShapedMembershipFunction(const double a, const double b,
@@ -145,8 +142,7 @@ CGeneralizedBellShapedMembershipFunction::
 }
 
 CGeneralizedBellShapedMembershipFunction::
-    ~CGeneralizedBellShapedMembershipFunction(void) {
-}
+    ~CGeneralizedBellShapedMembershipFunction(void) {}
 
 double CGeneralizedBellShapedMembershipFunction::GetValue(const double x) {
 
@@ -179,8 +175,7 @@ public:
   double GetValue(const double x);
 };
 
-CS_ShapedMembershipFunction::CS_ShapedMembershipFunction(void) {
-}
+CS_ShapedMembershipFunction::CS_ShapedMembershipFunction(void) {}
 
 CS_ShapedMembershipFunction::CS_ShapedMembershipFunction(const double a,
                                                          const double b) {
@@ -188,8 +183,7 @@ CS_ShapedMembershipFunction::CS_ShapedMembershipFunction(const double a,
   m_b = b;
 }
 
-CS_ShapedMembershipFunction::~CS_ShapedMembershipFunction(void) {
-}
+CS_ShapedMembershipFunction::~CS_ShapedMembershipFunction(void) {}
 
 double CS_ShapedMembershipFunction::GetValue(const double x) {
   if (x <= m_a) {
@@ -233,8 +227,7 @@ public:
   double GetValue(const double x);
 };
 
-CZ_ShapedMembershipFunction::CZ_ShapedMembershipFunction(void) {
-}
+CZ_ShapedMembershipFunction::CZ_ShapedMembershipFunction(void) {}
 
 CZ_ShapedMembershipFunction::CZ_ShapedMembershipFunction(const double a,
                                                          const double b) {
@@ -242,8 +235,7 @@ CZ_ShapedMembershipFunction::CZ_ShapedMembershipFunction(const double a,
   m_b = b;
 }
 
-CZ_ShapedMembershipFunction::~CZ_ShapedMembershipFunction(void) {
-}
+CZ_ShapedMembershipFunction::~CZ_ShapedMembershipFunction(void) {}
 
 double CZ_ShapedMembershipFunction::GetValue(const double x) {
   if (x <= m_a) {
@@ -302,8 +294,7 @@ public:
   double GetValue(const double x);
 };
 
-CP_ShapedMembershipFunction::CP_ShapedMembershipFunction(void) {
-}
+CP_ShapedMembershipFunction::CP_ShapedMembershipFunction(void) {}
 
 CP_ShapedMembershipFunction::CP_ShapedMembershipFunction(const double a,
                                                          const double b,
@@ -315,8 +306,7 @@ CP_ShapedMembershipFunction::CP_ShapedMembershipFunction(const double a,
   m_c = c;
 }
 
-CP_ShapedMembershipFunction::~CP_ShapedMembershipFunction(void) {
-}
+CP_ShapedMembershipFunction::~CP_ShapedMembershipFunction(void) {}
 
 double CP_ShapedMembershipFunction::GetValue(const double x) {
   if (x <= m_a) {
@@ -373,8 +363,7 @@ CSigmoidalMembershipFunction::CSigmoidalMembershipFunction(const double a,
   m_c = c;
 }
 
-CSigmoidalMembershipFunction::~CSigmoidalMembershipFunction(void) {
-}
+CSigmoidalMembershipFunction::~CSigmoidalMembershipFunction(void) {}
 
 double CSigmoidalMembershipFunction::GetValue(const double x) {
 
@@ -440,8 +429,7 @@ CProductTwoSigmoidalMembershipFunctions::
 }
 
 CProductTwoSigmoidalMembershipFunctions::
-    ~CProductTwoSigmoidalMembershipFunctions(void) {
-}
+    ~CProductTwoSigmoidalMembershipFunctions(void) {}
 
 double CProductTwoSigmoidalMembershipFunctions::GetValue(const double x) {
   double first_equation = 1 / (1 + exp(-m_a1 * (x - m_c1)));
@@ -492,8 +480,7 @@ public:
 };
 
 CDifferencTwoSigmoidalMembershipFunction::
-    CDifferencTwoSigmoidalMembershipFunction(void) {
-}
+    CDifferencTwoSigmoidalMembershipFunction(void) {}
 
 CDifferencTwoSigmoidalMembershipFunction::
     CDifferencTwoSigmoidalMembershipFunction(const double a1, const double c1,
@@ -505,8 +492,7 @@ CDifferencTwoSigmoidalMembershipFunction::
 }
 
 CDifferencTwoSigmoidalMembershipFunction::
-    ~CDifferencTwoSigmoidalMembershipFunction() {
-}
+    ~CDifferencTwoSigmoidalMembershipFunction() {}
 
 double CDifferencTwoSigmoidalMembershipFunction::GetValue(const double x) {
   double first_equation = 1 / (1 + exp(-m_a1 * (x - m_c1)));
@@ -556,8 +542,7 @@ public:
   double GetValue(const double x);
 };
 
-CTrapezoidMembershipFunction::CTrapezoidMembershipFunction(void) {
-}
+CTrapezoidMembershipFunction::CTrapezoidMembershipFunction(void) {}
 
 CTrapezoidMembershipFunction::CTrapezoidMembershipFunction(const double x1,
                                                            const double x2,
@@ -573,8 +558,7 @@ CTrapezoidMembershipFunction::CTrapezoidMembershipFunction(const double x1,
   }
 }
 
-CTrapezoidMembershipFunction::~CTrapezoidMembershipFunction() {
-}
+CTrapezoidMembershipFunction::~CTrapezoidMembershipFunction() {}
 
 double CTrapezoidMembershipFunction::GetValue(const double x) {
   double result = 0;
@@ -621,8 +605,7 @@ public:
   double GetValue(const double x);
 };
 
-CNormalMembershipFunction::CNormalMembershipFunction(void) {
-}
+CNormalMembershipFunction::CNormalMembershipFunction(void) {}
 
 CNormalMembershipFunction::CNormalMembershipFunction(const double b,
                                                      const double sigma) {
@@ -630,8 +613,7 @@ CNormalMembershipFunction::CNormalMembershipFunction(const double b,
   m_sigma = sigma;
 }
 
-CNormalMembershipFunction::~CNormalMembershipFunction(void) {
-}
+CNormalMembershipFunction::~CNormalMembershipFunction(void) {}
 
 double CNormalMembershipFunction::GetValue(const double x) {
 
@@ -674,8 +656,7 @@ public:
   double GetValue(const double x);
 };
 
-CTriangularMembershipFunction::CTriangularMembershipFunction(void) {
-}
+CTriangularMembershipFunction::CTriangularMembershipFunction(void) {}
 
 CTriangularMembershipFunction::CTriangularMembershipFunction(const double x1,
                                                              const double x2,
@@ -689,8 +670,7 @@ CTriangularMembershipFunction::CTriangularMembershipFunction(const double x1,
   m_x3 = x3;
 }
 
-CTriangularMembershipFunction::~CTriangularMembershipFunction(void) {
-}
+CTriangularMembershipFunction::~CTriangularMembershipFunction(void) {}
 
 CNormalMembershipFunction *CTriangularMembershipFunction::ToNormalMF(void) {
   double b = m_x2;
@@ -733,8 +713,7 @@ public:
   }
 };
 
-CConstantMembershipFunction::CConstantMembershipFunction(void) {
-}
+CConstantMembershipFunction::CConstantMembershipFunction(void) {}
 
 CConstantMembershipFunction::CConstantMembershipFunction(
     const double constValue) {
@@ -744,8 +723,7 @@ CConstantMembershipFunction::CConstantMembershipFunction(
   m_constValue = constValue;
 }
 
-CConstantMembershipFunction::~CConstantMembershipFunction(void) {
-}
+CConstantMembershipFunction::~CConstantMembershipFunction(void) {}
 
 class CCompositeMembershipFunction : public IMembershipFunction {
 private:

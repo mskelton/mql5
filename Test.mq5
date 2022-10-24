@@ -10,7 +10,7 @@
 #include <Arrays/List.mqh>
 #include <Arrays/Tree.mqh>
 #include <Arrays/TreeNode.mqh>
-// #include <Canvas/Canvas.mqh>
+#include <Canvas/Canvas.mqh>
 // #include <Canvas/Canvas3D.mqh>
 // #include <Canvas/Charts/ChartCanvas.mqh>
 // #include <Canvas/Charts/HistogramChart.mqh>
@@ -67,84 +67,84 @@
 // #include <Controls/WndClient.mqh>
 // #include <Controls/WndContainer.mqh>
 // #include <Controls/WndObj.mqh>
-// #include <Expert/Expert.mqh>
-// #include <Expert/ExpertBase.mqh>
-// #include <Expert/ExpertMoney.mqh>
-// #include <Expert/ExpertSignal.mqh>
-// #include <Expert/ExpertTrade.mqh>
-// #include <Expert/ExpertTrailing.mqh>
-// #include <Expert/Money/MoneyFixedLot.mqh>
-// #include <Expert/Money/MoneyFixedMargin.mqh>
-// #include <Expert/Money/MoneyFixedRisk.mqh>
-// #include <Expert/Money/MoneyNone.mqh>
-// #include <Expert/Money/MoneySizeOptimized.mqh>
-// #include <Expert/Signal/SignalAC.mqh>
-// #include <Expert/Signal/SignalAMA.mqh>
-// #include <Expert/Signal/SignalAO.mqh>
-// #include <Expert/Signal/SignalBearsPower.mqh>
-// #include <Expert/Signal/SignalBullsPower.mqh>
-// #include <Expert/Signal/SignalCCI.mqh>
-// #include <Expert/Signal/SignalDEMA.mqh>
-// #include <Expert/Signal/SignalDeMarker.mqh>
-// #include <Expert/Signal/SignalEnvelopes.mqh>
-// #include <Expert/Signal/SignalFrAMA.mqh>
-// #include <Expert/Signal/SignalITF.mqh>
-// #include <Expert/Signal/SignalMA.mqh>
-// #include <Expert/Signal/SignalMACD.mqh>
-// #include <Expert/Signal/SignalRSI.mqh>
-// #include <Expert/Signal/SignalRVI.mqh>
-// #include <Expert/Signal/SignalSAR.mqh>
-// #include <Expert/Signal/SignalStoch.mqh>
-// #include <Expert/Signal/SignalTEMA.mqh>
-// #include <Expert/Signal/SignalTRIX.mqh>
-// #include <Expert/Signal/SignalWPR.mqh>
-// #include <Expert/Trailing/TrailingFixedPips.mqh>
-// #include <Expert/Trailing/TrailingMA.mqh>
-// #include <Expert/Trailing/TrailingNone.mqh>
-// #include <Expert/Trailing/TrailingParabolicSAR.mqh>
+#include <Expert/Expert.mqh>
+#include <Expert/ExpertBase.mqh>
+#include <Expert/ExpertMoney.mqh>
+#include <Expert/ExpertSignal.mqh>
+#include <Expert/ExpertTrade.mqh>
+#include <Expert/ExpertTrailing.mqh>
+#include <Expert/Money/MoneyFixedLot.mqh>
+#include <Expert/Money/MoneyFixedMargin.mqh>
+#include <Expert/Money/MoneyFixedRisk.mqh>
+#include <Expert/Money/MoneyNone.mqh>
+#include <Expert/Money/MoneySizeOptimized.mqh>
+#include <Expert/Signal/SignalAC.mqh>
+#include <Expert/Signal/SignalAMA.mqh>
+#include <Expert/Signal/SignalAO.mqh>
+#include <Expert/Signal/SignalBearsPower.mqh>
+#include <Expert/Signal/SignalBullsPower.mqh>
+#include <Expert/Signal/SignalCCI.mqh>
+#include <Expert/Signal/SignalDEMA.mqh>
+#include <Expert/Signal/SignalDeMarker.mqh>
+#include <Expert/Signal/SignalEnvelopes.mqh>
+#include <Expert/Signal/SignalFrAMA.mqh>
+#include <Expert/Signal/SignalITF.mqh>
+#include <Expert/Signal/SignalMA.mqh>
+#include <Expert/Signal/SignalMACD.mqh>
+#include <Expert/Signal/SignalRSI.mqh>
+#include <Expert/Signal/SignalRVI.mqh>
+#include <Expert/Signal/SignalSAR.mqh>
+#include <Expert/Signal/SignalStoch.mqh>
+#include <Expert/Signal/SignalTEMA.mqh>
+#include <Expert/Signal/SignalTRIX.mqh>
+#include <Expert/Signal/SignalWPR.mqh>
+#include <Expert/Trailing/TrailingFixedPips.mqh>
+#include <Expert/Trailing/TrailingMA.mqh>
+#include <Expert/Trailing/TrailingNone.mqh>
+#include <Expert/Trailing/TrailingParabolicSAR.mqh>
 #include <Files/File.mqh>
 #include <Files/FileBMP.mqh>
 #include <Files/FileBin.mqh>
 #include <Files/FilePipe.mqh>
 #include <Files/FileTxt.mqh>
-// #include <Generic/ArrayList.mqh>
-// #include <Generic/HashMap.mqh>
-// #include <Generic/HashSet.mqh>
-// #include <Generic/Interfaces/ICollection.mqh>
-// #include <Generic/Interfaces/IComparable.mqh>
-// #include <Generic/Interfaces/IComparer.mqh>
-// #include <Generic/Interfaces/IEqualityComparable.mqh>
-// #include <Generic/Interfaces/IEqualityComparer.mqh>
-// #include <Generic/Interfaces/IList.mqh>
-// #include <Generic/Interfaces/IMap.mqh>
-// #include <Generic/Interfaces/ISet.mqh>
-// #include <Generic/Internal/ArrayFunction.mqh>
-// #include <Generic/Internal/CompareFunction.mqh>
-// #include <Generic/Internal/DefaultComparer.mqh>
-// #include <Generic/Internal/DefaultEqualityComparer.mqh>
-// #include <Generic/Internal/EqualFunction.mqh>
-// #include <Generic/Internal/HashFunction.mqh>
-// #include <Generic/Internal/Introsort.mqh>
-// #include <Generic/Internal/PrimeGenerator.mqh>
-// #include <Generic/LinkedList.mqh>
-// #include <Generic/Queue.mqh>
-// #include <Generic/RedBlackTree.mqh>
-// #include <Generic/SortedMap.mqh>
-// #include <Generic/SortedSet.mqh>
-// #include <Generic/Stack.mqh>
-// #include <Graphics/Axis.mqh>
-// #include <Graphics/ColorGenerator.mqh>
-// #include <Graphics/Curve.mqh>
-// #include <Graphics/Graphic.mqh>
-// #include <Indicators/BillWilliams.mqh>
-// #include <Indicators/Custom.mqh>
-// #include <Indicators/Indicator.mqh>
-// #include <Indicators/Indicators.mqh>
-// #include <Indicators/Oscilators.mqh>
-// #include <Indicators/Series.mqh>
-// #include <Indicators/TimeSeries.mqh>
-// #include <Indicators/Trend.mqh>
-// #include <Indicators/Volumes.mqh>
+#include <Generic/ArrayList.mqh>
+#include <Generic/HashMap.mqh>
+#include <Generic/HashSet.mqh>
+#include <Generic/Interfaces/ICollection.mqh>
+#include <Generic/Interfaces/IComparable.mqh>
+#include <Generic/Interfaces/IComparer.mqh>
+#include <Generic/Interfaces/IEqualityComparable.mqh>
+#include <Generic/Interfaces/IEqualityComparer.mqh>
+#include <Generic/Interfaces/IList.mqh>
+#include <Generic/Interfaces/IMap.mqh>
+#include <Generic/Interfaces/ISet.mqh>
+#include <Generic/Internal/ArrayFunction.mqh>
+#include <Generic/Internal/CompareFunction.mqh>
+#include <Generic/Internal/DefaultComparer.mqh>
+#include <Generic/Internal/DefaultEqualityComparer.mqh>
+#include <Generic/Internal/EqualFunction.mqh>
+#include <Generic/Internal/HashFunction.mqh>
+#include <Generic/Internal/Introsort.mqh>
+#include <Generic/Internal/PrimeGenerator.mqh>
+#include <Generic/LinkedList.mqh>
+#include <Generic/Queue.mqh>
+#include <Generic/RedBlackTree.mqh>
+#include <Generic/SortedMap.mqh>
+#include <Generic/SortedSet.mqh>
+#include <Generic/Stack.mqh>
+#include <Graphics/Axis.mqh>
+#include <Graphics/ColorGenerator.mqh>
+#include <Graphics/Curve.mqh>
+#include <Graphics/Graphic.mqh>
+#include <Indicators/BillWilliams.mqh>
+#include <Indicators/Custom.mqh>
+#include <Indicators/Indicator.mqh>
+#include <Indicators/Indicators.mqh>
+#include <Indicators/Oscilators.mqh>
+#include <Indicators/Series.mqh>
+#include <Indicators/TimeSeries.mqh>
+#include <Indicators/Trend.mqh>
+#include <Indicators/Volumes.mqh>
 // #include <Math/Alglib/alglib.mqh>
 // #include <Math/Alglib/alglibinternal.mqh>
 // #include <Math/Alglib/alglibmisc.mqh>
@@ -213,7 +213,7 @@
 #include <Trade/SymbolInfo.mqh>
 #include <Trade/TerminalInfo.mqh>
 #include <Trade/Trade.mqh>
-// #include <VirtualKeys.mqh>
+#include <VirtualKeys.mqh>
 // #include <WinAPI/errhandlingapi.mqh>
 // #include <WinAPI/fileapi.mqh>
 // #include <WinAPI/handleapi.mqh>

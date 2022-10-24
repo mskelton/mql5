@@ -67,11 +67,9 @@ public:
   template <typename T> bool ReadEnum(T &value);
 };
 
-CFileBin::CFileBin(void) {
-}
+CFileBin::CFileBin(void) {}
 
-CFileBin::~CFileBin(void) {
-}
+CFileBin::~CFileBin(void) {}
 
 int CFileBin::Open(const string file_name, const int open_flags) {
   return (CFile::Open(file_name, open_flags | FILE_BIN));

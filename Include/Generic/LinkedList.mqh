@@ -4,6 +4,8 @@
 #include <Generic/Interfaces/ICollection.mqh>
 #include <Generic/Internal/EqualFunction.mqh>
 
+template <typename T> class CLinkedList;
+
 template <typename T> class CLinkedListNode {
 protected:
   CLinkedList<T> *m_list;
@@ -12,19 +14,18 @@ protected:
   T m_item;
 
 public:
-  CLinkedListNode(T value) ;
-  CLinkedListNode(CLinkedList<T> *list, T value)
-      ;
-  ~CLinkedListNode(void) ;
+  CLinkedListNode(T value);
+  CLinkedListNode(CLinkedList<T> *list, T value);
+  ~CLinkedListNode(void);
 
-  CLinkedList<T> *List(void) ;
-  void List(CLinkedList<T> *value) ;
-  CLinkedListNode<T> *Next(void) ;
-  void Next(CLinkedListNode<T> *value) ;
-  CLinkedListNode<T> *Previous(void) ;
-  void Previous(CLinkedListNode<T> *value) ;
-  T Value(void) ;
-  void Value(T value) ;
+  CLinkedList<T> *List(void);
+  void List(CLinkedList<T> *value);
+  CLinkedListNode<T> *Next(void);
+  void Next(CLinkedListNode<T> *value);
+  CLinkedListNode<T> *Previous(void);
+  void Previous(CLinkedListNode<T> *value);
+  T Value(void);
+  void Value(T value);
 };
 
 template <typename T> class CLinkedList : public ICollection<T> {
@@ -49,7 +50,7 @@ public:
   bool AddLast(CLinkedListNode<T> *node);
 
   int Count(void);
-  CLinkedListNode<T> *Head(void) ;
+  CLinkedListNode<T> *Head(void);
   CLinkedListNode<T> *First(void);
   CLinkedListNode<T> *Last(void);
   bool Contains(T item);
@@ -73,35 +74,5 @@ private:
   void InternalInsertNodeToEmptyList(CLinkedListNode<T> *new_node);
   void InternalRemoveNode(CLinkedListNode<T> *node);
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #endif

@@ -6,10 +6,10 @@
 
 template <typename T> class CDefaultComparer : public IComparer<T> {
 public:
-  CDefaultComparer(void) ;
-  ~CDefaultComparer(void) ;
+  CDefaultComparer(void);
+  ~CDefaultComparer(void);
 
-  int Compare(T x, T y) ;
+  int Compare(T x, T y);
 };
 
 #endif

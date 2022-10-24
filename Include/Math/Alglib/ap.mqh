@@ -113,6 +113,7 @@ public:
 
 
 
+
 class CHighQualityRandState {
 public:
   int m_s1;
@@ -179,6 +180,7 @@ public:
 
 
 
+
 class CMath {
 public:
   static bool m_first_call;
@@ -201,6 +203,7 @@ public:
   static al_complex Conj(const al_complex &z);
   static al_complex Csqr(const al_complex &z);
 };
+
 
 
 
@@ -267,6 +270,7 @@ public:
 
   string Get_String(void);
 };
+
 
 
 

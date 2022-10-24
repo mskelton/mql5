@@ -1566,7 +1566,11 @@ struct WGLSWAP {
   uint uiFlags;
 };
 
-union DISPLAYCONFIG_MODE ;
+union DISPLAYCONFIG_MODE {
+  DISPLAYCONFIG_TARGET_MODE targetMode;
+  DISPLAYCONFIG_SOURCE_MODE sourceMode;
+  DISPLAYCONFIG_DESKTOP_IMAGE_INFO desktopImageInfo;
+};
 
 struct DISPLAYCONFIG_MODE_INFO {
   DISPLAYCONFIG_MODE_INFO_TYPE infoType;
@@ -1575,7 +1579,6 @@ struct DISPLAYCONFIG_MODE_INFO {
   DISPLAYCONFIG_MODE mode;
 };
 
-#import "gdi32.dll"
 int AbortDoc(HANDLE hdc);
 int AbortPath(HANDLE hdc);
 HANDLE AddFontMemResourceEx(PVOID file_view, uint size, PVOID resrved,
@@ -1760,7 +1763,7 @@ uint GetGlyphIndicesW(HANDLE hdc, const string lpstr, int c, ushort pgi[],
 uint GetGlyphOutlineW(HANDLE hdc, uint symbol, uint format, GLYPHMETRICS &lpgm,
                       uint buffer, PVOID buffer, MAT2 &lpmat2);
 int GetGraphicsMode(HANDLE hdc);
-int GetICMProfileW(HANDLE hdc, uint buf_size, ushort &filename[]);
+int GetICMProfileW(HANDLE hdc, uint &buf_size, ushort filename[]);
 uint GetKerningPairsW(HANDLE hdc, uint pairs, KERNINGPAIR &kern_pair);
 uint GetLayout(HANDLE hdc);
 int GetLogColorSpaceW(HANDLE color_space, LOGCOLORSPACEW &buffer, uint size);
@@ -1797,9 +1800,9 @@ int GetTextCharset(HANDLE hdc);
 int GetTextCharsetInfo(HANDLE hdc, FONTSIGNATURE &sig, uint flags);
 uint GetTextColor(HANDLE hdc);
 int GetTextExtentExPointI(HANDLE hdc, ushort str[], int str_size,
-                          int max_extent, int fit, int &dx[], SIZE &size);
+                          int max_extent, int &fit, int dx[], SIZE &size);
 int GetTextExtentExPointW(HANDLE hdc, const string str, int str, int max_extent,
-                          int fit, int &dx[], SIZE &size);
+                          int &fit, int dx[], SIZE &size);
 int GetTextExtentPoint32W(HANDLE hdc, const string str, int c, SIZE &psizl);
 int GetTextExtentPointI(HANDLE hdc, ushort in[], int cgi, SIZE &psize);
 int GetTextExtentPointW(HANDLE hdc, const string str, int c, SIZE &lpsz);
@@ -1839,12 +1842,12 @@ int PlgBlt(HANDLE dest, POINT &point, HANDLE src, int src, int src, int width,
            int height, HANDLE mask, int mask, int mask);
 int PolyBezier(HANDLE hdc, POINT &apt, uint cpt);
 int PolyBezierTo(HANDLE hdc, POINT &apt, uint cpt);
-int PolyDraw(HANDLE hdc, const POINT apt, const uchar &aj[], int cpt);
+int PolyDraw(HANDLE hdc, const POINT &apt, const uchar aj[], int cpt);
 int Polygon(HANDLE hdc, const POINT &apt, int cpt);
 int Polyline(HANDLE hdc, const POINT &apt, int cpt);
 int PolylineTo(HANDLE hdc, const POINT &apt, uint cpt);
-int PolyPolygon(HANDLE hdc, const POINT apt, int &asz[], int csz);
-int PolyPolyline(HANDLE hdc, const POINT apt, uint &asz[], uint csz);
+int PolyPolygon(HANDLE hdc, const POINT &apt, int asz[], int csz);
+int PolyPolyline(HANDLE hdc, const POINT &apt, uint asz[], uint csz);
 int PolyTextOutW(HANDLE hdc, POLYTEXTW &ppt, int nstrings);
 int PtInRegion(HANDLE hrgn, int x, int y);
 int PtVisible(HANDLE hdc, int x, int y);
@@ -1934,9 +1937,7 @@ int UpdateColors(HANDLE hdc);
 int UpdateICMRegKeyW(uint reserved, string lpszCMID, string file_name,
                      uint command);
 int WidenPath(HANDLE hdc);
-#import
 
-#import "Opengl32.dll"
 int wglCopyContext(HANDLE, HANDLE, uint);
 HANDLE wglCreateContext(HANDLE);
 HANDLE wglCreateLayerContext(HANDLE, int);
@@ -1955,6 +1956,5 @@ uint wglSwapMultipleBuffers(uint, WGLSWAP &);
 int wglUseFontBitmapsW(HANDLE, uint, uint, uint);
 int wglUseFontOutlinesW(HANDLE, uint, uint, uint, float, float, int,
                         GLYPHMETRICSFLOAT &);
-#import
 
 #endif

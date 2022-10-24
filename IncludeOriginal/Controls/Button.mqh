@@ -63,8 +63,7 @@ CButton::CButton(void) {
   m_color_border = CONTROLS_BUTTON_COLOR_BORDER;
 }
 
-CButton::~CButton(void) {
-}
+CButton::~CButton(void) {}
 
 bool CButton::Create(const long chart, const string name, const int subwin,
                      const int x1, const int y1, const int x2, const int y2) {

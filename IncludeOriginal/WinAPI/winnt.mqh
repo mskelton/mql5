@@ -3231,16 +3231,13 @@ struct SYSTEM_CPU_SET_INFORMATION {
   ulong AllocationTag;
 };
 
-#import "kernel32.dll"
 ushort RtlCaptureStackBackTrace(uint frames_to_skip, uint frames_to_capture,
                                 PVOID &back_trace[], uint &back_trace_hash);
 ulong RtlCompareMemory(const uchar &source1[], const uchar &source2[],
                        ulong length);
 ulong VerSetConditionMask(ulong condition_mask, uint type_mask,
                           uchar condition);
-#import
 
-#import "Win32k.sys"
 void RtlCaptureContext(PVOID context_record);
 void RtlUnwind(PVOID target_frame, PVOID target_ip,
                EXCEPTION_RECORD &exception_record, PVOID return_value);
@@ -3275,6 +3272,5 @@ void RtlUnwindEx(PVOID target_frame, PVOID target_ip,
                  EXCEPTION_RECORD &exception_record, PVOID return_value,
                  PVOID context_record, PVOID history_table);
 PVOID RtlPcToFileHeader(PVOID pc_value, PVOID &base_of_image);
-#import
 
 #endif

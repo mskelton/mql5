@@ -1,23 +1,31 @@
 #ifndef INTROSORT_H
 #define INTROSORT_H
 
-template <typename TKey, typename TItem> struct Introsort ;
+#include <Generic/Interfaces/IComparer.mqh>
 
-template <typename TKey, typename TItem>
+template <typename TKey, typename TItem> struct Introsort {
+public:
+  IComparer<TKey> *comparer;
+  TKey keys;
+  TItem items;
 
-template <typename TKey, typename TItem>
+  Introsort(void);
+  ~Introsort(void);
 
-template <typename TKey, typename TItem>
+  void Sort(const int index, const int length);
 
+private:
+  void IntroSort(const int lo, const int hi, int depthLimit);
+  int PickPivotAndPartition(const int lo, const int hi);
+  void InsertionSort(const int lo, const int hi);
 
-template <typename TKey, typename TItem>
+  void Heapsort(const int lo, const int hi);
+  void DownHeap(const int i, const int n, const int lo);
 
-template <typename TKey, typename TItem>
+  void SwapIfGreaterWithItems(const int a, const int b);
+  void Swap(const int i, const int j);
 
-template <typename TKey, typename TItem>
-
-template <typename TKey, typename TItem>
-
-template <typename TKey, typename TItem>
+  int FloorLog2(int n) const;
+};
 
 #endif

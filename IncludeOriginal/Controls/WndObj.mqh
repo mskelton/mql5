@@ -110,11 +110,9 @@ bool CWndObj::OnEvent(const int id, const long &lparam, const double &dparam,
 CWndObj::CWndObj(void)
     : m_color(clrNONE), m_color_background(clrNONE), m_color_border(clrNONE),
       m_font(CONTROLS_FONT_NAME), m_font_size(CONTROLS_FONT_SIZE), m_zorder(0),
-      m_undeletable(true), m_unchangeable(true), m_unmoveable(true) {
-}
+      m_undeletable(true), m_unchangeable(true), m_unmoveable(true) {}
 
-CWndObj::~CWndObj(void) {
-}
+CWndObj::~CWndObj(void) {}
 
 bool CWndObj::Text(const string value) {
 

@@ -20,7 +20,9 @@ rl.on("line", (line) => {
     line.startsWith("template <typename T> class") ||
     line.startsWith("interface") ||
     line.startsWith("template <typename T> interface") ||
+    /^template <.*> struct/.test(line) ||
     line.startsWith("enum") ||
+    line.startsWith("union") ||
     line.startsWith("struct")
   ) {
     lines.push(line.replace("interface ", "class "))
@@ -34,20 +36,26 @@ rl.on("line", (line) => {
       let content = line
         .replace(/:.+/, ";")
         .replace(/\{\}?/, ";")
-        .replace(/\&(.+?)\[\]/g, (group) => group.substring(1))
+        .replace(/\&([A-z\d]+?)\[\]/g, (group) => group.substring(1))
         .replace("[];", ";")
 
       if (content.trimStart().startsWith("#include")) {
         content = content.replace(/\\/g, "/")
       }
 
-      lines.push(content)
+      if (line === "uint GetLastError(void);") {
+        lines.push("// " + content)
+      } else if (!content.trimStart().startsWith("#import")) {
+        lines.push(content)
+      }
     } else {
       // Class method implementations are removed completely. Add a "fake" block
-      blocks.push("::")
+      if (!line.trimEnd().endsWith(";")) {
+        blocks.push("::")
+      }
 
       // Remove template decl
-      if (lines.at(-1).trim() === "template <typename T>") {
+      if (/template <.*>/.test(lines.at(-1).trim())) {
         lines.pop()
       }
     }

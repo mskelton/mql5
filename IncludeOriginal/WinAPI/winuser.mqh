@@ -1101,7 +1101,6 @@ struct INPUT {
   INPUT_TYPE in;
 };
 
-#import "user32.dll"
 HANDLE ActivateKeyboardLayout(HANDLE hkl, uint Flags);
 int AddClipboardFormatListener(HANDLE hwnd);
 int AdjustWindowRect(RECT &rect, uint style, int menu);
@@ -1839,6 +1838,5 @@ HANDLE WindowFromPhysicalPoint(long point);
 HANDLE WindowFromPoint(long point);
 int WinHelpW(HANDLE wnd_main, const string help, uint command, ulong data);
 int wvsprintfW(ushort &[], const string, PVOID &arglist[]);
-#import
 
 #endif

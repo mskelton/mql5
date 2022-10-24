@@ -81,12 +81,12 @@ public:
   static void AllocComplex(CSerializer &s, al_complex &v);
   static void SerializeComplex(CSerializer &s, al_complex &v);
   static al_complex UnserializeComplex(CSerializer &s);
-  static void AllocRealArray(CSerializer s, double &v[], int n);
-  static void SerializeRealArray(CSerializer s, double &v[], int n);
-  static void UnserializeRealArray(CSerializer s, double &v[]);
-  static void AllocIntegerArray(CSerializer s, int &v[], int n);
-  static void SerializeIntegerArray(CSerializer s, int &v[], int n);
-  static void UnserializeIntegerArray(CSerializer s, int &v[]);
+  static void AllocRealArray(CSerializer &s, double v[], int n);
+  static void SerializeRealArray(CSerializer &s, double v[], int n);
+  static void UnserializeRealArray(CSerializer &s, double v[]);
+  static void AllocIntegerArray(CSerializer &s, int v[], int n);
+  static void SerializeIntegerArray(CSerializer &s, int v[], int n);
+  static void UnserializeIntegerArray(CSerializer &s, int v[]);
   static void AllocRealMatrix(CSerializer &s, CMatrixDouble &v, int n0, int n1);
   static void SerializeRealMatrix(CSerializer &s, CMatrixDouble &v, int n0,
                                   int n1);
@@ -315,7 +315,7 @@ public:
   static void HermitianMatrixVectorMultiply(CMatrixComplex &a,
                                             const bool isupper, const int i1,
                                             const int i2, al_complex x[],
-                                            al_complex alpha, al_complex &y[]);
+                                            al_complex &alpha, al_complex y[]);
   static void HermitianRank2Update(CMatrixComplex &a, const bool isupper,
                                    const int i1, const int i2, al_complex x[],
                                    al_complex y[], al_complex t[],
@@ -355,10 +355,10 @@ public:
   static void ComplexGenerateReflection(al_complex x[], const int n,
                                         al_complex &tau);
   static void ComplexApplyReflectionFromTheLeft(
-      CMatrixComplex c, al_complex &tau, al_complex &v[], const int m1,
+      CMatrixComplex &c, al_complex &tau, al_complex v[], const int m1,
       const int m2, const int n1, const int n2, al_complex work[]);
   static void ComplexApplyReflectionFromTheRight(
-      CMatrixComplex c, al_complex &tau, al_complex &v[], const int m1,
+      CMatrixComplex &c, al_complex &tau, al_complex v[], const int m1,
       const int m2, const int n1, const int n2, al_complex work[]);
 };
 
@@ -394,11 +394,11 @@ public:
   static void ApplyRotationsFromTheLeft(const bool isforward, const int m1,
                                         const int m2, const int n1,
                                         const int n2, double c[], double s[],
-                                        CMatrixDouble a, double &work[]);
+                                        CMatrixDouble &a, double work[]);
   static void ApplyRotationsFromTheRight(const bool isforward, const int m1,
                                          const int m2, const int n1,
                                          const int n2, double c[], double s[],
-                                         CMatrixDouble a, double &work[]);
+                                         CMatrixDouble &a, double work[]);
   static void GenerateRotation(const double f, const double g, double &cs,
                                double &sn, double &r);
 };
@@ -413,7 +413,7 @@ private:
   static void InternalAuxSchur(const bool wantt, const bool wantz, const int n,
                                const int ilo, const int ihi, CMatrixDouble &h,
                                double wr[], double wi[], const int iloz,
-                               const int ihiz, CMatrixDouble z, double &work[],
+                               const int ihiz, CMatrixDouble &z, double work[],
                                double workv3[], double workc1[],
                                double works1[], int &info);
   static void Aux2x2Schur(double &a, double &b, double &c, double &d,
@@ -447,10 +447,10 @@ public:
   CTrLinSolve(void);
   ~CTrLinSolve(void);
 
-  static void RMatrixTrSafeSolve(CMatrixDouble a, const int n, double &x[],
+  static void RMatrixTrSafeSolve(CMatrixDouble &a, const int n, double x[],
                                  double &s, const bool isupper,
                                  const bool istrans, const bool isunit);
-  static void SafeSolveTriangular(CMatrixDouble a, const int n, double &x[],
+  static void SafeSolveTriangular(CMatrixDouble &a, const int n, double x[],
                                   double &s, const bool isupper,
                                   const bool istrans, const bool isunit,
                                   const bool normin, double cnorm[]);
@@ -591,9 +591,9 @@ public:
   ~CLinMin(void);
 
   static void LinMinNormalized(double d[], double &stp, const int n);
-  static void MCSrch(const int n, double x[], double f, double &g[],
+  static void MCSrch(const int n, double x[], double &f, double g[],
                      double s[], double &stp, double stpmax, double gtol,
-                     int info, int &nfev, double &wa[], CLinMinState &state,
+                     int &info, int &nfev, double wa[], CLinMinState &state,
                      int &stage);
   static void ArmijoCreate(const int n, double x[], const double f,
                            double s[], const double stp, const double stpmax,
@@ -614,13 +614,14 @@ public:
 
 
 
+
 class COptServ {
 public:
   COptServ(void);
   ~COptServ(void);
 
   static void TrimPrepare(const double f, double &threshold);
-  static void TrimFunction(double f, double &g[], const int n,
+  static void TrimFunction(double &f, double g[], const int n,
                            const double threshold);
 };
 
@@ -702,6 +703,7 @@ public:
   static int FtBaseFindSmoothEven(const int n);
   static double FtBaseGetFlopEstimate(const int n);
 };
+
 
 
 

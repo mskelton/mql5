@@ -36,6 +36,4 @@ public:
   string InfoString(const ENUM_TERMINAL_INFO_STRING prop_id) const;
 };
 
-string
-
 #endif

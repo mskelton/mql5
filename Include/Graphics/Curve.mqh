@@ -92,13 +92,13 @@ public:
          const string name);
   ~CCurve(void);
 
-  void GetX(double x[]) const ;
-  void GetY(double y[]) const ;
-  double XMax(void) const ;
-  double XMin(void) const ;
-  double YMax(void) const ;
-  double YMin(void) const ;
-  int Size(void) const ;
+  void GetX(double x[]) const;
+  void GetY(double y[]) const;
+  double XMax(void) const;
+  double XMin(void) const;
+  double YMax(void) const;
+  double YMin(void) const;
+  int Size(void) const;
 
   void Update(const double y[]);
   void Update(const double x[], const double y[]);
@@ -106,67 +106,56 @@ public:
   void Update(CurveFunction function, const double from, const double to,
               const double step);
 
-  uint Color(void) const ;
-  int Type(void) const ;
-  string Name(void) const ;
-  bool Visible(void) const ;
-  void Color(const uint clr) ;
-  void Type(const int type) ;
-  void Name(const string name) ;
-  void Visible(const bool visible) ;
+  uint Color(void) const;
+  int Type(void) const;
+  string Name(void) const;
+  bool Visible(void) const;
+  void Color(const uint clr);
+  void Type(const int type);
+  void Name(const string name);
+  void Visible(const bool visible);
 
-  ENUM_LINE_STYLE LinesStyle(void) const ;
-  ENUM_LINE_END LinesEndStyle(void) const ;
-  int LinesWidth(void) const ;
-  bool LinesSmooth(void) const ;
-  double LinesSmoothTension(void) const ;
-  double LinesSmoothStep(void) const ;
-  void LinesStyle(ENUM_LINE_STYLE style) ;
-  void LinesEndStyle(ENUM_LINE_END end_style) ;
-  void LinesWidth(const int width) ;
-  void LinesSmooth(const bool smooth) ;
-  void LinesSmoothTension(const double tension) ;
-  void LinesSmoothStep(const double step) ;
+  ENUM_LINE_STYLE LinesStyle(void) const;
+  ENUM_LINE_END LinesEndStyle(void) const;
+  int LinesWidth(void) const;
+  bool LinesSmooth(void) const;
+  double LinesSmoothTension(void) const;
+  double LinesSmoothStep(void) const;
+  void LinesStyle(ENUM_LINE_STYLE style);
+  void LinesEndStyle(ENUM_LINE_END end_style);
+  void LinesWidth(const int width);
+  void LinesSmooth(const bool smooth);
+  void LinesSmoothTension(const double tension);
+  void LinesSmoothStep(const double step);
 
-  int PointsSize(void) const ;
-  ENUM_POINT_TYPE PointsType(void) const ;
-  bool PointsFill(void) const ;
-  uint PointsColor(void) const ;
-  void PointsSize(const int size) ;
-  void PointsType(ENUM_POINT_TYPE type) ;
-  void PointsFill(const bool fill) ;
-  void PointsColor(const uint clr) ;
+  int PointsSize(void) const;
+  ENUM_POINT_TYPE PointsType(void) const;
+  bool PointsFill(void) const;
+  uint PointsColor(void) const;
+  void PointsSize(const int size);
+  void PointsType(ENUM_POINT_TYPE type);
+  void PointsFill(const bool fill);
+  void PointsColor(const uint clr);
 
-  int StepsDimension(void) const ;
-  void StepsDimension(const int dimension) ;
+  int StepsDimension(void) const;
+  void StepsDimension(const int dimension);
 
-  int HistogramWidth(void) const ;
-  void HistogramWidth(const int width) ;
+  int HistogramWidth(void) const;
+  void HistogramWidth(const int width);
 
-  PlotFucntion CustomPlotFunction(void) const ;
-  void *CustomPlotCBData(void) const ;
-  void CustomPlotFunction(PlotFucntion func) ;
-  void CustomPlotCBData(void *cbdata) ;
+  PlotFucntion CustomPlotFunction(void) const;
+  void *CustomPlotCBData(void) const;
+  void CustomPlotFunction(PlotFucntion func);
+  void CustomPlotCBData(void *cbdata);
 
-  bool TrendLineVisible(void) const ;
-  uint TrendLineColor(void) const ;
-  void TrendLineVisible(const bool visible) ;
-  void TrendLineColor(const uint clr) ;
+  bool TrendLineVisible(void) const;
+  uint TrendLineColor(void) const;
+  void TrendLineVisible(const bool visible);
+  void TrendLineColor(const uint clr);
   void TrendLineCoefficients(double coefficients[]);
 
 protected:
   virtual void CalculateCoefficients(void);
 };
-
-
-
-
-
-
-
-
-
-
-
 
 #endif

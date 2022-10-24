@@ -433,7 +433,6 @@ struct SYSTEMTIME {
   ushort wMilliseconds;
 };
 
-#import "kernel32.dll"
 int ActivateActCtx(HANDLE act_ctx, PVOID &cookie);
 int ActivateActCtx(ACTCTXW &act_ctx, PVOID &cookie);
 ushort AddAtomW(const string str);
@@ -884,9 +883,7 @@ uint WriteTapemark(HANDLE device, uint tapemark_type, uint tapemark_count,
 uint WTSGetActiveConsoleSessionId(void);
 int ZombifyActCtx(HANDLE act_ctx);
 int ZombifyActCtx(ACTCTXW &act_ctx);
-#import
 
-#import "advapi32.dll"
 int AddConditionalAce(ACL &acl, uint ace_revision, uint AceFlags, uchar AceType,
                       uint AccessMask, SID &sid, string ConditionStr,
                       uint &ReturnLength);
@@ -945,6 +942,5 @@ int ReportEventW(HANDLE event_log, ushort &type, ushort &category,
                  uint data_size, const string &strings[], PVOID raw_data);
 uint WriteEncryptedFileRaw(PVOID import_callback, PVOID callback_context,
                            PVOID context);
-#import
 
 #endif

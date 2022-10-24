@@ -98,8 +98,7 @@ CSignalStoch::CSignalStoch(void)
       USE_SERIES_OPEN + USE_SERIES_HIGH + USE_SERIES_LOW + USE_SERIES_CLOSE;
 }
 
-CSignalStoch::~CSignalStoch(void) {
-}
+CSignalStoch::~CSignalStoch(void) {}
 
 bool CSignalStoch::ValidationSettings(void) {
 

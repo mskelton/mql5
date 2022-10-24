@@ -139,10 +139,11 @@ public:
   static void ODESolverRKCK(double y[], const int n, double x[], const int m,
                             const double eps, const double h,
                             CODESolverState &state);
-  static void ODESolverResults(CODESolverState state, int &m, double &xtbl[],
+  static void ODESolverResults(CODESolverState &state, int &m, double xtbl[],
                                CMatrixDouble &ytbl, CODESolverReport &rep);
   static bool ODESolverIteration(CODESolverState &state);
 };
+
 
 
 

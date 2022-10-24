@@ -47,7 +47,6 @@ struct SYSTEM_INFO {
   ushort wProcessorRevision;
 };
 
-#import "kernel32.dll"
 int GlobalMemoryStatusEx(MEMORYSTATUSEX &buffer);
 void GetSystemInfo(SYSTEM_INFO &system_info);
 void GetSystemTime(SYSTEMTIME &system_time);
@@ -102,6 +101,5 @@ int GetProcessorSystemCycleTime(
     ushort group, SYSTEM_PROCESSOR_CYCLE_TIME_INFORMATION buffer[],
     uint &returned_length);
 int SetComputerNameW(const string computer_name);
-#import
 
 #endif
