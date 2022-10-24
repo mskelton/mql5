@@ -12,9 +12,6 @@ public:
   virtual void Func(double x[], double &func, CObject &obj);
 };
 
-
-
-
 class CNDimensional_Grad {
 public:
   CNDimensional_Grad(void);
@@ -22,9 +19,6 @@ public:
 
   virtual void Grad(double x[], double &func, double grad[], CObject &obj);
 };
-
-
-
 
 class CNDimensional_Hess {
 public:
@@ -35,9 +29,6 @@ public:
                     CMatrixDouble &hess, CObject &obj);
 };
 
-
-
-
 class CNDimensional_FVec {
 public:
   CNDimensional_FVec(void);
@@ -45,9 +36,6 @@ public:
 
   virtual void FVec(double x[], double fi[], CObject &obj);
 };
-
-
-
 
 class CNDimensional_Jac {
 public:
@@ -57,9 +45,6 @@ public:
   virtual void Jac(double x[], double fi[], CMatrixDouble &jac, CObject &obj);
 };
 
-
-
-
 class CNDimensional_PFunc {
 public:
   CNDimensional_PFunc(void);
@@ -67,9 +52,6 @@ public:
 
   virtual void PFunc(double c[], double x[], double &func, CObject &obj);
 };
-
-
-
 
 class CNDimensional_PGrad {
 public:
@@ -80,9 +62,6 @@ public:
                      CObject &obj);
 };
 
-
-
-
 class CNDimensional_PHess {
 public:
   CNDimensional_PHess(void);
@@ -92,9 +71,6 @@ public:
                      CMatrixDouble &hess, CObject &obj);
 };
 
-
-
-
 class CNDimensional_ODE_RP {
 public:
   CNDimensional_ODE_RP(void);
@@ -102,9 +78,6 @@ public:
 
   virtual void ODE_RP(double y[], double x, double dy[], CObject &obj);
 };
-
-
-
 
 class CIntegrator1_Func {
 public:
@@ -115,9 +88,6 @@ public:
                         CObject &obj);
 };
 
-
-
-
 class CNDimensional_Rep {
 public:
   CNDimensional_Rep(void);
@@ -125,8 +95,5 @@ public:
 
   virtual void Rep(double arg[], double func, CObject &obj);
 };
-
-
-
 
 #endif

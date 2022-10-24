@@ -22,18 +22,18 @@ public:
   CSeries(void);
   ~CSeries(void);
 
-  string Name(void) const ;
-  int BuffersTotal(void) const ;
-  int BufferSize(void) const ;
-  int Timeframe(void) const ;
-  string Symbol(void) const ;
-  ENUM_TIMEFRAMES Period(void) const ;
+  string Name(void) const;
+  int BuffersTotal(void) const;
+  int BufferSize(void) const;
+  int Timeframe(void) const;
+  string Symbol(void) const;
+  ENUM_TIMEFRAMES Period(void) const;
   string PeriodDescription(const int val = 0);
-  void RefreshCurrent(const bool flag) ;
+  void RefreshCurrent(const bool flag);
 
   virtual bool BufferResize(const int size);
 
-  virtual void Refresh(const int flags) ;
+  virtual void Refresh(const int flags);
 
 protected:
   bool SetSymbolPeriod(const string symbol, const ENUM_TIMEFRAMES period);
@@ -43,15 +43,6 @@ protected:
   bool CheckTerminalHistory(const int size);
   bool CheckServerHistory(const int size);
 };
-
-
-
-
-
-
-
-
-
 
 class CDoubleBuffer : public CArrayDouble {
 protected:
@@ -63,18 +54,14 @@ public:
   CDoubleBuffer(void);
   ~CDoubleBuffer(void);
 
-  void Size(const int size) ;
+  void Size(const int size);
 
   double At(const int index) const;
 
-  virtual bool Refresh(void) ;
-  virtual bool RefreshCurrent(void) ;
+  virtual bool Refresh(void);
+  virtual bool RefreshCurrent(void);
 
   void SetSymbolPeriod(const string symbol, const ENUM_TIMEFRAMES period);
 };
-
-
-
-
 
 #endif

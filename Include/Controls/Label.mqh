@@ -16,22 +16,15 @@ public:
                       const int x1, const int y1, const int x2, const int y2);
 
 protected:
-  virtual bool OnSetText(void) ;
-  virtual bool OnSetColor(void) ;
-  virtual bool OnSetFont(void) ;
-  virtual bool OnSetFontSize(void) ;
+  virtual bool OnSetText(void);
+  virtual bool OnSetColor(void);
+  virtual bool OnSetFont(void);
+  virtual bool OnSetFontSize(void);
 
   virtual bool OnCreate(void);
   virtual bool OnShow(void);
   virtual bool OnHide(void);
   virtual bool OnMove(void);
 };
-
-
-
-
-
-
-
 
 #endif

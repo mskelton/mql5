@@ -21,26 +21,26 @@ public:
   virtual bool Create(const long chart, const string name, const int subwin,
                       const int x1, const int y1, const int x2, const int y2);
 
-  int Border(void) const ;
+  int Border(void) const;
   bool Border(const int value);
   bool BmpNames(const string off = "", const string on = "");
-  string BmpOffName(void) const ;
+  string BmpOffName(void) const;
   bool BmpOffName(const string name);
-  string BmpOnName(void) const ;
+  string BmpOnName(void) const;
   bool BmpOnName(const string name);
-  string BmpPassiveName(void) const ;
+  string BmpPassiveName(void) const;
   bool BmpPassiveName(const string name);
-  string BmpActiveName(void) const ;
+  string BmpActiveName(void) const;
   bool BmpActiveName(const string name);
 
-  bool Pressed(void) const ;
-  bool Pressed(const bool pressed) ;
+  bool Pressed(void) const;
+  bool Pressed(const bool pressed);
 
-  bool Locking(void) const ;
+  bool Locking(void) const;
   void Locking(const bool locking);
 
 protected:
-  virtual bool OnSetZOrder(void) ;
+  virtual bool OnSetZOrder(void);
 
   virtual bool OnCreate(void);
   virtual bool OnShow(void);
@@ -53,24 +53,5 @@ protected:
   virtual bool OnMouseDown(void);
   virtual bool OnMouseUp(void);
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #endif

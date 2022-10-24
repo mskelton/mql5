@@ -11,7 +11,7 @@ public:
   bool Create(long chart_id, const string name, const int window,
               const datetime time, const double price);
 
-  virtual int Type(void) const override ;
+  virtual int Type(void) const override;
 
   double Angle(void) const;
   bool Angle(const double angle) const;
@@ -26,19 +26,6 @@ public:
   virtual bool Load(const int file_handle);
 };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 class CChartObjectLabel : public CChartObjectText {
 public:
   CChartObjectLabel(void);
@@ -47,7 +34,7 @@ public:
   bool Create(long chart_id, const string name, const int window, const int X,
               const int Y);
 
-  virtual int Type(void) const ;
+  virtual int Type(void) const;
 
   int X_Distance(void) const;
   bool X_Distance(const int X) const;
@@ -59,27 +46,14 @@ public:
   ENUM_BASE_CORNER Corner(void) const;
   bool Corner(const ENUM_BASE_CORNER corner) const;
 
-  datetime Time(const int point) const ;
-  bool Time(const int point, const datetime time) const ;
-  double Price(const int point) const ;
-  bool Price(const int point, const double price) const ;
+  datetime Time(const int point) const;
+  bool Time(const int point, const datetime time) const;
+  double Price(const int point) const;
+  bool Price(const int point, const double price) const;
 
   virtual bool Save(const int file_handle);
   virtual bool Load(const int file_handle);
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 class CChartObjectEdit : public CChartObjectLabel {
 public:
@@ -89,12 +63,12 @@ public:
   bool Create(long chart_id, const string name, const int window, const int X,
               const int Y, const int sizeX, const int sizeY);
 
-  virtual int Type(void) const override ;
+  virtual int Type(void) const override;
 
   bool X_Size(const int X) const;
-  int X_Size(void) const ;
+  int X_Size(void) const;
   bool Y_Size(const int Y) const;
-  int Y_Size(void) const ;
+  int Y_Size(void) const;
   color BackColor(void) const;
   bool BackColor(const color new_color) const;
   color BorderColor(void) const;
@@ -104,34 +78,19 @@ public:
   ENUM_ALIGN_MODE TextAlign(void) const;
   bool TextAlign(const ENUM_ALIGN_MODE align) const;
 
-  bool Angle(const double angle) const ;
-  double Angle(void) const ;
+  bool Angle(const double angle) const;
+  double Angle(void) const;
 
   virtual bool Save(const int file_handle);
   virtual bool Load(const int file_handle);
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 class CChartObjectButton : public CChartObjectEdit {
 public:
   CChartObjectButton(void);
   ~CChartObjectButton(void);
 
-  virtual int Type(void) const override ;
+  virtual int Type(void) const override;
 
   bool State(void) const;
   bool State(const bool state) const;
@@ -139,12 +98,6 @@ public:
   virtual bool Save(const int file_handle);
   virtual bool Load(const int file_handle);
 };
-
-
-
-
-
-
 
 class CChartObjectRectLabel : public CChartObjectLabel {
 public:
@@ -154,33 +107,22 @@ public:
   bool Create(long chart_id, const string name, const int window, const int X,
               const int Y, const int sizeX, const int sizeY);
 
-  virtual int Type(void) const ;
+  virtual int Type(void) const;
 
   bool X_Size(const int X) const;
-  int X_Size(void) const ;
+  int X_Size(void) const;
   bool Y_Size(const int Y) const;
-  int Y_Size(void) const ;
+  int Y_Size(void) const;
   color BackColor(void) const;
   bool BackColor(const color new_color) const;
   ENUM_BORDER_TYPE BorderType(void) const;
   bool BorderType(const ENUM_BORDER_TYPE flag) const;
 
-  bool Angle(const double angle) const ;
-  double Angle(void) const ;
+  bool Angle(const double angle) const;
+  double Angle(void) const;
 
   virtual bool Save(const int file_handle);
   virtual bool Load(const int file_handle);
 };
-
-
-
-
-
-
-
-
-
-
-
 
 #endif

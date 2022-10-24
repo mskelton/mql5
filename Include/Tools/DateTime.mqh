@@ -7,15 +7,15 @@ struct CDateTime : public MqlDateTime {
   string ShortMonthName(const int num) const;
   string DayName(const int num) const;
   string ShortDayName(const int num) const;
-  string MonthName(void) const ;
-  string ShortMonthName(void) const ;
-  string DayName(void) const ;
-  string ShortDayName(void) const ;
+  string MonthName(void) const;
+  string ShortMonthName(void) const;
+  string DayName(void) const;
+  string ShortDayName(void) const;
   int DaysInMonth(void) const;
 
-  datetime DateTime(void) ;
-  void DateTime(const datetime value) ;
-  void DateTime(const MqlDateTime &value) ;
+  datetime DateTime(void);
+  void DateTime(const datetime value);
+  void DateTime(const MqlDateTime &value);
   void Date(const datetime value);
   void Date(const MqlDateTime &value);
   void Time(const datetime value);
@@ -43,33 +43,5 @@ struct CDateTime : public MqlDateTime {
 
   void DayCheck(void);
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #endif

@@ -19,21 +19,13 @@ public:
                                     CFtPlan &plan);
 };
 
-
-
-
-
-
-
-
-
 class CConv {
 public:
   CConv(void);
   ~CConv(void);
 
-  static void ConvC1D(al_complex a[], const int m, al_complex b[],
-                      const int n, al_complex r[]);
+  static void ConvC1D(al_complex a[], const int m, al_complex b[], const int n,
+                      al_complex r[]);
   static void ConvC1DInv(al_complex a[], const int m, al_complex b[],
                          const int n, al_complex r[]);
   static void ConvC1DCircular(al_complex s[], const int m, al_complex r[],
@@ -44,28 +36,15 @@ public:
                       double r[]);
   static void ConvR1DInv(double a[], const int m, double b[], const int n,
                          double r[]);
-  static void ConvR1DCircular(double s[], const int m, double r[],
-                              const int n, double c[]);
+  static void ConvR1DCircular(double s[], const int m, double r[], const int n,
+                              double c[]);
   static void ConvR1DCircularInv(double a[], const int m, double b[],
                                  const int n, double r[]);
-  static void ConvC1DX(al_complex a[], const int m, al_complex b[],
-                       const int n, const bool circular, int alg, int q,
-                       al_complex r[]);
+  static void ConvC1DX(al_complex a[], const int m, al_complex b[], const int n,
+                       const bool circular, int alg, int q, al_complex r[]);
   static void ConvR1DX(double a[], const int m, double b[], const int n,
                        const bool circular, int alg, int q, double r[]);
 };
-
-
-
-
-
-
-
-
-
-
-
-
 
 class CCorr {
 public:
@@ -83,12 +62,6 @@ public:
                               const int n, double c[]);
 };
 
-
-
-
-
-
-
 class CFastHartleyTransform {
 public:
   CFastHartleyTransform(void);
@@ -97,9 +70,5 @@ public:
   static void FHTR1D(double a[], const int n);
   static void FHTR1DInv(double a[], const int n);
 };
-
-
-
-
 
 #endif

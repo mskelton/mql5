@@ -16,17 +16,14 @@ public:
   CSignalITF(void);
   ~CSignalITF(void);
 
-  void GoodMinuteOfHour(int value) ;
-  void BadMinutesOfHour(long value) ;
-  void GoodHourOfDay(int value) ;
-  void BadHoursOfDay(int value) ;
-  void GoodDayOfWeek(int value) ;
-  void BadDaysOfWeek(int value) ;
+  void GoodMinuteOfHour(int value);
+  void BadMinutesOfHour(long value);
+  void GoodHourOfDay(int value);
+  void BadHoursOfDay(int value);
+  void GoodDayOfWeek(int value);
+  void BadDaysOfWeek(int value);
 
   virtual double Direction(void);
 };
-
-
-
 
 #endif

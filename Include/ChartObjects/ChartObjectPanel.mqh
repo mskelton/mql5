@@ -18,31 +18,21 @@ public:
 
   bool Attach(CChartObjectLabel *chart_object);
   bool X_Distance(const int X);
-  int X_Distance(void) const ;
+  int X_Distance(void) const;
   bool Y_Distance(const int Y);
-  int Y_Distance(void) const ;
+  int Y_Distance(void) const;
   int X_Size() const;
-  int X_Size(const int Y) const ;
+  int X_Size(const int Y) const;
   int Y_Size() const;
-  int Y_Size(const int Y) const ;
+  int Y_Size(const int Y) const;
 
-  int Timeframes(void) const ;
+  int Timeframes(void) const;
   virtual bool Timeframes(const int timeframes);
   bool State(const bool state);
-  bool State(void) const ;
+  bool State(void) const;
   bool CheckState();
 
 protected:
 };
-
-
-
-
-
-
-
-
-
-
 
 #endif

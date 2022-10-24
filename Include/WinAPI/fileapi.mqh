@@ -183,12 +183,10 @@ int UnlockFile(HANDLE file, uint file_offset_low, uint file_offset_high,
                uint number_of_bytes_to_unlock_high);
 int UnlockFileEx(HANDLE file, uint reserved, uint number_of_bytes_to_unlock_low,
                  uint number_of_bytes_to_unlock_high, OVERLAPPED &overlapped);
-int WriteFile(HANDLE file, const ushort buffer[],
-              uint number_of_bytes_to_write, uint &number_of_bytes_written,
-              OVERLAPPED &overlapped);
-int WriteFile(HANDLE file, const ushort buffer[],
-              uint number_of_bytes_to_write, uint &number_of_bytes_written,
-              PVOID overlapped);
+int WriteFile(HANDLE file, const ushort buffer[], uint number_of_bytes_to_write,
+              uint &number_of_bytes_written, OVERLAPPED &overlapped);
+int WriteFile(HANDLE file, const ushort buffer[], uint number_of_bytes_to_write,
+              uint &number_of_bytes_written, PVOID overlapped);
 int WriteFileGather(HANDLE file, FILE_SEGMENT_ELEMENT segment_array[],
                     uint number_of_bytes_to_write, uint &reserved,
                     OVERLAPPED &overlapped);

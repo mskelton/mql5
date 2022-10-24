@@ -15,35 +15,28 @@ public:
   static bool IsLittleEndian(void);
 };
 
+void ArrayReverse(uchar array[]);
 
+void ArrayReverse(bool array[]);
 
+string GetSelectionString(char buf[], int startIndex, int lenght);
 
-
-
-
-
-void ArrayReverse(uchar array[]) ;
-
-void ArrayReverse(bool array[]) ;
-
-string GetSelectionString(char buf[], int startIndex, int lenght) ;
-
-double MathSign(const double x) ;
+double MathSign(const double x);
 #ifndef __MQL5__
 
-double MathSinh(const double x) ;
+double MathSinh(const double x);
 
-double MathCosh(const double x) ;
+double MathCosh(const double x);
 
-double MathTanh(const double x) ;
+double MathTanh(const double x);
 #endif
 
 union UDoubleValue {
   double value;
   long bits;
 
-  UDoubleValue(double dbl) ;
-  UDoubleValue(long bit_value) ;
+  UDoubleValue(double dbl);
+  UDoubleValue(long bit_value);
 };
 
 class CInfOrNaN {
@@ -60,14 +53,5 @@ public:
   static double NegativeInfinity(void);
   static double NaN(void);
 };
-
-
-
-
-
-
-
-
-
 
 #endif

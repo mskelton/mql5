@@ -21,10 +21,10 @@ public:
   CSignalBullsPower(void);
   ~CSignalBullsPower(void);
 
-  void PeriodBulls(int value) ;
+  void PeriodBulls(int value);
 
-  void Pattern_0(int value) ;
-  void Pattern_1(int value) ;
+  void Pattern_0(int value);
+  void Pattern_1(int value);
 
   virtual bool ValidationSettings(void);
 
@@ -35,18 +35,10 @@ public:
 protected:
   bool InitBears(CIndicators *indicators);
 
-  double Bulls(int ind) ;
-  double DiffBulls(int ind) ;
+  double Bulls(int ind);
+  double DiffBulls(int ind);
   int StateBulls(int ind);
   bool ExtStateBulls(int ind);
 };
-
-
-
-
-
-
-
-
 
 #endif

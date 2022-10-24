@@ -17,17 +17,17 @@ public:
   CTreeNode(void);
   ~CTreeNode(void);
 
-  CTreeNode *Parent(void) const ;
-  void Parent(CTreeNode *node) ;
-  CTreeNode *Left(void) const ;
-  void Left(CTreeNode *node) ;
-  CTreeNode *Right(void) const ;
-  void Right(CTreeNode *node) ;
-  int Balance(void) const ;
-  int BalanceL(void) const ;
-  int BalanceR(void) const ;
+  CTreeNode *Parent(void) const;
+  void Parent(CTreeNode *node);
+  CTreeNode *Left(void) const;
+  void Left(CTreeNode *node);
+  CTreeNode *Right(void) const;
+  void Right(CTreeNode *node);
+  int Balance(void) const;
+  int BalanceL(void) const;
+  int BalanceR(void) const;
 
-  virtual int Type(void) const ;
+  virtual int Type(void) const;
 
   int RefreshBalance(void);
   CTreeNode *GetNext(const CTreeNode *node);
@@ -36,13 +36,7 @@ public:
   bool LoadNode(const int file_handle, CTreeNode *main);
 
 protected:
-  virtual CTreeNode *CreateSample(void) ;
+  virtual CTreeNode *CreateSample(void);
 };
-
-
-
-
-
-
 
 #endif

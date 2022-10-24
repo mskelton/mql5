@@ -133,26 +133,30 @@ enum ENUM_WND_ALIGN_FLAGS {
 
 #define INTERNAL_EVENT (-1)
 
-#define EVENT_MAP_BEGIN(class_name)                                            \
+#define EVENT_MAP_BEGIN(class_name)
 
 #define ON_EVENT(event, control, handler)                                      \
-  if (id == (event + CHARTEVENT_CUSTOM) && lparam == control.Id()) ;           \
+  if (id == (event + CHARTEVENT_CUSTOM) && lparam == control.Id())             \
+    ;
 
 #define ON_EVENT_PTR(event, control, handler)                                  \
   if (control != NULL && id == (event + CHARTEVENT_CUSTOM) &&                  \
-      lparam == control.Id()) ;                                                \
+      lparam == control.Id())                                                  \
+    ;
 
 #define ON_NO_ID_EVENT(event, handler)                                         \
-  if (id == (event + CHARTEVENT_CUSTOM)) ;                                     \
+  if (id == (event + CHARTEVENT_CUSTOM))                                       \
+    ;
 
 #define ON_NAMED_EVENT(event, control, handler)                                \
-  if (id == (event + CHARTEVENT_CUSTOM) && sparam == control.Name()) ;         \
+  if (id == (event + CHARTEVENT_CUSTOM) && sparam == control.Name())           \
+    ;
 
-#define ON_INDEXED_EVENT(event, controls, handler)                             \
-  ;                                                                            \
+#define ON_INDEXED_EVENT(event, controls, handler) ;
 
 #define ON_EXTERNAL_EVENT(event, handler)                                      \
-  if (id == (event + CHARTEVENT_CUSTOM)) ;                                     \
+  if (id == (event + CHARTEVENT_CUSTOM))                                       \
+    ;
 
 #define ON_CLICK (0)
 #define ON_DBL_CLICK (1)

@@ -24,13 +24,13 @@ public:
   CSignalCCI(void);
   ~CSignalCCI(void);
 
-  void PeriodCCI(int value) ;
-  void Applied(ENUM_APPLIED_PRICE value) ;
+  void PeriodCCI(int value);
+  void Applied(ENUM_APPLIED_PRICE value);
 
-  void Pattern_0(int value) ;
-  void Pattern_1(int value) ;
-  void Pattern_2(int value) ;
-  void Pattern_3(int value) ;
+  void Pattern_0(int value);
+  void Pattern_1(int value);
+  void Pattern_2(int value);
+  void Pattern_3(int value);
 
   virtual bool ValidationSettings(void);
 
@@ -42,21 +42,11 @@ public:
 protected:
   bool InitStoch(CIndicators *indicators);
 
-  double CCI(int ind) ;
-  double Diff(int ind) ;
+  double CCI(int ind);
+  double Diff(int ind);
   int State(int ind);
   bool ExtState(int ind);
   bool CompareMaps(int map, int count, bool minimax = false, int start = 0);
 };
-
-
-
-
-
-
-
-
-
-
 
 #endif

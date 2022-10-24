@@ -15,25 +15,25 @@ protected:
   CDXTexture *m_textures;
 
 public:
-  virtual ~CDXShader(void) ;
+  virtual ~CDXShader(void);
 
   bool Create(int context, ENUM_DX_SHADER_TYPE shader_type, string source,
-              string entry_point) ;
+              string entry_point);
 
-  template <typename TVertex> bool LayoutSet(void) ;
+  template <typename TVertex> bool LayoutSet(void);
 
-  bool InputSet(int index, CDXInput *dx_input) ;
+  bool InputSet(int index, CDXInput *dx_input);
 
-  bool TextureSet(int index, CDXTexture *texture) ;
+  bool TextureSet(int index, CDXTexture *texture);
 
-  void TexturesClear() ;
+  void TexturesClear();
 
-  virtual bool Render(void) ;
+  virtual bool Render(void);
 
-  virtual void Shutdown(void) ;
+  virtual void Shutdown(void);
 
 private:
-  bool UpdateInputs(void) ;
+  bool UpdateInputs(void);
 };
 
 #endif

@@ -10,11 +10,7 @@ public:
 
   virtual double CheckOpenLong(double price, double sl);
   virtual double CheckOpenShort(double price, double sl);
-  virtual double CheckClose(CPositionInfo *position) ;
+  virtual double CheckClose(CPositionInfo *position);
 };
-
-
-
-
 
 #endif

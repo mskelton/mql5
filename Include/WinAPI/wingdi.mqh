@@ -1718,16 +1718,14 @@ uint GetBkColor(HANDLE hdc);
 int GetBkMode(HANDLE hdc);
 uint GetBoundsRect(HANDLE hdc, RECT &lprect, uint flags);
 int GetBrushOrgEx(HANDLE hdc, POINT &lppt);
-int GetCharABCWidthsFloatW(HANDLE hdc, uint first, uint last,
-                           ABCFLOAT lpABC[]);
+int GetCharABCWidthsFloatW(HANDLE hdc, uint first, uint last, ABCFLOAT lpABC[]);
 int GetCharABCWidthsI(HANDLE hdc, uint first, uint cgi, ushort pgi[],
                       ABC pabc[]);
 int GetCharABCWidthsW(HANDLE hdc, uint first, uint last, ABC lpABC[]);
 uint GetCharacterPlacementW(HANDLE hdc, const string str, int count,
                             int mex_extent, GCP_RESULTSW &results, uint flags);
 int GetCharWidthFloatW(HANDLE hdc, uint first, uint last, float buffer[]);
-int GetCharWidthI(HANDLE hdc, uint first, uint cgi, ushort pgi[],
-                  int widths[]);
+int GetCharWidthI(HANDLE hdc, uint first, uint cgi, ushort pgi[], int widths[]);
 int GetCharWidthW(HANDLE hdc, uint first, uint last, int buffer[]);
 int GetClipBox(HANDLE hdc, RECT &lprect);
 int GetClipRgn(HANDLE hdc, HANDLE hrgn);

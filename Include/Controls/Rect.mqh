@@ -24,10 +24,10 @@ struct CRect {
   void RightBottom(const int x, const int y);
   void RightBottom(const CPoint &point);
   CPoint CenterPoint(void) const;
-  int Width(void) const ;
-  void Width(const int w) ;
-  int Height(void) const ;
-  void Height(const int h) ;
+  int Width(void) const;
+  void Width(const int w);
+  int Height(void) const;
+  void Height(const int h);
   CSize Size(void) const;
   void Size(const int cx, const int cy);
   void Size(const CSize &size);
@@ -44,27 +44,5 @@ struct CRect {
   bool Contains(const CPoint &point) const;
   void Normalize(void);
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #endif

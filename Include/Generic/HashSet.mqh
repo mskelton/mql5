@@ -11,7 +11,7 @@ public:
   int hash_code;
   T value;
   int next;
-  Slot(void) ;
+  Slot(void);
 };
 
 template <typename T> class CHashSet : public ISet<T> {
@@ -35,8 +35,8 @@ public:
 
   bool Add(T value);
 
-  int Count(void) ;
-  IEqualityComparer<T> *Comparer(void) const ;
+  int Count(void);
+  IEqualityComparer<T> *Comparer(void) const;
   bool Contains(T item);
   void TrimExcess(void);
 
@@ -77,46 +77,5 @@ private:
   bool InternalIsProperSubsetOf(CHashSet<T> *set);
   bool InternalIsProperSupersetOf(CHashSet<T> *set);
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #endif

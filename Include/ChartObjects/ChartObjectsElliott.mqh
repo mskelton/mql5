@@ -17,20 +17,11 @@ public:
               const datetime time1, const double price1, const datetime time2,
               const double price2, const datetime time3, const double price3);
 
-  virtual int Type(void) const ;
+  virtual int Type(void) const;
 
   virtual bool Save(const int file_handle);
   virtual bool Load(const int file_handle);
 };
-
-
-
-
-
-
-
-
-
 
 class CChartObjectElliottWave5 : public CChartObjectElliottWave3 {
 public:
@@ -43,10 +34,7 @@ public:
               const datetime time4, const double price4, const datetime time5,
               const double price5);
 
-  virtual int Type(void) const ;
+  virtual int Type(void) const;
 };
-
-
-
 
 #endif

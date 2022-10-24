@@ -12,19 +12,13 @@ public:
 
   double Main(const int index) const;
 
-  virtual int Type(void) const ;
+  virtual int Type(void) const;
 
 protected:
   virtual bool Initialize(const string symbol, const ENUM_TIMEFRAMES period,
                           const int num_params, const MqlParam params[]);
   bool Initialize(const string symbol, const ENUM_TIMEFRAMES period);
 };
-
-
-
-
-
-
 
 class CiAlligator : public CIndicator {
 protected:
@@ -41,14 +35,14 @@ public:
   CiAlligator(void);
   ~CiAlligator(void);
 
-  int JawPeriod(void) const ;
-  int JawShift(void) const ;
-  int TeethPeriod(void) const ;
-  int TeethShift(void) const ;
-  int LipsPeriod(void) const ;
-  int LipsShift(void) const ;
-  ENUM_MA_METHOD MaMethod(void) const ;
-  int Applied(void) const ;
+  int JawPeriod(void) const;
+  int JawShift(void) const;
+  int TeethPeriod(void) const;
+  int TeethShift(void) const;
+  int LipsPeriod(void) const;
+  int LipsShift(void) const;
+  ENUM_MA_METHOD MaMethod(void) const;
+  int Applied(void) const;
 
   bool Create(const string symbol, const ENUM_TIMEFRAMES period,
               const int jaw_period, const int jaw_shift, const int teeth_period,
@@ -60,7 +54,7 @@ public:
   double Teeth(const int index) const;
   double Lips(const int index) const;
 
-  virtual int Type(void) const ;
+  virtual int Type(void) const;
 
 protected:
   virtual bool Initialize(const string symbol, const ENUM_TIMEFRAMES period,
@@ -72,14 +66,6 @@ protected:
                   const ENUM_MA_METHOD ma_method, const int applied);
 };
 
-
-
-
-
-
-
-
-
 class CiAO : public CIndicator {
 public:
   CiAO(void);
@@ -89,19 +75,13 @@ public:
 
   double Main(const int index) const;
 
-  virtual int Type(void) const ;
+  virtual int Type(void) const;
 
 protected:
   virtual bool Initialize(const string symbol, const ENUM_TIMEFRAMES period,
                           const int num_params, const MqlParam params[]);
   bool Initialize(const string symbol, const ENUM_TIMEFRAMES period);
 };
-
-
-
-
-
-
 
 class CiFractals : public CIndicator {
 public:
@@ -113,20 +93,13 @@ public:
   double Upper(const int index) const;
   double Lower(const int index) const;
 
-  virtual int Type(void) const ;
+  virtual int Type(void) const;
 
 protected:
   virtual bool Initialize(const string symbol, const ENUM_TIMEFRAMES period,
                           const int num_params, const MqlParam params[]);
   bool Initialize(const string symbol, const ENUM_TIMEFRAMES period);
 };
-
-
-
-
-
-
-
 
 class CiGator : public CIndicator {
 protected:
@@ -143,14 +116,14 @@ public:
   CiGator(void);
   ~CiGator(void);
 
-  int JawPeriod(void) const ;
-  int JawShift(void) const ;
-  int TeethPeriod(void) const ;
-  int TeethShift(void) const ;
-  int LipsPeriod(void) const ;
-  int LipsShift(void) const ;
-  ENUM_MA_METHOD MaMethod(void) const ;
-  int Applied(void) const ;
+  int JawPeriod(void) const;
+  int JawShift(void) const;
+  int TeethPeriod(void) const;
+  int TeethShift(void) const;
+  int LipsPeriod(void) const;
+  int LipsShift(void) const;
+  ENUM_MA_METHOD MaMethod(void) const;
+  int Applied(void) const;
 
   bool Create(const string symbol, const ENUM_TIMEFRAMES period,
               const int jaw_period, const int jaw_shift, const int teeth_period,
@@ -161,7 +134,7 @@ public:
   double Upper(const int index) const;
   double Lower(const int index) const;
 
-  virtual int Type(void) const ;
+  virtual int Type(void) const;
 
 protected:
   virtual bool Initialize(const string symbol, const ENUM_TIMEFRAMES period,
@@ -173,13 +146,6 @@ protected:
                   const ENUM_MA_METHOD ma_method, const int applied);
 };
 
-
-
-
-
-
-
-
 class CiBWMFI : public CIndicator {
 protected:
   ENUM_APPLIED_VOLUME m_applied;
@@ -188,14 +154,14 @@ public:
   CiBWMFI(void);
   ~CiBWMFI(void);
 
-  ENUM_APPLIED_VOLUME Applied(void) const ;
+  ENUM_APPLIED_VOLUME Applied(void) const;
 
   bool Create(const string symbol, const ENUM_TIMEFRAMES period,
               const ENUM_APPLIED_VOLUME applied);
 
   double Main(const int index) const;
 
-  virtual int Type(void) const ;
+  virtual int Type(void) const;
 
 protected:
   virtual bool Initialize(const string symbol, const ENUM_TIMEFRAMES period,
@@ -203,11 +169,5 @@ protected:
   bool Initialize(const string symbol, const ENUM_TIMEFRAMES period,
                   const ENUM_APPLIED_VOLUME applied);
 };
-
-
-
-
-
-
 
 #endif

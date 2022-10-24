@@ -19,14 +19,14 @@ public:
   COpenCL();
   ~COpenCL();
 
-  int GetContext(void) const ;
-  int GetProgram(void) const ;
+  int GetContext(void) const;
+  int GetProgram(void) const;
   int GetKernel(const int kernel_index) const;
   string GetKernelName(const int kernel_index) const;
 
   bool GetGlobalMemorySize(long &global_memory_size);
 
-  bool SupportDouble(void) const ;
+  bool SupportDouble(void) const;
 
   bool Initialize(const string program, const bool show_log = true);
   void Shutdown();
@@ -45,9 +45,8 @@ public:
                        const uint data_array_offset,
                        const uint data_array_count, const uint flags);
   template <typename T>
-  bool BufferRead(const int buffer_index, T data[],
-                  const uint cl_buffer_offset, const uint data_array_offset,
-                  const uint data_array_count);
+  bool BufferRead(const int buffer_index, T data[], const uint cl_buffer_offset,
+                  const uint data_array_offset, const uint data_array_count);
   template <typename T>
   bool BufferWrite(const int buffer_index, T data[],
                    const uint cl_buffer_offset, const uint data_array_offset,
@@ -66,26 +65,5 @@ public:
                const uint work_offset[], const uint work_size[],
                const uint local_work_size[]);
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #endif

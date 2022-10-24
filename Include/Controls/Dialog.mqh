@@ -34,8 +34,8 @@ public:
   virtual bool OnEvent(const int id, const long &lparam, const double &dparam,
                        const string &sparam);
 
-  string Caption(void) const ;
-  bool Caption(const string text) ;
+  string Caption(void) const;
+  bool Caption(const string text);
 
   bool Add(CWnd *control);
   bool Add(CWnd &control);
@@ -54,15 +54,15 @@ protected:
   virtual void OnClickButtonClose(void);
 
   void CaptionAlignment(const int flags, const int left, const int top,
-                        const int right, const int bottom) ;
+                        const int right, const int bottom);
 
-  bool ClientAreaVisible(const bool visible) ;
-  int ClientAreaLeft(void) const ;
-  int ClientAreaTop(void) const ;
-  int ClientAreaRight(void) const ;
-  int ClientAreaBottom(void) const ;
-  int ClientAreaWidth(void) const ;
-  int ClientAreaHeight(void) const ;
+  bool ClientAreaVisible(const bool visible);
+  int ClientAreaLeft(void) const;
+  int ClientAreaTop(void) const;
+  int ClientAreaRight(void) const;
+  int ClientAreaBottom(void) const;
+  int ClientAreaWidth(void) const;
+  int ClientAreaHeight(void) const;
 
   virtual bool OnDialogDragStart(void);
   virtual bool OnDialogDragProcess(void);
@@ -76,23 +76,6 @@ ON_EVENT(ON_DRAG_START, m_caption, OnDialogDragStart)
 ON_EVENT_PTR(ON_DRAG_PROCESS, m_drag_object, OnDialogDragProcess)
 ON_EVENT_PTR(ON_DRAG_END, m_drag_object, OnDialogDragEnd)
 EVENT_MAP_END(CWndContainer)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 class CAppDialog : public CDialog {
 private:
@@ -127,12 +110,12 @@ public:
   void ChartEvent(const int id, const long &lparam, const double &dparam,
                   const string &sparam);
 
-  void Minimized(const bool flag) ;
+  void Minimized(const bool flag);
 
   void IniFileSave(void);
   void IniFileLoad(void);
   virtual string IniFileName(void) const;
-  virtual string IniFileExt(void) const ;
+  virtual string IniFileExt(void) const;
   virtual bool Load(const int file_handle);
   virtual bool Save(const int file_handle);
 
@@ -155,7 +138,7 @@ protected:
   virtual void Minimize(void);
   virtual void Maximize(void);
   string CreateInstanceId(void);
-  string ProgramName(void) const ;
+  string ProgramName(void) const;
   void SubwinOff(void);
 };
 
@@ -163,28 +146,5 @@ EVENT_MAP_BEGIN(CAppDialog)
 ON_EVENT(ON_CLICK, m_button_minmax, OnClickButtonMinMax)
 ON_EXTERNAL_EVENT(ON_APP_CLOSE, OnAnotherApplicationClose)
 EVENT_MAP_END(CDialog)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #endif

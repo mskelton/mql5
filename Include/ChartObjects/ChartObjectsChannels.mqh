@@ -12,11 +12,8 @@ public:
               const datetime time1, const double price1, const datetime time2,
               const double price2, const datetime time3, const double price3);
 
-  virtual int Type(void) const ;
+  virtual int Type(void) const;
 };
-
-
-
 
 class CChartObjectStdDevChannel : public CChartObjectTrend {
 public:
@@ -30,18 +27,11 @@ public:
               const datetime time1, const datetime time2,
               const double deviation);
 
-  virtual int Type(void) const ;
+  virtual int Type(void) const;
 
   virtual bool Save(const int file_handle);
   virtual bool Load(const int file_handle);
 };
-
-
-
-
-
-
-
 
 class CChartObjectRegression : public CChartObjectTrend {
 public:
@@ -51,11 +41,8 @@ public:
   bool Create(long chart_id, const string name, const int window,
               const datetime time1, const datetime time2);
 
-  virtual int Type(void) const ;
+  virtual int Type(void) const;
 };
-
-
-
 
 class CChartObjectPitchfork : public CChartObjectTrend {
 public:
@@ -66,10 +53,7 @@ public:
               const datetime time1, const double price1, const datetime time2,
               const double price2, const datetime time3, const double price3);
 
-  virtual int Type(void) const ;
+  virtual int Type(void) const;
 };
-
-
-
 
 #endif

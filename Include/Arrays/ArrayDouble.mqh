@@ -12,9 +12,9 @@ public:
   CArrayDouble(void);
   ~CArrayDouble(void);
 
-  void Delta(const double delta) ;
+  void Delta(const double delta);
 
-  virtual int Type(void) const ;
+  virtual int Type(void) const;
 
   virtual bool Save(const int file_handle);
   virtual bool Load(const int file_handle);
@@ -33,10 +33,10 @@ public:
   bool AssignArray(const CArrayDouble *src);
 
   double At(const int index) const;
-  double operator[](const int index) const ;
+  double operator[](const int index) const;
 
-  int Minimum(const int start, const int count) const ;
-  int Maximum(const int start, const int count) const ;
+  int Minimum(const int start, const int count) const;
+  int Maximum(const int start, const int count) const;
 
   bool Update(const int index, const double element);
   bool Shift(const int index, const int shift);
@@ -62,39 +62,5 @@ protected:
   int QuickSearch(const double element) const;
   int MemMove(const int dest, const int src, int count);
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #endif

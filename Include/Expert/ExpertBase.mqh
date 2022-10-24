@@ -76,10 +76,10 @@ public:
   CExpertBase(void);
   ~CExpertBase(void);
 
-  ENUM_INIT_PHASE InitPhase(void) const ;
-  void TrendType(ENUM_TYPE_TREND value) ;
+  ENUM_INIT_PHASE InitPhase(void) const;
+  void TrendType(ENUM_TYPE_TREND value);
   int UsedSeries(void) const;
-  void EveryTick(bool value) ;
+  void EveryTick(bool value);
 
   double Open(int ind) const;
   double High(int ind) const;
@@ -93,8 +93,8 @@ public:
   virtual bool Init(CSymbolInfo *symbol, ENUM_TIMEFRAMES period, double point);
   bool Symbol(string name);
   bool Period(ENUM_TIMEFRAMES value);
-  void Magic(ulong value) ;
-  void SetMarginMode(void) ;
+  void Magic(ulong value);
+  void SetMarginMode(void);
 
   virtual bool ValidationSettings();
 
@@ -115,37 +115,11 @@ protected:
   bool InitTickVolume(CIndicators *indicators);
   bool InitRealVolume(CIndicators *indicators);
 
-  virtual double PriceLevelUnit(void) ;
+  virtual double PriceLevelUnit(void);
 
-  virtual int StartIndex(void) ;
-  virtual bool CompareMagic(ulong magic) ;
-  bool IsHedging(void) const ;
+  virtual int StartIndex(void);
+  virtual bool CompareMagic(ulong magic);
+  bool IsHedging(void) const;
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #endif
