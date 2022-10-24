@@ -5,7 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - run: clang --version
+      - name: Clang version
+        run: clang --version
       - name: Lint
         run: make lint
   test:
