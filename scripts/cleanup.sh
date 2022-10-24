@@ -7,7 +7,7 @@ for i in $(find IncludeOriginal -name '*.mqh'); do
 	clang-format -i $i
 done
 
-mkdir -p Include/Core
-cp ../magellan/Include/MQL5.mqh Include/Core/MQL5.mqh
+# mkdir -p Include/Core
+cp -r ../magellan/Include/Core Include/
 
 # find Include -name '*.mqh' | sed 's/Include\//#include </' | sed 's/$/>/'
