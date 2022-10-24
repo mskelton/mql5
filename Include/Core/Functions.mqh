@@ -3307,7 +3307,7 @@ double MathArctan2(double y, double x);
  * @param value The real number to be checked
  * @returns A value from the ENUM_FP_CLASS enumeration
  */
-ENUM_FP_CLASS MathClassify(double value);
+int MathClassify(double value);
 
 /**
  * The function returns integer numeric value closest from above.
