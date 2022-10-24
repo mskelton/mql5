@@ -5,6 +5,21 @@
 #include <Core/Enums.mqh>
 
 /**
+ * Minimal value, which can be represented by char type.
+ */
+char CHAR_MIN;
+
+/**
+ * Maximal value, which can be represented by char type.
+ */
+char CHAR_MAX;
+
+/**
+ * Maximal value, which can be represented by uchar type.
+ */
+uchar UCHAR_MAX;
+
+/**
  * Minimal value, which can be represented by short type.
  */
 short SHORT_MIN;
@@ -18,6 +33,36 @@ short SHORT_MAX;
  * Maximal value, which can be represented by ushort type.
  */
 ushort USHORT_MAX;
+
+/**
+ * Minimal value, which can be represented by int type.
+ */
+int INT_MIN;
+
+/**
+ * Maximal value, which can be represented by int type.
+ */
+int INT_MAX;
+
+/**
+ * Maximal value, which can be represented by uint type.
+ */
+uint UINT_MAX;
+
+/**
+ * Minimal value, which can be represented by long type.
+ */
+long LONG_MIN;
+
+/**
+ * Maximal value, which can be represented by long type.
+ */
+long LONG_MAX;
+
+/**
+ * Maximal value, which can be represented by ulong type.
+ */
+ulong ULONG_MAX;
 
 /**
  * Minimal positive value, which can be represented by double type.
