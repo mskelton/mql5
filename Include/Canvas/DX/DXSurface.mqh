@@ -7,9 +7,18 @@
 
 class CDXSurface : public CDXMesh {
 public:
-  enum EN_SURFACE_FLAGS;
+  enum EN_SURFACE_FLAGS {
+    SF_NONE = 0x0,
+    SF_TWO_SIDED = 0x1,
+    SF_USE_NORMALS = 0x2,
+  };
 
-  enum EN_COLOR_SCHEME;
+  enum EN_COLOR_SCHEME {
+    CS_NONE = 0,
+    CS_JET = 1,
+    CS_COLD_TO_HOT = 2,
+    CS_RED_TO_GREEN = 3
+  };
 
 protected:
   uint m_data_width;

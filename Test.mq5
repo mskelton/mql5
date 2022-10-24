@@ -16,21 +16,21 @@
 #include <Canvas/Charts/HistogramChart.mqh>
 #include <Canvas/Charts/LineChart.mqh>
 #include <Canvas/Charts/PieChart.mqh>
-// #include <Canvas/DX/DXBox.mqh>
+#include <Canvas/DX/DXBox.mqh>
 #include <Canvas/DX/DXBuffers.mqh>
 #include <Canvas/DX/DXData.mqh>
 #include <Canvas/DX/DXDispatcher.mqh>
 #include <Canvas/DX/DXHandle.mqh>
 #include <Canvas/DX/DXInput.mqh>
 #include <Canvas/DX/DXMath.mqh>
-// #include <Canvas/DX/DXMesh.mqh>
+#include <Canvas/DX/DXMesh.mqh>
 #include <Canvas/DX/DXObject.mqh>
 #include <Canvas/DX/DXObjectBase.mqh>
 #include <Canvas/DX/DXShader.mqh>
-// #include <Canvas/DX/DXSurface.mqh>
+#include <Canvas/DX/DXSurface.mqh>
 #include <Canvas/DX/DXTexture.mqh>
 #include <Canvas/DX/DXUtils.mqh>
-// #include <Canvas/FlameCanvas.mqh>
+#include <Canvas/FlameCanvas.mqh>
 #include <ChartObjects/ChartObject.mqh>
 #include <ChartObjects/ChartObjectPanel.mqh>
 #include <ChartObjects/ChartObjectSubChart.mqh>

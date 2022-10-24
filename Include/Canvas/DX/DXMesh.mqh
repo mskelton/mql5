@@ -6,6 +6,18 @@
 #include "DXObject.mqh"
 #include "DXUtils.mqh"
 
+typedef enum ENUM_DX_PRIMITIVE_TOPOLOGY {
+  DX_PRIMITIVE_TOPOLOGY_LINELIST,
+  DX_PRIMITIVE_TOPOLOGY_LINELIST_ADJ,
+  DX_PRIMITIVE_TOPOLOGY_LINESTRIP,
+  DX_PRIMITIVE_TOPOLOGY_LINESTRIP_ADJ,
+  DX_PRIMITIVE_TOPOLOGY_POINTLIST,
+  DX_PRIMITIVE_TOPOLOGY_TRIANGLELIST,
+  DX_PRIMITIVE_TOPOLOGY_TRIANGLELIST_ADJ,
+  DX_PRIMITIVE_TOPOLOGY_TRIANGLESTRIP,
+  DX_PRIMITIVE_TOPOLOGY_TRIANGLESTRIP_ADJ,
+} ENUM_DX_PRIMITIVE_TOPOLOGY;
+
 class CDXMesh : public CDXObject {
 protected:
   CDXVertexBuffer *m_buffer_vertex;
@@ -26,9 +38,6 @@ protected:
 
 public:
   CDXMesh(void);
-  m_buffer_scene(NULL), m_shader_vertex(NULL), m_shader_pixel(NULL),
-      m_topology(WRONG_VALUE);
-
   ~CDXMesh(void);
 
   bool Create(
