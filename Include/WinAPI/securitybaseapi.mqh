@@ -127,7 +127,7 @@ int CreateRestrictedToken(
     LUID_AND_ATTRIBUTES &privileges_to_delete, uint restricted_sid_count,
     SID_AND_ATTRIBUTES &sids_to_restrict, HANDLE &new_token_handle);
 int CreateWellKnownSid(WELL_KNOWN_SID_TYPE well_known_sid_type, SID &domain_sid,
-                       SID &sid, uint &sid);
+                       SID &p_sid, uint &cb_sid);
 int EqualDomainSid(SID &sid1, SID &sid2, int &equal);
 int DeleteAce(ACL &acl, uint ace_index);
 int DestroyPrivateObjectSecurity(SECURITY_DESCRIPTOR &object_descriptor);
@@ -180,7 +180,8 @@ int GetTokenInformation(HANDLE token_handle,
                         TOKEN_INFORMATION_CLASS token_information_class,
                         PVOID &token_information, uint token_information_length,
                         uint &return_length);
-int GetWindowsAccountDomainSid(SID &sid, SID &domain_sid, uint &domain_sid);
+int GetWindowsAccountDomainSid(SID &sid, SID &p_domain_sid,
+                               uint &cb_domain_sid);
 int ImpersonateAnonymousToken(HANDLE thread_handle);
 int ImpersonateLoggedOnUser(HANDLE token);
 int ImpersonateSelf(SECURITY_IMPERSONATION_LEVEL impersonation_level);

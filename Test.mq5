@@ -214,19 +214,19 @@
 #include <Trade/TerminalInfo.mqh>
 #include <Trade/Trade.mqh>
 #include <VirtualKeys.mqh>
-// #include <WinAPI/errhandlingapi.mqh>
-// #include <WinAPI/fileapi.mqh>
-// #include <WinAPI/handleapi.mqh>
-// #include <WinAPI/libloaderapi.mqh>
-// #include <WinAPI/memoryapi.mqh>
-// #include <WinAPI/processenv.mqh>
-// #include <WinAPI/processthreadsapi.mqh>
-// #include <WinAPI/securitybaseapi.mqh>
-// #include <WinAPI/sysinfoapi.mqh>
-// #include <WinAPI/winapi.mqh>
-// #include <WinAPI/winbase.mqh>
-// #include <WinAPI/windef.mqh>
-// #include <WinAPI/wingdi.mqh>
-// #include <WinAPI/winnt.mqh>
-// #include <WinAPI/winreg.mqh>
-// #include <WinAPI/winuser.mqh>
+#include <WinAPI/errhandlingapi.mqh>
+#include <WinAPI/fileapi.mqh>
+#include <WinAPI/handleapi.mqh>
+#include <WinAPI/libloaderapi.mqh>
+#include <WinAPI/memoryapi.mqh>
+#include <WinAPI/processenv.mqh>
+#include <WinAPI/processthreadsapi.mqh>
+#include <WinAPI/securitybaseapi.mqh>
+#include <WinAPI/sysinfoapi.mqh>
+#include <WinAPI/winapi.mqh>
+#include <WinAPI/winbase.mqh>
+#include <WinAPI/windef.mqh>
+#include <WinAPI/wingdi.mqh>
+#include <WinAPI/winnt.mqh>
+#include <WinAPI/winreg.mqh>
+#include <WinAPI/winuser.mqh>

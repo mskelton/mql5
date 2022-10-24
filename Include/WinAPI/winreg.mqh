@@ -105,7 +105,7 @@ int RegSaveKeyW(HANDLE key, const string file, PVOID security_attributes);
 int RegSetKeySecurity(HANDLE key, uint SecurityInformation,
                       SECURITY_DESCRIPTOR &security_descriptor);
 int RegSetKeyValueW(HANDLE key, const string sub_key, const string value_name,
-                    uint type, const uchar data[], uint data);
+                    uint type, const uchar lp_data[], uint cb_data);
 int RegSetValueExW(HANDLE key, const string value_name, PVOID reserved,
                    uint type, const uchar data[], uint data_size);
 int RegSetValueW(HANDLE key, const string sub_key, uint type,

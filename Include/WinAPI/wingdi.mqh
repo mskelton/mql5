@@ -1,6 +1,7 @@
 #ifndef WINGDI_H
 #define WINGDI_H
 
+#include <Files/BMP.mqh>
 #include <WinAPI/windef.mqh>
 #include <WinAPI/winnt.mqh>
 
@@ -152,14 +153,6 @@ struct BITMAPCOREHEADER {
   ushort bcBitCount;
 };
 
-struct BITMAPFILEHEADER {
-  ushort bfType;
-  uint bfSize;
-  ushort bfReserved1;
-  ushort bfReserved2;
-  uint bfOffBits;
-};
-
 struct RGBTRIPLE {
   uchar rgbtBlue;
   uchar rgbtGreen;
@@ -169,20 +162,6 @@ struct RGBTRIPLE {
 struct BITMAPCOREINFO {
   BITMAPCOREHEADER bmciHeader;
   RGBTRIPLE bmciColors[1];
-};
-
-struct BITMAPINFOHEADER {
-  uint biSize;
-  int biWidth;
-  int biHeight;
-  ushort biPlanes;
-  ushort biBitCount;
-  uint biCompression;
-  uint biSizeImage;
-  int biXPelsPerMeter;
-  int biYPelsPerMeter;
-  uint biClrUsed;
-  uint biClrImportant;
 };
 
 struct RGBQUAD {
@@ -1665,7 +1644,7 @@ int DeleteObject(PVOID ho);
 int DescribePixelFormat(HANDLE hdc, int pixel_format, uint bytes,
                         PIXELFORMATDESCRIPTOR &ppfd);
 int DPtoLP(HANDLE hdc, POINT &lppt, int c);
-int DrawEscape(HANDLE hdc, int escape, int in, uchar in[]);
+int DrawEscape(HANDLE hdc, int escape, int cj_in, uchar lp_in[]);
 int Ellipse(HANDLE hdc, int left, int top, int right, int bottom);
 int EndDoc(HANDLE hdc);
 int EndPage(HANDLE hdc);
@@ -1681,7 +1660,7 @@ int EnumICMProfilesW(HANDLE hdc, PVOID proc, PVOID param);
 int EnumMetaFile(HANDLE hdc, HANDLE hmf, PVOID proc, PVOID param);
 int EnumObjects(HANDLE hdc, int type, PVOID func, PVOID param);
 int EqualRgn(HANDLE hrgn1, HANDLE hrgn2);
-int Escape(HANDLE hdc, int escape, int in, uchar in[], PVOID out);
+int Escape(HANDLE hdc, int escape, int cj_in, uchar lp_in[], PVOID out);
 int ExcludeClipRect(HANDLE hdc, int left, int top, int right, int bottom);
 HANDLE ExtCreatePen(uint pen_style, uint width, LOGBRUSH &plbrush, uint style,
                     const uint pstyle[]);
@@ -1698,18 +1677,18 @@ int FixBrushOrgEx(HANDLE hdc, int x, int y, POINT &ptl);
 int FlattenPath(HANDLE hdc);
 int FloodFill(HANDLE hdc, int x, int y, uint clr);
 int FrameRgn(HANDLE hdc, HANDLE hrgn, HANDLE hbr, int w, int h);
-int GdiAlphaBlend(HANDLE dest, int dest, int dest, int dest, int dest,
-                  HANDLE src, int src, int src, int src, int src,
+int GdiAlphaBlend(HANDLE dest, int x_dest, int y_dest, int w_dest, int h_dest,
+                  HANDLE src, int x_src, int y_src, int w_src, int h_src,
                   BLENDFUNCTION &ftn);
 int GdiComment(HANDLE hdc, uint size, const uchar data[]);
 int GdiFlush(void);
 uint GdiGetBatchLimit(void);
-int GdiGradientFill(HANDLE hdc, TRIVERTEX &vertex, uint vertex, PVOID mesh,
+int GdiGradientFill(HANDLE hdc, TRIVERTEX &p_vertex, uint n_vertex, PVOID mesh,
                     uint count, uint mode);
 uint GdiSetBatchLimit(uint dw);
-int GdiTransparentBlt(HANDLE dest, int dest, int dest, int dest, int dest,
-                      HANDLE src, int src, int src, int src, int src,
-                      uint transparent);
+int GdiTransparentBlt(HANDLE dest, int x_dest, int y_dest, int w_dest,
+                      int h_dest, HANDLE src, int x_src, int y_src, int w_src,
+                      int h_src, uint transparent);
 int GetArcDirection(HANDLE hdc);
 int GetAspectRatioFilterEx(HANDLE hdc, SIZE &lpsize);
 int GetBitmapBits(HANDLE hbit, int cb, PVOID bits);
@@ -1751,15 +1730,15 @@ uint GetEnhMetaFilePaletteEntries(HANDLE hemf, uint num_entries,
 uint GetEnhMetaFilePixelFormat(HANDLE hemf, uint buffer,
                                PIXELFORMATDESCRIPTOR &ppfd);
 HANDLE GetEnhMetaFileW(const string name);
-uint GetFontData(HANDLE hdc, uint table, uint offset, PVOID buffer,
-                 uint buffer);
+uint GetFontData(HANDLE hdc, uint table, uint offset, PVOID pv_buffer,
+                 uint cj_buffer);
 uint GetFontLanguageInfo(HANDLE hdc);
 uint GetFontUnicodeRanges(HANDLE hdc, PVOID lpgs);
 uint GetFontUnicodeRanges(HANDLE hdc, GLYPHSET &lpgs);
 uint GetGlyphIndicesW(HANDLE hdc, const string lpstr, int c, ushort pgi[],
                       uint fl);
 uint GetGlyphOutlineW(HANDLE hdc, uint symbol, uint format, GLYPHMETRICS &lpgm,
-                      uint buffer, PVOID buffer, MAT2 &lpmat2);
+                      uint cj_buffer, PVOID pv_buffer, MAT2 &lpmat2);
 int GetGraphicsMode(HANDLE hdc);
 int GetICMProfileW(HANDLE hdc, uint &buf_size, ushort filename[]);
 uint GetKerningPairsW(HANDLE hdc, uint pairs, KERNINGPAIR &kern_pair);
@@ -1799,8 +1778,8 @@ int GetTextCharsetInfo(HANDLE hdc, FONTSIGNATURE &sig, uint flags);
 uint GetTextColor(HANDLE hdc);
 int GetTextExtentExPointI(HANDLE hdc, ushort str[], int str_size,
                           int max_extent, int &fit, int dx[], SIZE &size);
-int GetTextExtentExPointW(HANDLE hdc, const string str, int str, int max_extent,
-                          int &fit, int dx[], SIZE &size);
+int GetTextExtentExPointW(HANDLE hdc, const string lpsz_str, int cch_str,
+                          int max_extent, int &fit, int dx[], SIZE &size);
 int GetTextExtentPoint32W(HANDLE hdc, const string str, int c, SIZE &psizl);
 int GetTextExtentPointI(HANDLE hdc, ushort in[], int cgi, SIZE &psize);
 int GetTextExtentPointW(HANDLE hdc, const string str, int c, SIZE &lpsz);
@@ -1810,15 +1789,16 @@ int GetViewportExtEx(HANDLE hdc, SIZE &lpsize);
 int GetViewportOrgEx(HANDLE hdc, POINT &lppoint);
 int GetWindowExtEx(HANDLE hdc, SIZE &lpsize);
 int GetWindowOrgEx(HANDLE hdc, POINT &lppoint);
-uint GetWinMetaFileBits(HANDLE hemf, uint data16, uchar &data16, int map_mode,
-                        HANDLE ref);
+uint GetWinMetaFileBits(HANDLE hemf, uint cb_data16, uchar &p_data16,
+                        int map_mode, HANDLE ref);
 int GetWorldTransform(HANDLE hdc, XFORM &lpxf);
 int IntersectClipRect(HANDLE hdc, int left, int top, int right, int bottom);
 int InvertRgn(HANDLE hdc, HANDLE hrgn);
 int LineTo(HANDLE hdc, int x, int y);
 int LPtoDP(HANDLE hdc, POINT lppt[], int c);
-int MaskBlt(HANDLE dest, int dest, int dest, int width, int height, HANDLE src,
-            int src, int src, HANDLE mask, int mask, int mask, uint rop);
+int MaskBlt(HANDLE dest, int x_dest, int y_dest, int width, int height,
+            HANDLE src, int x_src, int y_src, HANDLE mask, int x_mask,
+            int y_mask, uint rop);
 int ModifyWorldTransform(HANDLE hdc, XFORM &lpxf, uint mode);
 int MoveToEx(HANDLE hdc, int x, int y, POINT &lppt);
 int OffsetClipRgn(HANDLE hdc, int x, int y);
@@ -1836,8 +1816,8 @@ int PlayEnhMetaFileRecord(HANDLE hdc, HANDLETABLE &pht, ENHMETARECORD &pmr,
 int PlayMetaFile(HANDLE hdc, HANDLE hmf);
 int PlayMetaFileRecord(HANDLE hdc, HANDLETABLE &handle_table, METARECORD &lpMR,
                        uint objs);
-int PlgBlt(HANDLE dest, POINT &point, HANDLE src, int src, int src, int width,
-           int height, HANDLE mask, int mask, int mask);
+int PlgBlt(HANDLE dest, POINT &point, HANDLE src, int x_src, int y_src,
+           int width, int height, HANDLE mask, int x_mask, int y_mask);
 int PolyBezier(HANDLE hdc, POINT &apt, uint cpt);
 int PolyBezierTo(HANDLE hdc, POINT &apt, uint cpt);
 int PolyDraw(HANDLE hdc, const POINT &apt, const uchar aj[], int cpt);
@@ -1884,9 +1864,9 @@ int SetDeviceGammaRamp(HANDLE hdc, PVOID ramp);
 uint SetDIBColorTable(HANDLE hdc, uint start, uint entries, RGBQUAD &prgbq);
 int SetDIBits(HANDLE hdc, HANDLE hbm, uint start, uint lines, PVOID bits,
               BITMAPINFO &lpbmi, uint ColorUse);
-int SetDIBitsToDevice(HANDLE hdc, int dest, int dest, uint w, uint h, int src,
-                      int src, uint StartScan, uint lines, PVOID bits,
-                      BITMAPINFO &lpbmi, uint ColorUse);
+int SetDIBitsToDevice(HANDLE hdc, int x_dest, int y_dest, uint w, uint h,
+                      int x_src, int y_src, uint StartScan, uint lines,
+                      PVOID bits, BITMAPINFO &lpbmi, uint ColorUse);
 HANDLE SetEnhMetaFileBits(uint size, const uchar pb[]);
 int SetGraphicsMode(HANDLE hdc, int mode);
 int SetICMMode(HANDLE hdc, int mode);
@@ -1920,11 +1900,13 @@ HANDLE SetWinMetaFileBits(uint size, const uchar lpMeta16Data[], HANDLE ref,
 int SetWorldTransform(HANDLE hdc, XFORM &lpxf);
 int StartDocW(HANDLE hdc, DOCINFOW &lpdi);
 int StartPage(HANDLE hdc);
-int StretchBlt(HANDLE dest, int dest, int dest, int dest, int dest, HANDLE src,
-               int src, int src, int src, int src, uint rop);
-int StretchDIBits(HANDLE hdc, int dest, int dest, int DestWidth, int DestHeight,
-                  int src, int src, int SrcWidth, int SrcHeight, PVOID bits,
-                  BITMAPINFO &lpbmi, uint usage, uint rop);
+int StretchBlt(HANDLE dest, int x_dest, int y_dest, int w_dest, int h_dest,
+               HANDLE src, int x_src, int y_src, int w_src, int h_src,
+               uint rop);
+int StretchDIBits(HANDLE hdc, int x_dest, int y_dest, int DestWidth,
+                  int DestHeight, int x_src, int y_src, int SrcWidth,
+                  int SrcHeight, PVOID bits, BITMAPINFO &lpbmi, uint usage,
+                  uint rop);
 int StrokeAndFillPath(HANDLE hdc);
 int StrokePath(HANDLE hdc);
 int SwapBuffers(HANDLE);
@@ -1943,11 +1925,11 @@ int wglDeleteContext(HANDLE);
 int wglDescribeLayerPlane(HANDLE, int, int, uint, LAYERPLANEDESCRIPTOR &);
 HANDLE wglGetCurrentContext(void);
 HANDLE wglGetCurrentDC(void);
-int wglGetLayerPaletteEntries(HANDLE, int, int, int, const uint &[]);
+int wglGetLayerPaletteEntries(HANDLE, int, int, int, const uint[]);
 PVOID wglGetProcAddress(string);
 int wglMakeCurrent(HANDLE, HANDLE);
 int wglRealizeLayerPalette(HANDLE, int, int);
-int wglSetLayerPaletteEntries(HANDLE, int, int, int, const uint &[]);
+int wglSetLayerPaletteEntries(HANDLE, int, int, int, const uint[]);
 int wglShareLists(HANDLE, HANDLE);
 int wglSwapLayerBuffers(HANDLE, uint);
 uint wglSwapMultipleBuffers(uint, WGLSWAP &);

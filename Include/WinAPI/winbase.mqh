@@ -1,7 +1,7 @@
 #ifndef WINBASE_H
 #define WINBASE_H
 
-#include <WinAPIileapi.mqh>
+#include <WinAPI/fileapi.mqh>
 #include <WinAPI/windef.mqh>
 #include <WinAPI/winnt.mqh>
 
@@ -753,16 +753,16 @@ uint PrepareTape(HANDLE device, uint operation, int immediate);
 int PulseEvent(HANDLE event);
 int PurgeComm(HANDLE file, uint flags);
 int QueryActCtxSettingsW(uint flags, HANDLE act_ctx, const string name_space,
-                         const string name, string buffer, ulong buffer,
+                         const string name, string pv_buffer, ulong dw_buffer,
                          ulong &written_or_required);
 int QueryActCtxSettingsW(uint flags, ACTCTXW &act_ctx, const string name_space,
-                         const string name, string buffer, ulong buffer,
+                         const string name, string pv_buffer, ulong cb_buffer,
                          ulong &written_or_required);
 int QueryActCtxW(uint flags, HANDLE act_ctx, PVOID sub_instance,
-                 uint info_class, PVOID buffer, ulong buffer,
+                 uint info_class, PVOID pv_buffer, ulong cb_buffer,
                  ulong &written_or_required);
 int QueryActCtxW(uint flags, ACTCTXW &act_ctx, PVOID sub_instance,
-                 uint info_class, PVOID buffer, ulong buffer,
+                 uint info_class, PVOID pv_buffer, ulong cb_buffer,
                  ulong &written_or_required);
 int QueryFullProcessImageNameW(HANDLE process, uint flags, string exe_name,
                                uint &size);
@@ -900,7 +900,7 @@ int GetEventLogInformation(HANDLE event_log, uint info_level, PVOID buffer,
                            uint buf_size, uint &bytes_needed);
 int GetNumberOfEventLogRecords(HANDLE event_log, uint &NumberOfRecords);
 int GetOldestEventLogRecord(HANDLE event_log, uint &OldestRecord);
-int GetUserNameW(string buffer, uint &buffer);
+int GetUserNameW(string lp_buffer, uint &pcb_buffer);
 int IsTextUnicode(PVOID lpv, int size, int &result);
 int IsTokenUntrusted(HANDLE TokenHandle);
 int LogonUserExW(const string username, const string domain,
@@ -917,10 +917,10 @@ int LookupAccountSidW(const string system_name, SID &Sid, string Name,
                       uint &name, string ReferencedDomainName,
                       uint &referenced_domain_name, SID_NAME_USE &use);
 int LookupPrivilegeDisplayNameW(const string system_name, const string name,
-                                string display_name, uint &display_name,
+                                string lp_display_name, uint &cch_display_name,
                                 uint &language_id);
-int LookupPrivilegeNameW(const string system_name, LUID &luid, string name,
-                         uint &name);
+int LookupPrivilegeNameW(const string system_name, LUID &luid, string lp_name,
+                         uint &cch_name);
 int LookupPrivilegeValueW(const string system_name, const string name,
                           LUID &luid);
 int NotifyChangeEventLog(HANDLE event_log, HANDLE event);
