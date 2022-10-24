@@ -74,11 +74,9 @@ public:
 COrderInfo::COrderInfo(void)
     : m_ticket(ULONG_MAX), m_type(WRONG_VALUE), m_state(WRONG_VALUE),
       m_expiration(0), m_volume_curr(0.0), m_price_open(0.0), m_stop_loss(0.0),
-      m_take_profit(0.0) {
-}
+      m_take_profit(0.0) {}
 
-COrderInfo::~COrderInfo(void) {
-}
+COrderInfo::~COrderInfo(void) {}
 
 datetime COrderInfo::TimeSetup(void) const {
   return ((datetime)OrderGetInteger(ORDER_TIME_SETUP));

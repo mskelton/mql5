@@ -202,11 +202,9 @@ protected:
   virtual int DrawScaleTop(const bool draw = true);
   virtual int DrawScaleBottom(const bool draw = true);
   virtual void DrawGrid(void);
-  virtual void DrawDescriptors(void) {
-  }
+  virtual void DrawDescriptors(void) {}
   virtual void DrawChart(void);
-  virtual void DrawData(const uint idx = 0) {
-  }
+  virtual void DrawData(const uint idx = 0) {}
 };
 
 CChartCanvas::CChartCanvas(void)
@@ -218,8 +216,7 @@ CChartCanvas::CChartCanvas(void)
       m_legend_alignment(ALIGNMENT_BOTTOM), m_threshold_drawing(2),
       m_accumulative(false), m_data_offset(0), m_data_total(0), m_data(NULL),
       m_v_scale_min(0.0), m_v_scale_max(10.0), m_num_grid(5),
-      m_scale_digits(0) {
-}
+      m_scale_digits(0) {}
 
 CChartCanvas::~CChartCanvas(void) {
   if (m_data != NULL)

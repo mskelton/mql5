@@ -77,11 +77,9 @@ public:
   void Copy(CMinCGState &obj);
 };
 
-CMinCGState::CMinCGState(void) {
-}
+CMinCGState::CMinCGState(void) {}
 
-CMinCGState::~CMinCGState(void) {
-}
+CMinCGState::~CMinCGState(void) {}
 
 void CMinCGState::Copy(CMinCGState &obj) {
 
@@ -169,16 +167,14 @@ public:
   CMinCGState *GetInnerObj(void);
 };
 
-CMinCGStateShell::CMinCGStateShell(void) {
-}
+CMinCGStateShell::CMinCGStateShell(void) {}
 
 CMinCGStateShell::CMinCGStateShell(CMinCGState &obj) {
 
   m_innerobj.Copy(obj);
 }
 
-CMinCGStateShell::~CMinCGStateShell(void) {
-}
+CMinCGStateShell::~CMinCGStateShell(void) {}
 
 bool CMinCGStateShell::GetNeedF(void) {
 
@@ -237,11 +233,9 @@ public:
   void Copy(CMinCGReport &obj);
 };
 
-CMinCGReport::CMinCGReport(void) {
-}
+CMinCGReport::CMinCGReport(void) {}
 
-CMinCGReport::~CMinCGReport(void) {
-}
+CMinCGReport::~CMinCGReport(void) {}
 
 void CMinCGReport::Copy(CMinCGReport &obj) {
 
@@ -268,16 +262,14 @@ public:
   CMinCGReport *GetInnerObj(void);
 };
 
-CMinCGReportShell::CMinCGReportShell(void) {
-}
+CMinCGReportShell::CMinCGReportShell(void) {}
 
 CMinCGReportShell::CMinCGReportShell(CMinCGReport &obj) {
 
   m_innerobj.Copy(obj);
 }
 
-CMinCGReportShell::~CMinCGReportShell(void) {
-}
+CMinCGReportShell::~CMinCGReportShell(void) {}
 
 int CMinCGReportShell::GetIterationsCount(void) {
 
@@ -388,11 +380,9 @@ public:
 const int CMinCG::m_rscountdownlen = 10;
 const double CMinCG::m_gtol = 0.3;
 
-CMinCG::CMinCG(void) {
-}
+CMinCG::CMinCG(void) {}
 
-CMinCG::~CMinCG(void) {
-}
+CMinCG::~CMinCG(void) {}
 
 static void CMinCG::MinCGCreate(const int n, double &x[], CMinCGState &state) {
 
@@ -1559,11 +1549,9 @@ public:
   void Copy(CMinBLEICState &obj);
 };
 
-CMinBLEICState::CMinBLEICState(void) {
-}
+CMinBLEICState::CMinBLEICState(void) {}
 
-CMinBLEICState::~CMinBLEICState(void) {
-}
+CMinBLEICState::~CMinBLEICState(void) {}
 
 void CMinBLEICState::Copy(CMinBLEICState &obj) {
 
@@ -1671,16 +1659,14 @@ public:
   CMinBLEICState *GetInnerObj(void);
 };
 
-CMinBLEICStateShell::CMinBLEICStateShell(void) {
-}
+CMinBLEICStateShell::CMinBLEICStateShell(void) {}
 
 CMinBLEICStateShell::CMinBLEICStateShell(CMinBLEICState &obj) {
 
   m_innerobj.Copy(obj);
 }
 
-CMinBLEICStateShell::~CMinBLEICStateShell(void) {
-}
+CMinBLEICStateShell::~CMinBLEICStateShell(void) {}
 
 bool CMinBLEICStateShell::GetNeedF(void) {
 
@@ -1744,11 +1730,9 @@ public:
   void Copy(CMinBLEICReport &obj);
 };
 
-CMinBLEICReport::CMinBLEICReport(void) {
-}
+CMinBLEICReport::CMinBLEICReport(void) {}
 
-CMinBLEICReport::~CMinBLEICReport(void) {
-}
+CMinBLEICReport::~CMinBLEICReport(void) {}
 
 void CMinBLEICReport::Copy(CMinBLEICReport &obj) {
 
@@ -1790,16 +1774,14 @@ public:
   CMinBLEICReport *GetInnerObj(void);
 };
 
-CMinBLEICReportShell::CMinBLEICReportShell(void) {
-}
+CMinBLEICReportShell::CMinBLEICReportShell(void) {}
 
 CMinBLEICReportShell::CMinBLEICReportShell(CMinBLEICReport &obj) {
 
   m_innerobj.Copy(obj);
 }
 
-CMinBLEICReportShell::~CMinBLEICReportShell(void) {
-}
+CMinBLEICReportShell::~CMinBLEICReportShell(void) {}
 
 int CMinBLEICReportShell::GetInnerIterationsCount(void) {
 
@@ -1974,11 +1956,9 @@ public:
 const double CMinBLEIC::m_svdtol = 100;
 const double CMinBLEIC::m_maxouterits = 20;
 
-CMinBLEIC::CMinBLEIC(void) {
-}
+CMinBLEIC::CMinBLEIC(void) {}
 
-CMinBLEIC::~CMinBLEIC(void) {
-}
+CMinBLEIC::~CMinBLEIC(void) {}
 
 static void CMinBLEIC::MinBLEICCreate(const int n, double &x[],
                                       CMinBLEICState &state) {
@@ -3550,11 +3530,9 @@ public:
   void Copy(CMinLBFGSState &obj);
 };
 
-CMinLBFGSState::CMinLBFGSState(void) {
-}
+CMinLBFGSState::CMinLBFGSState(void) {}
 
-CMinLBFGSState::~CMinLBFGSState(void) {
-}
+CMinLBFGSState::~CMinLBFGSState(void) {}
 
 void CMinLBFGSState::Copy(CMinLBFGSState &obj) {
 
@@ -3627,16 +3605,14 @@ public:
   CMinLBFGSState *GetInnerObj(void);
 };
 
-CMinLBFGSStateShell::CMinLBFGSStateShell(void) {
-}
+CMinLBFGSStateShell::CMinLBFGSStateShell(void) {}
 
 CMinLBFGSStateShell::CMinLBFGSStateShell(CMinLBFGSState &obj) {
 
   m_innerobj.Copy(obj);
 }
 
-CMinLBFGSStateShell::~CMinLBFGSStateShell(void) {
-}
+CMinLBFGSStateShell::~CMinLBFGSStateShell(void) {}
 
 bool CMinLBFGSStateShell::GetNeedF(void) {
 
@@ -3695,11 +3671,9 @@ public:
   void Copy(CMinLBFGSReport &obj);
 };
 
-CMinLBFGSReport::CMinLBFGSReport(void) {
-}
+CMinLBFGSReport::CMinLBFGSReport(void) {}
 
-CMinLBFGSReport::~CMinLBFGSReport(void) {
-}
+CMinLBFGSReport::~CMinLBFGSReport(void) {}
 
 void CMinLBFGSReport::Copy(CMinLBFGSReport &obj) {
 
@@ -3726,16 +3700,14 @@ public:
   CMinLBFGSReport *GetInnerObj(void);
 };
 
-CMinLBFGSReportShell::CMinLBFGSReportShell(void) {
-}
+CMinLBFGSReportShell::CMinLBFGSReportShell(void) {}
 
 CMinLBFGSReportShell::CMinLBFGSReportShell(CMinLBFGSReport &obj) {
 
   m_innerobj.Copy(obj);
 }
 
-CMinLBFGSReportShell::~CMinLBFGSReportShell(void) {
-}
+CMinLBFGSReportShell::~CMinLBFGSReportShell(void) {}
 
 int CMinLBFGSReportShell::GetIterationsCount(void) {
 
@@ -3823,11 +3795,9 @@ public:
 
 const double CMinLBFGS::m_gtol = 0.4;
 
-CMinLBFGS::CMinLBFGS(void) {
-}
+CMinLBFGS::CMinLBFGS(void) {}
 
-CMinLBFGS::~CMinLBFGS(void) {
-}
+CMinLBFGS::~CMinLBFGS(void) {}
 
 static void CMinLBFGS::MinLBFGSCreate(const int n, const int m, double &x[],
                                       CMinLBFGSState &state) {
@@ -4712,11 +4682,9 @@ public:
   void Copy(CMinQPState &obj);
 };
 
-CMinQPState::CMinQPState(void) {
-}
+CMinQPState::CMinQPState(void) {}
 
-CMinQPState::~CMinQPState(void) {
-}
+CMinQPState::~CMinQPState(void) {}
 
 void CMinQPState::Copy(CMinQPState &obj) {
 
@@ -4769,16 +4737,14 @@ public:
   CMinQPState *GetInnerObj(void);
 };
 
-CMinQPStateShell::CMinQPStateShell(void) {
-}
+CMinQPStateShell::CMinQPStateShell(void) {}
 
 CMinQPStateShell::CMinQPStateShell(CMinQPState &obj) {
 
   m_innerobj.Copy(obj);
 }
 
-CMinQPStateShell::~CMinQPStateShell(void) {
-}
+CMinQPStateShell::~CMinQPStateShell(void) {}
 
 CMinQPState *CMinQPStateShell::GetInnerObj(void) {
 
@@ -4799,11 +4765,9 @@ public:
   void Copy(CMinQPReport &obj);
 };
 
-CMinQPReport::CMinQPReport(void) {
-}
+CMinQPReport::CMinQPReport(void) {}
 
-CMinQPReport::~CMinQPReport(void) {
-}
+CMinQPReport::~CMinQPReport(void) {}
 
 void CMinQPReport::Copy(CMinQPReport &obj) {
 
@@ -4836,16 +4800,14 @@ public:
   CMinQPReport *GetInnerObj(void);
 };
 
-CMinQPReportShell::CMinQPReportShell(void) {
-}
+CMinQPReportShell::CMinQPReportShell(void) {}
 
 CMinQPReportShell::CMinQPReportShell(CMinQPReport &obj) {
 
   m_innerobj.Copy(obj);
 }
 
-CMinQPReportShell::~CMinQPReportShell(void) {
-}
+CMinQPReportShell::~CMinQPReportShell(void) {}
 
 int CMinQPReportShell::GetInnerIterationsCount(void) {
 
@@ -4931,11 +4893,9 @@ public:
   static void MinQPSetOriginFast(CMinQPState &state, double &xorigin[]);
 };
 
-CMinQP::CMinQP(void) {
-}
+CMinQP::CMinQP(void) {}
 
-CMinQP::~CMinQP(void) {
-}
+CMinQP::~CMinQP(void) {}
 
 static void CMinQP::MinQPCreate(const int n, CMinQPState &state) {
 
@@ -5662,11 +5622,9 @@ public:
   void Copy(CMinLMState &obj);
 };
 
-CMinLMState::CMinLMState(void) {
-}
+CMinLMState::CMinLMState(void) {}
 
-CMinLMState::~CMinLMState(void) {
-}
+CMinLMState::~CMinLMState(void) {}
 
 void CMinLMState::Copy(CMinLMState &obj) {
 
@@ -5765,16 +5723,14 @@ public:
   CMinLMState *GetInnerObj(void);
 };
 
-CMinLMStateShell::CMinLMStateShell(void) {
-}
+CMinLMStateShell::CMinLMStateShell(void) {}
 
 CMinLMStateShell::CMinLMStateShell(CMinLMState &obj) {
 
   m_innerobj.Copy(obj);
 }
 
-CMinLMStateShell::~CMinLMStateShell(void) {
-}
+CMinLMStateShell::~CMinLMStateShell(void) {}
 
 bool CMinLMStateShell::GetNeedF(void) {
 
@@ -5867,11 +5823,9 @@ public:
   void Copy(CMinLMReport &obj);
 };
 
-CMinLMReport::CMinLMReport(void) {
-}
+CMinLMReport::CMinLMReport(void) {}
 
-CMinLMReport::~CMinLMReport(void) {
-}
+CMinLMReport::~CMinLMReport(void) {}
 
 void CMinLMReport::Copy(CMinLMReport &obj) {
 
@@ -5910,16 +5864,14 @@ public:
   CMinLMReport *GetInnerObj(void);
 };
 
-CMinLMReportShell::CMinLMReportShell(void) {
-}
+CMinLMReportShell::CMinLMReportShell(void) {}
 
 CMinLMReportShell::CMinLMReportShell(CMinLMReport &obj) {
 
   m_innerobj.Copy(obj);
 }
 
-CMinLMReportShell::~CMinLMReportShell(void) {
-}
+CMinLMReportShell::~CMinLMReportShell(void) {}
 
 int CMinLMReportShell::GetIterationsCount(void) {
 
@@ -6111,11 +6063,9 @@ const double CMinLM::m_suspiciousnu = 16;
 const int CMinLM::m_smallmodelage = 3;
 const int CMinLM::m_additers = 5;
 
-CMinLM::CMinLM(void) {
-}
+CMinLM::CMinLM(void) {}
 
-CMinLM::~CMinLM(void) {
-}
+CMinLM::~CMinLM(void) {}
 
 static void CMinLM::MinLMCreateVJ(const int n, const int m, double &x[],
                                   CMinLMState &state) {
@@ -7486,11 +7436,9 @@ public:
   void Copy(CMinASAState &obj);
 };
 
-CMinASAState::CMinASAState(void) {
-}
+CMinASAState::CMinASAState(void) {}
 
-CMinASAState::~CMinASAState(void) {
-}
+CMinASAState::~CMinASAState(void) {}
 
 void CMinASAState::Copy(CMinASAState &obj) {
 
@@ -7559,16 +7507,14 @@ public:
   CMinASAState *GetInnerObj(void);
 };
 
-CMinASAStateShell::CMinASAStateShell(void) {
-}
+CMinASAStateShell::CMinASAStateShell(void) {}
 
 CMinASAStateShell::CMinASAStateShell(CMinASAState &obj) {
 
   m_innerobj.Copy(obj);
 }
 
-CMinASAStateShell::~CMinASAStateShell(void) {
-}
+CMinASAStateShell::~CMinASAStateShell(void) {}
 
 bool CMinASAStateShell::GetNeedFG(void) {
 
@@ -7618,11 +7564,9 @@ public:
   void Copy(CMinASAReport &obj);
 };
 
-CMinASAReport::CMinASAReport(void) {
-}
+CMinASAReport::CMinASAReport(void) {}
 
-CMinASAReport::~CMinASAReport(void) {
-}
+CMinASAReport::~CMinASAReport(void) {}
 
 void CMinASAReport::Copy(CMinASAReport &obj) {
 
@@ -7652,16 +7596,14 @@ public:
   CMinASAReport *GetInnerObj(void);
 };
 
-CMinASAReportShell::CMinASAReportShell(void) {
-}
+CMinASAReportShell::CMinASAReportShell(void) {}
 
 CMinASAReportShell::CMinASAReportShell(CMinASAReport &obj) {
 
   m_innerobj.Copy(obj);
 }
 
-CMinASAReportShell::~CMinASAReportShell(void) {
-}
+CMinASAReportShell::~CMinASAReportShell(void) {}
 
 int CMinASAReportShell::GetIterationsCount(void) {
 
@@ -7823,11 +7765,9 @@ const double CMinComp::m_gpaftol = 0.0001;
 const double CMinComp::m_gpadecay = 0.5;
 const double CMinComp::m_asarho = 0.5;
 
-CMinComp::CMinComp(void) {
-}
+CMinComp::CMinComp(void) {}
 
-CMinComp::~CMinComp(void) {
-}
+CMinComp::~CMinComp(void) {}
 
 static void CMinComp::MinLBFGSSetDefaultPreconditioner(CMinLBFGSState &state) {
 
@@ -7842,12 +7782,10 @@ static void CMinComp::MinLBFGSSetCholeskyPreconditioner(CMinLBFGSState &state,
 }
 
 static void CMinComp::MinBLEICSetBarrierWidth(CMinBLEICState &state,
-                                              const double mu) {
-}
+                                              const double mu) {}
 
 static void CMinComp::MinBLEICSetBarrierDecay(CMinBLEICState &state,
-                                              const double mudecay) {
-}
+                                              const double mudecay) {}
 
 static void CMinComp::MinASACreate(const int n, double &x[], double &bndl[],
                                    double &bndu[], CMinASAState &state) {

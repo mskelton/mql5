@@ -32,11 +32,9 @@ public:
 void CTrailingPSAR::CTrailingPSAR(void)
     : m_step(0.02), m_maximum(0.2)
 
-{
-}
+{}
 
-void CTrailingPSAR::~CTrailingPSAR(void) {
-}
+void CTrailingPSAR::~CTrailingPSAR(void) {}
 
 bool CTrailingPSAR::InitIndicators(CIndicators *indicators) {
 

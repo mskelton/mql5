@@ -17,11 +17,9 @@ public:
   }
 };
 
-CChartObjectChannel::CChartObjectChannel(void) {
-}
+CChartObjectChannel::CChartObjectChannel(void) {}
 
-CChartObjectChannel::~CChartObjectChannel(void) {
-}
+CChartObjectChannel::~CChartObjectChannel(void) {}
 
 bool CChartObjectChannel::Create(long chart_id, const string name,
                                  const int window, const datetime time1,
@@ -57,11 +55,9 @@ public:
   virtual bool Load(const int file_handle);
 };
 
-CChartObjectStdDevChannel::CChartObjectStdDevChannel(void) {
-}
+CChartObjectStdDevChannel::CChartObjectStdDevChannel(void) {}
 
-CChartObjectStdDevChannel::~CChartObjectStdDevChannel(void) {
-}
+CChartObjectStdDevChannel::~CChartObjectStdDevChannel(void) {}
 
 bool CChartObjectStdDevChannel::Create(long chart_id, const string name,
                                        const int window, const datetime time1,
@@ -138,11 +134,9 @@ public:
   }
 };
 
-CChartObjectRegression::CChartObjectRegression(void) {
-}
+CChartObjectRegression::CChartObjectRegression(void) {}
 
-CChartObjectRegression::~CChartObjectRegression(void) {
-}
+CChartObjectRegression::~CChartObjectRegression(void) {}
 
 bool CChartObjectRegression::Create(long chart_id, const string name,
                                     const int window, const datetime time1,
@@ -170,11 +164,9 @@ public:
   }
 };
 
-CChartObjectPitchfork::CChartObjectPitchfork(void) {
-}
+CChartObjectPitchfork::CChartObjectPitchfork(void) {}
 
-CChartObjectPitchfork::~CChartObjectPitchfork(void) {
-}
+CChartObjectPitchfork::~CChartObjectPitchfork(void) {}
 
 bool CChartObjectPitchfork::Create(long chart_id, const string name,
                                    const int window, const datetime time1,

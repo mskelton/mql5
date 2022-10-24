@@ -31,8 +31,7 @@ void CExpertTrade::CExpertTrade(void)
     : m_symbol(NULL), m_order_type_time(ORDER_TIME_GTC), m_order_expiration(0) {
 }
 
-CExpertTrade::~CExpertTrade(void) {
-}
+CExpertTrade::~CExpertTrade(void) {}
 
 bool CExpertTrade::SetSymbol(CSymbolInfo *symbol) {
   if (symbol != NULL) {

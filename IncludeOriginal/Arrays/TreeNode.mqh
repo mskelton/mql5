@@ -63,8 +63,7 @@ protected:
 
 CTreeNode::CTreeNode(void)
     : m_p_node(NULL), m_l_node(NULL), m_r_node(NULL), m_balance(0),
-      m_l_balance(0), m_r_balance(0) {
-}
+      m_l_balance(0), m_r_balance(0) {}
 
 CTreeNode::~CTreeNode(void) {
 

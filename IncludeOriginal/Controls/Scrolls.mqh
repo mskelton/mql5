@@ -85,11 +85,9 @@ ON_EVENT_PTR(ON_DRAG_PROCESS, m_drag_object, OnThumbDragProcess)
 ON_EVENT_PTR(ON_DRAG_END, m_drag_object, OnThumbDragEnd)
 EVENT_MAP_END(CWndContainer)
 
-CScroll::CScroll(void) : m_curr_pos(0), m_min_pos(0), m_max_pos(0) {
-}
+CScroll::CScroll(void) : m_curr_pos(0), m_min_pos(0), m_max_pos(0) {}
 
-CScroll::~CScroll(void) {
-}
+CScroll::~CScroll(void) {}
 
 bool CScroll::Create(const long chart, const string name, const int subwin,
                      const int x1, const int y1, const int x2, const int y2) {
@@ -216,11 +214,9 @@ protected:
   virtual int CalcPos(const int coord);
 };
 
-CScrollV::CScrollV(void) {
-}
+CScrollV::CScrollV(void) {}
 
-CScrollV::~CScrollV(void) {
-}
+CScrollV::~CScrollV(void) {}
 
 bool CScrollV::CreateInc(void) {
 
@@ -399,11 +395,9 @@ protected:
   virtual int CalcPos(const int coord);
 };
 
-CScrollH::CScrollH(void) {
-}
+CScrollH::CScrollH(void) {}
 
-CScrollH::~CScrollH(void) {
-}
+CScrollH::~CScrollH(void) {}
 
 bool CScrollH::CreateInc(void) {
 

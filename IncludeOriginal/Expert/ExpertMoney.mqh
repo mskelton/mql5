@@ -23,11 +23,9 @@ public:
   virtual double CheckClose(CPositionInfo *position);
 };
 
-void CExpertMoney::CExpertMoney(void) : m_percent(10.0) {
-}
+void CExpertMoney::CExpertMoney(void) : m_percent(10.0) {}
 
-void CExpertMoney::~CExpertMoney(void) {
-}
+void CExpertMoney::~CExpertMoney(void) {}
 
 bool CExpertMoney::ValidationSettings() {
   if (!CExpertBase::ValidationSettings())

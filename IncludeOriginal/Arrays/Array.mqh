@@ -55,11 +55,9 @@ protected:
 };
 
 CArray::CArray(void)
-    : m_step_resize(16), m_data_total(0), m_data_max(0), m_sort_mode(-1) {
-}
+    : m_step_resize(16), m_data_total(0), m_data_max(0), m_sort_mode(-1) {}
 
-CArray::~CArray(void) {
-}
+CArray::~CArray(void) {}
 
 bool CArray::Step(const int step) {
 

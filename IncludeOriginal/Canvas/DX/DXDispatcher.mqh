@@ -55,8 +55,7 @@ private:
   void ResourcesCheck(void);
 };
 
-CDXDispatcher::CDXDispatcher(void) {
-}
+CDXDispatcher::CDXDispatcher(void) {}
 
 CDXDispatcher::~CDXDispatcher(void) {
   Destroy();
@@ -156,9 +155,8 @@ CDXShader *CDXDispatcher::ShaderCreateFromFile(ENUM_DX_SHADER_TYPE shader_type,
   return (ShaderCreateFromSource(shader_type, source, entry_point));
 }
 
-CDXShader *
-CDXDispatcher::ShaderCreateFromSource(ENUM_DX_SHADER_TYPE shader_type,
-                                      string source, string entry_point) {
+CDXShader *CDXDispatcher::ShaderCreateFromSource(
+    ENUM_DX_SHADER_TYPE shader_type, string source, string entry_point) {
 
   if (m_context == INVALID_HANDLE)
     return (NULL);

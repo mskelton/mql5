@@ -9,10 +9,8 @@ public:
   ~CTrailingNone(void);
 };
 
-CTrailingNone::CTrailingNone(void) {
-}
+CTrailingNone::CTrailingNone(void) {}
 
-CTrailingNone::~CTrailingNone(void) {
-}
+CTrailingNone::~CTrailingNone(void) {}
 
 #endif

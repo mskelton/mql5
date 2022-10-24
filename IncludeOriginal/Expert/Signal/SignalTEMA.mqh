@@ -81,8 +81,7 @@ CSignalTEMA::CSignalTEMA(void)
       USE_SERIES_OPEN + USE_SERIES_HIGH + USE_SERIES_LOW + USE_SERIES_CLOSE;
 }
 
-CSignalTEMA::~CSignalTEMA(void) {
-}
+CSignalTEMA::~CSignalTEMA(void) {}
 
 bool CSignalTEMA::ValidationSettings(void) {
 

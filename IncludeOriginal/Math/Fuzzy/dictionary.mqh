@@ -56,11 +56,9 @@ public:
   void SetAll(CObject *key, CObject *value);
 };
 
-CDictionary_Obj_Obj::CDictionary_Obj_Obj(void) {
-}
+CDictionary_Obj_Obj::CDictionary_Obj_Obj(void) {}
 
-CDictionary_Obj_Obj::~CDictionary_Obj_Obj() {
-}
+CDictionary_Obj_Obj::~CDictionary_Obj_Obj() {}
 
 void CDictionary_Obj_Obj::SetAll(CObject *key, CObject *value) {
   m_key = key;
@@ -93,8 +91,7 @@ public:
   void SetAll(const string key, CObject *value);
 };
 
-CDictionary_String_Obj::CDictionary_String_Obj(void) {
-}
+CDictionary_String_Obj::CDictionary_String_Obj(void) {}
 
 CDictionary_String_Obj::~CDictionary_String_Obj() {
   if (CheckPointer(m_value) == POINTER_DYNAMIC)
@@ -132,11 +129,9 @@ public:
   void SetAll(CObject *key, const double value);
 };
 
-CDictionary_Obj_Double::CDictionary_Obj_Double(void) {
-}
+CDictionary_Obj_Double::CDictionary_Obj_Double(void) {}
 
-CDictionary_Obj_Double::~CDictionary_Obj_Double() {
-}
+CDictionary_Obj_Double::~CDictionary_Obj_Double() {}
 
 void CDictionary_Obj_Double::SetAll(CObject *key, const double value) {
   m_key = key;

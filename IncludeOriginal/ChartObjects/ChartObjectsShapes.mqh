@@ -17,11 +17,9 @@ public:
   }
 };
 
-CChartObjectRectangle::CChartObjectRectangle(void) {
-}
+CChartObjectRectangle::CChartObjectRectangle(void) {}
 
-CChartObjectRectangle::~CChartObjectRectangle(void) {
-}
+CChartObjectRectangle::~CChartObjectRectangle(void) {}
 
 bool CChartObjectRectangle::Create(long chart_id, const string name,
                                    const int window, const datetime time1,
@@ -50,11 +48,9 @@ public:
   }
 };
 
-CChartObjectTriangle::CChartObjectTriangle(void) {
-}
+CChartObjectTriangle::CChartObjectTriangle(void) {}
 
-CChartObjectTriangle::~CChartObjectTriangle(void) {
-}
+CChartObjectTriangle::~CChartObjectTriangle(void) {}
 
 bool CChartObjectTriangle::Create(long chart_id, const string name,
                                   const int window, const datetime time1,
@@ -84,11 +80,9 @@ public:
   }
 };
 
-CChartObjectEllipse::CChartObjectEllipse(void) {
-}
+CChartObjectEllipse::CChartObjectEllipse(void) {}
 
-CChartObjectEllipse::~CChartObjectEllipse(void) {
-}
+CChartObjectEllipse::~CChartObjectEllipse(void) {}
 
 bool CChartObjectEllipse::Create(long chart_id, const string name,
                                  const int window, const datetime time1,

@@ -1578,11 +1578,9 @@ public:
                                      double &leftTail, double &rightTail);
 };
 
-CAlglib::CAlglib(void) {
-}
+CAlglib::CAlglib(void) {}
 
-CAlglib::~CAlglib(void) {
-}
+CAlglib::~CAlglib(void) {}
 
 static void CAlglib::HQRndRandomize(CHighQualityRandStateShell &state) {
 
@@ -3575,10 +3573,9 @@ static void CAlglib::BarycentricBuildXYW(double &x[], double &y[], double &w[],
   return;
 }
 
-static void
-CAlglib::BarycentricBuildFloaterHormann(double &x[], double &y[], const int n,
-                                        const int d,
-                                        CBarycentricInterpolantShell &b) {
+static void CAlglib::BarycentricBuildFloaterHormann(
+    double &x[], double &y[], const int n, const int d,
+    CBarycentricInterpolantShell &b) {
 
   CRatInt::BarycentricBuildFloaterHormann(x, y, n, d, b.GetInnerObj());
 
@@ -5339,10 +5336,9 @@ static void CAlglib::Spline2DLinTransF(CSpline2DInterpolantShell &c,
   return;
 }
 
-static void
-CAlglib::Spline2DResampleBicubic(CMatrixDouble &a, const int oldheight,
-                                 const int oldwidth, CMatrixDouble &b,
-                                 const int newheight, const int newwidth) {
+static void CAlglib::Spline2DResampleBicubic(
+    CMatrixDouble &a, const int oldheight, const int oldwidth, CMatrixDouble &b,
+    const int newheight, const int newwidth) {
 
   CSpline2D::Spline2DResampleBicubic(a, oldheight, oldwidth, b, newheight,
                                      newwidth);
@@ -5350,10 +5346,9 @@ CAlglib::Spline2DResampleBicubic(CMatrixDouble &a, const int oldheight,
   return;
 }
 
-static void
-CAlglib::Spline2DResampleBilinear(CMatrixDouble &a, const int oldheight,
-                                  const int oldwidth, CMatrixDouble &b,
-                                  const int newheight, const int newwidth) {
+static void CAlglib::Spline2DResampleBilinear(
+    CMatrixDouble &a, const int oldheight, const int oldwidth, CMatrixDouble &b,
+    const int newheight, const int newwidth) {
 
   CSpline2D::Spline2DResampleBilinear(a, oldheight, oldwidth, b, newheight,
                                       newwidth);
@@ -7488,10 +7483,12 @@ static void CAlglib::MinLMOptimize(CMinLMStateShell &state,
   }
 }
 
-static void
-CAlglib::MinLMOptimize(CMinLMStateShell &state, CNDimensional_Func &func,
-                       CNDimensional_Grad &grad, CNDimensional_Hess &hess,
-                       CNDimensional_Rep &rep, bool rep_status, CObject &obj) {
+static void CAlglib::MinLMOptimize(CMinLMStateShell &state,
+                                   CNDimensional_Func &func,
+                                   CNDimensional_Grad &grad,
+                                   CNDimensional_Hess &hess,
+                                   CNDimensional_Rep &rep, bool rep_status,
+                                   CObject &obj) {
 
   while (CAlglib::MinLMIteration(state)) {
 
@@ -7564,10 +7561,12 @@ static void CAlglib::MinLMOptimize(CMinLMStateShell &state,
   }
 }
 
-static void
-CAlglib::MinLMOptimize(CMinLMStateShell &state, CNDimensional_Func &func,
-                       CNDimensional_Grad &grad, CNDimensional_Jac &jac,
-                       CNDimensional_Rep &rep, bool rep_status, CObject &obj) {
+static void CAlglib::MinLMOptimize(CMinLMStateShell &state,
+                                   CNDimensional_Func &func,
+                                   CNDimensional_Grad &grad,
+                                   CNDimensional_Jac &jac,
+                                   CNDimensional_Rep &rep, bool rep_status,
+                                   CObject &obj) {
 
   while (CAlglib::MinLMIteration(state)) {
 
@@ -7688,17 +7687,16 @@ static void CAlglib::MinLMCreateFJ(const int m, double &x[],
   return;
 }
 
-static void
-CAlglib::MinLBFGSSetDefaultPreconditioner(CMinLBFGSStateShell &state) {
+static void CAlglib::MinLBFGSSetDefaultPreconditioner(
+    CMinLBFGSStateShell &state) {
 
   CMinComp::MinLBFGSSetDefaultPreconditioner(state.GetInnerObj());
 
   return;
 }
 
-static void
-CAlglib::MinLBFGSSetCholeskyPreconditioner(CMinLBFGSStateShell &state,
-                                           CMatrixDouble &p, bool isupper) {
+static void CAlglib::MinLBFGSSetCholeskyPreconditioner(
+    CMinLBFGSStateShell &state, CMatrixDouble &p, bool isupper) {
 
   CMinComp::MinLBFGSSetCholeskyPreconditioner(state.GetInnerObj(), p, isupper);
 

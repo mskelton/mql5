@@ -28,11 +28,9 @@ public:
   virtual bool Load(const int file_handle);
 };
 
-CChartObjectText::CChartObjectText(void) {
-}
+CChartObjectText::CChartObjectText(void) {}
 
-CChartObjectText::~CChartObjectText(void) {
-}
+CChartObjectText::~CChartObjectText(void) {}
 
 bool CChartObjectText::Create(long chart_id, const string name,
                               const int window, const datetime time,
@@ -216,11 +214,9 @@ public:
   virtual bool Load(const int file_handle);
 };
 
-CChartObjectLabel::CChartObjectLabel(void) {
-}
+CChartObjectLabel::CChartObjectLabel(void) {}
 
-CChartObjectLabel::~CChartObjectLabel(void) {
-}
+CChartObjectLabel::~CChartObjectLabel(void) {}
 
 bool CChartObjectLabel::Create(long chart_id, const string name,
                                const int window, const int X, const int Y) {
@@ -395,11 +391,9 @@ public:
   virtual bool Load(const int file_handle);
 };
 
-CChartObjectEdit::CChartObjectEdit(void) {
-}
+CChartObjectEdit::CChartObjectEdit(void) {}
 
-CChartObjectEdit::~CChartObjectEdit(void) {
-}
+CChartObjectEdit::~CChartObjectEdit(void) {}
 
 bool CChartObjectEdit::Create(long chart_id, const string name,
                               const int window, const int X, const int Y,
@@ -564,11 +558,9 @@ public:
   virtual bool Load(const int file_handle);
 };
 
-CChartObjectButton::CChartObjectButton(void) {
-}
+CChartObjectButton::CChartObjectButton(void) {}
 
-CChartObjectButton::~CChartObjectButton(void) {
-}
+CChartObjectButton::~CChartObjectButton(void) {}
 
 bool CChartObjectButton::State(void) const {
 
@@ -655,11 +647,9 @@ public:
   virtual bool Load(const int file_handle);
 };
 
-CChartObjectRectLabel::CChartObjectRectLabel(void) {
-}
+CChartObjectRectLabel::CChartObjectRectLabel(void) {}
 
-CChartObjectRectLabel::~CChartObjectRectLabel(void) {
-}
+CChartObjectRectLabel::~CChartObjectRectLabel(void) {}
 
 bool CChartObjectRectLabel::Create(long chart_id, const string name,
                                    const int window, const int X, const int Y,

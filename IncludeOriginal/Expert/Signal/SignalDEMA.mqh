@@ -81,8 +81,7 @@ CSignalDEMA::CSignalDEMA(void)
       USE_SERIES_OPEN + USE_SERIES_HIGH + USE_SERIES_LOW + USE_SERIES_CLOSE;
 }
 
-CSignalDEMA::~CSignalDEMA(void) {
-}
+CSignalDEMA::~CSignalDEMA(void) {}
 
 bool CSignalDEMA::ValidationSettings(void) {
 

@@ -33,11 +33,9 @@ public:
   void Copy(CIDWInterpolant &obj);
 };
 
-CIDWInterpolant::CIDWInterpolant(void) {
-}
+CIDWInterpolant::CIDWInterpolant(void) {}
 
-CIDWInterpolant::~CIDWInterpolant(void) {
-}
+CIDWInterpolant::~CIDWInterpolant(void) {}
 
 void CIDWInterpolant::Copy(CIDWInterpolant &obj) {
 
@@ -72,16 +70,14 @@ public:
   CIDWInterpolant *GetInnerObj(void);
 };
 
-CIDWInterpolantShell::CIDWInterpolantShell(void) {
-}
+CIDWInterpolantShell::CIDWInterpolantShell(void) {}
 
 CIDWInterpolantShell::CIDWInterpolantShell(CIDWInterpolant &obj) {
 
   m_innerobj.Copy(obj);
 }
 
-CIDWInterpolantShell::~CIDWInterpolantShell(void) {
-}
+CIDWInterpolantShell::~CIDWInterpolantShell(void) {}
 
 CIDWInterpolant *CIDWInterpolantShell::GetInnerObj(void) {
 
@@ -119,11 +115,9 @@ public:
 const double CIDWInt::m_idwqfactor = 1.5;
 const int CIDWInt::m_idwkmin = 5;
 
-CIDWInt::CIDWInt(void) {
-}
+CIDWInt::CIDWInt(void) {}
 
-CIDWInt::~CIDWInt(void) {
-}
+CIDWInt::~CIDWInt(void) {}
 
 static double CIDWInt::IDWCalc(CIDWInterpolant &z, double &x[]) {
 
@@ -746,11 +740,9 @@ public:
   void Copy(CBarycentricInterpolant &obj);
 };
 
-CBarycentricInterpolant::CBarycentricInterpolant(void) {
-}
+CBarycentricInterpolant::CBarycentricInterpolant(void) {}
 
-CBarycentricInterpolant::~CBarycentricInterpolant(void) {
-}
+CBarycentricInterpolant::~CBarycentricInterpolant(void) {}
 
 void CBarycentricInterpolant::Copy(CBarycentricInterpolant &obj) {
 
@@ -774,8 +766,7 @@ public:
   CBarycentricInterpolant *GetInnerObj(void);
 };
 
-CBarycentricInterpolantShell::CBarycentricInterpolantShell(void) {
-}
+CBarycentricInterpolantShell::CBarycentricInterpolantShell(void) {}
 
 CBarycentricInterpolantShell::CBarycentricInterpolantShell(
     CBarycentricInterpolant &obj) {
@@ -783,8 +774,7 @@ CBarycentricInterpolantShell::CBarycentricInterpolantShell(
   m_innerobj.Copy(obj);
 }
 
-CBarycentricInterpolantShell::~CBarycentricInterpolantShell(void) {
-}
+CBarycentricInterpolantShell::~CBarycentricInterpolantShell(void) {}
 
 CBarycentricInterpolant *CBarycentricInterpolantShell::GetInnerObj(void) {
 
@@ -819,11 +809,9 @@ public:
                               CBarycentricInterpolant &b2);
 };
 
-CRatInt::CRatInt(void) {
-}
+CRatInt::CRatInt(void) {}
 
-CRatInt::~CRatInt(void) {
-}
+CRatInt::~CRatInt(void) {}
 
 static double CRatInt::BarycentricCalc(CBarycentricInterpolant &b,
                                        const double t) {
@@ -1215,9 +1203,8 @@ static void CRatInt::BarycentricBuildXYW(double &x[], double &y[], double &w[],
   BarycentricNormalize(b);
 }
 
-static void
-CRatInt::BarycentricBuildFloaterHormann(double &x[], double &y[], const int n,
-                                        int d, CBarycentricInterpolant &b) {
+static void CRatInt::BarycentricBuildFloaterHormann(
+    double &x[], double &y[], const int n, int d, CBarycentricInterpolant &b) {
 
   double s0 = 0;
   double s = 0;
@@ -1391,11 +1378,9 @@ public:
                                     const int n, double t);
 };
 
-CPolInt::CPolInt(void) {
-}
+CPolInt::CPolInt(void) {}
 
-CPolInt::~CPolInt(void) {
-}
+CPolInt::~CPolInt(void) {}
 
 static void CPolInt::PolynomialBar2Cheb(CBarycentricInterpolant &p,
                                         const double a, const double b,
@@ -2276,11 +2261,9 @@ public:
   void Copy(CSpline1DInterpolant &obj);
 };
 
-CSpline1DInterpolant::CSpline1DInterpolant(void) {
-}
+CSpline1DInterpolant::CSpline1DInterpolant(void) {}
 
-CSpline1DInterpolant::~CSpline1DInterpolant(void) {
-}
+CSpline1DInterpolant::~CSpline1DInterpolant(void) {}
 
 void CSpline1DInterpolant::Copy(CSpline1DInterpolant &obj) {
 
@@ -2304,8 +2287,7 @@ public:
   CSpline1DInterpolant *GetInnerObj(void);
 };
 
-CSpline1DInterpolantShell::CSpline1DInterpolantShell(void) {
-}
+CSpline1DInterpolantShell::CSpline1DInterpolantShell(void) {}
 
 CSpline1DInterpolantShell::CSpline1DInterpolantShell(
     CSpline1DInterpolant &obj) {
@@ -2313,8 +2295,7 @@ CSpline1DInterpolantShell::CSpline1DInterpolantShell(
   m_innerobj.Copy(obj);
 }
 
-CSpline1DInterpolantShell::~CSpline1DInterpolantShell(void) {
-}
+CSpline1DInterpolantShell::~CSpline1DInterpolantShell(void) {}
 
 CSpline1DInterpolant *CSpline1DInterpolantShell::GetInnerObj(void) {
 
@@ -2323,12 +2304,11 @@ CSpline1DInterpolant *CSpline1DInterpolantShell::GetInnerObj(void) {
 
 class CSpline1D {
 private:
-  static void
-  Spline1DGridDiffCubicInternal(double &x[], double &y[], const int n,
-                                const int boundltype, const double boundl,
-                                const int boundrtype, const double boundr,
-                                double &d[], double &a1[], double &a2[],
-                                double &a3[], double &b[], double &dt[]);
+  static void Spline1DGridDiffCubicInternal(
+      double &x[], double &y[], const int n, const int boundltype,
+      const double boundl, const int boundrtype, const double boundr,
+      double &d[], double &a1[], double &a2[], double &a3[], double &b[],
+      double &dt[]);
   static void HeapSortPoints(double &x[], double &y[], const int n);
   static void HeapSortPPoints(double &x[], double &y[], int &p[], const int n);
   static void SolveTridiagonal(double &a[], double &cb[], double &c[],
@@ -2399,11 +2379,9 @@ public:
                               const int n);
 };
 
-CSpline1D::CSpline1D(void) {
-}
+CSpline1D::CSpline1D(void) {}
 
-CSpline1D::~CSpline1D(void) {
-}
+CSpline1D::~CSpline1D(void) {}
 
 static void CSpline1D::Spline1DBuildLinear(double &cx[], double &cy[],
                                            const int n,
@@ -3997,11 +3975,9 @@ public:
   void Copy(CPolynomialFitReport &obj);
 };
 
-CPolynomialFitReport::CPolynomialFitReport(void) {
-}
+CPolynomialFitReport::CPolynomialFitReport(void) {}
 
-CPolynomialFitReport::~CPolynomialFitReport(void) {
-}
+CPolynomialFitReport::~CPolynomialFitReport(void) {}
 
 void CPolynomialFitReport::Copy(CPolynomialFitReport &obj) {
 
@@ -4034,8 +4010,7 @@ public:
   CPolynomialFitReport *GetInnerObj(void);
 };
 
-CPolynomialFitReportShell::CPolynomialFitReportShell(void) {
-}
+CPolynomialFitReportShell::CPolynomialFitReportShell(void) {}
 
 CPolynomialFitReportShell::CPolynomialFitReportShell(
     CPolynomialFitReport &obj) {
@@ -4043,8 +4018,7 @@ CPolynomialFitReportShell::CPolynomialFitReportShell(
   m_innerobj.Copy(obj);
 }
 
-CPolynomialFitReportShell::~CPolynomialFitReportShell(void) {
-}
+CPolynomialFitReportShell::~CPolynomialFitReportShell(void) {}
 
 double CPolynomialFitReportShell::GetTaskRCond(void) {
 
@@ -4116,11 +4090,9 @@ public:
   void Copy(CBarycentricFitReport &obj);
 };
 
-CBarycentricFitReport::CBarycentricFitReport(void) {
-}
+CBarycentricFitReport::CBarycentricFitReport(void) {}
 
-CBarycentricFitReport::~CBarycentricFitReport(void) {
-}
+CBarycentricFitReport::~CBarycentricFitReport(void) {}
 
 void CBarycentricFitReport::Copy(CBarycentricFitReport &obj) {
 
@@ -4156,8 +4128,7 @@ public:
   CBarycentricFitReport *GetInnerObj(void);
 };
 
-CBarycentricFitReportShell::CBarycentricFitReportShell(void) {
-}
+CBarycentricFitReportShell::CBarycentricFitReportShell(void) {}
 
 CBarycentricFitReportShell::CBarycentricFitReportShell(
     CBarycentricFitReport &obj) {
@@ -4165,8 +4136,7 @@ CBarycentricFitReportShell::CBarycentricFitReportShell(
   m_innerobj.Copy(obj);
 }
 
-CBarycentricFitReportShell::~CBarycentricFitReportShell(void) {
-}
+CBarycentricFitReportShell::~CBarycentricFitReportShell(void) {}
 
 double CBarycentricFitReportShell::GetTaskRCond(void) {
 
@@ -4247,11 +4217,9 @@ public:
   void Copy(CSpline1DFitReport &obj);
 };
 
-CSpline1DFitReport::CSpline1DFitReport(void) {
-}
+CSpline1DFitReport::CSpline1DFitReport(void) {}
 
-CSpline1DFitReport::~CSpline1DFitReport(void) {
-}
+CSpline1DFitReport::~CSpline1DFitReport(void) {}
 
 void CSpline1DFitReport::Copy(CSpline1DFitReport &obj) {
 
@@ -4284,16 +4252,14 @@ public:
   CSpline1DFitReport *GetInnerObj(void);
 };
 
-CSpline1DFitReportShell::CSpline1DFitReportShell(void) {
-}
+CSpline1DFitReportShell::CSpline1DFitReportShell(void) {}
 
 CSpline1DFitReportShell::CSpline1DFitReportShell(CSpline1DFitReport &obj) {
 
   m_innerobj.Copy(obj);
 }
 
-CSpline1DFitReportShell::~CSpline1DFitReportShell(void) {
-}
+CSpline1DFitReportShell::~CSpline1DFitReportShell(void) {}
 
 double CSpline1DFitReportShell::GetTaskRCond(void) {
 
@@ -4366,11 +4332,9 @@ public:
   void Copy(CLSFitReport &obj);
 };
 
-CLSFitReport::CLSFitReport(void) {
-}
+CLSFitReport::CLSFitReport(void) {}
 
-CLSFitReport::~CLSFitReport(void) {
-}
+CLSFitReport::~CLSFitReport(void) {}
 
 void CLSFitReport::Copy(CLSFitReport &obj) {
 
@@ -4409,16 +4373,14 @@ public:
   CLSFitReport *GetInnerObj(void);
 };
 
-CLSFitReportShell::CLSFitReportShell(void) {
-}
+CLSFitReportShell::CLSFitReportShell(void) {}
 
 CLSFitReportShell::CLSFitReportShell(CLSFitReport &obj) {
 
   m_innerobj.Copy(obj);
 }
 
-CLSFitReportShell::~CLSFitReportShell(void) {
-}
+CLSFitReportShell::~CLSFitReportShell(void) {}
 
 double CLSFitReportShell::GetTaskRCond(void) {
 
@@ -4546,11 +4508,9 @@ public:
   void Copy(CLSFitState &obj);
 };
 
-CLSFitState::CLSFitState(void) {
-}
+CLSFitState::CLSFitState(void) {}
 
-CLSFitState::~CLSFitState(void) {
-}
+CLSFitState::~CLSFitState(void) {}
 
 void CLSFitState::Copy(CLSFitState &obj) {
 
@@ -4620,16 +4580,14 @@ public:
   CLSFitState *GetInnerObj(void);
 };
 
-CLSFitStateShell::CLSFitStateShell(void) {
-}
+CLSFitStateShell::CLSFitStateShell(void) {}
 
 CLSFitStateShell::CLSFitStateShell(CLSFitState &obj) {
 
   m_innerobj.Copy(obj);
 }
 
-CLSFitStateShell::~CLSFitStateShell(void) {
-}
+CLSFitStateShell::~CLSFitStateShell(void) {}
 
 bool CLSFitStateShell::GetNeedF(void) {
 
@@ -4831,11 +4789,9 @@ public:
 
 const int CLSFit::m_rfsmax = 10;
 
-CLSFit::CLSFit(void) {
-}
+CLSFit::CLSFit(void) {}
 
-CLSFit::~CLSFit(void) {
-}
+CLSFit::~CLSFit(void) {}
 
 static void CLSFit::PolynomialFit(double &x[], double &y[], const int n,
                                   const int m, int &info,
@@ -8144,11 +8100,9 @@ public:
   void Copy(CPSpline2Interpolant &obj);
 };
 
-CPSpline2Interpolant::CPSpline2Interpolant(void) {
-}
+CPSpline2Interpolant::CPSpline2Interpolant(void) {}
 
-CPSpline2Interpolant::~CPSpline2Interpolant(void) {
-}
+CPSpline2Interpolant::~CPSpline2Interpolant(void) {}
 
 void CPSpline2Interpolant::Copy(CPSpline2Interpolant &obj) {
 
@@ -8172,8 +8126,7 @@ public:
   CPSpline2Interpolant *GetInnerObj(void);
 };
 
-CPSpline2InterpolantShell::CPSpline2InterpolantShell(void) {
-}
+CPSpline2InterpolantShell::CPSpline2InterpolantShell(void) {}
 
 CPSpline2InterpolantShell::CPSpline2InterpolantShell(
     CPSpline2Interpolant &obj) {
@@ -8181,8 +8134,7 @@ CPSpline2InterpolantShell::CPSpline2InterpolantShell(
   m_innerobj.Copy(obj);
 }
 
-CPSpline2InterpolantShell::~CPSpline2InterpolantShell(void) {
-}
+CPSpline2InterpolantShell::~CPSpline2InterpolantShell(void) {}
 
 CPSpline2Interpolant *CPSpline2InterpolantShell::GetInnerObj(void) {
 
@@ -8205,11 +8157,9 @@ public:
   void Copy(CPSpline3Interpolant &obj);
 };
 
-CPSpline3Interpolant::CPSpline3Interpolant(void) {
-}
+CPSpline3Interpolant::CPSpline3Interpolant(void) {}
 
-CPSpline3Interpolant::~CPSpline3Interpolant(void) {
-}
+CPSpline3Interpolant::~CPSpline3Interpolant(void) {}
 
 void CPSpline3Interpolant::Copy(CPSpline3Interpolant &obj) {
 
@@ -8234,8 +8184,7 @@ public:
   CPSpline3Interpolant *GetInnerObj(void);
 };
 
-CPSpline3InterpolantShell::CPSpline3InterpolantShell(void) {
-}
+CPSpline3InterpolantShell::CPSpline3InterpolantShell(void) {}
 
 CPSpline3InterpolantShell::CPSpline3InterpolantShell(
     CPSpline3Interpolant &obj) {
@@ -8243,8 +8192,7 @@ CPSpline3InterpolantShell::CPSpline3InterpolantShell(
   m_innerobj.Copy(obj);
 }
 
-CPSpline3InterpolantShell::~CPSpline3InterpolantShell(void) {
-}
+CPSpline3InterpolantShell::~CPSpline3InterpolantShell(void) {}
 
 CPSpline3Interpolant *CPSpline3InterpolantShell::GetInnerObj(void) {
 
@@ -8301,11 +8249,9 @@ public:
                                   const double b);
 };
 
-CPSpline::CPSpline(void) {
-}
+CPSpline::CPSpline(void) {}
 
-CPSpline::~CPSpline(void) {
-}
+CPSpline::~CPSpline(void) {}
 
 static void CPSpline::PSpline2Build(CMatrixDouble &cxy, const int n,
                                     const int st, const int pt,
@@ -9008,11 +8954,9 @@ public:
   void Copy(CSpline2DInterpolant &obj);
 };
 
-CSpline2DInterpolant::CSpline2DInterpolant(void) {
-}
+CSpline2DInterpolant::CSpline2DInterpolant(void) {}
 
-CSpline2DInterpolant::~CSpline2DInterpolant(void) {
-}
+CSpline2DInterpolant::~CSpline2DInterpolant(void) {}
 
 void CSpline2DInterpolant::Copy(CSpline2DInterpolant &obj) {
 
@@ -9033,8 +8977,7 @@ public:
   CSpline2DInterpolant *GetInnerObj(void);
 };
 
-CSpline2DInterpolantShell::CSpline2DInterpolantShell(void) {
-}
+CSpline2DInterpolantShell::CSpline2DInterpolantShell(void) {}
 
 CSpline2DInterpolantShell::CSpline2DInterpolantShell(
     CSpline2DInterpolant &obj) {
@@ -9042,8 +8985,7 @@ CSpline2DInterpolantShell::CSpline2DInterpolantShell(
   m_innerobj.Copy(obj);
 }
 
-CSpline2DInterpolantShell::~CSpline2DInterpolantShell(void) {
-}
+CSpline2DInterpolantShell::~CSpline2DInterpolantShell(void) {}
 
 CSpline2DInterpolant *CSpline2DInterpolantShell::GetInnerObj(void) {
 
@@ -9087,11 +9029,9 @@ public:
                                        const int newheight, const int newwidth);
 };
 
-CSpline2D::CSpline2D(void) {
-}
+CSpline2D::CSpline2D(void) {}
 
-CSpline2D::~CSpline2D(void) {
-}
+CSpline2D::~CSpline2D(void) {}
 
 static void CSpline2D::Spline2DBuildBilinear(double &cx[], double &cy[],
                                              CMatrixDouble &cf, const int m,
@@ -9834,10 +9774,9 @@ static void CSpline2D::Spline2DCopy(CSpline2DInterpolant &c,
     cc.m_c[i_] = c.m_c[i_];
 }
 
-static void
-CSpline2D::Spline2DResampleBicubic(CMatrixDouble &a, const int oldheight,
-                                   const int oldwidth, CMatrixDouble &b,
-                                   const int newheight, const int newwidth) {
+static void CSpline2D::Spline2DResampleBicubic(
+    CMatrixDouble &a, const int oldheight, const int oldwidth, CMatrixDouble &b,
+    const int newheight, const int newwidth) {
 
   int i = 0;
   int j = 0;
@@ -9894,10 +9833,9 @@ CSpline2D::Spline2DResampleBicubic(CMatrixDouble &a, const int oldheight,
   }
 }
 
-static void
-CSpline2D::Spline2DResampleBilinear(CMatrixDouble &a, const int oldheight,
-                                    const int oldwidth, CMatrixDouble &b,
-                                    const int newheight, const int newwidth) {
+static void CSpline2D::Spline2DResampleBilinear(
+    CMatrixDouble &a, const int oldheight, const int oldwidth, CMatrixDouble &b,
+    const int newheight, const int newwidth) {
 
   int i = 0;
   int j = 0;

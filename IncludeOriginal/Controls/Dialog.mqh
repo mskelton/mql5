@@ -97,11 +97,9 @@ ON_EVENT_PTR(ON_DRAG_PROCESS, m_drag_object, OnDialogDragProcess)
 ON_EVENT_PTR(ON_DRAG_END, m_drag_object, OnDialogDragEnd)
 EVENT_MAP_END(CWndContainer)
 
-CDialog::CDialog(void) : m_panel_flag(false), m_minimized(false) {
-}
+CDialog::CDialog(void) : m_panel_flag(false), m_minimized(false) {}
 
-CDialog::~CDialog(void) {
-}
+CDialog::~CDialog(void) {}
 
 bool CDialog::Create(const long chart, const string name, const int subwin,
                      const int x1, const int y1, const int x2, const int y2) {
@@ -282,8 +280,7 @@ bool CDialog::CreateClientArea(void) {
   return (true);
 }
 
-void CDialog::OnClickCaption(void) {
-}
+void CDialog::OnClickCaption(void) {}
 
 void CDialog::OnClickButtonClose(void) {
   Visible(false);
@@ -424,11 +421,9 @@ EVENT_MAP_END(CDialog)
 
 CAppDialog::CAppDialog(void)
     : m_program_type(WRONG_VALUE), m_deinit_reason(WRONG_VALUE),
-      m_subwin_Yoff(0), m_focused_wnd(NULL), m_top_wnd(NULL) {
-}
+      m_subwin_Yoff(0), m_focused_wnd(NULL), m_top_wnd(NULL) {}
 
-CAppDialog::~CAppDialog(void) {
-}
+CAppDialog::~CAppDialog(void) {}
 
 bool CAppDialog::Create(const long chart, const string name, const int subwin,
                         const int x1, const int y1, const int x2,

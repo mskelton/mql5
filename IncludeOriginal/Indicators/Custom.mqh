@@ -30,11 +30,9 @@ protected:
                           const int num_params, const MqlParam &params[]);
 };
 
-CiCustom::CiCustom(void) : m_num_params(0) {
-}
+CiCustom::CiCustom(void) : m_num_params(0) {}
 
-CiCustom::~CiCustom(void) {
-}
+CiCustom::~CiCustom(void) {}
 
 bool CiCustom::NumBuffers(const int buffers) {
   bool result = true;

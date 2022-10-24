@@ -96,11 +96,9 @@ ON_EVENT(ON_SCROLL_DEC, m_scroll_h, OnScrollLineLeft)
 ON_EVENT(ON_SCROLL_INC, m_scroll_h, OnScrollLineRight)
 EVENT_MAP_END(CWndContainer)
 
-CWndClient::CWndClient(void) : m_v_scrolled(false), m_h_scrolled(false) {
-}
+CWndClient::CWndClient(void) : m_v_scrolled(false), m_h_scrolled(false) {}
 
-CWndClient::~CWndClient(void) {
-}
+CWndClient::~CWndClient(void) {}
 
 bool CWndClient::Create(const long chart, const string name, const int subwin,
                         const int x1, const int y1, const int x2,

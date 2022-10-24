@@ -54,8 +54,8 @@ public:
   bool TrySetValue(TKey key, TValue value);
 
 private:
-  static void
-  ClearNodes(CRedBlackTreeNode<CKeyValuePair<TKey, TValue> *> *node);
+  static void ClearNodes(
+      CRedBlackTreeNode<CKeyValuePair<TKey, TValue> *> *node);
 };
 
 template <typename TKey, typename TValue> CSortedMap::CSortedMap(void) {
@@ -120,8 +120,8 @@ template <typename TKey, typename TValue> CSortedMap::~CSortedMap(void) {
 }
 
 template <typename TKey, typename TValue>
-static void
-CSortedMap::ClearNodes(CRedBlackTreeNode<CKeyValuePair<TKey, TValue> *> *node) {
+static void CSortedMap::ClearNodes(
+    CRedBlackTreeNode<CKeyValuePair<TKey, TValue> *> *node) {
 
   if (CheckPointer(node) == POINTER_INVALID)
     return;

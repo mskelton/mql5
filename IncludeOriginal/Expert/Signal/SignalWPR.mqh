@@ -63,8 +63,7 @@ CSignalWPR::CSignalWPR(void)
   m_used_series = USE_SERIES_HIGH + USE_SERIES_LOW;
 }
 
-CSignalWPR::~CSignalWPR(void) {
-}
+CSignalWPR::~CSignalWPR(void) {}
 
 bool CSignalWPR::ValidationSettings(void) {
 

@@ -17,8 +17,8 @@ for i in $(find IncludeOriginal -name '*.mqh'); do
 	content=$(iconv -f ISO-8859-1 -t UTF-8 $i)
 	echo -e "$content" >$i
 
-	# Use forward slashes in include path
-	sed -i '' '/^#include/s/\\\\/\//g' $i
+	# Remove comments again
+	sed -i '' 's/\/\/.*//' $i
 
 	# Remove resources and properties
 	sed -i '' 's/^#resource .*//' $i
@@ -31,5 +31,8 @@ for i in $(find IncludeOriginal -name '*.mqh'); do
 	sed -i '' "2s/.*/#define $h_name/" $i
 	echo -e "\n#endif" >>$i
 
-	clang-format -style='{AllowShortFunctionsOnASingleLine: None, BinPackArguments: true, BinPackParameters: true}' -i $i
+	clang-format -style='{AllowShortFunctionsOnASingleLine: None, BinPackArguments: true, BinPackParameters: true, AlwaysBreakAfterDefinitionReturnType: None, PenaltyReturnTypeOnItsOwnLine: 99999}' -i $i
+
+	# Use forward slashes in include path
+	sed -i '' '/^#include/s/\\\\/\//g' $i
 done

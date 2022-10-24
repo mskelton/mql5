@@ -19,11 +19,9 @@ public:
                                     CFtPlan &plan);
 };
 
-CFastFourierTransform::CFastFourierTransform(void) {
-}
+CFastFourierTransform::CFastFourierTransform(void) {}
 
-CFastFourierTransform::~CFastFourierTransform(void) {
-}
+CFastFourierTransform::~CFastFourierTransform(void) {}
 
 static void CFastFourierTransform::FFTC1D(al_complex &a[], const int n) {
 
@@ -370,11 +368,9 @@ public:
                        const bool circular, int alg, int q, double &r[]);
 };
 
-CConv::CConv(void) {
-}
+CConv::CConv(void) {}
 
-CConv::~CConv(void) {
-}
+CConv::~CConv(void) {}
 
 static void CConv::ConvC1D(al_complex &a[], const int m, al_complex &b[],
                            const int n, al_complex &r[]) {
@@ -1538,11 +1534,9 @@ public:
                               const int n, double &c[]);
 };
 
-CCorr::CCorr(void) {
-}
+CCorr::CCorr(void) {}
 
-CCorr::~CCorr(void) {
-}
+CCorr::~CCorr(void) {}
 
 static void CCorr::CorrC1D(al_complex &signal[], const int n,
                            al_complex &pattern[], const int m,
@@ -1736,11 +1730,9 @@ public:
   static void FHTR1DInv(double &a[], const int n);
 };
 
-CFastHartleyTransform::CFastHartleyTransform(void) {
-}
+CFastHartleyTransform::CFastHartleyTransform(void) {}
 
-CFastHartleyTransform::~CFastHartleyTransform(void) {
-}
+CFastHartleyTransform::~CFastHartleyTransform(void) {}
 
 static void CFastHartleyTransform::FHTR1D(double &a[], const int n) {
 

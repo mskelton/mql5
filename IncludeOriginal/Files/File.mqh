@@ -25,7 +25,8 @@ public:
   void SetUnicode(const bool unicode);
   void SetCommon(const bool common);
 
-  int Open(const string file_name, int open_flags, const short delimiter = '	');
+  int Open(const string file_name, int open_flags,
+           const short delimiter = '	');
   void Close(void);
   void Delete(void);
   ulong Size(void);
@@ -51,8 +52,7 @@ public:
   void FileFindClose(const long search_handle);
 };
 
-CFile::CFile(void) : m_handle(INVALID_HANDLE), m_name(""), m_flags(FILE_ANSI) {
-}
+CFile::CFile(void) : m_handle(INVALID_HANDLE), m_name(""), m_flags(FILE_ANSI) {}
 
 CFile::~CFile(void) {
 

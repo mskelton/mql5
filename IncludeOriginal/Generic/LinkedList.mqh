@@ -12,12 +12,10 @@ protected:
   T m_item;
 
 public:
-  CLinkedListNode(T value) : m_item(value) {
-  }
-  CLinkedListNode(CLinkedList<T> *list, T value) : m_list(list), m_item(value) {
-  }
-  ~CLinkedListNode(void) {
-  }
+  CLinkedListNode(T value) : m_item(value) {}
+  CLinkedListNode(CLinkedList<T> *list, T value)
+      : m_list(list), m_item(value) {}
+  ~CLinkedListNode(void) {}
 
   CLinkedList<T> *List(void) {
     return (m_list);
@@ -94,8 +92,7 @@ private:
   void InternalRemoveNode(CLinkedListNode<T> *node);
 };
 
-template <typename T> CLinkedList::CLinkedList(void) : m_count(0) {
-}
+template <typename T> CLinkedList::CLinkedList(void) : m_count(0) {}
 
 template <typename T> CLinkedList::CLinkedList(T &array[]) : m_count(0) {
   for (int i = 0; i < ArraySize(array); i++)

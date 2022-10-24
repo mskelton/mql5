@@ -119,11 +119,9 @@ CExpertSignal::CExpertSignal(void)
     : m_base_price(0.0), m_general(-1), m_weight(1.0), m_patterns_usage(-1),
       m_ignore(0), m_invert(0), m_threshold_open(50), m_threshold_close(100),
       m_price_level(0.0), m_stop_level(0.0), m_take_level(0.0), m_expiration(0),
-      m_direction(EMPTY_VALUE) {
-}
+      m_direction(EMPTY_VALUE) {}
 
-CExpertSignal::~CExpertSignal(void) {
-}
+CExpertSignal::~CExpertSignal(void) {}
 
 int CExpertSignal::UsedSeries(void) {
   if (m_other_symbol || m_other_period)

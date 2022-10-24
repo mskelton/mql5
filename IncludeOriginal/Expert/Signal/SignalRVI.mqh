@@ -55,11 +55,9 @@ protected:
 };
 
 CSignalRVI::CSignalRVI(void)
-    : m_periodRVI(10), m_pattern_0(60), m_pattern_1(100) {
-}
+    : m_periodRVI(10), m_pattern_0(60), m_pattern_1(100) {}
 
-CSignalRVI::~CSignalRVI(void) {
-}
+CSignalRVI::~CSignalRVI(void) {}
 
 bool CSignalRVI::ValidationSettings(void) {
 

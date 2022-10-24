@@ -27,11 +27,9 @@ public:
 };
 
 void CTrailingFixedPips::CTrailingFixedPips(void)
-    : m_stop_level(30), m_profit_level(50) {
-}
+    : m_stop_level(30), m_profit_level(50) {}
 
-CTrailingFixedPips::~CTrailingFixedPips(void) {
-}
+CTrailingFixedPips::~CTrailingFixedPips(void) {}
 
 bool CTrailingFixedPips::ValidationSettings(void) {
   if (!CExpertTrailing::ValidationSettings())

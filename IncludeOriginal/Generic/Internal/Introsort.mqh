@@ -7,10 +7,8 @@ public:
   TKey keys[];
   TItem items[];
 
-  Introsort(void) {
-  }
-  ~Introsort(void) {
-  }
+  Introsort(void) {}
+  ~Introsort(void) {}
 
   void Sort(const int index, const int length);
 

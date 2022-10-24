@@ -41,11 +41,9 @@ public:
   void Copy(CODESolverState &obj);
 };
 
-CODESolverState::CODESolverState(void) {
-}
+CODESolverState::CODESolverState(void) {}
 
-CODESolverState::~CODESolverState(void) {
-}
+CODESolverState::~CODESolverState(void) {}
 
 void CODESolverState::Copy(CODESolverState &obj) {
 
@@ -94,16 +92,14 @@ public:
   CODESolverState *GetInnerObj(void);
 };
 
-CODESolverStateShell::CODESolverStateShell(void) {
-}
+CODESolverStateShell::CODESolverStateShell(void) {}
 
 CODESolverStateShell::CODESolverStateShell(CODESolverState &obj) {
 
   m_innerobj.Copy(obj);
 }
 
-CODESolverStateShell::~CODESolverStateShell(void) {
-}
+CODESolverStateShell::~CODESolverStateShell(void) {}
 
 bool CODESolverStateShell::GetNeedDY(void) {
 
@@ -141,11 +137,9 @@ public:
   void Copy(CODESolverReport &obj);
 };
 
-CODESolverReport::CODESolverReport(void) {
-}
+CODESolverReport::CODESolverReport(void) {}
 
-CODESolverReport::~CODESolverReport(void) {
-}
+CODESolverReport::~CODESolverReport(void) {}
 
 void CODESolverReport::Copy(CODESolverReport &obj) {
 
@@ -169,16 +163,14 @@ public:
   CODESolverReport *GetInnerObj(void);
 };
 
-CODESolverReportShell::CODESolverReportShell(void) {
-}
+CODESolverReportShell::CODESolverReportShell(void) {}
 
 CODESolverReportShell::CODESolverReportShell(CODESolverReport &obj) {
 
   m_innerobj.Copy(obj);
 }
 
-CODESolverReportShell::~CODESolverReportShell(void) {
-}
+CODESolverReportShell::~CODESolverReportShell(void) {}
 
 int CODESolverReportShell::GetNFev(void) {
 
@@ -246,11 +238,9 @@ public:
 const double CODESolver::m_odesolvermaxgrow = 3.0;
 const double CODESolver::m_odesolvermaxshrink = 10.0;
 
-CODESolver::CODESolver(void) {
-}
+CODESolver::CODESolver(void) {}
 
-CODESolver::~CODESolver(void) {
-}
+CODESolver::~CODESolver(void) {}
 
 static void CODESolver::ODESolverRKCK(double &y[], const int n, double &x[],
                                       const int m, const double eps,

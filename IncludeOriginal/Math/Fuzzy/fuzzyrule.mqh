@@ -126,8 +126,7 @@ CFuzzyCondition::CFuzzyCondition(CFuzzyVariable *var, CFuzzyTerm *term)
   CSingleCondition::Not(false);
 }
 
-CFuzzyCondition::~CFuzzyCondition(void) {
-}
+CFuzzyCondition::~CFuzzyCondition(void) {}
 
 class CConditions : public ICondition {
 private:
@@ -177,14 +176,12 @@ public:
   virtual CConditions *Condition(void) {
     return (NULL);
   }
-  virtual void Condition(CConditions *value) {
-  }
+  virtual void Condition(CConditions *value) {}
 
   virtual CSingleCondition *Conclusion(void) {
     return (NULL);
   }
-  virtual void Conclusion(CSingleCondition *value) {
-  }
+  virtual void Conclusion(CSingleCondition *value) {}
 
   virtual bool IsTypeOf(EnRule type) {
     return (type == TYPE_CLASS_IParsableRule);
@@ -215,8 +212,7 @@ public:
   virtual CSingleCondition *Conclusion(void) {
     return (NULL);
   }
-  virtual void Conclusion(CSingleCondition *value) {
-  }
+  virtual void Conclusion(CSingleCondition *value) {}
 
   virtual bool IsTypeOf(EnRule type) {
     return (type == TYPE_CLASS_GenericFuzzyRule);
@@ -308,8 +304,7 @@ public:
   }
 };
 
-CSugenoFuzzyRule::CSugenoFuzzyRule(void) {
-}
+CSugenoFuzzyRule::CSugenoFuzzyRule(void) {}
 
 CSugenoFuzzyRule::~CSugenoFuzzyRule(void) {
   if (CheckPointer(m_sugeno_conclusion) == POINTER_DYNAMIC)

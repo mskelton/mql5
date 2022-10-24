@@ -59,11 +59,9 @@ ON_EVENT(ON_CLICK, m_inc, OnClickInc)
 ON_EVENT(ON_CLICK, m_dec, OnClickDec)
 EVENT_MAP_END(CWndContainer)
 
-CSpinEdit::CSpinEdit(void) : m_min_value(0), m_max_value(0), m_value(0) {
-}
+CSpinEdit::CSpinEdit(void) : m_min_value(0), m_max_value(0), m_value(0) {}
 
-CSpinEdit::~CSpinEdit(void) {
-}
+CSpinEdit::~CSpinEdit(void) {}
 
 bool CSpinEdit::Create(const long chart, const string name, const int subwin,
                        const int x1, const int y1, const int x2, const int y2) {

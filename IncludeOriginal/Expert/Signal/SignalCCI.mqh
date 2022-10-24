@@ -72,8 +72,7 @@ CSignalCCI::CSignalCCI(void)
   m_used_series = USE_SERIES_HIGH + USE_SERIES_LOW;
 }
 
-CSignalCCI::~CSignalCCI(void) {
-}
+CSignalCCI::~CSignalCCI(void) {}
 
 bool CSignalCCI::ValidationSettings(void) {
 

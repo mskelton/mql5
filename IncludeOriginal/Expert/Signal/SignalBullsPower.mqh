@@ -57,8 +57,7 @@ CSignalBullsPower::CSignalBullsPower(void)
   m_used_series = USE_SERIES_HIGH + USE_SERIES_LOW;
 }
 
-CSignalBullsPower::~CSignalBullsPower(void) {
-}
+CSignalBullsPower::~CSignalBullsPower(void) {}
 
 bool CSignalBullsPower::ValidationSettings(void) {
 

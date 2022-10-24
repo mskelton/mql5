@@ -26,11 +26,9 @@ public:
   virtual bool Load(const int file_handle);
 };
 
-CChartObjectBitmap::CChartObjectBitmap(void) {
-}
+CChartObjectBitmap::CChartObjectBitmap(void) {}
 
-CChartObjectBitmap::~CChartObjectBitmap(void) {
-}
+CChartObjectBitmap::~CChartObjectBitmap(void) {}
 
 bool CChartObjectBitmap::Create(long chart_id, const string name,
                                 const int window, const datetime time,
@@ -171,11 +169,9 @@ public:
   virtual bool Load(const int file_handle);
 };
 
-CChartObjectBmpLabel::CChartObjectBmpLabel(void) {
-}
+CChartObjectBmpLabel::CChartObjectBmpLabel(void) {}
 
-CChartObjectBmpLabel::~CChartObjectBmpLabel(void) {
-}
+CChartObjectBmpLabel::~CChartObjectBmpLabel(void) {}
 
 bool CChartObjectBmpLabel::Create(long chart_id, const string name,
                                   const int window, const int X, const int Y) {

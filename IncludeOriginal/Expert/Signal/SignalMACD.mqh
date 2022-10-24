@@ -95,8 +95,7 @@ CSignalMACD::CSignalMACD(void)
   m_used_series = USE_SERIES_HIGH + USE_SERIES_LOW;
 }
 
-CSignalMACD::~CSignalMACD(void) {
-}
+CSignalMACD::~CSignalMACD(void) {}
 
 bool CSignalMACD::ValidationSettings(void) {
 

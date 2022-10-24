@@ -15,11 +15,9 @@ public:
   static bool IsLittleEndian(void);
 };
 
-BitConverter::BitConverter(void) {
-}
+BitConverter::BitConverter(void) {}
 
-BitConverter::~BitConverter(void) {
-}
+BitConverter::~BitConverter(void) {}
 
 static void BitConverter::GetBytes(const int d, uchar &bytes[]) {
 
@@ -315,10 +313,8 @@ union UDoubleValue {
   double value;
   long bits;
 
-  UDoubleValue(double dbl) : value(dbl) {
-  }
-  UDoubleValue(long bit_value) : bits(bit_value) {
-  }
+  UDoubleValue(double dbl) : value(dbl) {}
+  UDoubleValue(long bit_value) : bits(bit_value) {}
 };
 
 class CInfOrNaN {
@@ -336,11 +332,9 @@ public:
   static double NaN(void);
 };
 
-CInfOrNaN::CInfOrNaN(void) {
-}
+CInfOrNaN::CInfOrNaN(void) {}
 
-CInfOrNaN::~CInfOrNaN(void) {
-}
+CInfOrNaN::~CInfOrNaN(void) {}
 
 static bool CInfOrNaN::IsPositiveInfinity(const double x) {
   UDoubleValue val = x;

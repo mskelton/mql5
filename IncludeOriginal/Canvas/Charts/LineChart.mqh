@@ -42,8 +42,7 @@ CLineChart::CLineChart(void) : m_filled(false) {
   ShowFlags(FLAG_SHOW_LEGEND | FLAGS_SHOW_SCALES | FLAG_SHOW_GRID);
 }
 
-CLineChart::~CLineChart(void) {
-}
+CLineChart::~CLineChart(void) {}
 
 bool CLineChart::Create(const string name, const int width, const int height,
                         ENUM_COLOR_FORMAT clrfmt) {

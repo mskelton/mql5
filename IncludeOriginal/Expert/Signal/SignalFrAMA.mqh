@@ -81,8 +81,7 @@ CSignalFrAMA::CSignalFrAMA(void)
       USE_SERIES_OPEN + USE_SERIES_HIGH + USE_SERIES_LOW + USE_SERIES_CLOSE;
 }
 
-CSignalFrAMA::~CSignalFrAMA(void) {
-}
+CSignalFrAMA::~CSignalFrAMA(void) {}
 
 bool CSignalFrAMA::ValidationSettings(void) {
 

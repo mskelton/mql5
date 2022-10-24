@@ -58,11 +58,9 @@ public:
 
 CPositionInfo::CPositionInfo(void)
     : m_type(WRONG_VALUE), m_volume(0.0), m_price(0.0), m_stop_loss(0.0),
-      m_take_profit(0.0) {
-}
+      m_take_profit(0.0) {}
 
-CPositionInfo::~CPositionInfo(void) {
-}
+CPositionInfo::~CPositionInfo(void) {}
 
 ulong CPositionInfo::Ticket(void) const {
   return ((ulong)PositionGetInteger(POSITION_TICKET));

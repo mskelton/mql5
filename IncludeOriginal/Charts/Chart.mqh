@@ -173,8 +173,7 @@ public:
   virtual bool Load(const int file_handle);
 };
 
-CChart::CChart(void) : m_chart_id(-1) {
-}
+CChart::CChart(void) : m_chart_id(-1) {}
 
 CChart::~CChart(void) {
   if (m_chart_id != -1)

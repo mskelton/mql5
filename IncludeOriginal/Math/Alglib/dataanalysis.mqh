@@ -18,11 +18,9 @@ public:
   ~CCVReport(void);
 };
 
-CCVReport::CCVReport(void) {
-}
+CCVReport::CCVReport(void) {}
 
-CCVReport::~CCVReport(void) {
-}
+CCVReport::~CCVReport(void) {}
 
 class CBdSS {
 private:
@@ -67,11 +65,9 @@ public:
                               double &thresholds[], int &ni, double &cve);
 };
 
-CBdSS::CBdSS(void) {
-}
+CBdSS::CBdSS(void) {}
 
-CBdSS::~CBdSS(void) {
-}
+CBdSS::~CBdSS(void) {}
 
 static void CBdSS::DSErrAllocate(const int nclasses, double &buf[]) {
 
@@ -1048,11 +1044,9 @@ public:
   void Copy(CDecisionForest &obj);
 };
 
-CDecisionForest::CDecisionForest(void) {
-}
+CDecisionForest::CDecisionForest(void) {}
 
-CDecisionForest::~CDecisionForest(void) {
-}
+CDecisionForest::~CDecisionForest(void) {}
 
 void CDecisionForest::Copy(CDecisionForest &obj) {
 
@@ -1076,16 +1070,14 @@ public:
   CDecisionForest *GetInnerObj(void);
 };
 
-CDecisionForestShell::CDecisionForestShell(void) {
-}
+CDecisionForestShell::CDecisionForestShell(void) {}
 
 CDecisionForestShell::CDecisionForestShell(CDecisionForest &obj) {
 
   m_innerobj.Copy(obj);
 }
 
-CDecisionForestShell::~CDecisionForestShell(void) {
-}
+CDecisionForestShell::~CDecisionForestShell(void) {}
 
 CDecisionForest *CDecisionForestShell::GetInnerObj(void) {
 
@@ -1111,11 +1103,9 @@ public:
   void Copy(CDFReport &obj);
 };
 
-CDFReport::CDFReport(void) {
-}
+CDFReport::CDFReport(void) {}
 
-CDFReport::~CDFReport(void) {
-}
+CDFReport::~CDFReport(void) {}
 
 void CDFReport::Copy(CDFReport &obj) {
 
@@ -1163,16 +1153,14 @@ public:
   CDFReport *GetInnerObj(void);
 };
 
-CDFReportShell::CDFReportShell(void) {
-}
+CDFReportShell::CDFReportShell(void) {}
 
 CDFReportShell::CDFReportShell(CDFReport &obj) {
 
   m_innerobj.Copy(obj);
 }
 
-CDFReportShell::~CDFReportShell(void) {
-}
+CDFReportShell::~CDFReportShell(void) {}
 
 double CDFReportShell::GetRelClsError(void) {
 
@@ -1298,11 +1286,9 @@ public:
   ~CDFInternalBuffers(void);
 };
 
-CDFInternalBuffers::CDFInternalBuffers(void) {
-}
+CDFInternalBuffers::CDFInternalBuffers(void) {}
 
-CDFInternalBuffers::~CDFInternalBuffers(void) {
-}
+CDFInternalBuffers::~CDFInternalBuffers(void) {}
 
 class CDForest {
 private:
@@ -1375,11 +1361,9 @@ const int CDForest::m_dfusestrongsplits = 1;
 const int CDForest::m_dfuseevs = 2;
 const int CDForest::m_dffirstversion = 0;
 
-CDForest::CDForest(void) {
-}
+CDForest::CDForest(void) {}
 
-CDForest::~CDForest(void) {
-}
+CDForest::~CDForest(void) {}
 
 static void CDForest::DFBuildRandomDecisionForest(
     CMatrixDouble &xy, const int npoints, const int nvars, const int nclasses,
@@ -2584,11 +2568,9 @@ public:
                              int &info, CMatrixDouble &c, int &xyc[]);
 };
 
-CKMeans::CKMeans(void) {
-}
+CKMeans::CKMeans(void) {}
 
-CKMeans::~CKMeans(void) {
-}
+CKMeans::~CKMeans(void) {}
 
 static void CKMeans::KMeansGenerate(CMatrixDouble &xy, const int npoints,
                                     const int nvars, const int k,
@@ -2842,11 +2824,9 @@ public:
                          const int nclasses, int &info, CMatrixDouble &w);
 };
 
-CLDA::CLDA(void) {
-}
+CLDA::CLDA(void) {}
 
-CLDA::~CLDA(void) {
-}
+CLDA::~CLDA(void) {}
 
 static void CLDA::FisherLDA(CMatrixDouble &xy, const int npoints,
                             const int nvars, const int nclasses, int &info,
@@ -3125,11 +3105,9 @@ public:
   void Copy(CLinearModel &obj);
 };
 
-CLinearModel::CLinearModel(void) {
-}
+CLinearModel::CLinearModel(void) {}
 
-CLinearModel::~CLinearModel(void) {
-}
+CLinearModel::~CLinearModel(void) {}
 
 void CLinearModel::Copy(CLinearModel &obj) {
 
@@ -3148,16 +3126,14 @@ public:
   CLinearModel *GetInnerObj(void);
 };
 
-CLinearModelShell::CLinearModelShell(void) {
-}
+CLinearModelShell::CLinearModelShell(void) {}
 
 CLinearModelShell::CLinearModelShell(CLinearModel &obj) {
 
   m_innerobj.Copy(obj);
 }
 
-CLinearModelShell::~CLinearModelShell(void) {
-}
+CLinearModelShell::~CLinearModelShell(void) {}
 
 CLinearModel *CLinearModelShell::GetInnerObj(void) {
 
@@ -3184,11 +3160,9 @@ public:
   void Copy(CLRReport &obj);
 };
 
-CLRReport::CLRReport(void) {
-}
+CLRReport::CLRReport(void) {}
 
-CLRReport::~CLRReport(void) {
-}
+CLRReport::~CLRReport(void) {}
 
 void CLRReport::Copy(CLRReport &obj) {
 
@@ -3231,16 +3205,14 @@ public:
   CLRReport *GetInnerObj(void);
 };
 
-CLRReportShell::CLRReportShell(void) {
-}
+CLRReportShell::CLRReportShell(void) {}
 
 CLRReportShell::CLRReportShell(CLRReport &obj) {
 
   m_innerobj.Copy(obj);
 }
 
-CLRReportShell::~CLRReportShell(void) {
-}
+CLRReportShell::~CLRReportShell(void) {}
 
 double CLRReportShell::GetRMSError(void) {
 
@@ -3358,11 +3330,9 @@ public:
 
 const int CLinReg::m_lrvnum = 5;
 
-CLinReg::CLinReg(void) {
-}
+CLinReg::CLinReg(void) {}
 
-CLinReg::~CLinReg(void) {
-}
+CLinReg::~CLinReg(void) {}
 
 static void CLinReg::LRBuild(CMatrixDouble &xy, const int npoints,
                              const int nvars, int &info, CLinearModel &lm,
@@ -4179,11 +4149,9 @@ public:
   void Copy(CMultilayerPerceptron &obj);
 };
 
-CMultilayerPerceptron::CMultilayerPerceptron(void) {
-}
+CMultilayerPerceptron::CMultilayerPerceptron(void) {}
 
-CMultilayerPerceptron::~CMultilayerPerceptron(void) {
-}
+CMultilayerPerceptron::~CMultilayerPerceptron(void) {}
 
 void CMultilayerPerceptron::Copy(CMultilayerPerceptron &obj) {
 
@@ -4220,8 +4188,7 @@ public:
   CMultilayerPerceptron *GetInnerObj(void);
 };
 
-CMultilayerPerceptronShell::CMultilayerPerceptronShell(void) {
-}
+CMultilayerPerceptronShell::CMultilayerPerceptronShell(void) {}
 
 CMultilayerPerceptronShell::CMultilayerPerceptronShell(
     CMultilayerPerceptron &obj) {
@@ -4229,8 +4196,7 @@ CMultilayerPerceptronShell::CMultilayerPerceptronShell(
   m_innerobj.Copy(obj);
 }
 
-CMultilayerPerceptronShell::~CMultilayerPerceptronShell(void) {
-}
+CMultilayerPerceptronShell::~CMultilayerPerceptronShell(void) {}
 
 CMultilayerPerceptron *CMultilayerPerceptronShell::GetInnerObj(void) {
 
@@ -4407,11 +4373,9 @@ const int CMLPBase::m_hlconm_nfieldwidth = 5;
 const int CMLPBase::m_hlm_nfieldwidth = 4;
 const int CMLPBase::m_chunksize = 32;
 
-CMLPBase::CMLPBase(void) {
-}
+CMLPBase::CMLPBase(void) {}
 
-CMLPBase::~CMLPBase(void) {
-}
+CMLPBase::~CMLPBase(void) {}
 
 static void CMLPBase::MLPCreate0(const int nin, const int nout,
                                  CMultilayerPerceptron &network) {
@@ -5441,9 +5405,9 @@ static void CMLPBase::MLPSetNeuronInfo(CMultilayerPerceptron &network,
     network.m_structinfo[activationoffset + 0] = fkind;
   } else {
 
-    if (!CAp::Assert(fkind == 0,
-                     __FUNCTION__ + ": you try to set activation function for "
-                                    "neuron which can not have one"))
+    if (!CAp::Assert(fkind == 0, __FUNCTION__ +
+                                     ": you try to set activation function for "
+                                     "neuron which can not have one"))
       return;
   }
 
@@ -6004,11 +5968,10 @@ static void CMLPBase::MLPHessianBatch(CMultilayerPerceptron &network,
   MLPHessianBatchInternal(network, xy, ssize, false, e, grad, h);
 }
 
-static void
-CMLPBase::MLPInternalProcessVector(int &structinfo[], double &weights[],
-                                   double &columnmeans[],
-                                   double &columnsigmas[], double &neurons[],
-                                   double &dfdnet[], double &x[], double &y[]) {
+static void CMLPBase::MLPInternalProcessVector(
+    int &structinfo[], double &weights[], double &columnmeans[],
+    double &columnsigmas[], double &neurons[], double &dfdnet[], double &x[],
+    double &y[]) {
 
   int i = 0;
   int n1 = 0;
@@ -7557,11 +7520,9 @@ public:
   void Copy(CLogitModel &obj);
 };
 
-CLogitModel::CLogitModel(void) {
-}
+CLogitModel::CLogitModel(void) {}
 
-CLogitModel::~CLogitModel(void) {
-}
+CLogitModel::~CLogitModel(void) {}
 
 void CLogitModel::Copy(CLogitModel &obj) {
 
@@ -7580,16 +7541,14 @@ public:
   CLogitModel *GetInnerObj(void);
 };
 
-CLogitModelShell::CLogitModelShell(void) {
-}
+CLogitModelShell::CLogitModelShell(void) {}
 
 CLogitModelShell::CLogitModelShell(CLogitModel &obj) {
 
   m_innerobj.Copy(obj);
 }
 
-CLogitModelShell::~CLogitModelShell(void) {
-}
+CLogitModelShell::~CLogitModelShell(void) {}
 
 CLogitModel *CLogitModelShell::GetInnerObj(void) {
 
@@ -7628,11 +7587,9 @@ public:
   ~CLogitMCState(void);
 };
 
-CLogitMCState::CLogitMCState(void) {
-}
+CLogitMCState::CLogitMCState(void) {}
 
-CLogitMCState::~CLogitMCState(void) {
-}
+CLogitMCState::~CLogitMCState(void) {}
 
 class CMNLReport {
 public:
@@ -7645,11 +7602,9 @@ public:
   void Copy(CMNLReport &obj);
 };
 
-CMNLReport::CMNLReport(void) {
-}
+CMNLReport::CMNLReport(void) {}
 
-CMNLReport::~CMNLReport(void) {
-}
+CMNLReport::~CMNLReport(void) {}
 
 void CMNLReport::Copy(CMNLReport &obj) {
 
@@ -7673,16 +7628,14 @@ public:
   CMNLReport *GetInnerObj(void);
 };
 
-CMNLReportShell::CMNLReportShell(void) {
-}
+CMNLReportShell::CMNLReportShell(void) {}
 
 CMNLReportShell::CMNLReportShell(CMNLReport &obj) {
 
   m_innerobj.Copy(obj);
 }
 
-CMNLReportShell::~CMNLReportShell(void) {
-}
+CMNLReportShell::~CMNLReportShell(void) {}
 
 int CMNLReportShell::GetNGrad(void) {
 
@@ -7765,11 +7718,9 @@ const double CLogit::m_stpmin = 1.0E-2;
 const double CLogit::m_stpmax = 1.0E5;
 const int CLogit::m_logitvnum = 6;
 
-CLogit::CLogit(void) {
-}
+CLogit::CLogit(void) {}
 
-CLogit::~CLogit(void) {
-}
+CLogit::~CLogit(void) {}
 
 static void CLogit::MNLTrainH(CMatrixDouble &xy, const int npoints,
                               const int nvars, const int nclasses, int &info,
@@ -8770,11 +8721,9 @@ public:
   void Copy(CMCPDState &obj);
 };
 
-CMCPDState::CMCPDState(void) {
-}
+CMCPDState::CMCPDState(void) {}
 
-CMCPDState::~CMCPDState(void) {
-}
+CMCPDState::~CMCPDState(void) {}
 
 void CMCPDState::Copy(CMCPDState &obj) {
 
@@ -8821,16 +8770,14 @@ public:
   CMCPDState *GetInnerObj(void);
 };
 
-CMCPDStateShell::CMCPDStateShell(void) {
-}
+CMCPDStateShell::CMCPDStateShell(void) {}
 
 CMCPDStateShell::CMCPDStateShell(CMCPDState &obj) {
 
   m_innerobj.Copy(obj);
 }
 
-CMCPDStateShell::~CMCPDStateShell(void) {
-}
+CMCPDStateShell::~CMCPDStateShell(void) {}
 
 CMCPDState *CMCPDStateShell::GetInnerObj(void) {
 
@@ -8850,11 +8797,9 @@ public:
   void Copy(CMCPDReport &obj);
 };
 
-CMCPDReport::CMCPDReport(void) {
-}
+CMCPDReport::CMCPDReport(void) {}
 
-CMCPDReport::~CMCPDReport(void) {
-}
+CMCPDReport::~CMCPDReport(void) {}
 
 void CMCPDReport::Copy(CMCPDReport &obj) {
 
@@ -8884,16 +8829,14 @@ public:
   CMCPDReport *GetInnerObj(void);
 };
 
-CMCPDReportShell::CMCPDReportShell(void) {
-}
+CMCPDReportShell::CMCPDReportShell(void) {}
 
 CMCPDReportShell::CMCPDReportShell(CMCPDReport &obj) {
 
   m_innerobj.Copy(obj);
 }
 
-CMCPDReportShell::~CMCPDReportShell(void) {
-}
+CMCPDReportShell::~CMCPDReportShell(void) {}
 
 int CMCPDReportShell::GetInnerIterationsCount(void) {
 
@@ -8975,11 +8918,9 @@ public:
 
 const double CMarkovCPD::m_xtol = 1.0E-8;
 
-CMarkovCPD::CMarkovCPD(void) {
-}
+CMarkovCPD::CMarkovCPD(void) {}
 
-CMarkovCPD::~CMarkovCPD(void) {
-}
+CMarkovCPD::~CMarkovCPD(void) {}
 
 static void CMarkovCPD::MCPDCreate(const int n, CMCPDState &s) {
 
@@ -9614,11 +9555,9 @@ public:
   void Copy(CMLPReport &obj);
 };
 
-CMLPReport::CMLPReport(void) {
-}
+CMLPReport::CMLPReport(void) {}
 
-CMLPReport::~CMLPReport(void) {
-}
+CMLPReport::~CMLPReport(void) {}
 
 void CMLPReport::Copy(CMLPReport &obj) {
 
@@ -9645,16 +9584,14 @@ public:
   CMLPReport *GetInnerObj(void);
 };
 
-CMLPReportShell::CMLPReportShell(void) {
-}
+CMLPReportShell::CMLPReportShell(void) {}
 
 CMLPReportShell::CMLPReportShell(CMLPReport &obj) {
 
   m_innerobj.Copy(obj);
 }
 
-CMLPReportShell::~CMLPReportShell(void) {
-}
+CMLPReportShell::~CMLPReportShell(void) {}
 
 int CMLPReportShell::GetNGrad(void) {
 
@@ -9705,11 +9642,9 @@ public:
   void Copy(CMLPCVReport &obj);
 };
 
-CMLPCVReport::CMLPCVReport(void) {
-}
+CMLPCVReport::CMLPCVReport(void) {}
 
-CMLPCVReport::~CMLPCVReport(void) {
-}
+CMLPCVReport::~CMLPCVReport(void) {}
 
 void CMLPCVReport::Copy(CMLPCVReport &obj) {
 
@@ -9742,16 +9677,14 @@ public:
   CMLPCVReport *GetInnerObj(void);
 };
 
-CMLPCVReportShell::CMLPCVReportShell(void) {
-}
+CMLPCVReportShell::CMLPCVReportShell(void) {}
 
 CMLPCVReportShell::CMLPCVReportShell(CMLPCVReport &obj) {
 
   m_innerobj.Copy(obj);
 }
 
-CMLPCVReportShell::~CMLPCVReportShell(void) {
-}
+CMLPCVReportShell::~CMLPCVReportShell(void) {}
 
 double CMLPCVReportShell::GetRelClsError(void) {
 
@@ -9850,11 +9783,9 @@ public:
 
 const double CMLPTrain::m_mindecay = 0.001;
 
-CMLPTrain::CMLPTrain(void) {
-}
+CMLPTrain::CMLPTrain(void) {}
 
-CMLPTrain::~CMLPTrain(void) {
-}
+CMLPTrain::~CMLPTrain(void) {}
 
 static void CMLPTrain::MLPTrainLM(CMultilayerPerceptron &network,
                                   CMatrixDouble &xy, const int npoints,
@@ -10625,11 +10556,9 @@ public:
   void Copy(CMLPEnsemble &obj);
 };
 
-CMLPEnsemble::CMLPEnsemble(void) {
-}
+CMLPEnsemble::CMLPEnsemble(void) {}
 
-CMLPEnsemble::~CMLPEnsemble(void) {
-}
+CMLPEnsemble::~CMLPEnsemble(void) {}
 
 void CMLPEnsemble::Copy(CMLPEnsemble &obj) {
 
@@ -10666,16 +10595,14 @@ public:
   CMLPEnsemble *GetInnerObj(void);
 };
 
-CMLPEnsembleShell::CMLPEnsembleShell(void) {
-}
+CMLPEnsembleShell::CMLPEnsembleShell(void) {}
 
 CMLPEnsembleShell::CMLPEnsembleShell(CMLPEnsemble &obj) {
 
   m_innerobj.Copy(obj);
 }
 
-CMLPEnsembleShell::~CMLPEnsembleShell(void) {
-}
+CMLPEnsembleShell::~CMLPEnsembleShell(void) {}
 
 CMLPEnsemble *CMLPEnsembleShell::GetInnerObj(void) {
 
@@ -10771,11 +10698,9 @@ public:
 const int CMLPE::m_mlpntotaloffset = 3;
 const int CMLPE::m_mlpevnum = 9;
 
-CMLPE::CMLPE(void) {
-}
+CMLPE::CMLPE(void) {}
 
-CMLPE::~CMLPE(void) {
-}
+CMLPE::~CMLPE(void) {}
 
 static void CMLPE::MLPECreate0(const int nin, const int nout,
                                const int ensemblesize, CMLPEnsemble &ensemble) {
@@ -11686,11 +11611,9 @@ public:
                             CMatrixDouble &v);
 };
 
-CPCAnalysis::CPCAnalysis(void) {
-}
+CPCAnalysis::CPCAnalysis(void) {}
 
-CPCAnalysis::~CPCAnalysis(void) {
-}
+CPCAnalysis::~CPCAnalysis(void) {}
 
 static void CPCAnalysis::PCABuildBasis(CMatrixDouble &x, const int npoints,
                                        const int nvars, int &info, double &s2[],

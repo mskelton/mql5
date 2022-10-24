@@ -78,8 +78,7 @@ CSignalEnvelopes::CSignalEnvelopes(void)
       USE_SERIES_OPEN + USE_SERIES_HIGH + USE_SERIES_LOW + USE_SERIES_CLOSE;
 }
 
-CSignalEnvelopes::~CSignalEnvelopes(void) {
-}
+CSignalEnvelopes::~CSignalEnvelopes(void) {}
 
 bool CSignalEnvelopes::ValidationSettings(void) {
 

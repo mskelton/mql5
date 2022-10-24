@@ -15,11 +15,9 @@ public:
   static double LnGamma(double x, double &sgngam);
 };
 
-CGammaFunc::CGammaFunc(void) {
-}
+CGammaFunc::CGammaFunc(void) {}
 
-CGammaFunc::~CGammaFunc(void) {
-}
+CGammaFunc::~CGammaFunc(void) {}
 
 static double CGammaFunc::GammaStirlFunc(double x) {
 
@@ -248,11 +246,9 @@ public:
   static double InvNormalDistribution(double y0);
 };
 
-CNormalDistr::CNormalDistr(void) {
-}
+CNormalDistr::CNormalDistr(void) {}
 
-CNormalDistr::~CNormalDistr(void) {
-}
+CNormalDistr::~CNormalDistr(void) {}
 
 static double CNormalDistr::ErrorFunction(double x) {
 
@@ -453,11 +449,9 @@ public:
   static double InvIncompleteGammaC(const double a, const double y0);
 };
 
-CIncGammaF::CIncGammaF(void) {
-}
+CIncGammaF::CIncGammaF(void) {}
 
-CIncGammaF::~CIncGammaF(void) {
-}
+CIncGammaF::~CIncGammaF(void) {}
 
 static double CIncGammaF::IncompleteGamma(const double a, const double x) {
 
@@ -719,11 +713,9 @@ public:
                    double &bip);
 };
 
-CAiryF::CAiryF(void) {
-}
+CAiryF::CAiryF(void) {}
 
-CAiryF::~CAiryF(void) {
-}
+CAiryF::~CAiryF(void) {}
 
 static void CAiryF::Airy(const double x, double &ai, double &aip, double &bi,
                          double &bip) {
@@ -1075,11 +1067,9 @@ public:
   static double BesselKN(int nn, double x);
 };
 
-CBessel::CBessel(void) {
-}
+CBessel::CBessel(void) {}
 
-CBessel::~CBessel(void) {
-}
+CBessel::~CBessel(void) {}
 
 static double CBessel::BesselJ0(double x) {
 
@@ -1967,11 +1957,9 @@ public:
   static double Beta(const double a, const double b);
 };
 
-CBetaF::CBetaF(void) {
-}
+CBetaF::CBetaF(void) {}
 
-CBetaF::~CBetaF(void) {
-}
+CBetaF::~CBetaF(void) {}
 
 static double CBetaF::Beta(const double a, const double b) {
 
@@ -2043,11 +2031,9 @@ public:
   static double InvIncompleteBeta(const double a, double b, double y);
 };
 
-CIncBetaF::CIncBetaF(void) {
-}
+CIncBetaF::CIncBetaF(void) {}
 
-CIncBetaF::~CIncBetaF(void) {
-}
+CIncBetaF::~CIncBetaF(void) {}
 
 static double CIncBetaF::IncompleteBeta(double a, double b, double x) {
 
@@ -2705,11 +2691,9 @@ public:
                                         const double y);
 };
 
-CBinomialDistr::CBinomialDistr(void) {
-}
+CBinomialDistr::CBinomialDistr(void) {}
 
-CBinomialDistr::~CBinomialDistr(void) {
-}
+CBinomialDistr::~CBinomialDistr(void) {}
 
 static double CBinomialDistr::BinomialDistribution(const int k, const int n,
                                                    const double p) {
@@ -2812,11 +2796,9 @@ public:
   static void FromChebyshev(double &a[], const int n, double &b[]);
 };
 
-CChebyshev::CChebyshev(void) {
-}
+CChebyshev::CChebyshev(void) {}
 
-CChebyshev::~CChebyshev(void) {
-}
+CChebyshev::~CChebyshev(void) {}
 
 static double CChebyshev::ChebyshevCalculate(const int r, const int n,
                                              const double x) {
@@ -2953,11 +2935,9 @@ public:
   static double InvChiSquareDistribution(const double v, const double y);
 };
 
-CChiSquareDistr::CChiSquareDistr(void) {
-}
+CChiSquareDistr::CChiSquareDistr(void) {}
 
-CChiSquareDistr::~CChiSquareDistr(void) {
-}
+CChiSquareDistr::~CChiSquareDistr(void) {}
 
 static double CChiSquareDistr::ChiSquareDistribution(const double v,
                                                      const double x) {
@@ -2995,11 +2975,9 @@ public:
   static double DawsonIntegral(double x);
 };
 
-CDawson::CDawson(void) {
-}
+CDawson::CDawson(void) {}
 
-CDawson::~CDawson(void) {
-}
+CDawson::~CDawson(void) {}
 
 static double CDawson::DawsonIntegral(double x) {
 
@@ -3111,11 +3089,9 @@ public:
   static double IncompleteEllipticIntegralE(const double phi, const double m);
 };
 
-CElliptic::CElliptic(void) {
-}
+CElliptic::CElliptic(void) {}
 
-CElliptic::~CElliptic(void) {
-}
+CElliptic::~CElliptic(void) {}
 
 static double CElliptic::EllipticIntegralK(const double m) {
 
@@ -3394,11 +3370,9 @@ public:
   static double ExponentialIntegralEn(const double x, const int n);
 };
 
-CExpIntegrals::CExpIntegrals(void) {
-}
+CExpIntegrals::CExpIntegrals(void) {}
 
-CExpIntegrals::~CExpIntegrals(void) {
-}
+CExpIntegrals::~CExpIntegrals(void) {}
 
 static double CExpIntegrals::ExponentialIntegralEi(const double x) {
 
@@ -3717,11 +3691,9 @@ public:
   static double InvFDistribution(const int a, const int b, const double y);
 };
 
-CFDistr::CFDistr(void) {
-}
+CFDistr::CFDistr(void) {}
 
-CFDistr::~CFDistr(void) {
-}
+CFDistr::~CFDistr(void) {}
 
 static double CFDistr::FDistribution(const int a, const int b, const double x) {
 
@@ -3784,11 +3756,9 @@ public:
   static void FresnelIntegral(double x, double &c, double &s);
 };
 
-CFresnel::CFresnel(void) {
-}
+CFresnel::CFresnel(void) {}
 
-CFresnel::~CFresnel(void) {
-}
+CFresnel::~CFresnel(void) {}
 
 static void CFresnel::FresnelIntegral(double x, double &c, double &s) {
 
@@ -3931,11 +3901,9 @@ public:
   static void HermiteCoefficients(const int n, double &c[]);
 };
 
-CHermite::CHermite(void) {
-}
+CHermite::CHermite(void) {}
 
-CHermite::~CHermite(void) {
-}
+CHermite::~CHermite(void) {}
 
 static double CHermite::HermiteCalculate(const int n, const double x) {
 
@@ -4006,11 +3974,9 @@ public:
                                         double &ph);
 };
 
-CJacobianElliptic::CJacobianElliptic(void) {
-}
+CJacobianElliptic::CJacobianElliptic(void) {}
 
-CJacobianElliptic::~CJacobianElliptic(void) {
-}
+CJacobianElliptic::~CJacobianElliptic(void) {}
 
 static void CJacobianElliptic::JacobianEllipticFunctions(const double u,
                                                          const double m,
@@ -4120,11 +4086,9 @@ public:
   static void LaguerreCoefficients(const int n, double &c[]);
 };
 
-CLaguerre::CLaguerre(void) {
-}
+CLaguerre::CLaguerre(void) {}
 
-CLaguerre::~CLaguerre(void) {
-}
+CLaguerre::~CLaguerre(void) {}
 
 static double CLaguerre::LaguerreCalculate(const int n, const double x) {
 
@@ -4195,11 +4159,9 @@ public:
   static void LegendreCoefficients(const int n, double &c[]);
 };
 
-CLegendre::CLegendre(void) {
-}
+CLegendre::CLegendre(void) {}
 
-CLegendre::~CLegendre(void) {
-}
+CLegendre::~CLegendre(void) {}
 
 static double CLegendre::LegendreCalculate(const int n, const double x) {
 
@@ -4274,11 +4236,9 @@ public:
   static double InvPoissonDistribution(const int k, const double y);
 };
 
-CPoissonDistr::CPoissonDistr(void) {
-}
+CPoissonDistr::CPoissonDistr(void) {}
 
-CPoissonDistr::~CPoissonDistr(void) {
-}
+CPoissonDistr::~CPoissonDistr(void) {}
 
 static double CPoissonDistr::PoissonDistribution(const int k, const double m) {
 
@@ -4315,11 +4275,9 @@ public:
   static double Psi(double x);
 };
 
-CPsiF::CPsiF(void) {
-}
+CPsiF::CPsiF(void) {}
 
-CPsiF::~CPsiF(void) {
-}
+CPsiF::~CPsiF(void) {}
 
 static double CPsiF::Psi(double x) {
 
@@ -4417,11 +4375,9 @@ public:
   static double InvStudenttDistribution(const int k, double p);
 };
 
-CStudenttDistr::CStudenttDistr(void) {
-}
+CStudenttDistr::CStudenttDistr(void) {}
 
-CStudenttDistr::~CStudenttDistr(void) {
-}
+CStudenttDistr::~CStudenttDistr(void) {}
 
 static double CStudenttDistr::StudenttDistribution(const int k,
                                                    const double t) {
@@ -4550,11 +4506,9 @@ public:
   static void HyperbolicSineCosineIntegrals(double x, double &shi, double &chi);
 };
 
-CTrigIntegrals::CTrigIntegrals(void) {
-}
+CTrigIntegrals::CTrigIntegrals(void) {}
 
-CTrigIntegrals::~CTrigIntegrals(void) {
-}
+CTrigIntegrals::~CTrigIntegrals(void) {}
 
 static void CTrigIntegrals::SineCosineIntegrals(double x, double &si,
                                                 double &ci) {

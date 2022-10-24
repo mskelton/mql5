@@ -33,11 +33,9 @@ protected:
                   const int ma_period);
 };
 
-CiADX::CiADX(void) : m_ma_period(-1) {
-}
+CiADX::CiADX(void) : m_ma_period(-1) {}
 
-CiADX::~CiADX(void) {
-}
+CiADX::~CiADX(void) {}
 
 bool CiADX::Create(const string symbol, const ENUM_TIMEFRAMES period,
                    const int ma_period) {
@@ -142,11 +140,9 @@ protected:
                   const int ma_period);
 };
 
-CiADXWilder::CiADXWilder(void) : m_ma_period(-1) {
-}
+CiADXWilder::CiADXWilder(void) : m_ma_period(-1) {}
 
-CiADXWilder::~CiADXWilder(void) {
-}
+CiADXWilder::~CiADXWilder(void) {}
 
 bool CiADXWilder::Create(const string symbol, const ENUM_TIMEFRAMES period,
                          const int ma_period) {
@@ -269,8 +265,7 @@ CiBands::CiBands(void)
     : m_ma_period(-1), m_ma_shift(-1), m_deviation(EMPTY_VALUE), m_applied(-1) {
 }
 
-CiBands::~CiBands(void) {
-}
+CiBands::~CiBands(void) {}
 
 bool CiBands::Create(const string symbol, const ENUM_TIMEFRAMES period,
                      const int ma_period, const int ma_shift,
@@ -408,11 +403,9 @@ protected:
 
 CiEnvelopes::CiEnvelopes(void)
     : m_ma_period(-1), m_ma_shift(-1), m_ma_method(WRONG_VALUE), m_applied(-1),
-      m_deviation(EMPTY_VALUE) {
-}
+      m_deviation(EMPTY_VALUE) {}
 
-CiEnvelopes::~CiEnvelopes(void) {
-}
+CiEnvelopes::~CiEnvelopes(void) {}
 
 bool CiEnvelopes::Create(const string symbol, const ENUM_TIMEFRAMES period,
                          const int ma_period, const int ma_shift,
@@ -538,11 +531,9 @@ protected:
 };
 
 CiIchimoku::CiIchimoku(void)
-    : m_tenkan_sen(-1), m_kijun_sen(-1), m_senkou_span_b(-1) {
-}
+    : m_tenkan_sen(-1), m_kijun_sen(-1), m_senkou_span_b(-1) {}
 
-CiIchimoku::~CiIchimoku(void) {
-}
+CiIchimoku::~CiIchimoku(void) {}
 
 bool CiIchimoku::Create(const string symbol, const ENUM_TIMEFRAMES period,
                         const int tenkan_sen, const int kijun_sen,
@@ -694,8 +685,7 @@ CiMA::CiMA(void)
     : m_ma_period(-1), m_ma_shift(-1), m_ma_method(WRONG_VALUE), m_applied(-1) {
 }
 
-CiMA::~CiMA(void) {
-}
+CiMA::~CiMA(void) {}
 
 bool CiMA::Create(const string symbol, const ENUM_TIMEFRAMES period,
                   const int ma_period, const int ma_shift,
@@ -793,11 +783,9 @@ protected:
                   const double step, const double maximum);
 };
 
-CiSAR::CiSAR(void) : m_step(EMPTY_VALUE), m_maximum(EMPTY_VALUE) {
-}
+CiSAR::CiSAR(void) : m_step(EMPTY_VALUE), m_maximum(EMPTY_VALUE) {}
 
-CiSAR::~CiSAR(void) {
-}
+CiSAR::~CiSAR(void) {}
 
 bool CiSAR::Create(const string symbol, const ENUM_TIMEFRAMES period,
                    const double step, const double maximum) {
@@ -901,8 +889,7 @@ CiStdDev::CiStdDev(void)
     : m_ma_period(-1), m_ma_shift(-1), m_ma_method(WRONG_VALUE), m_applied(-1) {
 }
 
-CiStdDev::~CiStdDev(void) {
-}
+CiStdDev::~CiStdDev(void) {}
 
 bool CiStdDev::Create(const string symbol, const ENUM_TIMEFRAMES period,
                       const int ma_period, const int ma_shift,
@@ -1004,11 +991,9 @@ protected:
                   const int ma_period, const int ind_shift, const int applied);
 };
 
-CiDEMA::CiDEMA(void) : m_ma_period(-1), m_ind_shift(-1), m_applied(-1) {
-}
+CiDEMA::CiDEMA(void) : m_ma_period(-1), m_ind_shift(-1), m_applied(-1) {}
 
-CiDEMA::~CiDEMA(void) {
-}
+CiDEMA::~CiDEMA(void) {}
 
 bool CiDEMA::Create(const string symbol, const ENUM_TIMEFRAMES period,
                     const int ma_period, const int ind_shift,
@@ -1108,11 +1093,9 @@ protected:
                   const int ma_period, const int ma_shift, const int applied);
 };
 
-CiTEMA::CiTEMA(void) : m_ma_period(-1), m_ind_shift(-1), m_applied(-1) {
-}
+CiTEMA::CiTEMA(void) : m_ma_period(-1), m_ind_shift(-1), m_applied(-1) {}
 
-CiTEMA::~CiTEMA(void) {
-}
+CiTEMA::~CiTEMA(void) {}
 
 bool CiTEMA::Create(const string symbol, const ENUM_TIMEFRAMES period,
                     const int ma_period, const int ind_shift,
@@ -1212,11 +1195,9 @@ protected:
                   const int ma_period, const int ind_shift, const int applied);
 };
 
-CiFrAMA::CiFrAMA(void) : m_ma_period(-1), m_ind_shift(-1), m_applied(-1) {
-}
+CiFrAMA::CiFrAMA(void) : m_ma_period(-1), m_ind_shift(-1), m_applied(-1) {}
 
-CiFrAMA::~CiFrAMA(void) {
-}
+CiFrAMA::~CiFrAMA(void) {}
 
 bool CiFrAMA::Create(const string symbol, const ENUM_TIMEFRAMES period,
                      const int ma_period, const int ind_shift,
@@ -1329,11 +1310,9 @@ protected:
 
 CiAMA::CiAMA(void)
     : m_ma_period(-1), m_fast_ema_period(-1), m_slow_ema_period(-1),
-      m_ind_shift(-1), m_applied(-1) {
-}
+      m_ind_shift(-1), m_applied(-1) {}
 
-CiAMA::~CiAMA(void) {
-}
+CiAMA::~CiAMA(void) {}
 
 bool CiAMA::Create(const string symbol, const ENUM_TIMEFRAMES period,
                    const int ma_period, const int fast_ema_period,
@@ -1449,11 +1428,9 @@ protected:
 };
 
 CiVIDyA::CiVIDyA(void)
-    : m_cmo_period(-1), m_ema_period(-1), m_ind_shift(-1), m_applied(-1) {
-}
+    : m_cmo_period(-1), m_ema_period(-1), m_ind_shift(-1), m_applied(-1) {}
 
-CiVIDyA::~CiVIDyA(void) {
-}
+CiVIDyA::~CiVIDyA(void) {}
 
 bool CiVIDyA::Create(const string symbol, const ENUM_TIMEFRAMES period,
                      const int cmo_period, const int ema_period,

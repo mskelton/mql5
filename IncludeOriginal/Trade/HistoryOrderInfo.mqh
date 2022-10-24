@@ -62,11 +62,9 @@ public:
   bool SelectByIndex(const int index);
 };
 
-CHistoryOrderInfo::CHistoryOrderInfo(void) : m_ticket(0) {
-}
+CHistoryOrderInfo::CHistoryOrderInfo(void) : m_ticket(0) {}
 
-CHistoryOrderInfo::~CHistoryOrderInfo(void) {
-}
+CHistoryOrderInfo::~CHistoryOrderInfo(void) {}
 
 datetime CHistoryOrderInfo::TimeSetup(void) const {
   return ((datetime)HistoryOrderGetInteger(m_ticket, ORDER_TIME_SETUP));

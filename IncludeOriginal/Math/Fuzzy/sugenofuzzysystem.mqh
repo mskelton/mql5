@@ -64,17 +64,15 @@ CSugenoVariable *CSugenoFuzzySystem::OutputByName(const string name) {
   return (NULL);
 }
 
-CLinearSugenoFunction *
-CSugenoFuzzySystem::CreateSugenoFunction(const string name, CList *coeffs,
-                                         const double constValue) {
+CLinearSugenoFunction *CSugenoFuzzySystem::CreateSugenoFunction(
+    const string name, CList *coeffs, const double constValue) {
 
   return new CLinearSugenoFunction(name, CGenericFuzzySystem::Input(), coeffs,
                                    constValue);
 }
 
-CLinearSugenoFunction *
-CSugenoFuzzySystem::CreateSugenoFunction(const string name,
-                                         const double &coeffs[]) {
+CLinearSugenoFunction *CSugenoFuzzySystem::CreateSugenoFunction(
+    const string name, const double &coeffs[]) {
 
   return new CLinearSugenoFunction(name, Input(), coeffs);
 }
