@@ -11,14 +11,14 @@ public:
   CiAD(void);
   ~CiAD(void);
 
-  ENUM_APPLIED_VOLUME Applied(void) const ;
+  ENUM_APPLIED_VOLUME Applied(void) const;
 
   bool Create(const string symbol, const ENUM_TIMEFRAMES period,
               const ENUM_APPLIED_VOLUME applied);
 
   double Main(const int index) const;
 
-  virtual int Type(void) const ;
+  virtual int Type(void) const;
 
 protected:
   virtual bool Initialize(const string symbol, const ENUM_TIMEFRAMES period,
@@ -26,12 +26,6 @@ protected:
   bool Initialize(const string symbol, const ENUM_TIMEFRAMES period,
                   const ENUM_APPLIED_VOLUME applied);
 };
-
-
-
-
-
-
 
 class CiMFI : public CIndicator {
 protected:
@@ -42,15 +36,15 @@ public:
   CiMFI(void);
   ~CiMFI(void);
 
-  int MaPeriod(void) const ;
-  ENUM_APPLIED_VOLUME Applied(void) const ;
+  int MaPeriod(void) const;
+  ENUM_APPLIED_VOLUME Applied(void) const;
 
   bool Create(const string symbol, const ENUM_TIMEFRAMES period,
               const int ma_period, const ENUM_APPLIED_VOLUME applied);
 
   double Main(const int index) const;
 
-  virtual int Type(void) const ;
+  virtual int Type(void) const;
 
 protected:
   virtual bool Initialize(const string symbol, const ENUM_TIMEFRAMES period,
@@ -58,12 +52,6 @@ protected:
   bool Initialize(const string symbol, const ENUM_TIMEFRAMES period,
                   const int ma_period, const ENUM_APPLIED_VOLUME applied);
 };
-
-
-
-
-
-
 
 class CiOBV : public CIndicator {
 protected:
@@ -73,14 +61,14 @@ public:
   CiOBV(void);
   ~CiOBV(void);
 
-  ENUM_APPLIED_VOLUME Applied(void) const ;
+  ENUM_APPLIED_VOLUME Applied(void) const;
 
   bool Create(const string symbol, const ENUM_TIMEFRAMES period,
               const ENUM_APPLIED_VOLUME applied);
 
   double Main(const int index) const;
 
-  virtual int Type(void) const ;
+  virtual int Type(void) const;
 
 protected:
   virtual bool Initialize(const string symbol, const ENUM_TIMEFRAMES period,
@@ -88,12 +76,6 @@ protected:
   bool Initialize(const string symbol, const ENUM_TIMEFRAMES period,
                   const ENUM_APPLIED_VOLUME applied);
 };
-
-
-
-
-
-
 
 class CiVolumes : public CIndicator {
 protected:
@@ -103,14 +85,14 @@ public:
   CiVolumes(void);
   ~CiVolumes(void);
 
-  ENUM_APPLIED_VOLUME Applied(void) const ;
+  ENUM_APPLIED_VOLUME Applied(void) const;
 
   bool Create(const string symbol, const ENUM_TIMEFRAMES period,
               const ENUM_APPLIED_VOLUME applied);
 
   double Main(const int index) const;
 
-  virtual int Type(void) const ;
+  virtual int Type(void) const;
 
 protected:
   virtual bool Initialize(const string symbol, const ENUM_TIMEFRAMES period,
@@ -118,11 +100,5 @@ protected:
   bool Initialize(const string symbol, const ENUM_TIMEFRAMES period,
                   const ENUM_APPLIED_VOLUME applied);
 };
-
-
-
-
-
-
 
 #endif

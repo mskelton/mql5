@@ -8,7 +8,7 @@
 #include <Generic/Internal/CompareFunction.mqh>
 #include <Generic/Internal/DefaultEqualityComparer.mqh>
 
-template <typename TKey, typename TValue> struct Entry ;
+template <typename TKey, typename TValue> struct Entry;
 
 template <typename TKey, typename TValue>
 class CKeyValuePair : public IComparable<CKeyValuePair<TKey, TValue> *> {
@@ -17,22 +17,22 @@ protected:
   TValue m_value;
 
 public:
-  CKeyValuePair(void) ;
-  CKeyValuePair(TKey key, TValue value) ;
-  ~CKeyValuePair(void) ;
+  CKeyValuePair(void);
+  CKeyValuePair(TKey key, TValue value);
+  ~CKeyValuePair(void);
 
-  TKey Key(void) ;
-  void Key(TKey key) ;
-  TValue Value(void) ;
-  void Value(TValue value) ;
+  TKey Key(void);
+  void Key(TKey key);
+  TValue Value(void);
+  void Value(TValue value);
 
-  CKeyValuePair<TKey, TValue> *Clone(void) ;
+  CKeyValuePair<TKey, TValue> *Clone(void);
 
-  int Compare(CKeyValuePair<TKey, TValue> *pair) ;
+  int Compare(CKeyValuePair<TKey, TValue> *pair);
 
-  bool Equals(CKeyValuePair<TKey, TValue> *pair) ;
+  bool Equals(CKeyValuePair<TKey, TValue> *pair);
 
-  int HashCode(void) ;
+  int HashCode(void);
 };
 
 template <typename TKey, typename TValue>
@@ -41,8 +41,8 @@ private:
   IComparer<TKey> *m_comparer;
 
 public:
-  CKeyValuePairComparer(IComparer<TKey> *comaprer) ;
-  int Compare(CKeyValuePair<TKey, TValue> *x, CKeyValuePair<TKey, TValue> *y) ;
+  CKeyValuePairComparer(IComparer<TKey> *comaprer);
+  int Compare(CKeyValuePair<TKey, TValue> *x, CKeyValuePair<TKey, TValue> *y);
 };
 
 template <typename TKey, typename TValue>
@@ -69,15 +69,14 @@ public:
   bool Add(CKeyValuePair<TKey, TValue> *pair);
   bool Add(TKey key, TValue value);
 
-  int Count(void) ;
-  IEqualityComparer<TKey> *Comparer(void) const ;
+  int Count(void);
+  IEqualityComparer<TKey> *Comparer(void) const;
   bool Contains(CKeyValuePair<TKey, TValue> *item);
   bool Contains(TKey key, TValue value);
   bool ContainsKey(TKey key);
   bool ContainsValue(TValue value);
 
-  int CopyTo(CKeyValuePair<TKey, TValue> *dst_array[],
-             const int dst_start = 0);
+  int CopyTo(CKeyValuePair<TKey, TValue> *dst_array[], const int dst_start = 0);
   int CopyTo(TKey dst_keys[], TValue dst_values[], const int dst_start = 0);
 
   void Clear(void);
@@ -94,27 +93,3 @@ private:
   bool Insert(TKey key, TValue value, const bool add);
   static int m_collision_threshold;
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

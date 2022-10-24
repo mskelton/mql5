@@ -11,9 +11,9 @@ public:
   CTree(void);
   ~CTree(void);
 
-  CTreeNode *Root(void) const ;
+  CTreeNode *Root(void) const;
 
-  virtual int Type() const ;
+  virtual int Type() const;
 
   CTreeNode *Insert(CTreeNode *new_node);
 
@@ -23,7 +23,7 @@ public:
 
   CTreeNode *Find(const CTreeNode *node);
 
-  virtual CTreeNode *CreateElement() ;
+  virtual CTreeNode *CreateElement();
 
   virtual bool Save(const int file_handle);
   virtual bool Load(const int file_handle);
@@ -31,15 +31,5 @@ public:
 protected:
   void Balance(CTreeNode *node);
 };
-
-
-
-
-
-
-
-
-
-
 
 #endif

@@ -17,9 +17,6 @@ public:
   void Copy(CDenseSolverReport &obj);
 };
 
-
-
-
 class CDenseSolverReportShell {
 private:
   CDenseSolverReport m_innerobj;
@@ -36,14 +33,6 @@ public:
   CDenseSolverReport *GetInnerObj(void);
 };
 
-
-
-
-
-
-
-
-
 class CDenseSolverLSReport {
 public:
   double m_r2;
@@ -56,9 +45,6 @@ public:
 
   void Copy(CDenseSolverLSReport &obj);
 };
-
-
-
 
 class CDenseSolverLSReportShell {
 private:
@@ -78,16 +64,6 @@ public:
   CDenseSolverLSReport *GetInnerObj(void);
 };
 
-
-
-
-
-
-
-
-
-
-
 class CDenseSolver {
 private:
   static void RMatrixLUSolveInternal(CMatrixDouble lua, int &p[],
@@ -105,11 +81,12 @@ private:
                                      CMatrixComplex &b, const int m, int &info,
                                      CDenseSolverReport &rep,
                                      CMatrixComplex &x);
-  static void HPDMatrixCholeskySolveInternal(
-      CMatrixComplex &cha, const double sqrtscalea, const int n,
-      const bool isupper, CMatrixComplex &a, const bool havea,
-      CMatrixComplex &b, const int m, int &info, CDenseSolverReport &rep,
-      CMatrixComplex &x);
+  static void
+  HPDMatrixCholeskySolveInternal(CMatrixComplex &cha, const double sqrtscalea,
+                                 const int n, const bool isupper,
+                                 CMatrixComplex &a, const bool havea,
+                                 CMatrixComplex &b, const int m, int &info,
+                                 CDenseSolverReport &rep, CMatrixComplex &x);
   static int CDenseSolverRFSMax(const int n, const double r1,
                                 const double rinf);
   static int CDenseSolverRFSMaxV2(const int n, const double r2);
@@ -129,8 +106,8 @@ public:
   CDenseSolver(void);
   ~CDenseSolver(void);
 
-  static void RMatrixSolve(CMatrixDouble a, const int n, double &b[],
-                           int info, CDenseSolverReport &rep, double &x[]);
+  static void RMatrixSolve(CMatrixDouble a, const int n, double &b[], int info,
+                           CDenseSolverReport &rep, double &x[]);
   static void RMatrixSolveM(CMatrixDouble &a, const int n, CMatrixDouble &b,
                             const int m, const bool rfs, int &info,
                             CDenseSolverReport &rep, CMatrixDouble &x);
@@ -156,16 +133,15 @@ public:
                               CMatrixComplex &b, const int m, int &info,
                               CDenseSolverReport &rep, CMatrixComplex &x);
   static void CMatrixLUSolve(CMatrixComplex lua, int &p[], const int n,
-                             al_complex b[], int &info,
-                             CDenseSolverReport rep, al_complex &x[]);
+                             al_complex b[], int &info, CDenseSolverReport rep,
+                             al_complex &x[]);
   static void CMatrixMixedSolveM(CMatrixComplex &a, CMatrixComplex &lua,
                                  int p[], const int n, CMatrixComplex &b,
                                  const int m, int &info,
                                  CDenseSolverReport &rep, CMatrixComplex &x);
-  static void CMatrixMixedSolve(CMatrixComplex &a, CMatrixComplex &lua,
-                                int p[], const int n, al_complex b[],
-                                int &info, CDenseSolverReport &rep,
-                                al_complex x[]);
+  static void CMatrixMixedSolve(CMatrixComplex &a, CMatrixComplex &lua, int p[],
+                                const int n, al_complex b[], int &info,
+                                CDenseSolverReport &rep, al_complex x[]);
   static void SPDMatrixSolveM(CMatrixDouble &a, const int n, const bool isupper,
                               CMatrixDouble &b, const int m, int &info,
                               CDenseSolverReport &rep, CMatrixDouble &x);
@@ -185,8 +161,8 @@ public:
                               const int m, int &info, CDenseSolverReport &rep,
                               CMatrixComplex &x);
   static void HPDMatrixSolve(CMatrixComplex &a, const int n, const bool isupper,
-                             al_complex b[], int &info,
-                             CDenseSolverReport rep, al_complex &x[]);
+                             al_complex b[], int &info, CDenseSolverReport rep,
+                             al_complex &x[]);
   static void HPDMatrixCholeskySolveM(CMatrixComplex &cha, const int n,
                                       const bool isupper, CMatrixComplex &b,
                                       const int m, int &info,
@@ -200,39 +176,6 @@ public:
                              double b[], double threshold, int &info,
                              CDenseSolverLSReport rep, double &x[]);
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 class CNlEqState {
 public:
@@ -269,9 +212,6 @@ public:
   void Copy(CNlEqState &obj);
 };
 
-
-
-
 class CNlEqStateShell {
 private:
   CNlEqState m_innerobj;
@@ -292,18 +232,6 @@ public:
   CNlEqState *GetInnerObj(void);
 };
 
-
-
-
-
-
-
-
-
-
-
-
-
 class CNlEqReport {
 public:
   int m_iterationscount;
@@ -316,9 +244,6 @@ public:
 
   void Copy(CNlEqReport &obj);
 };
-
-
-
 
 class CNlEqReportShell {
 private:
@@ -339,18 +264,6 @@ public:
   void SetTerminationType(const int i);
   CNlEqReport *GetInnerObj(void);
 };
-
-
-
-
-
-
-
-
-
-
-
-
 
 class CNlEq {
 private:
@@ -395,24 +308,5 @@ public:
   static void NlEqRestartFrom(CNlEqState state, double &x[]);
   static bool NlEqIteration(CNlEqState &state);
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #endif

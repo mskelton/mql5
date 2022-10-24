@@ -328,10 +328,8 @@ public:
   static void MLPERandomize(CMLPEnsembleShell &ensemble);
   static void MLPEProperties(CMLPEnsembleShell &ensemble, int &nin, int &nout);
   static bool MLPEIsSoftMax(CMLPEnsembleShell &ensemble);
-  static void MLPEProcess(CMLPEnsembleShell ensemble, double &x[],
-                          double y[]);
-  static void MLPEProcessI(CMLPEnsembleShell ensemble, double &x[],
-                           double y[]);
+  static void MLPEProcess(CMLPEnsembleShell ensemble, double &x[], double y[]);
+  static void MLPEProcessI(CMLPEnsembleShell ensemble, double &x[], double y[]);
   static double MLPERelClsError(CMLPEnsembleShell &ensemble, CMatrixDouble &xy,
                                 const int npoints);
   static double MLPEAvgCE(CMLPEnsembleShell &ensemble, CMatrixDouble &xy,
@@ -381,8 +379,8 @@ public:
   static void FFTR1DInv(al_complex f[], const int n, double a[]);
   static void FFTR1DInv(al_complex f[], double a[]);
 
-  static void ConvC1D(al_complex a[], const int m, al_complex b[],
-                      const int n, al_complex r[]);
+  static void ConvC1D(al_complex a[], const int m, al_complex b[], const int n,
+                      al_complex r[]);
   static void ConvC1DInv(al_complex a[], const int m, al_complex b[],
                          const int n, al_complex r[]);
   static void ConvC1DCircular(al_complex s[], const int m, al_complex r[],
@@ -393,8 +391,8 @@ public:
                       double r[]);
   static void ConvR1DInv(double a[], const int m, double b[], const int n,
                          double r[]);
-  static void ConvR1DCircular(double s[], const int m, double r[],
-                              const int n, double c[]);
+  static void ConvR1DCircular(double s[], const int m, double r[], const int n,
+                              double c[]);
   static void ConvR1DCircularInv(double a[], const int m, double b[],
                                  const int n, double r[]);
   static void CorrC1D(al_complex signal[], const int n, al_complex pattern[],
@@ -425,8 +423,8 @@ public:
   static void GQGenerateGaussJacobi(const int n, const double alpha,
                                     const double beta, int info, double &x[],
                                     double w[]);
-  static void GQGenerateGaussLaguerre(const int n, const double alpha,
-                                      int info, double &x[], double w[]);
+  static void GQGenerateGaussLaguerre(const int n, const double alpha, int info,
+                                      double &x[], double w[]);
   static void GQGenerateGaussHermite(const int n, int info, double &x[],
                                      double w[]);
 
@@ -517,10 +515,10 @@ public:
                                    CBarycentricInterpolantShell &p);
   static void PolynomialBuildCheb2(const double a, const double b, double y[],
                                    CBarycentricInterpolantShell &p);
-  static double PolynomialCalcEqDist(const double a, const double b,
-                                     double f[], const int n, const double t);
-  static double PolynomialCalcEqDist(const double a, const double b,
-                                     double f[], const double t);
+  static double PolynomialCalcEqDist(const double a, const double b, double f[],
+                                     const int n, const double t);
+  static double PolynomialCalcEqDist(const double a, const double b, double f[],
+                                     const double t);
   static double PolynomialCalcCheb1(const double a, const double b, double f[],
                                     const int n, const double t);
   static double PolynomialCalcCheb1(const double a, const double b, double f[],
@@ -601,22 +599,23 @@ public:
   static void PolynomialFit(double x[], double y[], const int m, int &info,
                             CBarycentricInterpolantShell &p,
                             CPolynomialFitReportShell &rep);
-  static void PolynomialFitWC(double x[], double y[], double w[],
-                              const int n, double xc[], double yc[],
-                              int dc[], const int k, const int m, int &info,
-                              CBarycentricInterpolantShell &p,
-                              CPolynomialFitReportShell &rep);
-  static void PolynomialFitWC(double x[], double y[], double w[],
-                              double xc[], double yc[], int dc[],
+  static void PolynomialFitWC(double x[], double y[], double w[], const int n,
+                              double xc[], double yc[], int dc[], const int k,
                               const int m, int &info,
                               CBarycentricInterpolantShell &p,
                               CPolynomialFitReportShell &rep);
-  static void BarycentricFitFloaterHormannWC(
-      double x[], double y[], double w[], const int n, double xc[],
-      double yc[], int dc[], const int k, const int m, int &info,
-      CBarycentricInterpolantShell &b, CBarycentricFitReportShell &rep);
-  static void BarycentricFitFloaterHormann(double x[], double y[],
-                                           const int n, const int m, int &info,
+  static void PolynomialFitWC(double x[], double y[], double w[], double xc[],
+                              double yc[], int dc[], const int m, int &info,
+                              CBarycentricInterpolantShell &p,
+                              CPolynomialFitReportShell &rep);
+  static void BarycentricFitFloaterHormannWC(double x[], double y[], double w[],
+                                             const int n, double xc[],
+                                             double yc[], int dc[], const int k,
+                                             const int m, int &info,
+                                             CBarycentricInterpolantShell &b,
+                                             CBarycentricFitReportShell &rep);
+  static void BarycentricFitFloaterHormann(double x[], double y[], const int n,
+                                           const int m, int &info,
                                            CBarycentricInterpolantShell &b,
                                            CBarycentricFitReportShell &rep);
   static void Spline1DFitPenalized(double x[], double y[], const int n,
@@ -655,9 +654,8 @@ public:
                                    const int m, int &info,
                                    CSpline1DInterpolantShell &s,
                                    CSpline1DFitReportShell &rep);
-  static void Spline1DFitCubic(double x[], double y[], const int n,
-                               const int m, int &info,
-                               CSpline1DInterpolantShell &s,
+  static void Spline1DFitCubic(double x[], double y[], const int n, const int m,
+                               int &info, CSpline1DInterpolantShell &s,
                                CSpline1DFitReportShell &rep);
   static void Spline1DFitCubic(double x[], double y[], const int m, int &info,
                                CSpline1DInterpolantShell &s,
@@ -666,8 +664,8 @@ public:
                                  const int m, int &info,
                                  CSpline1DInterpolantShell &s,
                                  CSpline1DFitReportShell &rep);
-  static void Spline1DFitHermite(double x[], double y[], const int m,
-                                 int &info, CSpline1DInterpolantShell &s,
+  static void Spline1DFitHermite(double x[], double y[], const int m, int &info,
+                                 CSpline1DInterpolantShell &s,
                                  CSpline1DFitReportShell &rep);
   static void LSFitLinearW(double y[], double w[], CMatrixDouble &fmatrix,
                            const int n, const int m, int info, double &c[],
@@ -716,8 +714,8 @@ public:
   static void LSFitCreateFG(CMatrixDouble x, double &y[], double c[],
                             const bool cheapfg, CLSFitStateShell &state);
   static void LSFitCreateWFGH(CMatrixDouble x, double &y[], double w[],
-                              double c[], const int n, const int m,
-                              const int k, CLSFitStateShell &state);
+                              double c[], const int n, const int m, const int k,
+                              CLSFitStateShell &state);
   static void LSFitCreateWFGH(CMatrixDouble x, double &y[], double w[],
                               double c[], CLSFitStateShell &state);
   static void LSFitCreateFGH(CMatrixDouble x, double &y[], double c[],
@@ -730,8 +728,7 @@ public:
   static void LSFitSetStpMax(CLSFitStateShell &state, const double stpmax);
   static void LSFitSetXRep(CLSFitStateShell &state, const bool needxrep);
   static void LSFitSetScale(CLSFitStateShell state, double &s[]);
-  static void LSFitSetBC(CLSFitStateShell state, double &bndl[],
-                         double bndu[]);
+  static void LSFitSetBC(CLSFitStateShell state, double &bndl[], double bndu[]);
   static bool LSFitIteration(CLSFitStateShell &state);
   static void LSFitFit(CLSFitStateShell &state, CNDimensional_PFunc &func,
                        CNDimensional_Rep &rep, bool rep_status, CObject &obj);
@@ -824,16 +821,15 @@ public:
                            const int ia, const int ja, al_complex u[],
                            const int iu, al_complex v[], const int iv);
   static void RMatrixRank1(const int m, const int n, CMatrixDouble &a,
-                           const int ia, const int ja, double u[],
-                           const int iu, double v[], const int iv);
+                           const int ia, const int ja, double u[], const int iu,
+                           double v[], const int iv);
   static void CMatrixMVect(const int m, const int n, CMatrixComplex &a,
                            const int ia, const int ja, const int opa,
                            al_complex x[], const int ix, al_complex y[],
                            const int iy);
   static void RMatrixMVect(const int m, const int n, CMatrixDouble &a,
                            const int ia, const int ja, const int opa,
-                           double x[], const int ix, double y[],
-                           const int iy);
+                           double x[], const int ix, double y[], const int iy);
   static void CMatrixRightTrsM(const int m, const int n, CMatrixComplex &a,
                                const int i1, const int j1, const bool isupper,
                                const bool isunit, const int optype,
@@ -887,8 +883,7 @@ public:
   static void RMatrixQRUnpackR(CMatrixDouble &a, const int m, const int n,
                                CMatrixDouble &r);
   static void RMatrixLQUnpackQ(CMatrixDouble &a, const int m, const int n,
-                               double tau[], const int qrows,
-                               CMatrixDouble &q);
+                               double tau[], const int qrows, CMatrixDouble &q);
   static void RMatrixLQUnpackL(CMatrixDouble &a, const int m, const int n,
                                CMatrixDouble &l);
   static void CMatrixQRUnpackQ(CMatrixComplex &a, const int m, const int n,
@@ -1220,8 +1215,7 @@ public:
   static void MinQPSetStartingPoint(CMinQPStateShell state, double &x[]);
   static void MinQPSetOrigin(CMinQPStateShell state, double &xorigin[]);
   static void MinQPSetAlgoCholesky(CMinQPStateShell &state);
-  static void MinQPSetBC(CMinQPStateShell state, double &bndl[],
-                         double bndu[]);
+  static void MinQPSetBC(CMinQPStateShell state, double &bndl[], double bndu[]);
   static void MinQPOptimize(CMinQPStateShell &state);
   static void MinQPResults(CMinQPStateShell state, double &x[],
                            CMinQPReportShell &rep);
@@ -1243,8 +1237,7 @@ public:
   static void MinLMSetXRep(CMinLMStateShell &state, const bool needxrep);
   static void MinLMSetStpMax(CMinLMStateShell &state, const double stpmax);
   static void MinLMSetScale(CMinLMStateShell state, double &s[]);
-  static void MinLMSetBC(CMinLMStateShell state, double &bndl[],
-                         double bndu[]);
+  static void MinLMSetBC(CMinLMStateShell state, double &bndl[], double bndu[]);
   static void MinLMSetAccType(CMinLMStateShell &state, const int acctype);
   static bool MinLMIteration(CMinLMStateShell &state);
   static void MinLMOptimize(CMinLMStateShell &state, CNDimensional_FVec &fvec,
@@ -1307,15 +1300,14 @@ public:
   static void MinASARestartFrom(CMinASAStateShell state, double &x[],
                                 double bndl[], double bndu[]);
 
-  static void RMatrixSolve(CMatrixDouble a, const int n, double &b[],
-                           int &info, CDenseSolverReportShell &rep,
-                           double x[]);
+  static void RMatrixSolve(CMatrixDouble a, const int n, double &b[], int &info,
+                           CDenseSolverReportShell &rep, double x[]);
   static void RMatrixSolveM(CMatrixDouble &a, const int n, CMatrixDouble &b,
                             const int m, const bool rfs, int &info,
                             CDenseSolverReportShell &rep, CMatrixDouble &x);
   static void RMatrixLUSolve(CMatrixDouble lua, int &p[], const int n,
-                             double b[], int &info,
-                             CDenseSolverReportShell rep, double &x[]);
+                             double b[], int &info, CDenseSolverReportShell rep,
+                             double &x[]);
   static void RMatrixLUSolveM(CMatrixDouble lua, int &p[], const int n,
                               CMatrixDouble &b, const int m, int &info,
                               CDenseSolverReportShell &rep, CMatrixDouble &x);
@@ -1343,16 +1335,15 @@ public:
                                  const int m, int &info,
                                  CDenseSolverReportShell &rep,
                                  CMatrixComplex &x);
-  static void CMatrixMixedSolve(CMatrixComplex &a, CMatrixComplex &lua,
-                                int p[], const int n, al_complex b[],
-                                int &info, CDenseSolverReportShell &rep,
-                                al_complex x[]);
+  static void CMatrixMixedSolve(CMatrixComplex &a, CMatrixComplex &lua, int p[],
+                                const int n, al_complex b[], int &info,
+                                CDenseSolverReportShell &rep, al_complex x[]);
   static void SPDMatrixSolveM(CMatrixDouble &a, const int n, const bool isupper,
                               CMatrixDouble &b, const int m, int &info,
                               CDenseSolverReportShell &rep, CMatrixDouble &x);
   static void SPDMatrixSolve(CMatrixDouble &a, const int n, const bool isupper,
-                             double b[], int &info,
-                             CDenseSolverReportShell rep, double &x[]);
+                             double b[], int &info, CDenseSolverReportShell rep,
+                             double &x[]);
   static void SPDMatrixCholeskySolveM(CMatrixDouble &cha, const int n,
                                       const bool isupper, CMatrixDouble &b,
                                       const int m, int &info,
@@ -1508,8 +1499,7 @@ public:
   static double Cov2(const double x[], const double y[]);
   static double PearsonCorr2(const double x[], const double y[], const int n);
   static double PearsonCorr2(const double x[], const double y[]);
-  static double SpearmanCorr2(const double x[], const double y[],
-                              const int n);
+  static double SpearmanCorr2(const double x[], const double y[], const int n);
   static double SpearmanCorr2(const double x[], const double y[]);
   static void CovM(const CMatrixDouble &x, const int n, const int m,
                    CMatrixDouble &c);
@@ -1546,9 +1536,8 @@ public:
 
   static void JarqueBeraTest(const double x[], const int n, double &p);
 
-  static void MannWhitneyUTest(const double x[], const int n,
-                               const double y[], const int m,
-                               double &bothTails, double &leftTail,
+  static void MannWhitneyUTest(const double x[], const int n, const double y[],
+                               const int m, double &bothTails, double &leftTail,
                                double &rightTail);
 
   static void OneSampleSignTest(const double x[], const int n,
@@ -1577,714 +1566,5 @@ public:
                                      const double e, double &bothTails,
                                      double &leftTail, double &rightTail);
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #endif

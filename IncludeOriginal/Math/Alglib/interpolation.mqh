@@ -1203,8 +1203,9 @@ static void CRatInt::BarycentricBuildXYW(double &x[], double &y[], double &w[],
   BarycentricNormalize(b);
 }
 
-static void CRatInt::BarycentricBuildFloaterHormann(
-    double &x[], double &y[], const int n, int d, CBarycentricInterpolant &b) {
+static void
+CRatInt::BarycentricBuildFloaterHormann(double &x[], double &y[], const int n,
+                                        int d, CBarycentricInterpolant &b) {
 
   double s0 = 0;
   double s = 0;
@@ -2304,11 +2305,12 @@ CSpline1DInterpolant *CSpline1DInterpolantShell::GetInnerObj(void) {
 
 class CSpline1D {
 private:
-  static void Spline1DGridDiffCubicInternal(
-      double &x[], double &y[], const int n, const int boundltype,
-      const double boundl, const int boundrtype, const double boundr,
-      double &d[], double &a1[], double &a2[], double &a3[], double &b[],
-      double &dt[]);
+  static void
+  Spline1DGridDiffCubicInternal(double &x[], double &y[], const int n,
+                                const int boundltype, const double boundl,
+                                const int boundrtype, const double boundr,
+                                double &d[], double &a1[], double &a2[],
+                                double &a3[], double &b[], double &dt[]);
   static void HeapSortPoints(double &x[], double &y[], const int n);
   static void HeapSortPPoints(double &x[], double &y[], int &p[], const int n);
   static void SolveTridiagonal(double &a[], double &cb[], double &c[],
@@ -9774,9 +9776,10 @@ static void CSpline2D::Spline2DCopy(CSpline2DInterpolant &c,
     cc.m_c[i_] = c.m_c[i_];
 }
 
-static void CSpline2D::Spline2DResampleBicubic(
-    CMatrixDouble &a, const int oldheight, const int oldwidth, CMatrixDouble &b,
-    const int newheight, const int newwidth) {
+static void
+CSpline2D::Spline2DResampleBicubic(CMatrixDouble &a, const int oldheight,
+                                   const int oldwidth, CMatrixDouble &b,
+                                   const int newheight, const int newwidth) {
 
   int i = 0;
   int j = 0;
@@ -9833,9 +9836,10 @@ static void CSpline2D::Spline2DResampleBicubic(
   }
 }
 
-static void CSpline2D::Spline2DResampleBilinear(
-    CMatrixDouble &a, const int oldheight, const int oldwidth, CMatrixDouble &b,
-    const int newheight, const int newwidth) {
+static void
+CSpline2D::Spline2DResampleBilinear(CMatrixDouble &a, const int oldheight,
+                                    const int oldwidth, CMatrixDouble &b,
+                                    const int newheight, const int newwidth) {
 
   int i = 0;
   int j = 0;

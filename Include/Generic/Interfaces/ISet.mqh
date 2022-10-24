@@ -3,6 +3,6 @@
 
 #include "ICollection.mqh"
 
-template <typename T> interface ISet ;
+template <typename T> interface ISet;
 
 #endif

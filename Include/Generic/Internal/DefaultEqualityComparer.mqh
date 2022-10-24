@@ -8,12 +8,12 @@
 template <typename T>
 class CDefaultEqualityComparer : public IEqualityComparer<T> {
 public:
-  CDefaultEqualityComparer(void) ;
-  ~CDefaultEqualityComparer(void) ;
+  CDefaultEqualityComparer(void);
+  ~CDefaultEqualityComparer(void);
 
-  bool Equals(T x, T y) ;
+  bool Equals(T x, T y);
 
-  int HashCode(T value) ;
+  int HashCode(T value);
 };
 
 #endif

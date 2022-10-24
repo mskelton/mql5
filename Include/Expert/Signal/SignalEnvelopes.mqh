@@ -22,16 +22,16 @@ public:
   CSignalEnvelopes(void);
   ~CSignalEnvelopes(void);
 
-  void PeriodMA(int value) ;
-  void Shift(int value) ;
-  void Method(ENUM_MA_METHOD value) ;
-  void Applied(ENUM_APPLIED_PRICE value) ;
-  void Deviation(double value) ;
-  void LimitIn(double value) ;
-  void LimitOut(double value) ;
+  void PeriodMA(int value);
+  void Shift(int value);
+  void Method(ENUM_MA_METHOD value);
+  void Applied(ENUM_APPLIED_PRICE value);
+  void Deviation(double value);
+  void LimitIn(double value);
+  void LimitOut(double value);
 
-  void Pattern_0(int value) ;
-  void Pattern_1(int value) ;
+  void Pattern_0(int value);
+  void Pattern_1(int value);
 
   virtual bool ValidationSettings(void);
 
@@ -43,15 +43,8 @@ public:
 protected:
   bool InitMA(CIndicators *indicators);
 
-  double Upper(int ind) ;
-  double Lower(int ind) ;
+  double Upper(int ind);
+  double Lower(int ind);
 };
-
-
-
-
-
-
-
 
 #endif

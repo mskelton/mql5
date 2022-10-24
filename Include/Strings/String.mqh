@@ -11,14 +11,14 @@ public:
   CString(void);
   ~CString(void);
 
-  string Str(void) const ;
-  uint Len(void) const ;
+  string Str(void) const;
+  uint Len(void) const;
   void Copy(string &copy) const;
   void Copy(CString *copy) const;
 
-  bool Fill(const short character) ;
-  void Assign(const string str) ;
-  void Assign(const CString *str) ;
+  bool Fill(const short character);
+  void Assign(const string str);
+  void Assign(const CString *str);
   void Append(const string str);
   void Append(const CString *str);
   uint Insert(const uint pos, const string substring);
@@ -36,10 +36,10 @@ public:
   int Trim(const string targets);
   int TrimLeft(const string targets);
   int TrimRight(const string targets);
-  bool Clear(void) ;
+  bool Clear(void);
 
-  bool ToUpper(void) ;
-  bool ToLower(void) ;
+  bool ToUpper(void);
+  bool ToLower(void);
   void Reverse(void);
 
   int Find(const uint start, const string substring) const;
@@ -50,29 +50,5 @@ public:
 protected:
   virtual int Compare(const CObject *node, const int mode = 0) const;
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #endif

@@ -26,12 +26,12 @@ public:
   virtual bool OnEvent(const int id, const long &lparam, const double &dparam,
                        const string &sparam);
 
-  int MinValue(void) const ;
+  int MinValue(void) const;
   void MinValue(const int value);
-  int MaxValue(void) const ;
+  int MaxValue(void) const;
   void MaxValue(const int value);
 
-  int Value(void) const ;
+  int Value(void) const;
   bool Value(int value);
 
   virtual bool Save(const int file_handle);
@@ -52,19 +52,5 @@ EVENT_MAP_BEGIN(CSpinEdit)
 ON_EVENT(ON_CLICK, m_inc, OnClickInc)
 ON_EVENT(ON_CLICK, m_dec, OnClickDec)
 EVENT_MAP_END(CWndContainer)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #endif

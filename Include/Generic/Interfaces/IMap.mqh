@@ -4,7 +4,6 @@
 #include "ICollection.mqh"
 template <typename TKey, typename TValue> class CKeyValuePair;
 
-template <typename TKey, typename TValue>
-interface IMap ;
+template <typename TKey, typename TValue> interface IMap;
 
 #endif

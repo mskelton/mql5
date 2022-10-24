@@ -30,59 +30,59 @@ public:
   CTrade(void);
   ~CTrade(void);
 
-  void LogLevel(const ENUM_LOG_LEVELS log_level) ;
+  void LogLevel(const ENUM_LOG_LEVELS log_level);
   void Request(MqlTradeRequest &request) const;
-  ENUM_TRADE_REQUEST_ACTIONS RequestAction(void) const ;
+  ENUM_TRADE_REQUEST_ACTIONS RequestAction(void) const;
   string RequestActionDescription(void) const;
-  ulong RequestMagic(void) const ;
-  ulong RequestOrder(void) const ;
-  ulong RequestPosition(void) const ;
-  ulong RequestPositionBy(void) const ;
-  string RequestSymbol(void) const ;
-  double RequestVolume(void) const ;
-  double RequestPrice(void) const ;
-  double RequestStopLimit(void) const ;
-  double RequestSL(void) const ;
-  double RequestTP(void) const ;
-  ulong RequestDeviation(void) const ;
-  ENUM_ORDER_TYPE RequestType(void) const ;
+  ulong RequestMagic(void) const;
+  ulong RequestOrder(void) const;
+  ulong RequestPosition(void) const;
+  ulong RequestPositionBy(void) const;
+  string RequestSymbol(void) const;
+  double RequestVolume(void) const;
+  double RequestPrice(void) const;
+  double RequestStopLimit(void) const;
+  double RequestSL(void) const;
+  double RequestTP(void) const;
+  ulong RequestDeviation(void) const;
+  ENUM_ORDER_TYPE RequestType(void) const;
   string RequestTypeDescription(void) const;
-  ENUM_ORDER_TYPE_FILLING RequestTypeFilling(void) const ;
+  ENUM_ORDER_TYPE_FILLING RequestTypeFilling(void) const;
   string RequestTypeFillingDescription(void) const;
-  ENUM_ORDER_TYPE_TIME RequestTypeTime(void) const ;
+  ENUM_ORDER_TYPE_TIME RequestTypeTime(void) const;
   string RequestTypeTimeDescription(void) const;
-  datetime RequestExpiration(void) const ;
-  string RequestComment(void) const ;
+  datetime RequestExpiration(void) const;
+  string RequestComment(void) const;
 
   void Result(MqlTradeResult &result) const;
-  uint ResultRetcode(void) const ;
+  uint ResultRetcode(void) const;
   string ResultRetcodeDescription(void) const;
-  int ResultRetcodeExternal(void) const ;
-  ulong ResultDeal(void) const ;
-  ulong ResultOrder(void) const ;
-  double ResultVolume(void) const ;
-  double ResultPrice(void) const ;
-  double ResultBid(void) const ;
-  double ResultAsk(void) const ;
-  string ResultComment(void) const ;
+  int ResultRetcodeExternal(void) const;
+  ulong ResultDeal(void) const;
+  ulong ResultOrder(void) const;
+  double ResultVolume(void) const;
+  double ResultPrice(void) const;
+  double ResultBid(void) const;
+  double ResultAsk(void) const;
+  string ResultComment(void) const;
 
   void CheckResult(MqlTradeCheckResult &check_result) const;
-  uint CheckResultRetcode(void) const ;
+  uint CheckResultRetcode(void) const;
   string CheckResultRetcodeDescription(void) const;
-  double CheckResultBalance(void) const ;
-  double CheckResultEquity(void) const ;
-  double CheckResultProfit(void) const ;
-  double CheckResultMargin(void) const ;
-  double CheckResultMarginFree(void) const ;
-  double CheckResultMarginLevel(void) const ;
-  string CheckResultComment(void) const ;
+  double CheckResultBalance(void) const;
+  double CheckResultEquity(void) const;
+  double CheckResultProfit(void) const;
+  double CheckResultMargin(void) const;
+  double CheckResultMarginFree(void) const;
+  double CheckResultMarginLevel(void) const;
+  string CheckResultComment(void) const;
 
-  void SetAsyncMode(const bool mode) ;
-  void SetExpertMagicNumber(const ulong magic) ;
-  void SetDeviationInPoints(const ulong deviation) ;
-  void SetTypeFilling(const ENUM_ORDER_TYPE_FILLING filling) ;
+  void SetAsyncMode(const bool mode);
+  void SetExpertMagicNumber(const ulong magic);
+  void SetDeviationInPoints(const ulong deviation);
+  void SetTypeFilling(const ENUM_ORDER_TYPE_FILLING filling);
   bool SetTypeFillingBySymbol(const string symbol);
-  void SetMarginMode(void) ;
+  void SetMarginMode(void);
 
   bool PositionOpen(const string symbol, const ENUM_ORDER_TYPE order_type,
                     const double volume, const double price, const double sl,
@@ -163,56 +163,9 @@ protected:
   bool OrderTypeCheck(const string symbol);
   void ClearStructures(void);
   bool IsStopped(const string function);
-  bool IsHedging(void) const ;
+  bool IsHedging(void) const;
 
   bool SelectPosition(const string symbol);
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #endif

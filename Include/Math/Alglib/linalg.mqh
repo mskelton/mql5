@@ -53,9 +53,9 @@ public:
   CAblas(void);
   ~CAblas(void);
 
-  static int AblasBlockSize(void) ;
-  static int AblasMicroBlockSize(void) ;
-  static int AblasComplexBlockSize(void) ;
+  static int AblasBlockSize(void);
+  static int AblasMicroBlockSize(void);
+  static int AblasComplexBlockSize(void);
 
   static void AblasSplitLength(const CMatrixDouble &a, const int n, int &n1,
                                int &n2);
@@ -130,35 +130,6 @@ public:
                               CMatrixComplex &x, const int i2, const int j2);
 };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class COrtFac {
 private:
   static void RMatrixQRBaseCase(CMatrixDouble &a, const int m, const int n,
@@ -194,8 +165,7 @@ public:
   static void RMatrixQRUnpackR(CMatrixDouble &a, const int m, const int n,
                                CMatrixDouble &r);
   static void RMatrixLQUnpackQ(CMatrixDouble &a, const int m, const int n,
-                               double tau[], const int qrows,
-                               CMatrixDouble &q);
+                               double tau[], const int qrows, CMatrixDouble &q);
   static void RMatrixLQUnpackL(CMatrixDouble &a, const int m, const int n,
                                CMatrixDouble &l);
   static void RMatrixBD(CMatrixDouble &a, const int m, const int n,
@@ -251,39 +221,6 @@ public:
                                CMatrixComplex &q);
 };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class CEigenVDetect {
 private:
   static bool TtidiagonalEVD(double d[], double ce[], const int n,
@@ -299,16 +236,15 @@ private:
       const double vl, const double vu, const int il, const int iu,
       const double abstol, double w[], int m, int &nsplit, int &iblock[],
       int isplit[], int &errorcode);
-  static void InternalDStein(const int n, double d[], double ce[],
-                             const int m, double cw[], int iblock[],
-                             int isplit[], CMatrixDouble z, int &ifail[],
-                             int &info);
+  static void InternalDStein(const int n, double d[], double ce[], const int m,
+                             double cw[], int iblock[], int isplit[],
+                             CMatrixDouble z, int &ifail[], int &info);
   static void TdIninternalDLAGTF(const int n, double a[], const double lambdav,
-                                 double b[], double c[], double tol,
-                                 double d[], int iin[], int &info);
+                                 double b[], double c[], double tol, double d[],
+                                 int iin[], int &info);
   static void TdIninternalDLAGTS(const int n, double a[], double b[],
-                                 double c[], double d[], int iin[],
-                                 double y[], double &tol, int &info);
+                                 double c[], double d[], int iin[], double y[],
+                                 double &tol, int &info);
   static void InternalDLAEBZ(const int ijob, const int nitmax, const int n,
                              const int mmax, const int minp,
                              const double abstol, const double reltol,
@@ -350,8 +286,8 @@ public:
   static bool HMatrixEVD(CMatrixComplex &ca, const int n, int zneeded,
                          const bool isupper, double d[], CMatrixComplex &z);
   static bool HMatrixEVDR(CMatrixComplex &ca, const int n, int zneeded,
-                          bool isupper, const double b1, const double b2,
-                          int m, double &w[], CMatrixComplex &z);
+                          bool isupper, const double b1, const double b2, int m,
+                          double &w[], CMatrixComplex &z);
   static bool HMatrixEVDI(CMatrixComplex &ca, const int n, int zneeded,
                           const bool isupper, const int i1, const int i2,
                           double w[], CMatrixComplex &z);
@@ -367,34 +303,6 @@ public:
                          double wr[], double wi[], CMatrixDouble &vl,
                          CMatrixDouble &vr);
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 class CMatGen {
 public:
@@ -421,22 +329,6 @@ public:
   static void HMatrixRndMultiply(CMatrixComplex &a, const int n);
 };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class CTrFac {
 private:
   static void CMatrixLUPRec(CMatrixComplex &a, const int offs, const int m,
@@ -462,8 +354,7 @@ private:
                                  const int n, const bool isupper,
                                  al_complex tmp[]);
   static bool SPDMatrixCholesky2(CMatrixDouble &aaa, const int offs,
-                                 const int n, const bool isupper,
-                                 double tmp[]);
+                                 const int n, const bool isupper, double tmp[]);
 
 public:
   CTrFac(void);
@@ -489,28 +380,6 @@ public:
                                    const int n, const bool isupper,
                                    double tmp[]);
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 class CRCond {
 private:
@@ -584,35 +453,6 @@ public:
   static double RCondThreshold(void);
 };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class CMatInvReport {
 public:
   double m_r1;
@@ -621,8 +461,6 @@ public:
   CMatInvReport(void);
   ~CMatInvReport(void);
 };
-
-
 
 class CMatInvReportShell {
 private:
@@ -640,14 +478,6 @@ public:
   CMatInvReport *GetInnerObj(void);
 };
 
-
-
-
-
-
-
-
-
 class CMatInv {
 private:
   static void RMatrixTrInverseRec(CMatrixDouble &a, const int offs, const int n,
@@ -658,8 +488,7 @@ private:
                                   const bool isunit, al_complex tmp[],
                                   int &info, CMatInvReport &rep);
   static void RMatrixLUInverseRec(CMatrixDouble &a, const int offs, const int n,
-                                  double work[], int &info,
-                                  CMatInvReport &rep);
+                                  double work[], int &info, CMatInvReport &rep);
   static void CMatrixLUInverseRec(CMatrixComplex &a, const int offs,
                                   const int n, al_complex work[], int &info,
                                   CMatInvReport &rep);
@@ -702,24 +531,6 @@ public:
                                CMatInvReport &rep);
 };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class CBdSingValueDecompose {
 private:
   static bool BidiagonalSVDDecompositionInternal(
@@ -749,14 +560,6 @@ public:
       CMatrixDouble &c, const int ncc, CMatrixDouble &vt, const int ncvt);
 };
 
-
-
-
-
-
-
-
-
 class CSingValueDecompose {
 public:
   CSingValueDecompose(void);
@@ -767,9 +570,6 @@ public:
                          const int additionalmemory, double w[],
                          CMatrixDouble &u, CMatrixDouble &vt);
 };
-
-
-
 
 class CFblsLinCgState {
 public:
@@ -792,8 +592,6 @@ public:
   CFblsLinCgState(void);
   ~CFblsLinCgState(void);
 };
-
-
 
 class CFbls {
 private:
@@ -822,15 +620,6 @@ public:
   static bool FblsCGIteration(CFblsLinCgState &state);
 };
 
-
-
-
-
-
-
-
-
-
 class CMatDet {
 public:
   CMatDet(void);
@@ -844,14 +633,6 @@ public:
   static al_complex CMatrixLUDet(CMatrixComplex a, int &pivots[], const int n);
   static al_complex CMatrixDet(CMatrixComplex &ca, const int n);
 };
-
-
-
-
-
-
-
-
 
 class CSpdGEVD {
 public:
@@ -867,10 +648,6 @@ public:
                                 const bool isupperb, const int problemtype,
                                 CMatrixDouble &r, bool &isupperr);
 };
-
-
-
-
 
 class CInverseUpdate {
 public:
@@ -888,12 +665,6 @@ public:
                                  double v[]);
 };
 
-
-
-
-
-
-
 class CSchur {
 public:
   CSchur(void);
@@ -901,8 +672,5 @@ public:
 
   static bool RMatrixSchur(CMatrixDouble &a, const int n, CMatrixDouble &s);
 };
-
-
-
 
 #endif

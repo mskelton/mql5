@@ -12,7 +12,7 @@ public:
   CMoneySizeOptimized(void);
   ~CMoneySizeOptimized(void);
 
-  void DecreaseFactor(double decrease_factor) ;
+  void DecreaseFactor(double decrease_factor);
   virtual bool ValidationSettings(void);
 
   virtual double CheckOpenLong(double price, double sl);
@@ -21,11 +21,5 @@ public:
 protected:
   double Optimize(double lots);
 };
-
-
-
-
-
-
 
 #endif

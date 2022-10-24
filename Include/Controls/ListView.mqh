@@ -42,13 +42,13 @@ public:
   virtual bool ItemDelete(const int index);
   virtual bool ItemsClear(void);
 
-  int Current(void) ;
-  string Select(void) ;
+  int Current(void);
+  string Select(void);
   bool Select(const int index);
   bool SelectByText(const string text);
   bool SelectByValue(const long value);
 
-  long Value(void) ;
+  long Value(void);
 
   virtual bool Show(void);
 
@@ -71,30 +71,5 @@ protected:
 EVENT_MAP_BEGIN(CListView)
 ON_INDEXED_EVENT(ON_CLICK, m_rows, OnItemClick)
 EVENT_MAP_END(CWndClient)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #endif

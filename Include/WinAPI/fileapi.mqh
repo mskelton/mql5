@@ -77,8 +77,8 @@ HANDLE FindFirstFileExW(const string file_name,
                         FINDEX_INFO_LEVELS info_level_id,
                         FIND_DATAW &find_file_data, FINDEX_SEARCH_OPS search_op,
                         PVOID search_filter, uint additional_flags);
-HANDLE FindFirstFileNameW(const string file_name, uint flags,
-                          uint StringLength, ushort &LinkName[]);
+HANDLE FindFirstFileNameW(const string file_name, uint flags, uint StringLength,
+                          ushort &LinkName[]);
 HANDLE FindFirstFileW(const string file_name, FIND_DATAW &find_file_data);
 HANDLE FindFirstStreamW(const string file_name, STREAM_INFO_LEVELS InfoLevel,
                         FIND_STREAM_DATA &find_stream_data, uint flags);
@@ -184,12 +184,10 @@ int UnlockFile(HANDLE file, uint file_offset_low, uint file_offset_high,
                uint number_of_bytes_to_unlock_high);
 int UnlockFileEx(HANDLE file, uint reserved, uint number_of_bytes_to_unlock_low,
                  uint number_of_bytes_to_unlock_high, OVERLAPPED &overlapped);
-int WriteFile(HANDLE file, const ushort buffer[],
-              uint number_of_bytes_to_write, uint &number_of_bytes_written,
-              OVERLAPPED &overlapped);
-int WriteFile(HANDLE file, const ushort buffer[],
-              uint number_of_bytes_to_write, uint &number_of_bytes_written,
-              PVOID overlapped);
+int WriteFile(HANDLE file, const ushort buffer[], uint number_of_bytes_to_write,
+              uint &number_of_bytes_written, OVERLAPPED &overlapped);
+int WriteFile(HANDLE file, const ushort buffer[], uint number_of_bytes_to_write,
+              uint &number_of_bytes_written, PVOID overlapped);
 int WriteFileGather(HANDLE file, FILE_SEGMENT_ELEMENT segment_array[],
                     uint number_of_bytes_to_write, uint &reserved,
                     OVERLAPPED &overlapped);

@@ -28,20 +28,20 @@ public:
   CExpertSignal(void);
   ~CExpertSignal(void);
 
-  void BasePrice(double value) ;
+  void BasePrice(double value);
   int UsedSeries(void);
 
-  void Weight(double value) ;
-  void PatternsUsage(int value) ;
-  void General(int value) ;
-  void Ignore(long value) ;
-  void Invert(long value) ;
-  void ThresholdOpen(int value) ;
-  void ThresholdClose(int value) ;
-  void PriceLevel(double value) ;
-  void StopLevel(double value) ;
-  void TakeLevel(double value) ;
-  void Expiration(int value) ;
+  void Weight(double value);
+  void PatternsUsage(int value);
+  void General(int value);
+  void Ignore(long value);
+  void Invert(long value);
+  void ThresholdOpen(int value);
+  void ThresholdClose(int value);
+  void PriceLevel(double value);
+  void StopLevel(double value);
+  void TakeLevel(double value);
+  void Expiration(int value);
 
   void Magic(ulong value);
 
@@ -72,31 +72,13 @@ public:
   virtual bool CheckReverseShort(double &price, double &sl, double &tp,
                                  datetime &expiration);
 
-  virtual bool CheckTrailingOrderLong(COrderInfo *order, double &price) ;
-  virtual bool CheckTrailingOrderShort(COrderInfo *order, double &price) ;
+  virtual bool CheckTrailingOrderLong(COrderInfo *order, double &price);
+  virtual bool CheckTrailingOrderShort(COrderInfo *order, double &price);
 
-  virtual int LongCondition(void) ;
-  virtual int ShortCondition(void) ;
+  virtual int LongCondition(void);
+  virtual int ShortCondition(void);
   virtual double Direction(void);
-  void SetDirection(void) ;
+  void SetDirection(void);
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #endif

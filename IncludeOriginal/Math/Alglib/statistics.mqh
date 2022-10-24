@@ -7747,9 +7747,10 @@ static void CVarianceTests::FTest(const double &x[], const int n,
   rightTail = 1 - leftTail;
 }
 
-static void CVarianceTests::OneSampleVarianceTest(
-    const double &x[], const int n, const double variance, double &bothTails,
-    double &leftTail, double &rightTail) {
+static void
+CVarianceTests::OneSampleVarianceTest(const double &x[], const int n,
+                                      const double variance, double &bothTails,
+                                      double &leftTail, double &rightTail) {
 
   int i;
   double xmean = 0;

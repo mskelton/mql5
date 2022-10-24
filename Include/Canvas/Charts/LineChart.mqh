@@ -17,7 +17,7 @@ public:
   virtual bool Create(const string name, const int width, const int height,
                       ENUM_COLOR_FORMAT clrfmt = COLOR_FORMAT_ARGB_NORMALIZE);
 
-  void Filled(const bool flag = true) ;
+  void Filled(const bool flag = true);
 
   bool SeriesAdd(const double value[], const string descr = "",
                  const uint clr = 0);
@@ -35,16 +35,5 @@ protected:
 private:
   double CalcArea(const uint index);
 };
-
-
-
-
-
-
-
-
-
-
-
 
 #endif

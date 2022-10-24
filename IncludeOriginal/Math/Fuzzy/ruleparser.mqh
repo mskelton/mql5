@@ -415,8 +415,9 @@ static CArrayObj *CRuleParser::ParseLexems(const string rule, CList *lexems) {
   return (expressions);
 }
 
-static CArrayObj *CRuleParser::ExtractSingleCondidtions(
-    CArrayObj *conditionExpression, CList *in, CList *lexems) {
+static CArrayObj *
+CRuleParser::ExtractSingleCondidtions(CArrayObj *conditionExpression, CList *in,
+                                      CList *lexems) {
   CArrayObj *copyExpressions = conditionExpression;
   CArrayObj *expressions = new CArrayObj;
   int index = 0;
@@ -758,8 +759,9 @@ static ICondition *CRuleParser::ParseConditionsRecurse(CArrayObj *expressions,
   }
 }
 
-static CSingleCondition *CRuleParser::ParseConclusion(
-    CArrayObj *conditionExpression, CList *out, CList *lexems) {
+static CSingleCondition *
+CRuleParser::ParseConclusion(CArrayObj *conditionExpression, CList *out,
+                             CList *lexems) {
   CArrayObj *copyExpression = conditionExpression;
 
   CDictionary_String_Obj *p_so;

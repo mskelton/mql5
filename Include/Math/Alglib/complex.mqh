@@ -41,34 +41,4 @@ public:
   al_complex operator/(const double rhs);
 };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #endif

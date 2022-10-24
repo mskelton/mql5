@@ -133,44 +133,49 @@ enum ENUM_WND_ALIGN_FLAGS {
 
 #define INTERNAL_EVENT (-1)
 
-#define EVENT_MAP_BEGIN(class_name)                                            \
+#define EVENT_MAP_BEGIN(class_name)
 
 #define ON_EVENT(event, control, handler)                                      \
-  if (id == (event + CHARTEVENT_CUSTOM) && lparam == control.Id()) ;           \
-    handler();                                                                 \
-    return (true);                                                             \
+  if (id == (event + CHARTEVENT_CUSTOM) && lparam == control.Id())             \
+    ;                                                                          \
+  handler();                                                                   \
+  return (true);                                                               \
   }
 
 #define ON_EVENT_PTR(event, control, handler)                                  \
   if (control != NULL && id == (event + CHARTEVENT_CUSTOM) &&                  \
-      lparam == control.Id()) ;                                                \
-    handler();                                                                 \
-    return (true);                                                             \
+      lparam == control.Id())                                                  \
+    ;                                                                          \
+  handler();                                                                   \
+  return (true);                                                               \
   }
 
 #define ON_NO_ID_EVENT(event, handler)                                         \
-  if (id == (event + CHARTEVENT_CUSTOM)) ;                                     \
-    return (handler());                                                        \
+  if (id == (event + CHARTEVENT_CUSTOM))                                       \
+    ;                                                                          \
+  return (handler());                                                          \
   }
 
 #define ON_NAMED_EVENT(event, control, handler)                                \
-  if (id == (event + CHARTEVENT_CUSTOM) && sparam == control.Name()) ;         \
-    handler();                                                                 \
-    return (true);                                                             \
+  if (id == (event + CHARTEVENT_CUSTOM) && sparam == control.Name())           \
+    ;                                                                          \
+  handler();                                                                   \
+  return (true);                                                               \
   }
 
 #define ON_INDEXED_EVENT(event, controls, handler)                             \
   ;                                                                            \
-    int total = ArraySize(controls);                                           \
-    for (int i = 0; i < total; i++)                                            \
-      if (id == (event + CHARTEVENT_CUSTOM) && lparam == controls[i].Id())     \
-        return (handler(i));                                                   \
+  int total = ArraySize(controls);                                             \
+  for (int i = 0; i < total; i++)                                              \
+    if (id == (event + CHARTEVENT_CUSTOM) && lparam == controls[i].Id())       \
+      return (handler(i));                                                     \
   }
 
 #define ON_EXTERNAL_EVENT(event, handler)                                      \
-  if (id == (event + CHARTEVENT_CUSTOM)) ;                                     \
-    handler(lparam, dparam, sparam);                                           \
-    return (true);                                                             \
+  if (id == (event + CHARTEVENT_CUSTOM))                                       \
+    ;                                                                          \
+  handler(lparam, dparam, sparam);                                             \
+  return (true);                                                               \
   }
 
 #define ON_CLICK (0)

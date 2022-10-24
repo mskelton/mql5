@@ -18,8 +18,6 @@ public:
   ~CCVReport(void);
 };
 
-
-
 class CBdSS {
 private:
   static double XLnY(const double x, const double y);
@@ -58,28 +56,10 @@ public:
   static void DSSplitK(double ca[], int cc[], const int n, const int nc,
                        int kmax, int info, double &thresholds[], int &ni,
                        double &cve);
-  static void DSOptimalSplitK(double ca[], int cc[], const int n,
-                              const int nc, int kmax, int &info,
-                              double thresholds[], int &ni, double &cve);
+  static void DSOptimalSplitK(double ca[], int cc[], const int n, const int nc,
+                              int kmax, int &info, double thresholds[], int &ni,
+                              double &cve);
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 class CDecisionForest {
 public:
@@ -95,9 +75,6 @@ public:
   void Copy(CDecisionForest &obj);
 };
 
-
-
-
 class CDecisionForestShell {
 private:
   CDecisionForest m_innerobj;
@@ -109,10 +86,6 @@ public:
 
   CDecisionForest *GetInnerObj(void);
 };
-
-
-
-
 
 class CDFReport {
 public:
@@ -132,9 +105,6 @@ public:
 
   void Copy(CDFReport &obj);
 };
-
-
-
 
 class CDFReportShell {
 private:
@@ -168,30 +138,6 @@ public:
   CDFReport *GetInnerObj(void);
 };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class CDFInternalBuffers {
 public:
   double m_treebuf;
@@ -211,14 +157,12 @@ public:
   ~CDFInternalBuffers(void);
 };
 
-
-
 class CDForest {
 private:
   static int DFClsError(CDecisionForest &df, CMatrixDouble &xy,
                         const int npoints);
-  static void DFProcessInternal(CDecisionForest &df, const int offs,
-                                double x[], double y[]);
+  static void DFProcessInternal(CDecisionForest &df, const int offs, double x[],
+                                double y[]);
   static void DFBuildTree(CMatrixDouble &xy, const int npoints, const int nvars,
                           const int nclasses, const int nfeatures,
                           const int nvarsinpool, const int flags,
@@ -278,28 +222,6 @@ public:
   static void DFUnserialize(CSerializer &s, CDecisionForest &forest);
 };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class CKMeans {
 private:
   static bool SelectCenterPP(CMatrixDouble &xy, const int npoints,
@@ -316,10 +238,6 @@ public:
                              int info, CMatrixDouble &c, int &xyc[]);
 };
 
-
-
-
-
 class CLDA {
 public:
   CLDA(void);
@@ -331,10 +249,6 @@ public:
                          const int nclasses, int &info, CMatrixDouble &w);
 };
 
-
-
-
-
 class CLinearModel {
 public:
   double m_w;
@@ -344,9 +258,6 @@ public:
 
   void Copy(CLinearModel &obj);
 };
-
-
-
 
 class CLinearModelShell {
 private:
@@ -359,10 +270,6 @@ public:
 
   CLinearModel *GetInnerObj(void);
 };
-
-
-
-
 
 class CLRReport {
 public:
@@ -383,9 +290,6 @@ public:
 
   void Copy(CLRReport &obj);
 };
-
-
-
 
 class CLRReportShell {
 private:
@@ -412,24 +316,6 @@ public:
   void SetNCVDEfects(const int i);
   CLRReport *GetInnerObj(void);
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 class CLinReg {
 private:
@@ -470,22 +356,6 @@ public:
                      double &b);
 };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class CMultilayerPerceptron {
 public:
   int m_hlnetworktype;
@@ -514,9 +384,6 @@ public:
   void Copy(CMultilayerPerceptron &obj);
 };
 
-
-
-
 class CMultilayerPerceptronShell {
 private:
   CMultilayerPerceptron m_innerobj;
@@ -529,10 +396,6 @@ public:
   CMultilayerPerceptron *GetInnerObj(void);
 };
 
-
-
-
-
 class CMLPBase {
 private:
   static void AddInputLayer(const int ncount, int lsizes[], int ltypes[],
@@ -540,9 +403,9 @@ private:
   static void AddBiasedSummatorLayer(const int ncount, int lsizes[],
                                      int ltypes[], int lconnfirst[],
                                      int lconnlast[], int &lastproc);
-  static void AddActivationLayer(const int functype, int lsizes[],
-                                 int ltypes[], int lconnfirst[],
-                                 int lconnlast[], int &lastproc);
+  static void AddActivationLayer(const int functype, int lsizes[], int ltypes[],
+                                 int lconnfirst[], int lconnlast[],
+                                 int &lastproc);
   static void AddZeroLayer(int lsizes[], int ltypes[], int lconnfirst[],
                            int lconnlast[], int &lastproc);
   static void HLAddInputLayer(CMultilayerPerceptron &network, int &connidx,
@@ -688,79 +551,12 @@ public:
                               CMatrixDouble &h);
   static void MLPInternalProcessVector(int structinfo[], double weights[],
                                        double columnmeans[],
-                                       double columnsigmas[],
-                                       double neurons[], double dfdnet[],
-                                       double x[], double y[]);
+                                       double columnsigmas[], double neurons[],
+                                       double dfdnet[], double x[], double y[]);
   static void MLPAlloc(CSerializer &s, CMultilayerPerceptron &network);
   static void MLPSerialize(CSerializer &s, CMultilayerPerceptron &network);
   static void MLPUnserialize(CSerializer &s, CMultilayerPerceptron &network);
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 class CLogitModel {
 public:
@@ -771,9 +567,6 @@ public:
 
   void Copy(CLogitModel &obj);
 };
-
-
-
 
 class CLogitModelShell {
 private:
@@ -786,10 +579,6 @@ public:
 
   CLogitModel *GetInnerObj(void);
 };
-
-
-
-
 
 class CLogitMCState {
 public:
@@ -823,8 +612,6 @@ public:
   ~CLogitMCState(void);
 };
 
-
-
 class CMNLReport {
 public:
   int m_ngrad;
@@ -835,9 +622,6 @@ public:
 
   void Copy(CMNLReport &obj);
 };
-
-
-
 
 class CMNLReportShell {
 private:
@@ -854,14 +638,6 @@ public:
   void SetNHess(const int i);
   CMNLReport *GetInnerObj(void);
 };
-
-
-
-
-
-
-
-
 
 class CLogit {
 private:
@@ -911,24 +687,6 @@ public:
   static int MNLClsError(CLogitModel &lm, CMatrixDouble &xy, const int npoints);
 };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class CMCPDState {
 public:
   int m_n;
@@ -967,9 +725,6 @@ public:
   void Copy(CMCPDState &obj);
 };
 
-
-
-
 class CMCPDStateShell {
 private:
   CMCPDState m_innerobj;
@@ -981,10 +736,6 @@ public:
 
   CMCPDState *GetInnerObj(void);
 };
-
-
-
-
 
 class CMCPDReport {
 public:
@@ -998,9 +749,6 @@ public:
 
   void Copy(CMCPDReport &obj);
 };
-
-
-
 
 class CMCPDReportShell {
 private:
@@ -1021,18 +769,6 @@ public:
   void SetTerminationType(const int i);
   CMCPDReport *GetInnerObj(void);
 };
-
-
-
-
-
-
-
-
-
-
-
-
 
 class CMarkovCPD {
 private:
@@ -1058,32 +794,13 @@ public:
                         CMatrixDouble &bndu);
   static void MCPDAddBC(CMCPDState &s, const int i, const int j, double bndl,
                         double bndu);
-  static void MCPDSetLC(CMCPDState s, CMatrixDouble &c, int &ct[],
-                        const int k);
+  static void MCPDSetLC(CMCPDState s, CMatrixDouble &c, int &ct[], const int k);
   static void MCPDSetTikhonovRegularizer(CMCPDState &s, const double v);
   static void MCPDSetPrior(CMCPDState &s, CMatrixDouble &cpp);
   static void MCPDSetPredictionWeights(CMCPDState s, double &pw[]);
   static void MCPDSolve(CMCPDState &s);
   static void MCPDResults(CMCPDState &s, CMatrixDouble &p, CMCPDReport &rep);
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 class CMLPReport {
 public:
@@ -1096,9 +813,6 @@ public:
 
   void Copy(CMLPReport &obj);
 };
-
-
-
 
 class CMLPReportShell {
 private:
@@ -1118,16 +832,6 @@ public:
   CMLPReport *GetInnerObj(void);
 };
 
-
-
-
-
-
-
-
-
-
-
 class CMLPCVReport {
 public:
   double m_relclserror;
@@ -1141,9 +845,6 @@ public:
 
   void Copy(CMLPCVReport &obj);
 };
-
-
-
 
 class CMLPCVReportShell {
 private:
@@ -1166,20 +867,6 @@ public:
   void SetAvgRelError(const double d);
   CMLPCVReport *GetInnerObj(void);
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 class CMLPTrain {
 private:
@@ -1221,15 +908,6 @@ public:
                            CMLPReport &rep, CMLPCVReport &cvrep);
 };
 
-
-
-
-
-
-
-
-
-
 class CMLPEnsemble {
 public:
   int m_ensemblesize;
@@ -1258,9 +936,6 @@ public:
   void Copy(CMLPEnsemble &obj);
 };
 
-
-
-
 class CMLPEnsembleShell {
 private:
   CMLPEnsemble m_innerobj;
@@ -1272,10 +947,6 @@ public:
 
   CMLPEnsemble *GetInnerObj(void);
 };
-
-
-
-
 
 class CMLPE {
 private:
@@ -1363,39 +1034,6 @@ public:
                           const int restarts, int &info, CMLPReport &rep);
 };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class CPCAnalysis {
 public:
   CPCAnalysis(void);
@@ -1405,8 +1043,5 @@ public:
                             const int nvars, int info, double &s2[],
                             CMatrixDouble &v);
 };
-
-
-
 
 #endif

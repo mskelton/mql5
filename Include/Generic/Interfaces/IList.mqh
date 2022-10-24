@@ -3,6 +3,6 @@
 
 #include "ICollection.mqh"
 
-template <typename T> interface IList ;
+template <typename T> interface IList;
 
 #endif

@@ -91,11 +91,3 @@ protected:
   void FlameCalculate(void);
   void Delay(const uint value);
 };
-
-
-
-
-
-
-
-

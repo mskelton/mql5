@@ -24,7 +24,7 @@ public:
 
   void Check(void);
 
-  int DXContext(void) const ;
+  int DXContext(void) const;
 
   CDXShader *ShaderCreateDefault(ENUM_DX_SHADER_TYPE shader_type);
   CDXShader *ShaderCreateFromFile(ENUM_DX_SHADER_TYPE shader_type, string path,
@@ -52,19 +52,5 @@ private:
 
   void ResourcesCheck(void);
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #endif

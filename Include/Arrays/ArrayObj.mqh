@@ -12,15 +12,15 @@ public:
   CArrayObj(void);
   ~CArrayObj(void);
 
-  bool FreeMode(void) const ;
-  void FreeMode(const bool mode) ;
+  bool FreeMode(void) const;
+  void FreeMode(const bool mode);
 
-  virtual int Type(void) const ;
+  virtual int Type(void) const;
 
   virtual bool Save(const int file_handle);
   virtual bool Load(const int file_handle);
 
-  virtual bool CreateElement(const int index) ;
+  virtual bool CreateElement(const int index);
 
   bool Reserve(const int size);
   bool Resize(const int size);
@@ -58,36 +58,5 @@ protected:
   int QuickSearch(const CObject *element) const;
   int MemMove(const int dest, const int src, int count);
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #endif

@@ -1,5 +1,5 @@
 lint:
-	$(shell find . -name *.mqh)@clang-format --dry-run $(shell find . -name *.mqh)
+	@clang-format --dry-run $(shell find . -name *.mqh)
 
 tidy:
 	@clang-format -i $(shell find . -name *.mqh)

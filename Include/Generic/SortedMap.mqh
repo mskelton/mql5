@@ -22,46 +22,29 @@ public:
   CSortedMap(IMap<TKey, TValue> *map, IComparer<TKey> *comparer);
   ~CSortedMap(void);
 
-  bool Add(CKeyValuePair<TKey, TValue> *value) ;
+  bool Add(CKeyValuePair<TKey, TValue> *value);
   bool Add(TKey key, TValue value);
 
-  int Count(void) ;
-  bool Contains(CKeyValuePair<TKey, TValue> *item) ;
+  int Count(void);
+  bool Contains(CKeyValuePair<TKey, TValue> *item);
   bool Contains(TKey key, TValue value);
   bool ContainsKey(TKey key);
   bool ContainsValue(TValue value);
-  IComparer<TKey> *Comparer(void) const ;
+  IComparer<TKey> *Comparer(void) const;
 
-  int CopyTo(CKeyValuePair<TKey, TValue> *dst_array[],
-             const int dst_start = 0);
+  int CopyTo(CKeyValuePair<TKey, TValue> *dst_array[], const int dst_start = 0);
   int CopyTo(TKey dst_keys[], TValue dst_values[], const int dst_start = 0);
 
   void Clear(void);
-  bool Remove(CKeyValuePair<TKey, TValue> *item) ;
+  bool Remove(CKeyValuePair<TKey, TValue> *item);
   bool Remove(TKey key);
 
   bool TryGetValue(TKey key, TValue &value);
   bool TrySetValue(TKey key, TValue value);
 
 private:
-  static void ClearNodes(
-      CRedBlackTreeNode<CKeyValuePair<TKey, TValue> *> *node);
+  static void
+  ClearNodes(CRedBlackTreeNode<CKeyValuePair<TKey, TValue> *> *node);
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #endif

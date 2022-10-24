@@ -13,9 +13,9 @@ public:
   CFile(void);
   ~CFile(void);
 
-  int Handle(void) const ;
-  string FileName(void) const ;
-  int Flags(void) const ;
+  int Handle(void) const;
+  string FileName(void) const;
+  int Flags(void) const;
   void SetUnicode(const bool unicode);
   void SetCommon(const bool common);
 
@@ -45,28 +45,5 @@ public:
   bool FileFindNext(const long search_handle, string &returned_filename);
   void FileFindClose(const long search_handle);
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #endif

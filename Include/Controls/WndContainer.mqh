@@ -18,8 +18,8 @@ public:
                        const string &sparam);
   virtual bool OnMouseEvent(const int x, const int y, const int flags);
 
-  int ControlsTotal(void) const ;
-  CWnd *Control(const int ind) const ;
+  int ControlsTotal(void) const;
+  CWnd *Control(const int ind) const;
   virtual CWnd *ControlFind(const long id);
 
   virtual bool MouseFocusKill(const long id = -1);
@@ -35,7 +35,7 @@ public:
   virtual bool Shift(const int dx, const int dy);
 
   virtual long Id(const long id);
-  long Id(void) const ;
+  long Id(void) const;
 
   virtual bool Enable(void);
   virtual bool Disable(void);
@@ -50,29 +50,5 @@ protected:
   virtual bool OnActivate(void);
   virtual bool OnDeactivate(void);
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #endif

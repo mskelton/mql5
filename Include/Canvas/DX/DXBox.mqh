@@ -19,8 +19,4 @@ private:
   void PrepareVertices(const DXVector3 &from, const DXVector3 &to);
 };
 
-
-
-
-
 #endif

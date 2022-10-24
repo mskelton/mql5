@@ -23,7 +23,7 @@ public:
                   const int items_count = WHOLE_ARRAY);
   template <typename T> uint WriteStruct(T &data);
   bool WriteObject(CObject *object);
-  template <typename T> uint WriteEnum(const T value) ;
+  template <typename T> uint WriteEnum(const T value);
 
   template <typename T> bool ReadInteger(T &value);
   bool ReadLong(long &value);
@@ -38,28 +38,5 @@ public:
   bool ReadObject(CObject *object);
   template <typename T> bool ReadEnum(T &value);
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #endif

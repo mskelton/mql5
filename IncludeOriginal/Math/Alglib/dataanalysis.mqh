@@ -5968,10 +5968,11 @@ static void CMLPBase::MLPHessianBatch(CMultilayerPerceptron &network,
   MLPHessianBatchInternal(network, xy, ssize, false, e, grad, h);
 }
 
-static void CMLPBase::MLPInternalProcessVector(
-    int &structinfo[], double &weights[], double &columnmeans[],
-    double &columnsigmas[], double &neurons[], double &dfdnet[], double &x[],
-    double &y[]) {
+static void
+CMLPBase::MLPInternalProcessVector(int &structinfo[], double &weights[],
+                                   double &columnmeans[],
+                                   double &columnsigmas[], double &neurons[],
+                                   double &dfdnet[], double &x[], double &y[]) {
 
   int i = 0;
   int n1 = 0;

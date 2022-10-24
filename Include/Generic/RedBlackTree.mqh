@@ -12,38 +12,8 @@ enum ENUM_RED_BLACK_TREE_NODE_TYPE {
   RED_BLACK_TREE_NODE_BLACK = 1
 };
 
-template <typename T> class CRedBlackTreeNode ;
+template <typename T> class CRedBlackTreeNode;
 
-
-
-
-
-
-template <typename T> class CRedBlackTree ;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+template <typename T> class CRedBlackTree;
 
 #endif

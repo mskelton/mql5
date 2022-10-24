@@ -6,36 +6,6 @@
 #include <Generic/Interfaces/ISet.mqh>
 #include <Generic/Internal/Introsort.mqh>
 
-template <typename T> class CSortedSet ;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+template <typename T> class CSortedSet;
 
 #endif

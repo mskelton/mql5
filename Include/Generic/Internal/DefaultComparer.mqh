@@ -4,6 +4,6 @@
 #include "CompareFunction.mqh"
 #include <Generic/Interfaces/IComparer.mqh>
 
-template <typename T> class CDefaultComparer ;
+template <typename T> class CDefaultComparer;
 
 #endif

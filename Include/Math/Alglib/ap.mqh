@@ -14,11 +14,11 @@ public:
   double ra;
   al_complex ca;
 
-  RCommState(void) ;
-  ~RCommState(void);;
+  RCommState(void);
+  ~RCommState(void);
+  ;
   void Copy(RCommState &obj);
 };
-
 
 class CAp {
 public:
@@ -74,45 +74,6 @@ public:
   static bool ForceHermitian(CMatrixComplex &a);
 };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class CHighQualityRandState {
 public:
   int m_s1;
@@ -123,8 +84,6 @@ public:
   CHighQualityRandState(void);
   ~CHighQualityRandState(void);
 };
-
-
 
 class CHighQualityRandStateShell {
 private:
@@ -137,10 +96,6 @@ public:
 
   CHighQualityRandState *GetInnerObj(void);
 };
-
-
-
-
 
 class CHighQualityRand {
 private:
@@ -168,17 +123,6 @@ public:
                                  const double lambdav);
 };
 
-
-
-
-
-
-
-
-
-
-
-
 class CMath {
 public:
   static bool m_first_call;
@@ -195,21 +139,12 @@ public:
   static bool IsFinite(const double d);
   static double RandomReal(void);
   static int RandomInteger(const int n);
-  static double Sqr(const double x) ;
+  static double Sqr(const double x);
   static double AbsComplex(const al_complex &z);
   static double AbsComplex(const double r);
   static al_complex Conj(const al_complex &z);
   static al_complex Csqr(const al_complex &z);
 };
-
-
-
-
-
-
-
-
-
 
 char _sixbits2char_tbl[] = ;
 class CSerializer {

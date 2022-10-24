@@ -11,7 +11,7 @@ public:
   CExpertMoney(void);
   ~CExpertMoney(void);
 
-  void Percent(double percent) ;
+  void Percent(double percent);
 
   virtual bool ValidationSettings();
 
@@ -20,12 +20,5 @@ public:
   virtual double CheckReverse(CPositionInfo *position, double sl);
   virtual double CheckClose(CPositionInfo *position);
 };
-
-
-
-
-
-
-
 
 #endif

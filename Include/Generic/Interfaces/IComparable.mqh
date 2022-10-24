@@ -3,6 +3,6 @@
 
 #include "IEqualityComparable.mqh"
 
-template <typename T> interface IComparable ;
+template <typename T> interface IComparable;
 
 #endif

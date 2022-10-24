@@ -5,51 +5,51 @@
 #include "Math.mqh"
 
 double MathProbabilityDensityChiSquare(const double x, const double nu,
-                                       const bool log_mode, int &error_code) ;
+                                       const bool log_mode, int &error_code);
 
 double MathProbabilityDensityChiSquare(const double x, const double nu,
-                                       int &error_code) ;
+                                       int &error_code);
 
 bool MathProbabilityDensityChiSquare(const double x[], const double nu,
-                                     const bool log_mode, double result[]) ;
+                                     const bool log_mode, double result[]);
 
 bool MathProbabilityDensityChiSquare(const double x[], const double nu,
-                                     double result[]) ;
+                                     double result[]);
 
 double MathCumulativeDistributionChiSquare(const double x, const double nu,
                                            const bool tail, const bool log_mode,
-                                           int &error_code) ;
+                                           int &error_code);
 
 double MathCumulativeDistributionChiSquare(const double x, const double nu,
-                                           int &error_code) ;
+                                           int &error_code);
 
 bool MathCumulativeDistributionChiSquare(const double x[], const double nu,
                                          const bool tail, const bool log_mode,
-                                         double result[]) ;
+                                         double result[]);
 
 bool MathCumulativeDistributionChiSquare(const double x[], const double nu,
-                                         double result[]) ;
+                                         double result[]);
 
 double MathQuantileChiSquare(const double probability, const double nu,
                              const bool tail, const bool log_mode,
-                             int &error_code) ;
+                             int &error_code);
 
 double MathQuantileChiSquare(const double probability, const double nu,
-                             int &error_code) ;
+                             int &error_code);
 
 bool MathQuantileChiSquare(const double probability[], const double nu,
                            const bool tail, const bool log_mode,
-                           double result[]) ;
+                           double result[]);
 
 bool MathQuantileChiSquare(const double probability[], const double nu,
-                           double result[]) ;
+                           double result[]);
 
-double MathRandomChiSquare(const double nu, int &error_code) ;
+double MathRandomChiSquare(const double nu, int &error_code);
 
 bool MathRandomChiSquare(const double nu, const int data_count,
-                         double result[]) ;
+                         double result[]);
 
 bool MathMomentsChiSquare(const double nu, double &mean, double &variance,
-                          double &skewness, double &kurtosis, int &error_code) ;
+                          double &skewness, double &kurtosis, int &error_code);
 
 #endif

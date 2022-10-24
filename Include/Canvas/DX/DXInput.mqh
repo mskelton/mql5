@@ -5,13 +5,13 @@
 
 class CDXInput : public CDXHandleShared {
 public:
-  virtual ~CDXInput(void) ;
+  virtual ~CDXInput(void);
 
-  template <typename TInput> bool Create(int context) ;
+  template <typename TInput> bool Create(int context);
 
-  template <typename TInput> bool InputSet(const TInput &input_data) ;
+  template <typename TInput> bool InputSet(const TInput &input_data);
 
-  virtual void Shutdown(void) ;
+  virtual void Shutdown(void);
 };
 
 #endif

@@ -21,10 +21,10 @@ public:
   CSignalBearsPower(void);
   ~CSignalBearsPower(void);
 
-  void PeriodBears(int value) ;
+  void PeriodBears(int value);
 
-  void Pattern_0(int value) ;
-  void Pattern_1(int value) ;
+  void Pattern_0(int value);
+  void Pattern_1(int value);
 
   virtual bool ValidationSettings(void);
 
@@ -35,18 +35,10 @@ public:
 protected:
   bool InitBears(CIndicators *indicators);
 
-  double Bears(int ind) ;
-  double DiffBears(int ind) ;
+  double Bears(int ind);
+  double DiffBears(int ind);
   int StateBears(int ind);
   bool ExtStateBears(int ind);
 };
-
-
-
-
-
-
-
-
 
 #endif

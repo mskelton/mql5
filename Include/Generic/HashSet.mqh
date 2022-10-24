@@ -6,49 +6,8 @@
 #include <Generic/Internal/DefaultEqualityComparer.mqh>
 #include <Generic/Internal/PrimeGenerator.mqh>
 
-template <typename T> struct Slot ;
+template <typename T> struct Slot;
 
-template <typename T> class CHashSet ;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+template <typename T> class CHashSet;
 
 #endif

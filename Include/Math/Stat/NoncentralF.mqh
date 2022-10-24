@@ -8,66 +8,66 @@
 
 double MathProbabilityDensityNoncentralF(const double x, const double nu1,
                                          const double nu2, const double sigma,
-                                         const bool log_mode, int &error_code) ;
+                                         const bool log_mode, int &error_code);
 
 double MathProbabilityDensityNoncentralF(const double x, const double nu1,
                                          const double nu2, const double sigma,
-                                         int &error_code) ;
+                                         int &error_code);
 
 bool MathProbabilityDensityNoncentralF(const double x[], const double nu1,
                                        const double nu2, const double sigma,
-                                       const bool log_mode, double result[]) ;
+                                       const bool log_mode, double result[]);
 
 bool MathProbabilityDensityNoncentralF(const double x[], const double nu1,
                                        const double nu2, const double sigma,
-                                       double result[]) ;
+                                       double result[]);
 
 double MathCumulativeDistributionNoncentralF(
     const double x, const double nu1, const double nu2, const double sigma,
-    const bool tail, const bool log_mode, int &error_code) ;
+    const bool tail, const bool log_mode, int &error_code);
 
 double MathCumulativeDistributionNoncentralF(const double x, const double nu1,
                                              const double nu2,
                                              const double sigma,
-                                             int &error_code) ;
+                                             int &error_code);
 
 bool MathCumulativeDistributionNoncentralF(const double x[], const double nu1,
                                            const double nu2, const double sigma,
                                            const bool tail, const bool log_mode,
-                                           double result[]) ;
+                                           double result[]);
 
 bool MathCumulativeDistributionNoncentralF(const double x[], const double nu1,
                                            const double nu2, const double sigma,
-                                           double result[]) ;
+                                           double result[]);
 
 double MathQuantileNoncentralF(const double probability, const double nu1,
                                const double nu2, const double sigma,
                                const bool tail, const bool log_mode,
-                               int &error_code) ;
+                               int &error_code);
 
 double MathQuantileNoncentralF(const double probability, const double nu1,
                                const double nu2, const double sigma,
-                               int &error_code) ;
+                               int &error_code);
 
 bool MathQuantileNoncentralF(const double probability[], const double nu1,
                              const double nu2, const double sigma,
                              const bool tail, const bool log_mode,
-                             double result[]) ;
+                             double result[]);
 
 bool MathQuantileNoncentralF(const double probability[], const double nu1,
                              const double nu2, const double sigma,
-                             double result[]) ;
+                             double result[]);
 
 double MathRandomNoncentralF(const double nu1, const double nu2,
-                             const double sigma, int &error_code) ;
+                             const double sigma, int &error_code);
 
 bool MathRandomNoncentralF(const double nu1, const double nu2,
                            const double sigma, const int data_count,
-                           double result[]) ;
+                           double result[]);
 
 bool MathMomentsNoncentralF(const double nu1, const double nu2,
                             const double sigma, double &mean, double &variance,
                             double &skewness, double &kurtosis,
-                            int &error_code) ;
+                            int &error_code);
 
 #endif

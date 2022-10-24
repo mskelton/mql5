@@ -194,7 +194,7 @@ enum WELL_KNOWN_SID_TYPE {
   WinBuiltinDeviceOwnersSid = 119
 };
 
-union FILE_SEGMENT_ELEMENT ;
+union FILE_SEGMENT_ELEMENT;
 
 struct REASON_CONTEXT {
   uint Version;

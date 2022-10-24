@@ -183,11 +183,12 @@ private:
                                      CMatrixComplex &b, const int m, int &info,
                                      CDenseSolverReport &rep,
                                      CMatrixComplex &x);
-  static void HPDMatrixCholeskySolveInternal(
-      CMatrixComplex &cha, const double sqrtscalea, const int n,
-      const bool isupper, CMatrixComplex &a, const bool havea,
-      CMatrixComplex &b, const int m, int &info, CDenseSolverReport &rep,
-      CMatrixComplex &x);
+  static void
+  HPDMatrixCholeskySolveInternal(CMatrixComplex &cha, const double sqrtscalea,
+                                 const int n, const bool isupper,
+                                 CMatrixComplex &a, const bool havea,
+                                 CMatrixComplex &b, const int m, int &info,
+                                 CDenseSolverReport &rep, CMatrixComplex &x);
   static int CDenseSolverRFSMax(const int n, const double r1,
                                 const double rinf);
   static int CDenseSolverRFSMaxV2(const int n, const double r2);
@@ -840,9 +841,10 @@ static void CDenseSolver::SPDMatrixCholeskySolveM(
                                  m, info, rep, x);
 }
 
-static void CDenseSolver::SPDMatrixCholeskySolve(
-    CMatrixDouble &cha, const int n, const bool isupper, double &b[], int &info,
-    CDenseSolverReport &rep, double &x[]) {
+static void
+CDenseSolver::SPDMatrixCholeskySolve(CMatrixDouble &cha, const int n,
+                                     const bool isupper, double &b[], int &info,
+                                     CDenseSolverReport &rep, double &x[]) {
 
   int i_ = 0;
 

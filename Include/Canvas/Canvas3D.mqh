@@ -32,20 +32,20 @@ public:
   CCanvas3D(void);
   ~CCanvas3D(void);
 
-  int DXContext(void) const ;
-  CDXDispatcher *DXDispatcher(void) ;
-  CDXInput *InputScene(void) ;
+  int DXContext(void) const;
+  CDXDispatcher *DXDispatcher(void);
+  CDXInput *InputScene(void);
 
-  virtual bool Create(
-      const string name, const int width, const int height,
-      ENUM_COLOR_FORMAT clrfmt = COLOR_FORMAT_XRGB_NOALPHA) override;
-  virtual bool Attach(
-      const long chart_id, const string objname,
-      ENUM_COLOR_FORMAT clrfmt = COLOR_FORMAT_XRGB_NOALPHA) override;
-  virtual bool Attach(
-      const long chart_id, const string objname, const int width,
-      const int height,
-      ENUM_COLOR_FORMAT clrfmt = COLOR_FORMAT_XRGB_NOALPHA) override;
+  virtual bool
+  Create(const string name, const int width, const int height,
+         ENUM_COLOR_FORMAT clrfmt = COLOR_FORMAT_XRGB_NOALPHA) override;
+  virtual bool
+  Attach(const long chart_id, const string objname,
+         ENUM_COLOR_FORMAT clrfmt = COLOR_FORMAT_XRGB_NOALPHA) override;
+  virtual bool
+  Attach(const long chart_id, const string objname, const int width,
+         const int height,
+         ENUM_COLOR_FORMAT clrfmt = COLOR_FORMAT_XRGB_NOALPHA) override;
   virtual void Destroy(void) override;
 
   bool ObjectAdd(CDXObject *object);
@@ -72,29 +72,5 @@ public:
   void AmbientColorSet(const DXColor &ambient_color);
   void AmbientColorGet(DXColor &ambient_color);
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #endif

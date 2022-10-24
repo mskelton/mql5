@@ -12,10 +12,8 @@ protected:
   virtual ~CDXHandle(void);
 
 public:
-  int Handle(void) const ;
+  int Handle(void) const;
 };
-
-
 
 class CDXHandleShared : public CDXHandle {
 protected:
@@ -31,12 +29,7 @@ public:
   virtual ulong References(void);
   virtual ulong Release(void);
 
-  bool operator!(void) const ;
+  bool operator!(void) const;
 };
-
-
-
-
-
 
 #endif

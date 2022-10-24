@@ -9,6 +9,4 @@ public:
   ~CTrailingNone(void);
 };
 
-
-
 #endif

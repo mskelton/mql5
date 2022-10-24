@@ -18,7 +18,7 @@ public:
   COrderInfo(void);
   ~COrderInfo(void);
 
-  ulong Ticket(void) const ;
+  ulong Ticket(void) const;
 
   datetime TimeSetup(void) const;
   ulong TimeSetupMsc(void) const;
@@ -68,47 +68,5 @@ public:
   void StoreState(void);
   bool CheckState(void);
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #endif

@@ -25,29 +25,20 @@ public:
   static void GQGenerateGaussJacobi(const int n, const double alpha,
                                     const double beta, int info, double &x[],
                                     double w[]);
-  static void GQGenerateGaussLaguerre(const int n, const double alpha,
-                                      int info, double &x[], double w[]);
+  static void GQGenerateGaussLaguerre(const int n, const double alpha, int info,
+                                      double &x[], double w[]);
   static void GQGenerateGaussHermite(const int n, int info, double &x[],
                                      double w[]);
 };
-
-
-
-
-
-
-
-
-
 
 class CGaussKronrodQ {
 public:
   CGaussKronrodQ(void);
   ~CGaussKronrodQ(void);
 
-  static void GKQGenerateRec(double calpha[], double cbeta[],
-                             const double mu0, int n, int info, double &x[],
-                             double wkronrod[], double wgauss[]);
+  static void GKQGenerateRec(double calpha[], double cbeta[], const double mu0,
+                             int n, int info, double &x[], double wkronrod[],
+                             double wgauss[]);
   static void GKQGenerateGaussLegendre(const int n, int info, double &x[],
                                        double wkronrod[], double wgauss[]);
   static void GKQGenerateGaussJacobi(const int n, const double alpha,
@@ -58,13 +49,6 @@ public:
   static void GKQLegendreTbl(const int n, double x[], double wkronrod[],
                              double wgauss[], double &eps);
 };
-
-
-
-
-
-
-
 
 class CAutoGKReport {
 public:
@@ -77,9 +61,6 @@ public:
 
   void Copy(CAutoGKReport &obj);
 };
-
-
-
 
 class CAutoGKReportShell {
 private:
@@ -98,16 +79,6 @@ public:
   void SetNIntervals(const int i);
   CAutoGKReport *GetInnerObj(void);
 };
-
-
-
-
-
-
-
-
-
-
 
 class CAutoGKInternalState {
 public:
@@ -140,9 +111,6 @@ public:
   void Copy(CAutoGKInternalState &obj);
 };
 
-
-
-
 class CAutoGKState {
 public:
   double m_a;
@@ -169,9 +137,6 @@ public:
   void Copy(CAutoGKState &obj);
 };
 
-
-
-
 class CAutoGKStateShell {
 private:
   CAutoGKState m_innerobj;
@@ -193,20 +158,6 @@ public:
   void SetF(const double d);
   CAutoGKState *GetInnerObj(void);
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 class CAutoGK {
 private:
@@ -292,29 +243,5 @@ public:
   static void AutoGKResults(CAutoGKState &state, double &v, CAutoGKReport &rep);
   static bool AutoGKIteration(CAutoGKState &state);
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #endif

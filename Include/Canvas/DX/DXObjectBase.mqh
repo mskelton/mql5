@@ -8,7 +8,7 @@ protected:
   int m_context;
 
 public:
-  virtual ~CDXObjectBase(void) ;
+  virtual ~CDXObjectBase(void);
 };
 
 #endif

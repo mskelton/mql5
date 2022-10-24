@@ -27,22 +27,22 @@ public:
 
   bool AddItem(const string item, const long value = 0);
 
-  void ListViewItems(const int value) ;
+  void ListViewItems(const int value);
 
-  virtual bool ItemAdd(const string item, const long value = 0) ;
+  virtual bool ItemAdd(const string item, const long value = 0);
   virtual bool ItemInsert(const int index, const string item,
-                          const long value = 0) ;
+                          const long value = 0);
   virtual bool ItemUpdate(const int index, const string item,
-                          const long value = 0) ;
-  virtual bool ItemDelete(const int index) ;
-  virtual bool ItemsClear(void) ;
+                          const long value = 0);
+  virtual bool ItemDelete(const int index);
+  virtual bool ItemsClear(void);
 
-  string Select(void) ;
+  string Select(void);
   bool Select(const int index);
   bool SelectByText(const string text);
   bool SelectByValue(const long value);
 
-  long Value(void) ;
+  long Value(void);
 
   virtual bool Show(void);
 
@@ -70,24 +70,5 @@ ON_EVENT(ON_CHANGE, m_list, OnChangeList)
 CheckListHide(id, (int)lparam, (int)dparam);
 
 EVENT_MAP_END(CWndContainer)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #endif

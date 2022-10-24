@@ -77,10 +77,10 @@ public:
                       ENUM_COLOR_FORMAT clrfmt = COLOR_FORMAT_XRGB_NOALPHA);
   virtual void Destroy(void);
 
-  string ChartObjectName(void) const ;
-  string ResourceName(void) const ;
-  int Width(void) const ;
-  int Height(void) const ;
+  string ChartObjectName(void) const;
+  string ResourceName(void) const;
+  int Width(void) const;
+  int Height(void) const;
 
   void Update(const bool redraw = true);
   bool Resize(const int width, const int height);
@@ -124,8 +124,7 @@ public:
               const uint clr, const uint style = UINT_MAX);
   void PolylineAA(int x[], int y[], const uint clr,
                   const uint style = UINT_MAX);
-  void PolygonAA(int x[], int y[], const uint clr,
-                 const uint style = UINT_MAX);
+  void PolygonAA(int x[], int y[], const uint clr, const uint style = UINT_MAX);
   void TriangleAA(const int x1, const int y1, const int x2, const int y2,
                   const int x3, const int y3, const uint clr,
                   const uint style = UINT_MAX);
@@ -182,10 +181,10 @@ public:
   bool FontFlagsSet(uint flags);
   bool FontAngleSet(uint angle);
   void FontGet(string &name, int &size, uint &flags, uint &angle);
-  string FontNameGet(void) const ;
-  int FontSizeGet(void) const ;
-  uint FontFlagsGet(void) const ;
-  uint FontAngleGet(void) const ;
+  string FontNameGet(void) const;
+  int FontSizeGet(void) const;
+  uint FontFlagsGet(void) const;
+  uint FontAngleGet(void) const;
   void TextOut(int x, int y, string text, const uint clr, uint alignment = 0);
   int TextWidth(const string text);
   int TextHeight(const string text);
@@ -252,4 +251,3 @@ private:
 protected:
   virtual double FilterFunction(const double x);
 };
-

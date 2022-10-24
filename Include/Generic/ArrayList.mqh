@@ -8,44 +8,6 @@
 #include <Generic/Internal/EqualFunction.mqh>
 #include <Generic/Internal/Introsort.mqh>
 
-template <typename T> class CArrayList ;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+template <typename T> class CArrayList;
 
 #endif

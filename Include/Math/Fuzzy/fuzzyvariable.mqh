@@ -14,25 +14,21 @@ public:
   CFuzzyVariable(const string name, const double min, const double max);
   ~CFuzzyVariable(void);
 
-  virtual bool IsTypeOf(EnType type) ;
+  virtual bool IsTypeOf(EnType type);
 
-  void Max(const double max) ;
-  double Max(void) ;
-  void Min(const double min) ;
-  double Min(void) ;
+  void Max(const double max);
+  double Max(void);
+  void Min(const double min);
+  double Min(void);
 
-  CList *Terms() ;
-  void Terms(CList *terms) ;
+  CList *Terms();
+  void Terms(CList *terms);
 
   void AddTerm(CFuzzyTerm *term);
 
   CFuzzyTerm *GetTermByName(const string name);
 
-  CList *Values() ;
+  CList *Values();
 };
-
-
-
-
 
 #endif

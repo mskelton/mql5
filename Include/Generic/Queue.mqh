@@ -5,27 +5,6 @@
 #include <Generic/Internal/ArrayFunction.mqh>
 #include <Generic/Internal/EqualFunction.mqh>
 
-template <typename T> class CQueue ;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+template <typename T> class CQueue;
 
 #endif

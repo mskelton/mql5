@@ -22,16 +22,16 @@ public:
   virtual bool OnEvent(const int id, const long &lparam, const double &dparam,
                        const string &sparam);
 
-  string Text(void) const ;
-  bool Text(const string value) ;
-  color Color(void) const ;
-  bool Color(const color value) ;
+  string Text(void) const;
+  bool Text(const string value);
+  color Color(void) const;
+  bool Color(const color value);
 
-  bool Checked(void) const ;
-  bool Checked(const bool flag) ;
+  bool Checked(void) const;
+  bool Checked(const bool flag);
 
-  int Value(void) const ;
-  void Value(const int value) ;
+  int Value(void) const;
+  void Value(const int value);
 
   virtual bool Save(const int file_handle);
   virtual bool Load(const int file_handle);
@@ -48,14 +48,5 @@ EVENT_MAP_BEGIN(CCheckBox)
 ON_EVENT(ON_CLICK, m_button, OnClickButton)
 ON_EVENT(ON_CLICK, m_label, OnClickLabel)
 EVENT_MAP_END(CWndContainer)
-
-
-
-
-
-
-
-
-
 
 #endif

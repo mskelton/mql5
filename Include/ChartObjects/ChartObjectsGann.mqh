@@ -15,18 +15,11 @@ public:
               const datetime time1, const double price1, const datetime time2,
               const double ppb);
 
-  virtual int Type(void) const ;
+  virtual int Type(void) const;
 
   virtual bool Save(const int file_handle);
   virtual bool Load(const int file_handle);
 };
-
-
-
-
-
-
-
 
 class CChartObjectGannFan : public CChartObjectTrend {
 public:
@@ -42,20 +35,11 @@ public:
               const datetime time1, const double price1, const datetime time2,
               const double ppb);
 
-  virtual int Type(void) const ;
+  virtual int Type(void) const;
 
   virtual bool Save(const int file_handle);
   virtual bool Load(const int file_handle);
 };
-
-
-
-
-
-
-
-
-
 
 class CChartObjectGannGrid : public CChartObjectTrend {
 public:
@@ -71,19 +55,10 @@ public:
               const datetime time1, const double price1, const datetime time2,
               const double ppb);
 
-  virtual int Type(void) const ;
+  virtual int Type(void) const;
 
   virtual bool Save(const int file_handle);
   virtual bool Load(const int file_handle);
 };
-
-
-
-
-
-
-
-
-
 
 #endif

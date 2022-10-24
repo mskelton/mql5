@@ -22,10 +22,10 @@ public:
   virtual bool Create(const string name, const int width, const int height,
                       ENUM_COLOR_FORMAT clrfmt = COLOR_FORMAT_ARGB_NORMALIZE);
 
-  void Gradient(const bool flag = true) ;
-  void BarGap(const uint value) ;
-  void BarMinSize(const uint value) ;
-  void BarBorder(const uint value) ;
+  void Gradient(const bool flag = true);
+  void BarGap(const uint value);
+  void BarMinSize(const uint value);
+  void BarBorder(const uint value);
 
   bool SeriesAdd(const double value[], const string descr = "",
                  const uint clr = 0);
@@ -42,16 +42,5 @@ protected:
                const uint clr);
   void GradientBrush(const int size, const uint fill_clr);
 };
-
-
-
-
-
-
-
-
-
-
-
 
 #endif

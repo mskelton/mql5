@@ -27,11 +27,4 @@ public:
             const string comment = "");
 };
 
-
-
-
-
-
-
-
 #endif

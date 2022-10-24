@@ -6,16 +6,16 @@
 
 template <typename T>
 int ArrayBinarySearch(T array[], const int start_index, const int count,
-                      T value, IComparer<T> *comparer) ;
+                      T value, IComparer<T> *comparer);
 
 template <typename T>
-int ArrayIndexOf(T array[], T value, const int start_index, const int count) ;
+int ArrayIndexOf(T array[], T value, const int start_index, const int count);
 
 template <typename T>
 int ArrayLastIndexOf(T array[], T value, const int start_index,
-                     const int count) ;
+                     const int count);
 
 template <typename T>
-bool ArrayReverse(T array[], const int start_index, const int count) ;
+bool ArrayReverse(T array[], const int start_index, const int count);
 
 #endif
