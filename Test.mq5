@@ -145,60 +145,60 @@
 #include <Indicators/TimeSeries.mqh>
 #include <Indicators/Trend.mqh>
 #include <Indicators/Volumes.mqh>
-// #include <Math/Alglib/alglib.mqh>
-// #include <Math/Alglib/alglibinternal.mqh>
-// #include <Math/Alglib/alglibmisc.mqh>
-// #include <Math/Alglib/ap.mqh>
-// #include <Math/Alglib/arrayresize.mqh>
-// #include <Math/Alglib/bitconvert.mqh>
-// #include <Math/Alglib/complex.mqh>
-// #include <Math/Alglib/dataanalysis.mqh>
-// #include <Math/Alglib/delegatefunctions.mqh>
-// #include <Math/Alglib/diffequations.mqh>
-// #include <Math/Alglib/fasttransforms.mqh>
-// #include <Math/Alglib/integration.mqh>
-// #include <Math/Alglib/interpolation.mqh>
-// #include <Math/Alglib/linalg.mqh>
-// #include <Math/Alglib/matrix.mqh>
-// #include <Math/Alglib/optimization.mqh>
-// #include <Math/Alglib/solvers.mqh>
-// #include <Math/Alglib/specialfunctions.mqh>
-// #include <Math/Alglib/statistics.mqh>
-// #include <Math/Fuzzy/dictionary.mqh>
-// #include <Math/Fuzzy/fuzzyrule.mqh>
-// #include <Math/Fuzzy/fuzzyterm.mqh>
-// #include <Math/Fuzzy/fuzzyvariable.mqh>
-// #include <Math/Fuzzy/genericfuzzysystem.mqh>
-// #include <Math/Fuzzy/helper.mqh>
-// #include <Math/Fuzzy/inferencemethod.mqh>
-// #include <Math/Fuzzy/mamdanifuzzysystem.mqh>
-// #include <Math/Fuzzy/membershipfunction.mqh>
-// #include <Math/Fuzzy/ruleparser.mqh>
-// #include <Math/Fuzzy/sugenofuzzysystem.mqh>
-// #include <Math/Fuzzy/sugenovariable.mqh>
-// #include <Math/Stat/Beta.mqh>
-// #include <Math/Stat/Binomial.mqh>
-// #include <Math/Stat/Cauchy.mqh>
-// #include <Math/Stat/ChiSquare.mqh>
-// #include <Math/Stat/Exponential.mqh>
-// #include <Math/Stat/F.mqh>
-// #include <Math/Stat/Gamma.mqh>
-// #include <Math/Stat/Geometric.mqh>
-// #include <Math/Stat/Hypergeometric.mqh>
-// #include <Math/Stat/Logistic.mqh>
-// #include <Math/Stat/Lognormal.mqh>
-// #include <Math/Stat/Math.mqh>
-// #include <Math/Stat/NegativeBinomial.mqh>
-// #include <Math/Stat/NoncentralBeta.mqh>
-// #include <Math/Stat/NoncentralChiSquare.mqh>
-// #include <Math/Stat/NoncentralF.mqh>
-// #include <Math/Stat/NoncentralT.mqh>
-// #include <Math/Stat/Normal.mqh>
-// #include <Math/Stat/Poisson.mqh>
-// #include <Math/Stat/Stat.mqh>
-// #include <Math/Stat/T.mqh>
-// #include <Math/Stat/Uniform.mqh>
-// #include <Math/Stat/Weibull.mqh>
+#include <Math/Alglib/alglib.mqh>
+#include <Math/Alglib/alglibinternal.mqh>
+#include <Math/Alglib/alglibmisc.mqh>
+#include <Math/Alglib/ap.mqh>
+#include <Math/Alglib/arrayresize.mqh>
+#include <Math/Alglib/bitconvert.mqh>
+#include <Math/Alglib/complex.mqh>
+#include <Math/Alglib/dataanalysis.mqh>
+#include <Math/Alglib/delegatefunctions.mqh>
+#include <Math/Alglib/diffequations.mqh>
+#include <Math/Alglib/fasttransforms.mqh>
+#include <Math/Alglib/integration.mqh>
+#include <Math/Alglib/interpolation.mqh>
+#include <Math/Alglib/linalg.mqh>
+#include <Math/Alglib/matrix.mqh>
+#include <Math/Alglib/optimization.mqh>
+#include <Math/Alglib/solvers.mqh>
+#include <Math/Alglib/specialfunctions.mqh>
+#include <Math/Alglib/statistics.mqh>
+#include <Math/Fuzzy/FuzzyRule.mqh>
+#include <Math/Fuzzy/FuzzyTerm.mqh>
+#include <Math/Fuzzy/FuzzyVariable.mqh>
+#include <Math/Fuzzy/Helper.mqh>
+#include <Math/Fuzzy/InferenceMethod.mqh>
+#include <Math/Fuzzy/MembershipFunction.mqh>
+#include <Math/Fuzzy/RuleParser.mqh>
+#include <Math/Fuzzy/SugenoVariable.mqh>
+#include <Math/Fuzzy/dictionary.mqh>
+#include <Math/Fuzzy/genericfuzzysystem.mqh>
+#include <Math/Fuzzy/mamdanifuzzysystem.mqh>
+#include <Math/Fuzzy/sugenofuzzysystem.mqh>
+#include <Math/Stat/Beta.mqh>
+#include <Math/Stat/Binomial.mqh>
+#include <Math/Stat/Cauchy.mqh>
+#include <Math/Stat/ChiSquare.mqh>
+#include <Math/Stat/Exponential.mqh>
+#include <Math/Stat/F.mqh>
+#include <Math/Stat/Gamma.mqh>
+#include <Math/Stat/Geometric.mqh>
+#include <Math/Stat/Hypergeometric.mqh>
+#include <Math/Stat/Logistic.mqh>
+#include <Math/Stat/Lognormal.mqh>
+#include <Math/Stat/Math.mqh>
+#include <Math/Stat/NegativeBinomial.mqh>
+#include <Math/Stat/NoncentralBeta.mqh>
+#include <Math/Stat/NoncentralChiSquare.mqh>
+#include <Math/Stat/NoncentralF.mqh>
+#include <Math/Stat/NoncentralT.mqh>
+#include <Math/Stat/Normal.mqh>
+#include <Math/Stat/Poisson.mqh>
+#include <Math/Stat/Stat.mqh>
+#include <Math/Stat/T.mqh>
+#include <Math/Stat/Uniform.mqh>
+#include <Math/Stat/Weibull.mqh>
 #include <MovingAverages.mqh>
 #include <Object.mqh>
 #include <OpenCL/OpenCL.mqh>

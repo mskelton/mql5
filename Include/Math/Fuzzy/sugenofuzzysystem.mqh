@@ -2,10 +2,10 @@
 #define SUGENOFUZZYSYSTEM_H
 
 #include "FuzzyRule.mqh"
-#include "GenericFuzzySystem.mqh"
 #include "InferenceMethod.mqh"
 #include "RuleParser.mqh"
 #include "SugenoVariable.mqh"
+#include "genericfuzzysystem.mqh"
 #include <Arrays/List.mqh>
 
 class CSugenoFuzzySystem : public CGenericFuzzySystem {
@@ -17,9 +17,9 @@ public:
   CSugenoFuzzySystem(void);
   ~CSugenoFuzzySystem(void);
 
-  CList *Output() ;
+  CList *Output();
 
-  CList *Rules() ;
+  CList *Rules();
 
   CSugenoVariable *OutputByName(const string name);
 
@@ -36,18 +36,5 @@ public:
   CList *CombineResult(CList *ruleWeights, CList *functionResults);
   CList *Calculate(CList *inputValues);
 };
-
-
-
-
-CLinearSugenoFunction *
-
-CLinearSugenoFunction *
-
-
-
-
-
-
 
 #endif

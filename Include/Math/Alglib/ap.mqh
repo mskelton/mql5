@@ -14,11 +14,10 @@ public:
   double ra;
   al_complex ca;
 
-  RCommState(void) ;
-  ~RCommState(void);;
+  RCommState(void);
+  ~RCommState(void);
   void Copy(RCommState &obj);
 };
-
 
 class CAp {
 public:
@@ -74,46 +73,6 @@ public:
   static bool ForceHermitian(CMatrixComplex &a);
 };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class CHighQualityRandState {
 public:
   int m_s1;
@@ -124,8 +83,6 @@ public:
   CHighQualityRandState(void);
   ~CHighQualityRandState(void);
 };
-
-
 
 class CHighQualityRandStateShell {
 private:
@@ -138,10 +95,6 @@ public:
 
   CHighQualityRandState *GetInnerObj(void);
 };
-
-
-
-
 
 class CHighQualityRand {
 private:
@@ -169,18 +122,6 @@ public:
                                  const double lambdav);
 };
 
-
-
-
-
-
-
-
-
-
-
-
-
 class CMath {
 public:
   static bool m_first_call;
@@ -197,30 +138,16 @@ public:
   static bool IsFinite(const double d);
   static double RandomReal(void);
   static int RandomInteger(const int n);
-  static double Sqr(const double x) ;
+  static double Sqr(const double x);
   static double AbsComplex(const al_complex &z);
   static double AbsComplex(const double r);
   static al_complex Conj(const al_complex &z);
   static al_complex Csqr(const al_complex &z);
 };
 
-
-
-
-
-
-
-
-
-
-
-char _sixbits2char_tbl[] = ;
-
-int _char2sixbits_tbl[128] = ;
-
 class CSerializer {
 
-  enum SMODE ; DEFAULT, ALLOC, TO_STRING, FROM_STRING };
+  enum SMODE { DEFAULT, ALLOC, TO_STRING, FROM_STRING };
 
 private:
   static const int m_ser_entries_per_row;
@@ -238,10 +165,10 @@ private:
   int Get_Alloc_Size(void);
   static char SixBits2Char(const int v);
   static int Char2SixBits(const char c);
-  static void ThreeBytes2FourSixBits(uchar src[], const int src_offs,
-                                     int dst[], const int dst_offs);
-  static void FourSixBits2ThreeBytes(int src[], const int src_offs,
-                                     uchar dst[], const int dst_offs);
+  static void ThreeBytes2FourSixBits(uchar src[], const int src_offs, int dst[],
+                                     const int dst_offs);
+  static void FourSixBits2ThreeBytes(int src[], const int src_offs, uchar dst[],
+                                     const int dst_offs);
   static void Bool2Str(const bool v, char buf[], int &offs);
   static bool Str2Bool(char buf[], int &offs);
   static void Int2Str(const int v, char buf[], int &offs);
@@ -270,32 +197,5 @@ public:
 
   string Get_String(void);
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #endif

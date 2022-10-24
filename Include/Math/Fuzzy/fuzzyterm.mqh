@@ -13,11 +13,9 @@ public:
   CFuzzyTerm(const string name, IMembershipFunction *mf);
   ~CFuzzyTerm(void);
 
-  virtual bool IsTypeOf(EnType type) ;
+  virtual bool IsTypeOf(EnType type);
 
-  IMembershipFunction *MembershipFunction() ;
+  IMembershipFunction *MembershipFunction();
 };
-
-
 
 #endif

@@ -33,9 +33,6 @@ public:
   void Copy(CIDWInterpolant &obj);
 };
 
-
-
-
 class CIDWInterpolantShell {
 private:
   CIDWInterpolant m_innerobj;
@@ -48,19 +45,14 @@ public:
   CIDWInterpolant *GetInnerObj(void);
 };
 
-
-
-
-
 class CIDWInt {
 private:
   static double IDWCalcQ(CIDWInterpolant &z, double x[], const int k);
   static void IDWInit1(const int n, const int nx, const int d, int nq, int nw,
                        CIDWInterpolant &z);
-  static void IDWInternalSolver(double y[], double w[],
-                                CMatrixDouble &fmatrix, double temp[],
-                                const int n, const int m, int &info,
-                                double x[], double &taskrcond);
+  static void IDWInternalSolver(double y[], double w[], CMatrixDouble &fmatrix,
+                                double temp[], const int n, const int m,
+                                int &info, double x[], double &taskrcond);
 
 public:
   static const double m_idwqfactor;
@@ -80,16 +72,6 @@ public:
                             const int d, int nq, int nw, CIDWInterpolant &z);
 };
 
-
-
-
-
-
-
-
-
-
-
 class CBarycentricInterpolant {
 public:
   int m_n;
@@ -105,9 +87,6 @@ public:
   void Copy(CBarycentricInterpolant &obj);
 };
 
-
-
-
 class CBarycentricInterpolantShell {
 private:
   CBarycentricInterpolant m_innerobj;
@@ -119,10 +98,6 @@ public:
 
   CBarycentricInterpolant *GetInnerObj(void);
 };
-
-
-
-
 
 class CRatInt {
 private:
@@ -152,19 +127,6 @@ public:
                               CBarycentricInterpolant &b2);
 };
 
-
-
-
-
-
-
-
-
-
-static void
-
-
-
 class CPolInt {
 public:
   CPolInt(void);
@@ -186,26 +148,13 @@ public:
                                    const int n, CBarycentricInterpolant &p);
   static void PolynomialBuildCheb2(const double a, const double b, double y[],
                                    const int n, CBarycentricInterpolant &p);
-  static double PolynomialCalcEqDist(const double a, const double b,
-                                     double f[], const int n, const double t);
+  static double PolynomialCalcEqDist(const double a, const double b, double f[],
+                                     const int n, const double t);
   static double PolynomialCalcCheb1(const double a, const double b, double f[],
                                     const int n, double t);
   static double PolynomialCalcCheb2(const double a, const double b, double f[],
                                     const int n, double t);
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 class CSpline1DInterpolant {
 public:
@@ -222,9 +171,6 @@ public:
   void Copy(CSpline1DInterpolant &obj);
 };
 
-
-
-
 class CSpline1DInterpolantShell {
 private:
   CSpline1DInterpolant m_innerobj;
@@ -237,10 +183,6 @@ public:
   CSpline1DInterpolant *GetInnerObj(void);
 };
 
-
-
-
-
 class CSpline1D {
 private:
   static void
@@ -251,8 +193,8 @@ private:
                                 double a3[], double b[], double dt[]);
   static void HeapSortPoints(double x[], double y[], const int n);
   static void HeapSortPPoints(double x[], double y[], int p[], const int n);
-  static void SolveTridiagonal(double a[], double cb[], double c[],
-                               double cd[], const int n, double x[]);
+  static void SolveTridiagonal(double a[], double cb[], double c[], double cd[],
+                               const int n, double x[]);
   static void SolveCyclicTridiagonal(double a[], double cb[], double c[],
                                      double d[], const int n, double x[]);
   static double DiffThreePoint(double t, const double x0, const double f0,
@@ -310,41 +252,13 @@ public:
                                 const double b);
   static double Spline1DIntegrate(CSpline1DInterpolant &c, double x);
   static void Spline1DConvDiffInternal(double xold[], double yold[],
-                                       double dold[], const int n,
-                                       double x2[], const int n2, double y[],
+                                       double dold[], const int n, double x2[],
+                                       const int n2, double y[],
                                        const bool needy, double d1[],
                                        const bool needd1, double d2[],
                                        const bool needd2);
-  static void HeapSortDPoints(double x[], double y[], double d[],
-                              const int n);
+  static void HeapSortDPoints(double x[], double y[], double d[], const int n);
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 class CPolynomialFitReport {
 public:
@@ -359,9 +273,6 @@ public:
 
   void Copy(CPolynomialFitReport &obj);
 };
-
-
-
 
 class CPolynomialFitReportShell {
 private:
@@ -385,20 +296,6 @@ public:
   CPolynomialFitReport *GetInnerObj(void);
 };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class CBarycentricFitReport {
 public:
   double m_taskrcond;
@@ -413,9 +310,6 @@ public:
 
   void Copy(CBarycentricFitReport &obj);
 };
-
-
-
 
 class CBarycentricFitReportShell {
 private:
@@ -441,22 +335,6 @@ public:
   CBarycentricFitReport *GetInnerObj(void);
 };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class CSpline1DFitReport {
 public:
   double m_taskrcond;
@@ -470,9 +348,6 @@ public:
 
   void Copy(CSpline1DFitReport &obj);
 };
-
-
-
 
 class CSpline1DFitReportShell {
 private:
@@ -496,20 +371,6 @@ public:
   CSpline1DFitReport *GetInnerObj(void);
 };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class CLSFitReport {
 public:
   double m_taskrcond;
@@ -525,9 +386,6 @@ public:
 
   void Copy(CLSFitReport &obj);
 };
-
-
-
 
 class CLSFitReportShell {
 private:
@@ -554,24 +412,6 @@ public:
   void SetWRMSError(const double d);
   CLSFitReport *GetInnerObj(void);
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 class CLSFitState {
 public:
@@ -624,9 +464,6 @@ public:
   void Copy(CLSFitState &obj);
 };
 
-
-
-
 class CLSFitStateShell {
 private:
   CLSFitState m_innerobj;
@@ -648,20 +485,6 @@ public:
   void SetF(const double d);
   CLSFitState *GetInnerObj(void);
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 class CLSFit {
 private:
@@ -722,16 +545,18 @@ public:
                             int &info, CBarycentricInterpolant &p,
                             CPolynomialFitReport &rep);
   static void PolynomialFitWC(double cx[], double cy[], double cw[],
-                              const int n, double cxc[], double cyc[],
-                              int dc[], const int k, const int m, int &info,
+                              const int n, double cxc[], double cyc[], int dc[],
+                              const int k, const int m, int &info,
                               CBarycentricInterpolant &p,
                               CPolynomialFitReport &rep);
-  static void BarycentricFitFloaterHormannWC(
-      double x[], double y[], double w[], const int n, double xc[],
-      double yc[], int dc[], const int k, const int m, int &info,
-      CBarycentricInterpolant &b, CBarycentricFitReport &rep);
-  static void BarycentricFitFloaterHormann(double x[], double y[],
-                                           const int n, const int m, int &info,
+  static void BarycentricFitFloaterHormannWC(double x[], double y[], double w[],
+                                             const int n, double xc[],
+                                             double yc[], int dc[], const int k,
+                                             const int m, int &info,
+                                             CBarycentricInterpolant &b,
+                                             CBarycentricFitReport &rep);
+  static void BarycentricFitFloaterHormann(double x[], double y[], const int n,
+                                           const int m, int &info,
                                            CBarycentricInterpolant &b,
                                            CBarycentricFitReport &rep);
   static void Spline1DFitPenalized(double cx[], double cy[], const int n,
@@ -752,8 +577,8 @@ public:
                                    int dc[], const int k, const int m,
                                    int &info, CSpline1DInterpolant &s,
                                    CSpline1DFitReport &rep);
-  static void Spline1DFitCubic(double x[], double y[], const int n,
-                               const int m, int &info, CSpline1DInterpolant &s,
+  static void Spline1DFitCubic(double x[], double y[], const int n, const int m,
+                               int &info, CSpline1DInterpolant &s,
                                CSpline1DFitReport &rep);
   static void Spline1DFitHermite(double x[], double y[], const int n,
                                  const int m, int &info,
@@ -786,8 +611,8 @@ public:
                             const int n, const int m, const int k,
                             const bool cheapfg, CLSFitState &state);
   static void LSFitCreateWFGH(CMatrixDouble &x, double y[], double w[],
-                              double c[], const int n, const int m,
-                              const int k, CLSFitState &state);
+                              double c[], const int n, const int m, const int k,
+                              CLSFitState &state);
   static void LSFitCreateFGH(CMatrixDouble &x, double y[], double c[],
                              const int n, const int m, const int k,
                              CLSFitState &state);
@@ -806,54 +631,6 @@ public:
   static bool LSFitIteration(CLSFitState &state);
 };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class CPSpline2Interpolant {
 public:
   int m_n;
@@ -869,9 +646,6 @@ public:
   void Copy(CPSpline2Interpolant &obj);
 };
 
-
-
-
 class CPSpline2InterpolantShell {
 private:
   CPSpline2Interpolant m_innerobj;
@@ -883,10 +657,6 @@ public:
 
   CPSpline2Interpolant *GetInnerObj(void);
 };
-
-
-
-
 
 class CPSpline3Interpolant {
 public:
@@ -904,9 +674,6 @@ public:
   void Copy(CPSpline3Interpolant &obj);
 };
 
-
-
-
 class CPSpline3InterpolantShell {
 private:
   CPSpline3Interpolant m_innerobj;
@@ -918,10 +685,6 @@ public:
 
   CPSpline3Interpolant *GetInnerObj(void);
 };
-
-
-
-
 
 class CPSpline {
 private:
@@ -973,26 +736,6 @@ public:
                                   const double b);
 };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class CSpline2DInterpolant {
 public:
   int m_k;
@@ -1004,9 +747,6 @@ public:
 
   void Copy(CSpline2DInterpolant &obj);
 };
-
-
-
 
 class CSpline2DInterpolantShell {
 private:
@@ -1020,10 +760,6 @@ public:
   CSpline2DInterpolant *GetInnerObj(void);
 };
 
-
-
-
-
 class CSpline2D {
 private:
   static void BicubicCalcDerivatives(CMatrixDouble &a, double x[], double y[],
@@ -1035,11 +771,11 @@ public:
   CSpline2D(void);
   ~CSpline2D(void);
 
-  static void Spline2DBuildBilinear(double cx[], double cy[],
-                                    CMatrixDouble &cf, const int m, const int n,
+  static void Spline2DBuildBilinear(double cx[], double cy[], CMatrixDouble &cf,
+                                    const int m, const int n,
                                     CSpline2DInterpolant &c);
-  static void Spline2DBuildBicubic(double cx[], double cy[],
-                                   CMatrixDouble &cf, const int m, const int n,
+  static void Spline2DBuildBicubic(double cx[], double cy[], CMatrixDouble &cf,
+                                   const int m, const int n,
                                    CSpline2DInterpolant &c);
   static double Spline2DCalc(CSpline2DInterpolant &c, const double x,
                              const double y);
@@ -1060,20 +796,5 @@ public:
                                        const int oldwidth, CMatrixDouble &b,
                                        const int newheight, const int newwidth);
 };
-
-
-
-
-
-
-
-
-
-
-
-static void
-
-static void
-
 
 #endif

@@ -8,12 +8,10 @@ public:
   CSCodes(void);
   ~CSCodes(void);
 
-  static int GetRDFSerializationCode(void) ;
-  static int GetKDTreeSerializationCode(void) ;
-  static int GetMLPSerializationCode(void) ;
+  static int GetRDFSerializationCode(void);
+  static int GetKDTreeSerializationCode(void);
+  static int GetMLPSerializationCode(void);
 };
-
-
 
 class CApBuff {
 public:
@@ -31,9 +29,6 @@ public:
 
   void Copy(CApBuff &obj);
 };
-
-
-
 
 class CApServ {
 public:
@@ -100,51 +95,10 @@ public:
                        int i1, int b[]);
 };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class CTSort {
 private:
-  static void TagSortFastIRec(double a[], int b[], double bufa[],
-                              int bufb[], const int i1, const int i2);
+  static void TagSortFastIRec(double a[], int b[], double bufa[], int bufb[],
+                              const int i1, const int i2);
   static void TagSortFastRRec(double a[], double b[], double bufa[],
                               double bufb[], const int i1, const int i2);
   static void TagSortFastRec(double a[], double bufa[], const int i1,
@@ -159,8 +113,8 @@ public:
                          CApBuff &buf);
   static void TagSortFastI(double a[], int b[], double bufa[], int bufb[],
                            const int n);
-  static void TagSortFastR(double a[], double b[], double bufa[],
-                           double bufb[], const int n);
+  static void TagSortFastR(double a[], double b[], double bufa[], double bufb[],
+                           const int n);
   static void TagSortFast(double a[], double bufa[], const int n);
   static void TagHeapPushI(double a[], int b[], int &n, const double va,
                            const int vb);
@@ -169,19 +123,6 @@ public:
   static void TagHeapPopI(double a[], int b[], int &n);
 };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 class CBasicStatOps {
 public:
   CBasicStatOps(void);
@@ -189,9 +130,6 @@ public:
 
   static void RankX(double x[], const int n, CApBuff &buf);
 };
-
-
-
 
 class CAblasF {
 public:
@@ -241,20 +179,6 @@ public:
                            al_complex &beta, CMatrixComplex &c, int ic, int jc);
 };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class CBlas {
 public:
   CBlas(void);
@@ -294,19 +218,6 @@ public:
       const int cj1, const int cj2, const double beta, double work[]);
 };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 class CHblas {
 public:
   CHblas(void);
@@ -321,10 +232,6 @@ public:
                                    al_complex y[], al_complex t[],
                                    al_complex &alpha);
 };
-
-
-
-
 
 class CReflections {
 public:
@@ -342,30 +249,22 @@ public:
                                           const int n2, double work[]);
 };
 
-
-
-
-
-
 class CComplexReflections {
 public:
-  void CComplexReflections(void);
-  void ~CComplexReflections(void);
+  CComplexReflections(void);
+  ~CComplexReflections(void);
 
   static void ComplexGenerateReflection(al_complex x[], const int n,
                                         al_complex &tau);
-  static void ComplexApplyReflectionFromTheLeft(
-      CMatrixComplex &c, al_complex &tau, al_complex v[], const int m1,
-      const int m2, const int n1, const int n2, al_complex work[]);
+  static void ComplexApplyReflectionFromTheLeft(CMatrixComplex &c,
+                                                al_complex &tau, al_complex v[],
+                                                const int m1, const int m2,
+                                                const int n1, const int n2,
+                                                al_complex work[]);
   static void ComplexApplyReflectionFromTheRight(
       CMatrixComplex &c, al_complex &tau, al_complex v[], const int m1,
       const int m2, const int n1, const int n2, al_complex work[]);
 };
-
-
-
-
-
 
 class CSblas {
 public:
@@ -377,14 +276,10 @@ public:
                                             const int i2, const double x[],
                                             const double alpha, double y[]);
   static void SymmetricRank2Update(CMatrixDouble &a, const bool isupper,
-                                   const int i1, const int i2,
-                                   const double x[], const double y[],
-                                   double t[], const double alpha);
+                                   const int i1, const int i2, const double x[],
+                                   const double y[], double t[],
+                                   const double alpha);
 };
-
-
-
-
 
 class CRotations {
 public:
@@ -402,11 +297,6 @@ public:
   static void GenerateRotation(const double f, const double g, double &cs,
                                double &sn, double &r);
 };
-
-
-
-
-
 
 class CHsSchur {
 private:
@@ -434,14 +324,6 @@ public:
                                          CMatrixDouble &z, int &info);
 };
 
-
-
-
-
-
-
-
-
 class CTrLinSolve {
 public:
   CTrLinSolve(void);
@@ -455,10 +337,6 @@ public:
                                   const bool istrans, const bool isunit,
                                   const bool normin, double cnorm[]);
 };
-
-
-
-
 
 class CSafeSolve {
 private:
@@ -483,11 +361,6 @@ public:
                                        const double maxgrowth);
 };
 
-
-
-
-
-
 class CXblas {
 private:
   static void XSum(double w[], const double mx, const int n, double &r,
@@ -500,15 +373,9 @@ public:
 
   static void XDot(double a[], double b[], const int n, double temp[],
                    double &r, double &rerr);
-  static void XCDot(al_complex a[], al_complex b[], const int n,
-                    double temp[], al_complex &r, double &rerr);
+  static void XCDot(al_complex a[], al_complex b[], const int n, double temp[],
+                    al_complex &r, double &rerr);
 };
-
-
-
-
-
-
 
 class CLinMinState {
 public:
@@ -544,9 +411,6 @@ public:
   void Copy(CLinMinState &obj);
 };
 
-
-
-
 class CArmijoState {
 public:
   bool m_needf;
@@ -566,8 +430,6 @@ public:
   CArmijoState(void);
   ~CArmijoState(void);
 };
-
-
 
 class CLinMin {
 private:
@@ -591,29 +453,16 @@ public:
   ~CLinMin(void);
 
   static void LinMinNormalized(double d[], double &stp, const int n);
-  static void MCSrch(const int n, double x[], double &f, double g[],
-                     double s[], double &stp, double stpmax, double gtol,
-                     int &info, int &nfev, double wa[], CLinMinState &state,
-                     int &stage);
-  static void ArmijoCreate(const int n, double x[], const double f,
-                           double s[], const double stp, const double stpmax,
+  static void MCSrch(const int n, double x[], double &f, double g[], double s[],
+                     double &stp, double stpmax, double gtol, int &info,
+                     int &nfev, double wa[], CLinMinState &state, int &stage);
+  static void ArmijoCreate(const int n, double x[], const double f, double s[],
+                           const double stp, const double stpmax,
                            const int ffmax, CArmijoState &state);
   static void ArmijoResults(CArmijoState &state, int &info, double &stp,
                             double &f);
   static bool ArmijoIteration(CArmijoState &state);
 };
-
-
-
-
-
-
-
-
-
-
-
-
 
 class COptServ {
 public:
@@ -625,10 +474,6 @@ public:
                            const double threshold);
 };
 
-
-
-
-
 class CFtPlan {
 public:
   int m_plan;
@@ -639,8 +484,6 @@ public:
   CFtPlan(void);
   ~CFtPlan(void);
 };
-
-
 
 class CFtBase {
 private:
@@ -693,9 +536,8 @@ public:
   static void FtBaseGenerateRealFHtPlan(const int n, CFtPlan &plan);
   static void FtBaseExecutePlan(double a[], const int aoffset, const int n,
                                 CFtPlan &plan);
-  static void FtBaseExecutePlanRec(double a[], const int aoffset,
-                                   CFtPlan &plan, const int entryoffset,
-                                   const int stackptr);
+  static void FtBaseExecutePlanRec(double a[], const int aoffset, CFtPlan &plan,
+                                   const int entryoffset, const int stackptr);
   static void FtBaseFactorize(const int n, const int tasktype, int &n1,
                               int &n2);
   static bool FtBaseIsSmooth(int n);
@@ -703,29 +545,6 @@ public:
   static int FtBaseFindSmoothEven(const int n);
   static double FtBaseGetFlopEstimate(const int n);
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 class CNearUnitYUnit {
 public:
@@ -736,10 +555,5 @@ public:
   static double NUExp1m(const double x);
   static double NUCos1m(const double x);
 };
-
-
-
-
-
 
 #endif

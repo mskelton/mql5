@@ -12,7 +12,7 @@ const blocks = []
 const lines = []
 
 rl.on("line", (line) => {
-  // console.log(blocks.length, line)
+  console.log(blocks.length, line)
 
   // Don't add classes or enums to the list of blocks
   if (
@@ -36,6 +36,7 @@ rl.on("line", (line) => {
       let content = line
         .replace(/:.+/, ";")
         .replace(/\{\}?/, ";")
+        .replace(";;", ";")
         .replace(/\&([A-z\d]+?)\[\]/g, (group) => group.substring(1))
         .replace("[];", ";")
 

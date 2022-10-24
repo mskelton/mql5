@@ -20,8 +20,7 @@ public:
                                double &v);
 
   static double Cov2(const double cx[], const double cy[], const int n);
-  static double PearsonCorr2(const double cx[], const double cy[],
-                             const int n);
+  static double PearsonCorr2(const double cx[], const double cy[], const int n);
   static double SpearmanCorr2(const double cx[], const double cy[],
                               const int n);
   static bool CovM(const CMatrixDouble &cx, const int n, const int m,
@@ -45,23 +44,6 @@ public:
                                         const int n);
 };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class CCorrTests {
 private:
   static double SpearmanTail5(const double s);
@@ -82,16 +64,6 @@ public:
                                        double &bothTails, double &leftTail,
                                        double &rightTail);
 };
-
-
-
-
-
-
-
-
-
-
 
 class CJarqueBera {
 private:
@@ -131,38 +103,6 @@ public:
 
   static bool JarqueBeraTest(const double x[], const int n, double &p);
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 class CMannWhitneyU {
 private:
@@ -283,124 +223,10 @@ public:
   CMannWhitneyU(void);
   ~CMannWhitneyU(void);
 
-  static void CMannWhitneyUTest(const double x[], const int n,
-                                const double y[], const int m,
-                                double &bothTails, double &leftTail,
-                                double &rightTail);
+  static void CMannWhitneyUTest(const double x[], const int n, const double y[],
+                                const int m, double &bothTails,
+                                double &leftTail, double &rightTail);
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 class CSignTest {
 public:
@@ -411,9 +237,6 @@ public:
                                 const double median, double &bothTails,
                                 double &leftTail, double &rightTail);
 };
-
-
-
 
 class CStudentTests {
 public:
@@ -432,11 +255,6 @@ public:
                                   double &rightTail);
 };
 
-
-
-
-
-
 class CVarianceTests {
 public:
   CVarianceTests(void);
@@ -449,11 +267,6 @@ public:
                                     const double variance, double &bothTails,
                                     double &leftTail, double &rightTail);
 };
-
-
-
-
-static void
 
 class CWilcoxonSignedRank {
 private:
@@ -500,40 +313,5 @@ public:
                                      const double e, double &bothTails,
                                      double &leftTail, double &rightTail);
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #endif

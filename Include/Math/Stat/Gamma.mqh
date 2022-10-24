@@ -3,62 +3,59 @@
 
 #include "Normal.mqh"
 
-const double DoubleEpsilon = 1.11022302462515654042E-16;
-const double LogMax = 7.09782712893383996732E2;
-
-double MathInverseGammaIncomplete(const double a, const double y) ;
+double MathInverseGammaIncomplete(const double a, const double y);
 
 double MathProbabilityDensityGamma(const double x, const double a,
                                    const double b, const bool log_mode,
-                                   int &error_code) ;
+                                   int &error_code);
 
 double MathProbabilityDensityGamma(const double x, const double a,
-                                   const double b, int &error_code) ;
+                                   const double b, int &error_code);
 
 bool MathProbabilityDensityGamma(const double x[], const double a,
                                  const double b, const bool log_mode,
-                                 double result[]) ;
+                                 double result[]);
 
 bool MathProbabilityDensityGamma(const double x[], const double a,
-                                 const double b, double result[]) ;
+                                 const double b, double result[]);
 
 double MathCumulativeDistributionGamma(const double x, const double a,
                                        const double b, const bool tail,
-                                       const bool log_mode, int &error_code) ;
+                                       const bool log_mode, int &error_code);
 
 double MathCumulativeDistributionGamma(const double x, const double a,
-                                       const double b, int &error_code) ;
+                                       const double b, int &error_code);
 
 bool MathCumulativeDistributionGamma(const double x[], const double a,
                                      const double b, const bool tail,
-                                     const bool log_mode, double result[]) ;
+                                     const bool log_mode, double result[]);
 
 bool MathCumulativeDistributionGamma(const double x[], const double a,
-                                     const double b, double result[]) ;
+                                     const double b, double result[]);
 
 double MathQuantileGamma(const double probability, const double a,
                          const double b, const bool tail, const bool log_mode,
-                         int &error_code) ;
+                         int &error_code);
 
 double MathQuantileGamma(const double probability, const double a,
-                         const double b, int &error_code) ;
+                         const double b, int &error_code);
 
 bool MathQuantileGamma(const double probability[], const double a,
                        const double b, const bool tail, const bool log_mode,
-                       double result[]) ;
+                       double result[]);
 
 bool MathQuantileGamma(const double probability[], const double a,
-                       const double b, double result[]) ;
+                       const double b, double result[]);
 
-double MathRandomGamma(const double a, const double b) ;
+double MathRandomGamma(const double a, const double b);
 
-double MathRandomGamma(const double a, const double b, int &error_code) ;
+double MathRandomGamma(const double a, const double b, int &error_code);
 
 bool MathRandomGamma(const double a, const double b, const int data_count,
-                     double result[]) ;
+                     double result[]);
 
 bool MathMomentsGamma(const double a, const double b, double &mean,
                       double &variance, double &skewness, double &kurtosis,
-                      int &error_code) ;
+                      int &error_code);
 
 #endif

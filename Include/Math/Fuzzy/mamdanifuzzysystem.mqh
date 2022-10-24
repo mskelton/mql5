@@ -2,9 +2,9 @@
 #define MAMDANIFUZZYSYSTEM_H
 
 #include "FuzzyRule.mqh"
-#include "GenericFuzzySystem.mqh"
 #include "InferenceMethod.mqh"
 #include "RuleParser.mqh"
+#include "genericfuzzysystem.mqh"
 #include <Arrays/ArrayDouble.mqh>
 #include <Arrays/List.mqh>
 
@@ -20,18 +20,18 @@ public:
   CMamdaniFuzzySystem(void);
   ~CMamdaniFuzzySystem(void);
 
-  CList *Output() ;
+  CList *Output();
 
-  CList *Rules() ;
+  CList *Rules();
 
-  ImplicationMethod ImplicationMethod() ;
-  void ImplicationMethod(ImplicationMethod value) ;
+  ImplicationMethod ImplicationMethod();
+  void ImplicationMethod(enum ImplicationMethod value);
 
-  AggregationMethod AggregationMethod() ;
-  void AggregationMethod(AggregationMethod value) ;
+  AggregationMethod AggregationMethod();
+  void AggregationMethod(enum AggregationMethod value);
 
-  DefuzzificationMethod DefuzzificationMethod() ;
-  void DefuzzificationMethod(DefuzzificationMethod value) ;
+  DefuzzificationMethod DefuzzificationMethod();
+  void DefuzzificationMethod(enum DefuzzificationMethod value);
 
   CFuzzyVariable *OutputByName(const string name);
 
@@ -46,16 +46,5 @@ public:
   CList *Defuzzify(CList *fuzzyResult);
   double Defuzzify(IMembershipFunction *mf, const double min, const double max);
 };
-
-
-
-
-
-
-
-
-
-
-
 
 #endif

@@ -1,9 +1,9 @@
 #ifndef GENERICFUZZYSYSTEM_H
 #define GENERICFUZZYSYSTEM_H
 
-#include "Dictionary.mqh"
 #include "FuzzyRule.mqh"
 #include "InferenceMethod.mqh"
+#include "dictionary.mqh"
 #include <Arrays/ArrayObj.mqh>
 #include <Arrays/List.mqh>
 
@@ -18,13 +18,13 @@ protected:
   ~CGenericFuzzySystem(void);
 
 public:
-  CList *Input(void) ;
+  CList *Input(void);
 
-  void AndMethod(AndMethod value) ;
-  AndMethod AndMethod(void) ;
+  void AndMethod(AndMethod value);
+  enum AndMethod AndMethod(void);
 
-  void OrMethod(OrMethod value) ;
-  OrMethod OrMethod(void) ;
+  void OrMethod(OrMethod value);
+  enum OrMethod OrMethod(void);
 
   CFuzzyVariable *InputByName(const string name);
 
@@ -38,12 +38,5 @@ protected:
 private:
   bool ValidateInputValues(CList *inputValues, string &msg);
 };
-
-
-
-
-
-
-
 
 #endif
