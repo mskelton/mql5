@@ -627,4 +627,145 @@ int OBJ_ALL_PERIODS;
  */
 ENUM_TIMEFRAMES _Period;
 
+/**
+ * "OK" button has been pressed
+ */
+int IDOK = 1;
+
+/**
+ * "Cancel" button has been pressed
+ */
+int IDCANCEL = 2;
+
+/**
+ * "Abort" button has been pressed
+ */
+int IDABORT = 3;
+
+/**
+ * "Retry" button has been pressed
+ */
+int IDRETRY = 4;
+
+/**
+ * "Ignore" button has been pressed
+ */
+int IDIGNORE = 5;
+
+/**
+ * "Yes" button has been pressed
+ */
+int IDYES = 6;
+
+/**
+ * "No" button has been pressed
+ */
+int IDNO = 7;
+
+/**
+ * "Try Again" button has been pressed
+ */
+int IDTRYAGAIN = 10;
+
+/**
+ * "Continue" button has been pressed
+ */
+int IDCONTINUE = 11;
+
+/**
+ * Message window contains only one button: OK. Default
+ */
+int MB_OK = 0x00000000;
+
+/**
+ * Message window contains two buttons: OK and Cancel
+ */
+int MB_OKCANCEL = 0x00000001;
+
+/**
+ * Message window contains three buttons: Abort, Retry and Ignore
+ */
+int MB_ABORTRETRYIGNORE = 0x00000002;
+
+/**
+ * Message window contains three buttons: Yes, No and Cancel
+ */
+int MB_YESNOCANCEL = 0x00000003;
+
+/**
+ * Message window contains two buttons: Yes and No
+ */
+int MB_YESNO = 0x00000004;
+
+/**
+ * Message window contains two buttons: Retry and Cancel
+ */
+int MB_RETRYCANCEL = 0x00000005;
+
+/**
+ * Message window contains three buttons: Cancel, Try Again, Continue
+ */
+int MB_CANCELTRYCONTINUE = 0x00000006;
+
+/**
+ * The STOP sign icon
+ */
+int MB_ICONSTOP = 0x00000010;
+
+/**
+ * The STOP sign icon
+ */
+int MB_ICONERROR = 0x00000010;
+
+/**
+ * The STOP sign icon
+ */
+int MB_ICONHAND = 0x00000010;
+
+/**
+ * The question sign icon
+ */
+int MB_ICONQUESTION = 0x00000020;
+
+/**
+ * The exclamation/warning sign icon
+ */
+int MB_ICONEXCLAMATION = 0x00000030;
+
+/**
+ * The exclamation/warning sign icon
+ */
+int MB_ICONWARNING = 0x00000030;
+
+/**
+ * The encircled i sign
+ */
+int MB_ICONINFORMATION = 0x00000040;
+
+/**
+ * The encircled i sign
+ */
+int MB_ICONASTERISK = 0x00000040;
+
+/**
+ * The first button MB_DEFBUTTON1 - is default, if the other buttons
+ * MB_DEFBUTTON2, MB_DEFBUTTON3, or MB_DEFBUTTON4 are not specified
+ */
+int MB_DEFBUTTON1 = 0x00000000;
+
+/**
+ * The second button is default
+ */
+int MB_DEFBUTTON2 = 0x00000100;
+
+/**
+ * The third button is default
+ */
+int MB_DEFBUTTON3 = 0x00000200;
+
+/**
+ * The fourth button is default
+ */
+int MB_DEFBUTTON4 = 0x00000300;
+
 #endif
