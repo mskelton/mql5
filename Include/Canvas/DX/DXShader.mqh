@@ -1,11 +1,10 @@
 #ifndef DXSHADER_H
 #define DXSHADER_H
 
+#include "DXEnums.mqh"
 #include "DXHandle.mqh"
 #include "DXInput.mqh"
 #include "DXTexture.mqh"
-
-#define DX_SHADER_INPUTS_MAX 14
 
 class CDXShader : public CDXHandleShared {
 protected:

@@ -53,6 +53,4 @@ private:
   void ResourcesCheck(void);
 };
 
-CDXShader *
-
 #endif

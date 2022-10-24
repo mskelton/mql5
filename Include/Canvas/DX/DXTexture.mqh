@@ -1,6 +1,7 @@
 #ifndef DXTEXTURE_H
 #define DXTEXTURE_H
 
+#include "DXEnums.mqh"
 #include "DXHandle.mqh"
 #include <Canvas/Canvas.mqh>
 
