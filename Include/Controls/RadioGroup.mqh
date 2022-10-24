@@ -31,7 +31,7 @@ public:
 
   virtual bool AddItem(const string item, const long value = 0);
 
-  long Value(void) const;
+  long Value(void) const ;
   bool Value(const long value);
   bool ValueCheck(long value) const;
 
@@ -57,5 +57,24 @@ protected:
 EVENT_MAP_BEGIN(CRadioGroup)
 ON_INDEXED_EVENT(ON_CHANGE, m_rows, OnChangeItem)
 EVENT_MAP_END(CWndClient)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #endif

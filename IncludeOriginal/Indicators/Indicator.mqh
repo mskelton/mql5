@@ -39,9 +39,11 @@ private:
   }
 };
 
-CIndicatorBuffer::CIndicatorBuffer(void) : m_offset(0), m_name("") {}
+CIndicatorBuffer::CIndicatorBuffer(void) : m_offset(0), m_name("") {
+}
 
-CIndicatorBuffer::~CIndicatorBuffer(void) {}
+CIndicatorBuffer::~CIndicatorBuffer(void) {
+}
 
 double CIndicatorBuffer::At(const int index) const {
   return (CDoubleBuffer::At(index + m_offset));
@@ -140,7 +142,8 @@ protected:
 
 void CIndicator::CIndicator(void)
     : m_handle(INVALID_HANDLE), m_status(""), m_full_release(false),
-      m_redrawer(false) {}
+      m_redrawer(false) {
+}
 
 void CIndicator::~CIndicator(void) {
 

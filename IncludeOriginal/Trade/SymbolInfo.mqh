@@ -230,9 +230,11 @@ CSymbolInfo::CSymbolInfo(void)
       m_trade_calcmode(0), m_trade_mode(0), m_swap_mode(0), m_swap3(0),
       m_margin_initial(0.0), m_margin_maintenance(0.0),
       m_margin_hedged_use_leg(false), m_margin_hedged(0.0),
-      m_trade_time_flags(0), m_trade_fill_flags(0) {}
+      m_trade_time_flags(0), m_trade_fill_flags(0) {
+}
 
-CSymbolInfo::~CSymbolInfo(void) {}
+CSymbolInfo::~CSymbolInfo(void) {
+}
 
 bool CSymbolInfo::Name(const string name) {
   string symbol_name = StringLen(name) > 0 ? name : _Symbol;

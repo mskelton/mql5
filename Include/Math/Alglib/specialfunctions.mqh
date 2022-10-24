@@ -15,6 +15,11 @@ public:
   static double LnGamma(double x, double &sgngam);
 };
 
+
+
+
+
+
 class CNormalDistr {
 public:
   CNormalDistr(void);
@@ -27,6 +32,13 @@ public:
   static double InvNormalDistribution(double y0);
 };
 
+
+
+
+
+
+
+
 class CIncGammaF {
 public:
   CIncGammaF(void);
@@ -37,6 +49,11 @@ public:
   static double InvIncompleteGammaC(const double a, const double y0);
 };
 
+
+
+
+
+
 class CAiryF {
 public:
   CAiryF(void);
@@ -45,6 +62,9 @@ public:
   static void Airy(const double x, double &ai, double &aip, double &bi,
                    double &bip);
 };
+
+
+
 
 class CBessel {
 private:
@@ -76,6 +96,25 @@ public:
   static double BesselKN(int nn, double x);
 };
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class CBetaF {
 public:
   CBetaF(void);
@@ -83,6 +122,9 @@ public:
 
   static double Beta(const double a, const double b);
 };
+
+
+
 
 class CIncBetaF {
 private:
@@ -103,6 +145,13 @@ public:
   static double InvIncompleteBeta(const double a, double b, double y);
 };
 
+
+
+
+
+
+
+
 class CBinomialDistr {
 public:
   CBinomialDistr(void);
@@ -114,6 +163,11 @@ public:
   static double InvBinomialDistribution(const int k, const int n,
                                         const double y);
 };
+
+
+
+
+
 
 class CChebyshev {
 public:
@@ -127,6 +181,12 @@ public:
   static void FromChebyshev(double a[], const int n, double b[]);
 };
 
+
+
+
+
+
+
 class CChiSquareDistr {
 public:
   CChiSquareDistr(void);
@@ -137,6 +197,11 @@ public:
   static double InvChiSquareDistribution(const double v, const double y);
 };
 
+
+
+
+
+
 class CDawson {
 public:
   CDawson(void);
@@ -144,6 +209,9 @@ public:
 
   static double DawsonIntegral(double x);
 };
+
+
+
 
 class CElliptic {
 public:
@@ -157,6 +225,13 @@ public:
   static double IncompleteEllipticIntegralE(const double phi, const double m);
 };
 
+
+
+
+
+
+
+
 class CExpIntegrals {
 public:
   CExpIntegrals(void);
@@ -165,6 +240,10 @@ public:
   static double ExponentialIntegralEi(const double x);
   static double ExponentialIntegralEn(const double x, const int n);
 };
+
+
+
+
 
 class CFDistr {
 public:
@@ -176,6 +255,11 @@ public:
   static double InvFDistribution(const int a, const int b, const double y);
 };
 
+
+
+
+
+
 class CFresnel {
 public:
   CFresnel(void);
@@ -183,6 +267,9 @@ public:
 
   static void FresnelIntegral(double x, double &c, double &s);
 };
+
+
+
 
 class CHermite {
 public:
@@ -194,6 +281,11 @@ public:
   static void HermiteCoefficients(const int n, double c[]);
 };
 
+
+
+
+
+
 class CJacobianElliptic {
 public:
   CJacobianElliptic(void);
@@ -203,6 +295,9 @@ public:
                                         double &sn, double &cn, double &dn,
                                         double &ph);
 };
+
+
+
 
 class CLaguerre {
 public:
@@ -214,6 +309,11 @@ public:
   static void LaguerreCoefficients(const int n, double c[]);
 };
 
+
+
+
+
+
 class CLegendre {
 public:
   CLegendre(void);
@@ -223,6 +323,11 @@ public:
   static double LegendreSum(double c[], const int n, const double x);
   static void LegendreCoefficients(const int n, double c[]);
 };
+
+
+
+
+
 
 class CPoissonDistr {
 public:
@@ -234,6 +339,11 @@ public:
   static double InvPoissonDistribution(const int k, const double y);
 };
 
+
+
+
+
+
 class CPsiF {
 public:
   CPsiF(void);
@@ -241,6 +351,9 @@ public:
 
   static double Psi(double x);
 };
+
+
+
 
 class CStudenttDistr {
 public:
@@ -250,6 +363,10 @@ public:
   static double StudenttDistribution(const int k, const double t);
   static double InvStudenttDistribution(const int k, double p);
 };
+
+
+
+
 
 class CTrigIntegrals {
 private:
@@ -263,5 +380,10 @@ public:
   static void SineCosineIntegrals(double x, double &si, double &ci);
   static void HyperbolicSineCosineIntegrals(double x, double &shi, double &chi);
 };
+
+
+
+
+
 
 #endif

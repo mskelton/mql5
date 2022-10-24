@@ -86,7 +86,8 @@ CSignalMA::CSignalMA(void)
       USE_SERIES_OPEN + USE_SERIES_HIGH + USE_SERIES_LOW + USE_SERIES_CLOSE;
 }
 
-CSignalMA::~CSignalMA(void) {}
+CSignalMA::~CSignalMA(void) {
+}
 
 bool CSignalMA::ValidationSettings(void) {
 

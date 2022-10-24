@@ -91,9 +91,11 @@ CComboBox::CComboBox(void)
     : m_item_height(CONTROLS_COMBO_ITEM_HEIGHT),
       m_view_items(CONTROLS_COMBO_ITEMS_VIEW)
 
-{}
+{
+}
 
-CComboBox::~CComboBox(void) {}
+CComboBox::~CComboBox(void) {
+}
 
 bool CComboBox::Create(const long chart, const string name, const int subwin,
                        const int x1, const int y1, const int x2, const int y2) {

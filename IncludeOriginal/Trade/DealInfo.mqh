@@ -49,9 +49,11 @@ public:
   bool SelectByIndex(const int index);
 };
 
-CDealInfo::CDealInfo(void) {}
+CDealInfo::CDealInfo(void) {
+}
 
-CDealInfo::~CDealInfo(void) {}
+CDealInfo::~CDealInfo(void) {
+}
 
 long CDealInfo::Order(void) const {
   return (HistoryDealGetInteger(m_ticket, DEAL_ORDER));

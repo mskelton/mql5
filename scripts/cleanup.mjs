@@ -17,10 +17,13 @@ rl.on("line", (line) => {
   // Don't add classes or enums to the list of blocks
   if (
     line.startsWith("class") ||
+    line.startsWith("template <typename T> class") ||
+    line.startsWith("interface") ||
+    line.startsWith("template <typename T> interface") ||
     line.startsWith("enum") ||
     line.startsWith("struct")
   ) {
-    lines.push(line)
+    lines.push(line.replace("interface ", "class "))
     return
   }
 
@@ -44,26 +47,24 @@ rl.on("line", (line) => {
       blocks.push("::")
 
       // Remove template decl
-      if (lines.at(-1).trimStart().startsWith("template <typename")) {
+      if (lines.at(-1).trim() === "template <typename T>") {
         lines.pop()
       }
     }
   }
 
   // Class methods can be on the same or different lines
-  if (/\{\}?$/.test(line.trimEnd())) {
+  if (/\{\}?/.test(line.trim())) {
     // Replace the fake block
     if (blocks.at(-1) === "::") {
       blocks.pop()
     }
 
-    if (!line.trimEnd().endsWith("}")) {
+    if (!line.includes("}")) {
       blocks.push("{")
     }
-  }
-
-  // End of block
-  if (line.trimStart().startsWith("}")) {
+  } else if (line.includes("}")) {
+    // End of block
     blocks.pop()
   }
 })

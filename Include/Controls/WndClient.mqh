@@ -24,17 +24,17 @@ public:
   virtual bool OnEvent(const int id, const long &lparam, const double &dparam,
                        const string &sparam);
 
-  virtual bool ColorBackground(const color value);
-  virtual bool ColorBorder(const color value);
-  virtual bool BorderType(const ENUM_BORDER_TYPE flag);
+  virtual bool ColorBackground(const color value) ;
+  virtual bool ColorBorder(const color value) ;
+  virtual bool BorderType(const ENUM_BORDER_TYPE flag) ;
 
-  virtual bool VScrolled(void);
+  virtual bool VScrolled(void) ;
   virtual bool VScrolled(const bool flag);
-  virtual bool HScrolled(void);
+  virtual bool HScrolled(void) ;
   virtual bool HScrolled(const bool flag);
 
   virtual long Id(const long id);
-  virtual long Id(void) const;
+  virtual long Id(void) const ;
 
   virtual bool Show(void);
 
@@ -45,14 +45,14 @@ protected:
 
   virtual bool OnResize(void);
 
-  virtual bool OnVScrollShow(void);
-  virtual bool OnVScrollHide(void);
-  virtual bool OnHScrollShow(void);
-  virtual bool OnHScrollHide(void);
-  virtual bool OnScrollLineDown(void);
-  virtual bool OnScrollLineUp(void);
-  virtual bool OnScrollLineLeft(void);
-  virtual bool OnScrollLineRight(void);
+  virtual bool OnVScrollShow(void) ;
+  virtual bool OnVScrollHide(void) ;
+  virtual bool OnHScrollShow(void) ;
+  virtual bool OnHScrollHide(void) ;
+  virtual bool OnScrollLineDown(void) ;
+  virtual bool OnScrollLineUp(void) ;
+  virtual bool OnScrollLineLeft(void) ;
+  virtual bool OnScrollLineRight(void) ;
 
   virtual bool Rebound(const CRect &rect);
 };
@@ -67,5 +67,17 @@ ON_NAMED_EVENT(ON_HIDE, m_scroll_h, OnHScrollHide)
 ON_EVENT(ON_SCROLL_DEC, m_scroll_h, OnScrollLineLeft)
 ON_EVENT(ON_SCROLL_INC, m_scroll_h, OnScrollLineRight)
 EVENT_MAP_END(CWndContainer)
+
+
+
+
+
+
+
+
+
+
+
+
 
 #endif

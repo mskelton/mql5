@@ -62,9 +62,11 @@ EVENT_MAP_END(CWndClient)
 
 CRadioGroup::CRadioGroup(void)
     : m_offset(0), m_total_view(0), m_item_height(CONTROLS_LIST_ITEM_HEIGHT),
-      m_current(CONTROLS_INVALID_INDEX) {}
+      m_current(CONTROLS_INVALID_INDEX) {
+}
 
-CRadioGroup::~CRadioGroup(void) {}
+CRadioGroup::~CRadioGroup(void) {
+}
 
 bool CRadioGroup::Create(const long chart, const string name, const int subwin,
                          const int x1, const int y1, const int x2,

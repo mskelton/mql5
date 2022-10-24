@@ -52,4 +52,37 @@ public:
                      const double price, const double percent = 100) const;
 };
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #endif

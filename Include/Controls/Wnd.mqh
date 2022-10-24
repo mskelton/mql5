@@ -46,32 +46,32 @@ public:
                        const string &sparam);
   virtual bool OnMouseEvent(const int x, const int y, const int flags);
 
-  string Name(void) const;
+  string Name(void) const ;
 
-  int ControlsTotal(void) const;
-  CWnd *Control(const int ind) const;
+  int ControlsTotal(void) const ;
+  CWnd *Control(const int ind) const ;
   virtual CWnd *ControlFind(const long id);
 
-  const CRect Rect(void) const;
-  int Left(void) const;
-  virtual void Left(const int x);
-  int Top(void) const;
-  virtual void Top(const int y);
-  int Right(void) const;
-  virtual void Right(const int x);
-  int Bottom(void) const;
-  virtual void Bottom(const int y);
-  int Width(void) const;
+  const CRect Rect(void) const ;
+  int Left(void) const ;
+  virtual void Left(const int x) ;
+  int Top(void) const ;
+  virtual void Top(const int y) ;
+  int Right(void) const ;
+  virtual void Right(const int x) ;
+  int Bottom(void) const ;
+  virtual void Bottom(const int y) ;
+  int Width(void) const ;
   virtual bool Width(const int w);
-  int Height(void) const;
+  int Height(void) const ;
   virtual bool Height(const int h);
-  CSize Size(void) const;
+  CSize Size(void) const ;
   virtual bool Size(const int w, const int h);
   virtual bool Size(const CSize &size);
   virtual bool Move(const int x, const int y);
   virtual bool Move(const CPoint &point);
   virtual bool Shift(const int dx, const int dy);
-  bool Contains(const int x, const int y) const;
+  bool Contains(const int x, const int y) const ;
   bool Contains(CWnd *control) const;
 
   void Alignment(const int flags, const int left, const int top,
@@ -79,52 +79,52 @@ public:
   virtual bool Align(const CRect &rect);
 
   virtual long Id(const long id);
-  long Id(void) const;
+  long Id(void) const ;
 
-  bool IsEnabled(void) const;
+  bool IsEnabled(void) const ;
   virtual bool Enable(void);
   virtual bool Disable(void);
-  bool IsVisible(void) const;
+  bool IsVisible(void) const ;
   virtual bool Visible(const bool flag);
   virtual bool Show(void);
   virtual bool Hide(void);
-  bool IsActive(void) const;
+  bool IsActive(void) const ;
   virtual bool Activate(void);
   virtual bool Deactivate(void);
 
-  int StateFlags(void) const;
-  void StateFlags(const int flags);
-  void StateFlagsSet(const int flags);
-  void StateFlagsReset(const int flags);
+  int StateFlags(void) const ;
+  void StateFlags(const int flags) ;
+  void StateFlagsSet(const int flags) ;
+  void StateFlagsReset(const int flags) ;
 
-  int PropFlags(void) const;
-  void PropFlags(const int flags);
-  void PropFlagsSet(const int flags);
-  void PropFlagsReset(const int flags);
+  int PropFlags(void) const ;
+  void PropFlags(const int flags) ;
+  void PropFlagsSet(const int flags) ;
+  void PropFlagsReset(const int flags) ;
 
-  int MouseX(void) const;
-  void MouseX(const int value);
-  int MouseY(void) const;
-  void MouseY(const int value);
-  int MouseFlags(void) const;
-  virtual void MouseFlags(const int value);
+  int MouseX(void) const ;
+  void MouseX(const int value) ;
+  int MouseY(void) const ;
+  void MouseY(const int value) ;
+  int MouseFlags(void) const ;
+  virtual void MouseFlags(const int value) ;
   bool MouseFocusKill(const long id = CONTROLS_INVALID_ID);
   bool BringToTop(void);
 
 protected:
-  virtual bool OnCreate(void);
-  virtual bool OnDestroy(void);
-  virtual bool OnMove(void);
-  virtual bool OnResize(void);
-  virtual bool OnEnable(void);
-  virtual bool OnDisable(void);
-  virtual bool OnShow(void);
-  virtual bool OnHide(void);
-  virtual bool OnActivate(void);
-  virtual bool OnDeactivate(void);
+  virtual bool OnCreate(void) ;
+  virtual bool OnDestroy(void) ;
+  virtual bool OnMove(void) ;
+  virtual bool OnResize(void) ;
+  virtual bool OnEnable(void) ;
+  virtual bool OnDisable(void) ;
+  virtual bool OnShow(void) ;
+  virtual bool OnHide(void) ;
+  virtual bool OnActivate(void) ;
+  virtual bool OnDeactivate(void) ;
   virtual bool OnClick(void);
   virtual bool OnDblClick(void);
-  virtual bool OnChange(void);
+  virtual bool OnChange(void) ;
 
   virtual bool OnMouseDown(void);
   virtual bool OnMouseUp(void);
@@ -133,9 +133,44 @@ protected:
   virtual bool OnDragProcess(const int x, const int y);
   virtual bool OnDragEnd(void);
 
-  virtual bool DragObjectCreate(void);
+  virtual bool DragObjectCreate(void) ;
   virtual bool DragObjectDestroy(void);
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class CDragWnd : public CWnd {
 protected:
@@ -153,5 +188,9 @@ public:
 protected:
   virtual bool OnDragProcess(const int x, const int y);
 };
+
+
+
+
 
 #endif

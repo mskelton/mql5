@@ -77,6 +77,9 @@ public:
   void Copy(CMinCGState &obj);
 };
 
+
+
+
 class CMinCGStateShell {
 private:
   CMinCGState m_innerobj;
@@ -97,6 +100,18 @@ public:
   CMinCGState *GetInnerObj(void);
 };
 
+
+
+
+
+
+
+
+
+
+
+
+
 class CMinCGReport {
 public:
   int m_iterationscount;
@@ -108,6 +123,9 @@ public:
 
   void Copy(CMinCGReport &obj);
 };
+
+
+
 
 class CMinCGReportShell {
 private:
@@ -126,6 +144,16 @@ public:
   void SetTerminationType(const int i);
   CMinCGReport *GetInnerObj(void);
 };
+
+
+
+
+
+
+
+
+
+
 
 class CMinCG {
 private:
@@ -197,6 +225,44 @@ public:
   static void MinCGSetPrecVarPart(CMinCGState state, double &d2[]);
   static bool MinCGIteration(CMinCGState &state);
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class CMinBLEICState {
 public:
@@ -289,6 +355,9 @@ public:
   void Copy(CMinBLEICState &obj);
 };
 
+
+
+
 class CMinBLEICStateShell {
 private:
   CMinBLEICState m_innerobj;
@@ -309,6 +378,18 @@ public:
   CMinBLEICState *GetInnerObj(void);
 };
 
+
+
+
+
+
+
+
+
+
+
+
+
 class CMinBLEICReport {
 public:
   int m_inneriterationscount;
@@ -325,6 +406,9 @@ public:
 
   void Copy(CMinBLEICReport &obj);
 };
+
+
+
 
 class CMinBLEICReportShell {
 private:
@@ -353,6 +437,26 @@ public:
   void SetDebugDX(const double d);
   CMinBLEICReport *GetInnerObj(void);
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class CMinBLEIC {
 private:
@@ -439,6 +543,45 @@ public:
   static bool MinBLEICIteration(CMinBLEICState &state);
 };
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class CMinLBFGSState {
 public:
   int m_n;
@@ -495,6 +638,9 @@ public:
   void Copy(CMinLBFGSState &obj);
 };
 
+
+
+
 class CMinLBFGSStateShell {
 private:
   CMinLBFGSState m_innerobj;
@@ -515,6 +661,18 @@ public:
   CMinLBFGSState *GetInnerObj(void);
 };
 
+
+
+
+
+
+
+
+
+
+
+
+
 class CMinLBFGSReport {
 public:
   int m_iterationscount;
@@ -526,6 +684,9 @@ public:
 
   void Copy(CMinLBFGSReport &obj);
 };
+
+
+
 
 class CMinLBFGSReportShell {
 private:
@@ -544,6 +705,16 @@ public:
   void SetTerminationType(const int i);
   CMinLBFGSReport *GetInnerObj(void);
 };
+
+
+
+
+
+
+
+
+
+
 
 class CMinLBFGS {
 private:
@@ -594,6 +765,31 @@ public:
   static bool MinLBFGSIteration(CMinLBFGSState &state);
 };
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class CMinQPState {
 public:
   int m_n;
@@ -638,6 +834,9 @@ public:
   void Copy(CMinQPState &obj);
 };
 
+
+
+
 class CMinQPStateShell {
 private:
   CMinQPState m_innerobj;
@@ -649,6 +848,10 @@ public:
 
   CMinQPState *GetInnerObj(void);
 };
+
+
+
+
 
 class CMinQPReport {
 public:
@@ -663,6 +866,9 @@ public:
 
   void Copy(CMinQPReport &obj);
 };
+
+
+
 
 class CMinQPReportShell {
 private:
@@ -685,6 +891,20 @@ public:
   void SetTerminationType(const int i);
   CMinQPReport *GetInnerObj(void);
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class CMinQP {
 private:
@@ -714,6 +934,25 @@ public:
   static void MinQPSetStartingPointFast(CMinQPState state, double &x[]);
   static void MinQPSetOriginFast(CMinQPState state, double &xorigin[]);
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class CMinLMState {
 public:
@@ -791,6 +1030,9 @@ public:
   void Copy(CMinLMState &obj);
 };
 
+
+
+
 class CMinLMStateShell {
 private:
   CMinLMState m_innerobj;
@@ -817,6 +1059,24 @@ public:
   CMinLMState *GetInnerObj(void);
 };
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class CMinLMReport {
 public:
   int m_iterationscount;
@@ -832,6 +1092,9 @@ public:
 
   void Copy(CMinLMReport &obj);
 };
+
+
+
 
 class CMinLMReportShell {
 private:
@@ -858,6 +1121,24 @@ public:
   void SetNCholesky(const int i);
   CMinLMReport *GetInnerObj(void);
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class CMinLM {
 private:
@@ -960,6 +1241,45 @@ public:
   static bool MinLMIteration(CMinLMState &state);
 };
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class CMinASAState {
 public:
   int m_n;
@@ -1014,6 +1334,9 @@ public:
   void Copy(CMinASAState &obj);
 };
 
+
+
+
 class CMinASAStateShell {
 private:
   CMinASAState m_innerobj;
@@ -1032,6 +1355,16 @@ public:
   CMinASAState *GetInnerObj(void);
 };
 
+
+
+
+
+
+
+
+
+
+
 class CMinASAReport {
 public:
   int m_iterationscount;
@@ -1044,6 +1377,9 @@ public:
 
   void Copy(CMinASAReport &obj);
 };
+
+
+
 
 class CMinASAReportShell {
 private:
@@ -1064,6 +1400,18 @@ public:
   void SetActiveConstraints(const int i);
   CMinASAReport *GetInnerObj(void);
 };
+
+
+
+
+
+
+
+
+
+
+
+
 
 class CMinComp {
 private:
@@ -1167,9 +1515,50 @@ public:
                             CMinASAReport &rep);
   static void MinASAResultsBuf(CMinASAState state, double &x[],
                                CMinASAReport &rep);
-  static void MinASARestartFrom(CMinASAState state, double &x[], double bndl[],
-                                double bndu[]);
+  static void MinASARestartFrom(CMinASAState state, double &x[],
+                                double bndl[], double bndu[]);
   static bool MinASAIteration(CMinASAState &state);
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #endif

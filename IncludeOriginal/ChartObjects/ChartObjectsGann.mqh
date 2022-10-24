@@ -23,9 +23,11 @@ public:
   virtual bool Load(const int file_handle);
 };
 
-CChartObjectGannLine::CChartObjectGannLine(void) {}
+CChartObjectGannLine::CChartObjectGannLine(void) {
+}
 
-CChartObjectGannLine::~CChartObjectGannLine(void) {}
+CChartObjectGannLine::~CChartObjectGannLine(void) {
+}
 
 bool CChartObjectGannLine::Create(long chart_id, const string name,
                                   const int window, const datetime time1,
@@ -111,9 +113,11 @@ public:
   virtual bool Load(const int file_handle);
 };
 
-CChartObjectGannFan::CChartObjectGannFan(void) {}
+CChartObjectGannFan::CChartObjectGannFan(void) {
+}
 
-CChartObjectGannFan::~CChartObjectGannFan(void) {}
+CChartObjectGannFan::~CChartObjectGannFan(void) {
+}
 
 bool CChartObjectGannFan::Create(long chart_id, const string name,
                                  const int window, const datetime time1,
@@ -225,9 +229,11 @@ public:
   virtual bool Load(const int file_handle);
 };
 
-CChartObjectGannGrid::CChartObjectGannGrid(void) {}
+CChartObjectGannGrid::CChartObjectGannGrid(void) {
+}
 
-CChartObjectGannGrid::~CChartObjectGannGrid(void) {}
+CChartObjectGannGrid::~CChartObjectGannGrid(void) {
+}
 
 bool CChartObjectGannGrid::Create(long chart_id, const string name,
                                   const int window, const datetime time1,

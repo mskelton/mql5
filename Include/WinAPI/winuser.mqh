@@ -1046,7 +1046,7 @@ struct RAWHID {
   uchar bRawData[1];
 };
 
-union RAWFORMAT;
+union RAWFORMAT ;
 
 struct RAWINPUT {
   RAWINPUTHEADER header;
@@ -1086,7 +1086,7 @@ struct MENUITEMINFO {
   uint cch;
 };
 
-union INPUT_TYPE;
+union INPUT_TYPE ;
 
 struct INPUT {
   uint type;
@@ -1439,7 +1439,8 @@ int GetPointerInputTransform(uint id, uint count, INPUT_TRANSFORM &transform);
 int GetPointerPenInfo(uint id, POINTER_PEN_INFO &info);
 int GetPointerPenInfoHistory(uint id, uint &count, POINTER_PEN_INFO &info);
 int GetPointerTouchInfo(uint id, POINTER_TOUCH_INFO info[]);
-int GetPointerTouchInfoHistory(uint id, uint &count, POINTER_TOUCH_INFO info[]);
+int GetPointerTouchInfoHistory(uint id, uint &count,
+                               POINTER_TOUCH_INFO info[]);
 int GetPointerType(uint id, uint &type);
 int GetPriorityClipboardFormat(uint format_priority_list[], int formats);
 int GetProcessDefaultLayout(uint &default_layout);
@@ -1454,7 +1455,8 @@ uint GetRawInputDeviceInfoW(HANDLE device, uint command, PVOID data,
 uint GetRawInputDeviceList(RAWINPUTDEVICELIST &raw_input_device_list,
                            uint &num_devices, uint size);
 int GetRawPointerDeviceData(uint id, uint count, uint count,
-                            POINTER_DEVICE_PROPERTY properties[], int values[]);
+                            POINTER_DEVICE_PROPERTY properties[],
+                            int values[]);
 uint GetRegisteredRawInputDevices(RAWINPUTDEVICE &raw_input_devices,
                                   uint &num_devices, uint size);
 int GetScrollBarInfo(HANDLE hwnd, int object, SCROLLBARINFO &psbi);
@@ -1594,8 +1596,8 @@ HANDLE MonitorFromRect(const RECT &lprc, uint flags);
 HANDLE MonitorFromWindow(HANDLE hwnd, uint flags);
 void mouse_event(uint flags, uint dx, uint dy, uint data, ulong extra_info);
 int MoveWindow(HANDLE wnd, int X, int Y, int width, int height, int repaint);
-uint MsgWaitForMultipleObjects(uint count, const HANDLE handles[], int wait_all,
-                               uint milliseconds, uint wake_mask);
+uint MsgWaitForMultipleObjects(uint count, const HANDLE handles[],
+                               int wait_all, uint milliseconds, uint wake_mask);
 uint MsgWaitForMultipleObjectsEx(uint count, const HANDLE handles[],
                                  uint milliseconds, uint wake_mask, uint flags);
 void NotifyWinEvent(uint event, HANDLE hwnd, int object, int child);
@@ -1632,7 +1634,8 @@ long QueryDisplayConfig(uint flags, uint &path_array_elements,
                         DISPLAYCONFIG_MODE_INFO info_array[],
                         DISPLAYCONFIG_TOPOLOGY_ID &topology_id);
 HANDLE RealChildWindowFromPoint(HANDLE parent, long parent_client_coords);
-uint RealGetWindowClassW(HANDLE hwnd, ushort class_name[], uint class_name_max);
+uint RealGetWindowClassW(HANDLE hwnd, ushort class_name[],
+                         uint class_name_max);
 int RedrawWindow(HANDLE wnd, RECT &rect, HANDLE update, uint flags);
 ushort RegisterClassExW(const WNDCLASSEXW &lpwcx);
 ushort RegisterClassW(const WNDCLASSW &wnd_class);
@@ -1827,7 +1830,7 @@ HANDLE WindowFromDC(HANDLE hDC);
 HANDLE WindowFromPhysicalPoint(long point);
 HANDLE WindowFromPoint(long point);
 int WinHelpW(HANDLE wnd_main, const string help, uint command, ulong data);
-int wvsprintfW(ushort[], const string, PVOID &arglist[]);
+int wvsprintfW(ushort [], const string, PVOID &arglist[]);
 #import
 
 #endif

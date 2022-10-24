@@ -1,5 +1,5 @@
 -IInclude
 --include=Core/MQL5.mqh
--std=c++11
+-std=c++14
 -xc++
 -Wno-write-strings

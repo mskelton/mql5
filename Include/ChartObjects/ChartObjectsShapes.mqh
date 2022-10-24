@@ -12,8 +12,11 @@ public:
               const datetime time1, const double price1, const datetime time2,
               const double price2);
 
-  virtual int Type(void) const;
+  virtual int Type(void) const ;
 };
+
+
+
 
 class CChartObjectTriangle : public CChartObject {
 public:
@@ -24,8 +27,11 @@ public:
               const datetime time1, const double price1, const datetime time2,
               const double price2, const datetime time3, const double price3);
 
-  virtual int Type(void) const;
+  virtual int Type(void) const ;
 };
+
+
+
 
 class CChartObjectEllipse : public CChartObject {
 public:
@@ -36,7 +42,10 @@ public:
               const datetime time1, const double price1, const datetime time2,
               const double price2, const datetime time3, const double price3);
 
-  virtual int Type(void) const;
+  virtual int Type(void) const ;
 };
+
+
+
 
 #endif

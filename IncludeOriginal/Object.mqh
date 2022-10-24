@@ -9,8 +9,10 @@ private:
   CObject *m_next;
 
 public:
-  CObject(void) : m_prev(NULL), m_next(NULL) {}
-  ~CObject(void) {}
+  CObject(void) : m_prev(NULL), m_next(NULL) {
+  }
+  ~CObject(void) {
+  }
 
   CObject *Prev(void) const {
     return (m_prev);

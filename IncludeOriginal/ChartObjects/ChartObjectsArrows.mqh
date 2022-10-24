@@ -24,9 +24,11 @@ public:
   virtual bool Load(const int file_handle);
 };
 
-CChartObjectArrow::CChartObjectArrow(void) {}
+CChartObjectArrow::CChartObjectArrow(void) {
+}
 
-CChartObjectArrow::~CChartObjectArrow(void) {}
+CChartObjectArrow::~CChartObjectArrow(void) {
+}
 
 bool CChartObjectArrow::Create(long chart_id, const string name,
                                const int window, const datetime time,
@@ -133,9 +135,11 @@ public:
   }
 };
 
-CChartObjectArrowThumbUp::CChartObjectArrowThumbUp(void) {}
+CChartObjectArrowThumbUp::CChartObjectArrowThumbUp(void) {
+}
 
-CChartObjectArrowThumbUp::~CChartObjectArrowThumbUp(void) {}
+CChartObjectArrowThumbUp::~CChartObjectArrowThumbUp(void) {
+}
 
 bool CChartObjectArrowThumbUp::Create(long chart_id, const string name,
                                       const int window, const datetime time,
@@ -168,9 +172,11 @@ public:
   }
 };
 
-CChartObjectArrowThumbDown::CChartObjectArrowThumbDown(void) {}
+CChartObjectArrowThumbDown::CChartObjectArrowThumbDown(void) {
+}
 
-CChartObjectArrowThumbDown::~CChartObjectArrowThumbDown(void) {}
+CChartObjectArrowThumbDown::~CChartObjectArrowThumbDown(void) {
+}
 
 bool CChartObjectArrowThumbDown::Create(long chart_id, const string name,
                                         const int window, const datetime time,
@@ -203,9 +209,11 @@ public:
   }
 };
 
-CChartObjectArrowUp::CChartObjectArrowUp(void) {}
+CChartObjectArrowUp::CChartObjectArrowUp(void) {
+}
 
-CChartObjectArrowUp::~CChartObjectArrowUp(void) {}
+CChartObjectArrowUp::~CChartObjectArrowUp(void) {
+}
 
 bool CChartObjectArrowUp::Create(long chart_id, const string name,
                                  const int window, const datetime time,
@@ -238,9 +246,11 @@ public:
   }
 };
 
-CChartObjectArrowDown::CChartObjectArrowDown(void) {}
+CChartObjectArrowDown::CChartObjectArrowDown(void) {
+}
 
-CChartObjectArrowDown::~CChartObjectArrowDown(void) {}
+CChartObjectArrowDown::~CChartObjectArrowDown(void) {
+}
 
 bool CChartObjectArrowDown::Create(long chart_id, const string name,
                                    const int window, const datetime time,
@@ -273,9 +283,11 @@ public:
   }
 };
 
-CChartObjectArrowStop::CChartObjectArrowStop(void) {}
+CChartObjectArrowStop::CChartObjectArrowStop(void) {
+}
 
-CChartObjectArrowStop::~CChartObjectArrowStop(void) {}
+CChartObjectArrowStop::~CChartObjectArrowStop(void) {
+}
 
 bool CChartObjectArrowStop::Create(long chart_id, const string name,
                                    const int window, const datetime time,
@@ -308,9 +320,11 @@ public:
   }
 };
 
-CChartObjectArrowCheck::CChartObjectArrowCheck(void) {}
+CChartObjectArrowCheck::CChartObjectArrowCheck(void) {
+}
 
-CChartObjectArrowCheck::~CChartObjectArrowCheck(void) {}
+CChartObjectArrowCheck::~CChartObjectArrowCheck(void) {
+}
 
 bool CChartObjectArrowCheck::Create(long chart_id, const string name,
                                     const int window, const datetime time,
@@ -349,9 +363,11 @@ public:
   }
 };
 
-CChartObjectArrowLeftPrice::CChartObjectArrowLeftPrice(void) {}
+CChartObjectArrowLeftPrice::CChartObjectArrowLeftPrice(void) {
+}
 
-CChartObjectArrowLeftPrice::~CChartObjectArrowLeftPrice(void) {}
+CChartObjectArrowLeftPrice::~CChartObjectArrowLeftPrice(void) {
+}
 
 bool CChartObjectArrowLeftPrice::Create(long chart_id, const string name,
                                         const int window, const datetime time,
@@ -390,9 +406,11 @@ public:
   }
 };
 
-CChartObjectArrowRightPrice::CChartObjectArrowRightPrice(void) {}
+CChartObjectArrowRightPrice::CChartObjectArrowRightPrice(void) {
+}
 
-CChartObjectArrowRightPrice::~CChartObjectArrowRightPrice(void) {}
+CChartObjectArrowRightPrice::~CChartObjectArrowRightPrice(void) {
+}
 
 bool CChartObjectArrowRightPrice::Create(long chart_id, const string name,
                                          const int window, const datetime time,

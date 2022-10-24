@@ -19,9 +19,11 @@ public:
   }
 };
 
-CSCodes::CSCodes(void) {}
+CSCodes::CSCodes(void) {
+}
 
-CSCodes::~CSCodes(void) {}
+CSCodes::~CSCodes(void) {
+}
 
 class CApBuff {
 public:
@@ -40,9 +42,11 @@ public:
   void Copy(CApBuff &obj);
 };
 
-CApBuff::CApBuff(void) {}
+CApBuff::CApBuff(void) {
+}
 
-CApBuff::~CApBuff(void) {}
+CApBuff::~CApBuff(void) {
+}
 
 void CApBuff::Copy(CApBuff &obj) {
 
@@ -121,9 +125,11 @@ public:
                        int i1, int &b[]);
 };
 
-CApServ::CApServ(void) {}
+CApServ::CApServ(void) {
+}
 
-CApServ::~CApServ(void) {}
+CApServ::~CApServ(void) {
+}
 
 static void CApServ::TaskGenInt1D(const double a, const double b, const int n,
                                   double &x[], double &y[]) {
@@ -910,9 +916,11 @@ public:
   static void TagHeapPopI(double &a[], int &b[], int &n);
 };
 
-CTSort::CTSort(void) {}
+CTSort::CTSort(void) {
+}
 
-CTSort::~CTSort(void) {}
+CTSort::~CTSort(void) {
+}
 
 static void CTSort::TagSort(double &a[], const int n, int &p1[], int &p2[]) {
 
@@ -1612,9 +1620,11 @@ public:
   static void RankX(double &x[], const int n, CApBuff &buf);
 };
 
-CBasicStatOps::CBasicStatOps(void) {}
+CBasicStatOps::CBasicStatOps(void) {
+}
 
-CBasicStatOps::~CBasicStatOps(void) {}
+CBasicStatOps::~CBasicStatOps(void) {
+}
 
 static void CBasicStatOps::RankX(double &x[], const int n, CApBuff &buf) {
 
@@ -1781,9 +1791,11 @@ public:
                            al_complex &beta, CMatrixComplex &c, int ic, int jc);
 };
 
-CAblasF::CAblasF(void) {}
+CAblasF::CAblasF(void) {
+}
 
-CAblasF::~CAblasF(void) {}
+CAblasF::~CAblasF(void) {
+}
 
 static bool CAblasF::CMatrixRank1F(const int m, const int n, CMatrixComplex &a,
                                    int ia, int ja, al_complex &u[], int iu,
@@ -1922,9 +1934,11 @@ public:
       const int cj1, const int cj2, const double beta, double &work[]);
 };
 
-CBlas::CBlas(void) {}
+CBlas::CBlas(void) {
+}
 
-CBlas::~CBlas(void) {}
+CBlas::~CBlas(void) {
+}
 
 static double CBlas::VectorNorm2(double &x[], const int i1, const int i2) {
 
@@ -2396,9 +2410,11 @@ public:
                                    al_complex &alpha);
 };
 
-CHblas::CHblas(void) {}
+CHblas::CHblas(void) {
+}
 
-CHblas::~CHblas(void) {}
+CHblas::~CHblas(void) {
+}
 
 static void CHblas::HermitianMatrixVectorMultiply(
     CMatrixComplex &a, const bool isupper, const int i1, const int i2,
@@ -2540,9 +2556,11 @@ public:
                                           const int n2, double &work[]);
 };
 
-CReflections::CReflections(void) {}
+CReflections::CReflections(void) {
+}
 
-CReflections::~CReflections(void) {}
+CReflections::~CReflections(void) {
+}
 
 static void CReflections::GenerateReflection(double &x[], const int n,
                                              double &tau) {
@@ -2693,9 +2711,11 @@ public:
       const int m2, const int n1, const int n2, al_complex &work[]);
 };
 
-CComplexReflections::CComplexReflections(void) {}
+CComplexReflections::CComplexReflections(void) {
+}
 
-CComplexReflections::~CComplexReflections(void) {}
+CComplexReflections::~CComplexReflections(void) {
+}
 
 static void CComplexReflections::ComplexGenerateReflection(al_complex &x[],
                                                            const int n,
@@ -2868,9 +2888,11 @@ public:
                                    double &t[], const double alpha);
 };
 
-CSblas::CSblas(void) {}
+CSblas::CSblas(void) {
+}
 
-CSblas::~CSblas(void) {}
+CSblas::~CSblas(void) {
+}
 
 static void CSblas::SymmetricMatrixVectorMultiply(
     const CMatrixDouble &a, const bool isupper, const int i1, const int i2,
@@ -3018,9 +3040,11 @@ public:
                                double &sn, double &r);
 };
 
-CRotations::CRotations(void) {}
+CRotations::CRotations(void) {
+}
 
-CRotations::~CRotations(void) {}
+CRotations::~CRotations(void) {
+}
 
 static void CRotations::ApplyRotationsFromTheLeft(
     const bool isforward, const int m1, const int m2, const int n1,
@@ -3269,9 +3293,11 @@ public:
                                          CMatrixDouble &z, int &info);
 };
 
-CHsSchur::CHsSchur(void) {}
+CHsSchur::CHsSchur(void) {
+}
 
-CHsSchur::~CHsSchur(void) {}
+CHsSchur::~CHsSchur(void) {
+}
 
 static bool CHsSchur::UpperHessenbergSchurDecomposition(CMatrixDouble &h,
                                                         const int n,
@@ -4125,9 +4151,11 @@ public:
                                   const bool normin, double &cnorm[]);
 };
 
-CTrLinSolve::CTrLinSolve(void) {}
+CTrLinSolve::CTrLinSolve(void) {
+}
 
-CTrLinSolve::~CTrLinSolve(void) {}
+CTrLinSolve::~CTrLinSolve(void) {
+}
 
 static void CTrLinSolve::RMatrixTrSafeSolve(CMatrixDouble &a, const int n,
                                             double &x[], double &s,
@@ -4732,9 +4760,11 @@ public:
                                        const double maxgrowth);
 };
 
-CSafeSolve::CSafeSolve(void) {}
+CSafeSolve::CSafeSolve(void) {
+}
 
-CSafeSolve::~CSafeSolve(void) {}
+CSafeSolve::~CSafeSolve(void) {
+}
 
 static bool CSafeSolve::RMatrixScaledTrSafeSolve(
     CMatrixDouble &a, const double sa, const int n, double &x[],
@@ -5183,9 +5213,11 @@ public:
                     double &temp[], al_complex &r, double &rerr);
 };
 
-CXblas::CXblas(void) {}
+CXblas::CXblas(void) {
+}
 
-CXblas::~CXblas(void) {}
+CXblas::~CXblas(void) {
+}
 
 static void CXblas::XDot(double &a[], double &b[], const int n, double &temp[],
                          double &r, double &rerr) {
@@ -5422,9 +5454,11 @@ public:
   void Copy(CLinMinState &obj);
 };
 
-CLinMinState::CLinMinState(void) {}
+CLinMinState::CLinMinState(void) {
+}
 
-CLinMinState::~CLinMinState(void) {}
+CLinMinState::~CLinMinState(void) {
+}
 
 void CLinMinState::Copy(CLinMinState &obj) {
 
@@ -5475,9 +5509,11 @@ public:
   ~CArmijoState(void);
 };
 
-CArmijoState::CArmijoState(void) {}
+CArmijoState::CArmijoState(void) {
+}
 
-CArmijoState::~CArmijoState(void) {}
+CArmijoState::~CArmijoState(void) {
+}
 
 class CLinMin {
 private:
@@ -5520,9 +5556,11 @@ const double CLinMin::m_stpmin = 1.0E-50;
 const double CLinMin::m_defstpmax = 1.0E+50;
 const double CLinMin::m_armijofactor = 1.3;
 
-CLinMin::CLinMin(void) {}
+CLinMin::CLinMin(void) {
+}
 
-CLinMin::~CLinMin(void) {}
+CLinMin::~CLinMin(void) {
+}
 
 static void CLinMin::LinMinNormalized(double &d[], double &stp, const int n) {
 
@@ -6160,9 +6198,11 @@ public:
                            const double threshold);
 };
 
-COptServ::COptServ(void) {}
+COptServ::COptServ(void) {
+}
 
-COptServ::~COptServ(void) {}
+COptServ::~COptServ(void) {
+}
 
 static void COptServ::TrimPrepare(const double f, double &threshold) {
 
@@ -6192,9 +6232,11 @@ public:
   ~CFtPlan(void);
 };
 
-CFtPlan::CFtPlan(void) {}
+CFtPlan::CFtPlan(void) {
+}
 
-CFtPlan::~CFtPlan(void) {}
+CFtPlan::~CFtPlan(void) {
+}
 
 class CFtBase {
 private:
@@ -6258,9 +6300,11 @@ public:
   static double FtBaseGetFlopEstimate(const int n);
 };
 
-CFtBase::CFtBase(void) {}
+CFtBase::CFtBase(void) {
+}
 
-CFtBase::~CFtBase(void) {}
+CFtBase::~CFtBase(void) {
+}
 
 const int CFtBase::m_ftbaseplanentrysize = 8;
 const int CFtBase::m_ftbasecffttask = 0;
@@ -7559,9 +7603,11 @@ public:
   static double NUCos1m(const double x);
 };
 
-CNearUnitYUnit::CNearUnitYUnit(void) {}
+CNearUnitYUnit::CNearUnitYUnit(void) {
+}
 
-CNearUnitYUnit::~CNearUnitYUnit(void) {}
+CNearUnitYUnit::~CNearUnitYUnit(void) {
+}
 
 static double CNearUnitYUnit::NULog1p(const double x) {
 

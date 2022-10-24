@@ -41,9 +41,11 @@ public:
 CSignalITF::CSignalITF(void)
     : m_good_minute_of_hour(-1), m_bad_minutes_of_hour(0),
       m_good_hour_of_day(-1), m_bad_hours_of_day(0), m_good_day_of_week(-1),
-      m_bad_days_of_week(0) {}
+      m_bad_days_of_week(0) {
+}
 
-CSignalITF::~CSignalITF(void) {}
+CSignalITF::~CSignalITF(void) {
+}
 
 double CSignalITF::Direction(void) {
   MqlDateTime s_time;

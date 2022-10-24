@@ -87,9 +87,11 @@ public:
 
 bool CAp::exception_happened = false;
 
-CAp::CAp(void) {}
+CAp::CAp(void) {
+}
 
-CAp::~CAp(void) {}
+CAp::~CAp(void) {
+}
 
 static int CAp::Len(const int &a[]) {
   return (ArraySize(a));
@@ -668,9 +670,11 @@ public:
   ~CHighQualityRandState(void);
 };
 
-CHighQualityRandState::CHighQualityRandState(void) {}
+CHighQualityRandState::CHighQualityRandState(void) {
+}
 
-CHighQualityRandState::~CHighQualityRandState(void) {}
+CHighQualityRandState::~CHighQualityRandState(void) {
+}
 
 class CHighQualityRandStateShell {
 private:
@@ -684,7 +688,8 @@ public:
   CHighQualityRandState *GetInnerObj(void);
 };
 
-CHighQualityRandStateShell::CHighQualityRandStateShell(void) {}
+CHighQualityRandStateShell::CHighQualityRandStateShell(void) {
+}
 
 CHighQualityRandStateShell::CHighQualityRandStateShell(
     CHighQualityRandState &obj) {
@@ -695,7 +700,8 @@ CHighQualityRandStateShell::CHighQualityRandStateShell(
   m_innerobj.m_magicv = obj.m_magicv;
 }
 
-CHighQualityRandStateShell::~CHighQualityRandStateShell(void) {}
+CHighQualityRandStateShell::~CHighQualityRandStateShell(void) {
+}
 
 CHighQualityRandState *CHighQualityRandStateShell::GetInnerObj(void) {
   return (GetPointer(m_innerobj));
@@ -732,9 +738,11 @@ const int CHighQualityRand::m_HQRndM1 = 2147483563;
 const int CHighQualityRand::m_HQRndM2 = 2147483399;
 const int CHighQualityRand::m_HQRndMagic = 1634357784;
 
-CHighQualityRand::CHighQualityRand(void) {}
+CHighQualityRand::CHighQualityRand(void) {
+}
 
-CHighQualityRand::~CHighQualityRand(void) {}
+CHighQualityRand::~CHighQualityRand(void) {
+}
 
 static void CHighQualityRand::HQRndRandomize(CHighQualityRandState &state) {
 
@@ -906,9 +914,11 @@ bool CMath::m_first_call = true;
 double CMath::m_last = 0.0;
 CHighQualityRandState CMath::m_state;
 
-CMath::CMath(void) {}
+CMath::CMath(void) {
+}
 
-CMath::~CMath(void) {}
+CMath::~CMath(void) {
+}
 
 static bool CMath::IsFinite(const double d) {
 
@@ -1090,9 +1100,11 @@ const int CSerializer::m_ser_entries_per_row = 5;
 const int CSerializer::m_ser_entry_length = 11;
 
 CSerializer::CSerializer(void)
-    : m_mode(DEFAULT), m_entries_needed(0), m_bytes_asked(0) {}
+    : m_mode(DEFAULT), m_entries_needed(0), m_bytes_asked(0) {
+}
 
-CSerializer::~CSerializer(void) {}
+CSerializer::~CSerializer(void) {
+}
 
 void CSerializer::Alloc_Start(void) {
 
@@ -1241,7 +1253,8 @@ double CSerializer::Unserialize_Double(void) {
   return (Str2Double(m_in_str, m_bytes_read));
 }
 
-void CSerializer::Stop(void) {}
+void CSerializer::Stop(void) {
+}
 
 string CSerializer::Get_String(void) {
 

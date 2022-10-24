@@ -3,6 +3,17 @@
 
 #include "ICollection.mqh"
 
-template <typename T> interface IList;
+template <typename T> class IList : public ICollection<T> {
+
+  bool TryGetValue(const int index, T &value);
+  bool TrySetValue(const int index, T value);
+
+  bool Insert(const int index, T item);
+
+  int IndexOf(T item);
+  int LastIndexOf(T item);
+
+  bool RemoveAt(const int index);
+};
 
 #endif

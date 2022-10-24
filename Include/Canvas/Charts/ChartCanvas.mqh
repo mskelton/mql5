@@ -94,31 +94,31 @@ public:
   virtual bool Create(const string name, const int width, const int height,
                       ENUM_COLOR_FORMAT clrfmt = COLOR_FORMAT_XRGB_NOALPHA);
 
-  uint ColorBackground(void) const;
+  uint ColorBackground(void) const ;
   void ColorBackground(const uint value);
-  uint ColorBorder(void) const;
+  uint ColorBorder(void) const ;
   void ColorBorder(const uint value);
-  uint ColorText(void) const;
+  uint ColorText(void) const ;
   void ColorText(const uint value);
-  uint ColorGrid(void) const;
-  void ColorGrid(const uint value);
+  uint ColorGrid(void) const ;
+  void ColorGrid(const uint value) ;
 
-  uint MaxData(void) const;
+  uint MaxData(void) const ;
   void MaxData(const uint value);
-  uint MaxDescrLen(void) const;
+  uint MaxDescrLen(void) const ;
   void MaxDescrLen(const uint value);
 
   void AllowedShowFlags(const uint flags);
-  uint ShowFlags(void) const;
+  uint ShowFlags(void) const ;
   void ShowFlags(const uint flags);
-  bool IsShowLegend(void) const;
-  bool IsShowScaleLeft(void) const;
-  bool IsShowScaleRight(void) const;
-  bool IsShowScaleTop(void) const;
-  bool IsShowScaleBottom(void) const;
-  bool IsShowGrid(void) const;
-  bool IsShowDescriptors(void) const;
-  bool IsShowPercent(void) const;
+  bool IsShowLegend(void) const ;
+  bool IsShowScaleLeft(void) const ;
+  bool IsShowScaleRight(void) const ;
+  bool IsShowScaleTop(void) const ;
+  bool IsShowScaleBottom(void) const ;
+  bool IsShowGrid(void) const ;
+  bool IsShowDescriptors(void) const ;
+  bool IsShowPercent(void) const ;
   void ShowLegend(const bool flag = true);
   void ShowScaleLeft(const bool flag = true);
   void ShowScaleRight(const bool flag = true);
@@ -131,18 +131,18 @@ public:
   void LegendAlignment(const ENUM_ALIGNMENT value);
   void Accumulative(const bool flag = true);
 
-  double VScaleMin(void) const;
+  double VScaleMin(void) const ;
   void VScaleMin(const double value);
-  double VScaleMax(void) const;
+  double VScaleMax(void) const ;
   void VScaleMax(const double value);
-  uint NumGrid(void) const;
+  uint NumGrid(void) const ;
   void NumGrid(const uint value);
   void VScaleParams(const double max, const double min, const uint grid);
 
-  int DataOffset(void) const;
+  int DataOffset(void) const ;
   void DataOffset(const int value);
 
-  uint DataTotal(void) const;
+  uint DataTotal(void) const ;
   bool DescriptorUpdate(const uint pos, const string descr);
   bool ColorUpdate(const uint pos, const uint clr);
 
@@ -160,9 +160,51 @@ protected:
   virtual int DrawScaleTop(const bool draw = true);
   virtual int DrawScaleBottom(const bool draw = true);
   virtual void DrawGrid(void);
-  virtual void DrawDescriptors(void);
+  virtual void DrawDescriptors(void) ;
   virtual void DrawChart(void);
-  virtual void DrawData(const uint idx = 0);
+  virtual void DrawData(const uint idx = 0) ;
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #endif

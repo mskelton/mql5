@@ -63,7 +63,8 @@ CConditionExpression::CConditionExpression(CArrayObj *expressions,
   m_condition = condition;
 }
 
-CConditionExpression::~CConditionExpression(void) {}
+CConditionExpression::~CConditionExpression(void) {
+}
 
 string CConditionExpression::Text(void) {
   string sb;
@@ -97,7 +98,8 @@ CKeywordLexem::CKeywordLexem(const string name) {
   m_name = name;
 }
 
-CKeywordLexem::~CKeywordLexem(void) {}
+CKeywordLexem::~CKeywordLexem(void) {
+}
 
 class CVarLexem : public CLexem {
 private:
@@ -136,7 +138,8 @@ CVarLexem::CVarLexem(INamedVariable *var, bool in) {
   m_input = in;
 }
 
-CVarLexem::~CVarLexem(void) {}
+CVarLexem::~CVarLexem(void) {
+}
 
 class IAltLexem : public CLexem {
 public:
@@ -415,9 +418,8 @@ static CArrayObj *CRuleParser::ParseLexems(const string rule, CList *lexems) {
   return (expressions);
 }
 
-static CArrayObj *
-CRuleParser::ExtractSingleCondidtions(CArrayObj *conditionExpression, CList *in,
-                                      CList *lexems) {
+static CArrayObj *CRuleParser::ExtractSingleCondidtions(
+    CArrayObj *conditionExpression, CList *in, CList *lexems) {
   CArrayObj *copyExpressions = conditionExpression;
   CArrayObj *expressions = new CArrayObj;
   int index = 0;
@@ -759,9 +761,8 @@ static ICondition *CRuleParser::ParseConditionsRecurse(CArrayObj *expressions,
   }
 }
 
-static CSingleCondition *
-CRuleParser::ParseConclusion(CArrayObj *conditionExpression, CList *out,
-                             CList *lexems) {
+static CSingleCondition *CRuleParser::ParseConclusion(
+    CArrayObj *conditionExpression, CList *out, CList *lexems) {
   CArrayObj *copyExpression = conditionExpression;
 
   CDictionary_String_Obj *p_so;

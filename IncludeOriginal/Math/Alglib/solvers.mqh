@@ -17,9 +17,11 @@ public:
   void Copy(CDenseSolverReport &obj);
 };
 
-CDenseSolverReport::CDenseSolverReport(void) {}
+CDenseSolverReport::CDenseSolverReport(void) {
+}
 
-CDenseSolverReport::~CDenseSolverReport(void) {}
+CDenseSolverReport::~CDenseSolverReport(void) {
+}
 
 void CDenseSolverReport::Copy(CDenseSolverReport &obj) {
 
@@ -43,14 +45,16 @@ public:
   CDenseSolverReport *GetInnerObj(void);
 };
 
-CDenseSolverReportShell::CDenseSolverReportShell(void) {}
+CDenseSolverReportShell::CDenseSolverReportShell(void) {
+}
 
 CDenseSolverReportShell::CDenseSolverReportShell(CDenseSolverReport &obj) {
 
   m_innerobj.Copy(obj);
 }
 
-CDenseSolverReportShell::~CDenseSolverReportShell(void) {}
+CDenseSolverReportShell::~CDenseSolverReportShell(void) {
+}
 
 double CDenseSolverReportShell::GetR1(void) {
 
@@ -90,9 +94,11 @@ public:
   void Copy(CDenseSolverLSReport &obj);
 };
 
-CDenseSolverLSReport::CDenseSolverLSReport(void) {}
+CDenseSolverLSReport::CDenseSolverLSReport(void) {
+}
 
-CDenseSolverLSReport::~CDenseSolverLSReport(void) {}
+CDenseSolverLSReport::~CDenseSolverLSReport(void) {
+}
 
 void CDenseSolverLSReport::Copy(CDenseSolverLSReport &obj) {
 
@@ -121,7 +127,8 @@ public:
   CDenseSolverLSReport *GetInnerObj(void);
 };
 
-CDenseSolverLSReportShell::CDenseSolverLSReportShell(void) {}
+CDenseSolverLSReportShell::CDenseSolverLSReportShell(void) {
+}
 
 CDenseSolverLSReportShell::CDenseSolverLSReportShell(
     CDenseSolverLSReport &obj) {
@@ -129,7 +136,8 @@ CDenseSolverLSReportShell::CDenseSolverLSReportShell(
   m_innerobj.Copy(obj);
 }
 
-CDenseSolverLSReportShell::~CDenseSolverLSReportShell(void) {}
+CDenseSolverLSReportShell::~CDenseSolverLSReportShell(void) {
+}
 
 double CDenseSolverLSReportShell::GetR2(void) {
 
@@ -183,12 +191,11 @@ private:
                                      CMatrixComplex &b, const int m, int &info,
                                      CDenseSolverReport &rep,
                                      CMatrixComplex &x);
-  static void
-  HPDMatrixCholeskySolveInternal(CMatrixComplex &cha, const double sqrtscalea,
-                                 const int n, const bool isupper,
-                                 CMatrixComplex &a, const bool havea,
-                                 CMatrixComplex &b, const int m, int &info,
-                                 CDenseSolverReport &rep, CMatrixComplex &x);
+  static void HPDMatrixCholeskySolveInternal(
+      CMatrixComplex &cha, const double sqrtscalea, const int n,
+      const bool isupper, CMatrixComplex &a, const bool havea,
+      CMatrixComplex &b, const int m, int &info, CDenseSolverReport &rep,
+      CMatrixComplex &x);
   static int CDenseSolverRFSMax(const int n, const double r1,
                                 const double rinf);
   static int CDenseSolverRFSMaxV2(const int n, const double r2);
@@ -280,9 +287,11 @@ public:
                              CDenseSolverLSReport &rep, double &x[]);
 };
 
-CDenseSolver::CDenseSolver(void) {}
+CDenseSolver::CDenseSolver(void) {
+}
 
-CDenseSolver::~CDenseSolver(void) {}
+CDenseSolver::~CDenseSolver(void) {
+}
 
 static void CDenseSolver::RMatrixSolve(CMatrixDouble &a, const int n,
                                        double &b[], int &info,
@@ -841,10 +850,9 @@ static void CDenseSolver::SPDMatrixCholeskySolveM(
                                  m, info, rep, x);
 }
 
-static void
-CDenseSolver::SPDMatrixCholeskySolve(CMatrixDouble &cha, const int n,
-                                     const bool isupper, double &b[], int &info,
-                                     CDenseSolverReport &rep, double &x[]) {
+static void CDenseSolver::SPDMatrixCholeskySolve(
+    CMatrixDouble &cha, const int n, const bool isupper, double &b[], int &info,
+    CDenseSolverReport &rep, double &x[]) {
 
   int i_ = 0;
 
@@ -1909,9 +1917,11 @@ public:
   void Copy(CNlEqState &obj);
 };
 
-CNlEqState::CNlEqState(void) {}
+CNlEqState::CNlEqState(void) {
+}
 
-CNlEqState::~CNlEqState(void) {}
+CNlEqState::~CNlEqState(void) {
+}
 
 void CNlEqState::Copy(CNlEqState &obj) {
 
@@ -1963,14 +1973,16 @@ public:
   CNlEqState *GetInnerObj(void);
 };
 
-CNlEqStateShell::CNlEqStateShell(void) {}
+CNlEqStateShell::CNlEqStateShell(void) {
+}
 
 CNlEqStateShell::CNlEqStateShell(CNlEqState &obj) {
 
   m_innerobj.Copy(obj);
 }
 
-CNlEqStateShell::~CNlEqStateShell(void) {}
+CNlEqStateShell::~CNlEqStateShell(void) {
+}
 
 bool CNlEqStateShell::GetNeedF(void) {
 
@@ -2030,9 +2042,11 @@ public:
   void Copy(CNlEqReport &obj);
 };
 
-CNlEqReport::CNlEqReport(void) {}
+CNlEqReport::CNlEqReport(void) {
+}
 
-CNlEqReport::~CNlEqReport(void) {}
+CNlEqReport::~CNlEqReport(void) {
+}
 
 void CNlEqReport::Copy(CNlEqReport &obj) {
 
@@ -2062,14 +2076,16 @@ public:
   CNlEqReport *GetInnerObj(void);
 };
 
-CNlEqReportShell::CNlEqReportShell(void) {}
+CNlEqReportShell::CNlEqReportShell(void) {
+}
 
 CNlEqReportShell::CNlEqReportShell(CNlEqReport &obj) {
 
   m_innerobj.Copy(obj);
 }
 
-CNlEqReportShell::~CNlEqReportShell(void) {}
+CNlEqReportShell::~CNlEqReportShell(void) {
+}
 
 int CNlEqReportShell::GetIterationsCount(void) {
 
@@ -2162,9 +2178,11 @@ public:
 
 const int CNlEq::m_armijomaxfev = 20;
 
-CNlEq::CNlEq(void) {}
+CNlEq::CNlEq(void) {
+}
 
-CNlEq::~CNlEq(void) {}
+CNlEq::~CNlEq(void) {
+}
 
 static void CNlEq::NlEqCreateLM(const int n, const int m, double &x[],
                                 CNlEqState &state) {

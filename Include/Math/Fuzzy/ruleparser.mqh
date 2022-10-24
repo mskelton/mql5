@@ -13,14 +13,14 @@ class IExpression : public CObject {
 public:
   virtual string Text(void) = NULL;
 
-  virtual bool IsTypeOf(EnLexem type);
+  virtual bool IsTypeOf(EnLexem type) ;
 };
 
 class CLexem : public IExpression {
 public:
   virtual string Text(void) = NULL;
 
-  virtual bool IsTypeOf(EnLexem type);
+  virtual bool IsTypeOf(EnLexem type) ;
 };
 
 class CConditionExpression : public IExpression {
@@ -32,16 +32,19 @@ public:
   CConditionExpression(CArrayObj *expressions, CFuzzyCondition *condition);
   ~CConditionExpression(void);
 
-  CArrayObj *Expressions(void);
-  void Expressions(CArrayObj *value);
+  CArrayObj *Expressions(void) ;
+  void Expressions(CArrayObj *value) ;
 
-  CFuzzyCondition *Condition(void);
-  void Condition(CFuzzyCondition *value);
+  CFuzzyCondition *Condition(void) ;
+  void Condition(CFuzzyCondition *value) ;
 
   string Text(void);
 
-  virtual bool IsTypeOf(EnLexem type);
+  virtual bool IsTypeOf(EnLexem type) ;
 };
+
+
+
 
 class CKeywordLexem : public CLexem {
 private:
@@ -51,10 +54,12 @@ public:
   CKeywordLexem(const string name);
   ~CKeywordLexem(void);
 
-  string Text(void);
+  string Text(void) ;
 
-  virtual bool IsTypeOf(EnLexem type);
+  virtual bool IsTypeOf(EnLexem type) ;
 };
+
+
 
 class CVarLexem : public CLexem {
 private:
@@ -65,23 +70,25 @@ public:
   CVarLexem(INamedVariable *var, bool in);
   ~CVarLexem(void);
 
-  INamedVariable *Var(void);
-  void Var(INamedVariable *var);
+  INamedVariable *Var(void) ;
+  void Var(INamedVariable *var) ;
 
-  string Text(void);
+  string Text(void) ;
 
-  bool Input(void);
-  void Input(bool value);
+  bool Input(void) ;
+  void Input(bool value) ;
 
-  virtual bool IsTypeOf(EnLexem type);
+  virtual bool IsTypeOf(EnLexem type) ;
 };
+
+
 
 class IAltLexem : public CLexem {
 public:
   virtual IAltLexem *Alternative(void) = NULL;
   virtual void Alternative(IAltLexem *value) = NULL;
 
-  virtual bool IsTypeOf(EnLexem type);
+  virtual bool IsTypeOf(EnLexem type) ;
 };
 
 class CTermLexem : public IAltLexem {
@@ -94,16 +101,18 @@ public:
   CTermLexem(INamedValue *term, bool in);
   ~CTermLexem(void);
 
-  INamedValue *Term(void);
-  void Term(INamedValue *value);
+  INamedValue *Term(void) ;
+  void Term(INamedValue *value) ;
 
-  string Text(void);
+  string Text(void) ;
 
-  IAltLexem *Alternative(void);
-  void Alternative(IAltLexem *value);
+  IAltLexem *Alternative(void) ;
+  void Alternative(IAltLexem *value) ;
 
-  virtual bool IsTypeOf(EnLexem type);
+  virtual bool IsTypeOf(EnLexem type) ;
 };
+
+
 
 class CRuleParser : public INamedVariable {
 public:
@@ -124,5 +133,16 @@ private:
   static CSingleCondition *ParseConclusion(CArrayObj *conditionExpression,
                                            CList *out, CList *lexems);
 };
+
+
+
+
+
+static CArrayObj *
+
+
+
+
+static CSingleCondition *
 
 #endif

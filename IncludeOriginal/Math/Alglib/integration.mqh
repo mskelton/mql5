@@ -31,9 +31,11 @@ public:
                                      double &w[]);
 };
 
-CGaussQ::CGaussQ(void) {}
+CGaussQ::CGaussQ(void) {
+}
 
-CGaussQ::~CGaussQ(void) {}
+CGaussQ::~CGaussQ(void) {
+}
 
 static void CGaussQ::GQGenerateRec(double &alpha[], double &beta[],
                                    const double mu0, const int n, int &info,
@@ -476,9 +478,11 @@ public:
                              double &wgauss[], double &eps);
 };
 
-CGaussKronrodQ::CGaussKronrodQ(void) {}
+CGaussKronrodQ::CGaussKronrodQ(void) {
+}
 
-CGaussKronrodQ::~CGaussKronrodQ(void) {}
+CGaussKronrodQ::~CGaussKronrodQ(void) {
+}
 
 static void CGaussKronrodQ::GKQGenerateRec(double &calpha[], double &cbeta[],
                                            const double mu0, int n, int &info,
@@ -1166,9 +1170,11 @@ public:
   void Copy(CAutoGKReport &obj);
 };
 
-CAutoGKReport::CAutoGKReport(void) {}
+CAutoGKReport::CAutoGKReport(void) {
+}
 
-CAutoGKReport::~CAutoGKReport(void) {}
+CAutoGKReport::~CAutoGKReport(void) {
+}
 
 void CAutoGKReport::Copy(CAutoGKReport &obj) {
 
@@ -1195,14 +1201,16 @@ public:
   CAutoGKReport *GetInnerObj(void);
 };
 
-CAutoGKReportShell::CAutoGKReportShell(void) {}
+CAutoGKReportShell::CAutoGKReportShell(void) {
+}
 
 CAutoGKReportShell::CAutoGKReportShell(CAutoGKReport &obj) {
 
   m_innerobj.Copy(obj);
 }
 
-CAutoGKReportShell::~CAutoGKReportShell(void) {}
+CAutoGKReportShell::~CAutoGKReportShell(void) {
+}
 
 int CAutoGKReportShell::GetNFev(void) {
 
@@ -1270,9 +1278,11 @@ public:
   void Copy(CAutoGKInternalState &obj);
 };
 
-CAutoGKInternalState::CAutoGKInternalState(void) {}
+CAutoGKInternalState::CAutoGKInternalState(void) {
+}
 
-CAutoGKInternalState::~CAutoGKInternalState(void) {}
+CAutoGKInternalState::~CAutoGKInternalState(void) {
+}
 
 void CAutoGKInternalState::Copy(CAutoGKInternalState &obj) {
 
@@ -1326,9 +1336,11 @@ public:
   void Copy(CAutoGKState &obj);
 };
 
-CAutoGKState::CAutoGKState(void) {}
+CAutoGKState::CAutoGKState(void) {
+}
 
-CAutoGKState::~CAutoGKState(void) {}
+CAutoGKState::~CAutoGKState(void) {
+}
 
 void CAutoGKState::Copy(CAutoGKState &obj) {
 
@@ -1373,13 +1385,15 @@ public:
   CAutoGKState *GetInnerObj(void);
 };
 
-CAutoGKStateShell::CAutoGKStateShell(void) {}
+CAutoGKStateShell::CAutoGKStateShell(void) {
+}
 
 CAutoGKStateShell::CAutoGKStateShell(CAutoGKState &obj) {
   m_innerobj.Copy(obj);
 }
 
-CAutoGKStateShell::~CAutoGKStateShell(void) {}
+CAutoGKStateShell::~CAutoGKStateShell(void) {
+}
 
 bool CAutoGKStateShell::GetNeedF(void) {
 
@@ -1523,9 +1537,11 @@ public:
 
 const int CAutoGK::m_maxsubintervals = 10000;
 
-CAutoGK::CAutoGK(void) {}
+CAutoGK::CAutoGK(void) {
+}
 
-CAutoGK::~CAutoGK(void) {}
+CAutoGK::~CAutoGK(void) {
+}
 
 static void CAutoGK::AutoGKSmooth(const double a, const double b,
                                   CAutoGKState &state) {

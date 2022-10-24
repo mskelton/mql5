@@ -63,9 +63,11 @@ EVENT_MAP_END(CWndClient)
 
 CCheckGroup::CCheckGroup(void)
     : m_offset(0), m_total_view(0), m_item_height(CONTROLS_LIST_ITEM_HEIGHT),
-      m_current(CONTROLS_INVALID_INDEX), m_value(0) {}
+      m_current(CONTROLS_INVALID_INDEX), m_value(0) {
+}
 
-CCheckGroup::~CCheckGroup(void) {}
+CCheckGroup::~CCheckGroup(void) {
+}
 
 bool CCheckGroup::Create(const long chart, const string name, const int subwin,
                          const int x1, const int y1, const int x2,

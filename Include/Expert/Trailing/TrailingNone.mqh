@@ -9,4 +9,6 @@ public:
   ~CTrailingNone(void);
 };
 
+
+
 #endif

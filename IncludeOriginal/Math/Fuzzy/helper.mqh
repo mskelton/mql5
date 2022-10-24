@@ -13,7 +13,8 @@ public:
   virtual string Name(void) {
     return ("");
   }
-  virtual void Name(const string name) {}
+  virtual void Name(const string name) {
+  }
 };
 
 class INamedVariable : public INamedValue {

@@ -68,7 +68,8 @@ CDateDropList::CDateDropList(void) : m_mode(DATE_MODE_MON) {
   ZeroMemory(m_value);
 }
 
-CDateDropList::~CDateDropList(void) {}
+CDateDropList::~CDateDropList(void) {
+}
 
 bool CDateDropList::Create(const long chart, const string name,
                            const int subwin, const int x1, const int y1,

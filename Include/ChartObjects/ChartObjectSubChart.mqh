@@ -11,7 +11,7 @@ public:
   bool Create(long chart_id, const string name, const int window, const int X,
               const int Y, const int sizeX, const int sizeY);
 
-  virtual int Type(void) const;
+  virtual int Type(void) const ;
 
   int X_Distance(void) const;
   bool X_Distance(const int X) const;
@@ -34,13 +34,38 @@ public:
   bool PriceScale(void) const;
   bool PriceScale(const bool scale) const;
 
-  datetime Time(const int point) const;
-  bool Time(const int point, const datetime time) const;
-  double Price(const int point) const;
-  bool Price(const int point, const double price) const;
+  datetime Time(const int point) const ;
+  bool Time(const int point, const datetime time) const ;
+  double Price(const int point) const ;
+  bool Price(const int point, const double price) const ;
 
   virtual bool Save(const int file_handle);
   virtual bool Load(const int file_handle);
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #endif

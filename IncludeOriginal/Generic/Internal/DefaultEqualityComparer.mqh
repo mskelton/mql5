@@ -8,8 +8,10 @@
 template <typename T>
 class CDefaultEqualityComparer : public IEqualityComparer<T> {
 public:
-  CDefaultEqualityComparer(void) {}
-  ~CDefaultEqualityComparer(void) {}
+  CDefaultEqualityComparer(void) {
+  }
+  ~CDefaultEqualityComparer(void) {
+  }
 
   bool Equals(T x, T y) {
     return ::Equals(x, y);

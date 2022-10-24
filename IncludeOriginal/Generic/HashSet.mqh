@@ -11,7 +11,8 @@ public:
   int hash_code;
   T value;
   int next;
-  Slot(void) : hash_code(0), value((T)NULL), next(0) {}
+  Slot(void) : hash_code(0), value((T)NULL), next(0) {
+  }
 };
 
 template <typename T> class CHashSet : public ISet<T> {

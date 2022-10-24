@@ -3,6 +3,6 @@
 
 #include <Generic/Interfaces/IEqualityComparable.mqh>
 
-template <typename T> bool Equals(T x, T y);
+template <typename T> bool Equals(T x, T y) ;
 
 #endif

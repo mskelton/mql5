@@ -38,6 +38,9 @@ public:
   void Copy(CKDTree &obj);
 };
 
+
+
+
 class CKDTreeShell {
 private:
   CKDTree m_innerobj;
@@ -49,6 +52,10 @@ public:
 
   CKDTree *GetInnerObj(void);
 };
+
+
+
+
 
 class CNearestNeighbor {
 public:
@@ -97,5 +104,30 @@ private:
   static void KDTreeAllocTemporaries(CKDTree &kdt, const int n, const int nx,
                                      const int ny);
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #endif

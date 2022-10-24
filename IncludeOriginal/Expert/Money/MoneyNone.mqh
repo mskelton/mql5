@@ -14,9 +14,11 @@ public:
   virtual double CheckOpenShort(double price, double sl);
 };
 
-void CMoneyNone::CMoneyNone(void) {}
+void CMoneyNone::CMoneyNone(void) {
+}
 
-void CMoneyNone::~CMoneyNone(void) {}
+void CMoneyNone::~CMoneyNone(void) {
+}
 
 bool CMoneyNone::ValidationSettings(void) {
   Percent(100.0);

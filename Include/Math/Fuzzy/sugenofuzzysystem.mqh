@@ -17,9 +17,9 @@ public:
   CSugenoFuzzySystem(void);
   ~CSugenoFuzzySystem(void);
 
-  CList *Output();
+  CList *Output() ;
 
-  CList *Rules();
+  CList *Rules() ;
 
   CSugenoVariable *OutputByName(const string name);
 
@@ -36,5 +36,18 @@ public:
   CList *CombineResult(CList *ruleWeights, CList *functionResults);
   CList *Calculate(CList *inputValues);
 };
+
+
+
+
+CLinearSugenoFunction *
+
+CLinearSugenoFunction *
+
+
+
+
+
+
 
 #endif

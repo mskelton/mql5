@@ -21,6 +21,14 @@ public:
   void operator=(const CRowDouble &r);
 };
 
+
+
+
+
+
+
+
+
 class CRowInt {
 private:
   int m_array;
@@ -37,6 +45,14 @@ public:
   void operator=(const int array[]);
   void operator=(const CRowInt &r);
 };
+
+
+
+
+
+
+
+
 
 class CRowComplex {
 private:
@@ -58,6 +74,17 @@ public:
   void operator=(const CRowComplex &r);
 };
 
+
+
+
+
+
+
+
+
+
+
+
 class CMatrixDouble {
 private:
   CRowDouble m_rows;
@@ -74,6 +101,14 @@ public:
   CRowDouble *operator[](const int i) const;
   void operator=(const CMatrixDouble &m);
 };
+
+
+
+
+
+
+
+
 
 class CMatrixInt {
 private:
@@ -92,6 +127,14 @@ public:
   void operator=(const CMatrixInt &m);
 };
 
+
+
+
+
+
+
+
+
 class CMatrixComplex {
 private:
   CRowComplex m_rows;
@@ -108,5 +151,13 @@ public:
   CRowComplex *operator[](const int i) const;
   void operator=(const CMatrixComplex &m);
 };
+
+
+
+
+
+
+
+
 
 #endif

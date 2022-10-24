@@ -34,7 +34,8 @@ public:
   T Pop(void);
 };
 
-template <typename T> CStack::CStack(void) : m_default_capacity(4), m_size(0) {}
+template <typename T> CStack::CStack(void) : m_default_capacity(4), m_size(0) {
+}
 
 template <typename T>
 CStack::CStack(const int capacity) : m_default_capacity(4), m_size(0) {
@@ -53,7 +54,8 @@ CStack::CStack(ICollection<T> *collection) : m_default_capacity(4), m_size(0) {
     m_size = collection.CopyTo(m_array, 0);
 }
 
-template <typename T> CStack::~CStack(void) {}
+template <typename T> CStack::~CStack(void) {
+}
 
 template <typename T> bool CStack::Add(T value) {
   return Push(value);

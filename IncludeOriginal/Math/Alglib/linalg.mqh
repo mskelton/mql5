@@ -136,9 +136,11 @@ public:
                               CMatrixComplex &x, const int i2, const int j2);
 };
 
-CAblas::CAblas(void) {}
+CAblas::CAblas(void) {
+}
 
-CAblas::~CAblas(void) {}
+CAblas::~CAblas(void) {
+}
 
 static void CAblas::RMatrixSyrk(const int n, const int k, const double alpha,
                                 const CMatrixDouble &a, const int ia,
@@ -2187,9 +2189,11 @@ public:
                                CMatrixComplex &q);
 };
 
-COrtFac::COrtFac(void) {}
+COrtFac::COrtFac(void) {
+}
 
-COrtFac::~COrtFac(void) {}
+COrtFac::~COrtFac(void) {
+}
 
 static void COrtFac::RMatrixQR(CMatrixDouble &a, const int m, const int n,
                                double &tau[]) {
@@ -4224,9 +4228,11 @@ public:
                          CMatrixDouble &vr);
 };
 
-CEigenVDetect::CEigenVDetect(void) {}
+CEigenVDetect::CEigenVDetect(void) {
+}
 
-CEigenVDetect::~CEigenVDetect(void) {}
+CEigenVDetect::~CEigenVDetect(void) {
+}
 
 static bool CEigenVDetect::SMatrixEVD(CMatrixDouble &ca, const int n,
                                       const int zneeded, const bool isupper,
@@ -8574,9 +8580,11 @@ public:
   static void HMatrixRndMultiply(CMatrixComplex &a, const int n);
 };
 
-CMatGen::CMatGen(void) {}
+CMatGen::CMatGen(void) {
+}
 
-CMatGen::~CMatGen(void) {}
+CMatGen::~CMatGen(void) {
+}
 
 static void CMatGen::RMatrixRndOrthogonal(const int n, CMatrixDouble &a) {
 
@@ -9259,9 +9267,11 @@ public:
                                    double &tmp[]);
 };
 
-CTrFac::CTrFac(void) {}
+CTrFac::CTrFac(void) {
+}
 
-CTrFac::~CTrFac(void) {}
+CTrFac::~CTrFac(void) {
+}
 
 static void CTrFac::RMatrixLU(CMatrixDouble &a, const int m, const int n,
                               int &pivots[]) {
@@ -12290,9 +12300,11 @@ public:
   ~CMatInvReport(void);
 };
 
-CMatInvReport::CMatInvReport(void) {}
+CMatInvReport::CMatInvReport(void) {
+}
 
-CMatInvReport::~CMatInvReport(void) {}
+CMatInvReport::~CMatInvReport(void) {
+}
 
 class CMatInvReportShell {
 private:
@@ -12310,14 +12322,16 @@ public:
   CMatInvReport *GetInnerObj(void);
 };
 
-CMatInvReportShell::CMatInvReportShell(void) {}
+CMatInvReportShell::CMatInvReportShell(void) {
+}
 
 CMatInvReportShell::CMatInvReportShell(CMatInvReport &obj) {
   m_innerobj.m_r1 = obj.m_r1;
   m_innerobj.m_rinf = obj.m_rinf;
 }
 
-CMatInvReportShell::~CMatInvReportShell(void) {}
+CMatInvReportShell::~CMatInvReportShell(void) {
+}
 
 double CMatInvReportShell::GetR1(void) {
   return (m_innerobj.m_r1);
@@ -12393,9 +12407,11 @@ public:
                                CMatInvReport &rep);
 };
 
-CMatInv::CMatInv(void) {}
+CMatInv::CMatInv(void) {
+}
 
-CMatInv::~CMatInv(void) {}
+CMatInv::~CMatInv(void) {
+}
 
 static void CMatInv::RMatrixLUInverse(CMatrixDouble &a, int &pivots[],
                                       const int n, int &info,
@@ -13579,9 +13595,11 @@ public:
       CMatrixDouble &c, const int ncc, CMatrixDouble &vt, const int ncvt);
 };
 
-CBdSingValueDecompose::CBdSingValueDecompose(void) {}
+CBdSingValueDecompose::CBdSingValueDecompose(void) {
+}
 
-CBdSingValueDecompose::~CBdSingValueDecompose(void) {}
+CBdSingValueDecompose::~CBdSingValueDecompose(void) {
+}
 
 static bool CBdSingValueDecompose::RMatrixBdSVD(
     double &d[], double &ce[], const int n, const bool isupper,
@@ -14571,9 +14589,11 @@ public:
                          CMatrixDouble &u, CMatrixDouble &vt);
 };
 
-CSingValueDecompose::CSingValueDecompose(void) {}
+CSingValueDecompose::CSingValueDecompose(void) {
+}
 
-CSingValueDecompose::~CSingValueDecompose(void) {}
+CSingValueDecompose::~CSingValueDecompose(void) {
+}
 
 static bool CSingValueDecompose::RMatrixSVD(CMatrixDouble &ca, const int m,
                                             const int n, const int uneeded,
@@ -14855,9 +14875,11 @@ public:
   ~CFblsLinCgState(void);
 };
 
-CFblsLinCgState::CFblsLinCgState(void) {}
+CFblsLinCgState::CFblsLinCgState(void) {
+}
 
-CFblsLinCgState::~CFblsLinCgState(void) {}
+CFblsLinCgState::~CFblsLinCgState(void) {
+}
 
 class CFbls {
 private:
@@ -14886,9 +14908,11 @@ public:
   static bool FblsCGIteration(CFblsLinCgState &state);
 };
 
-CFbls::CFbls(void) {}
+CFbls::CFbls(void) {
+}
 
-CFbls::~CFbls(void) {}
+CFbls::~CFbls(void) {
+}
 
 static void CFbls::FblsCholeskySolve(CMatrixDouble &cha,
                                      const double sqrtscalea, const int n,
@@ -15378,9 +15402,11 @@ public:
   static al_complex CMatrixDet(CMatrixComplex &ca, const int n);
 };
 
-CMatDet::CMatDet(void) {}
+CMatDet::CMatDet(void) {
+}
 
-CMatDet::~CMatDet(void) {}
+CMatDet::~CMatDet(void) {
+}
 
 static double CMatDet::RMatrixLUDet(CMatrixDouble &a, int &pivots[],
                                     const int n) {
@@ -15579,9 +15605,11 @@ public:
                                 CMatrixDouble &r, bool &isupperr);
 };
 
-CSpdGEVD::CSpdGEVD(void) {}
+CSpdGEVD::CSpdGEVD(void) {
+}
 
-CSpdGEVD::~CSpdGEVD(void) {}
+CSpdGEVD::~CSpdGEVD(void) {
+}
 
 static bool CSpdGEVD::SMatrixGEVD(CMatrixDouble &ca, const int n,
                                   const bool isuppera, CMatrixDouble &b,
@@ -15857,9 +15885,11 @@ public:
                                  double &v[]);
 };
 
-CInverseUpdate::CInverseUpdate(void) {}
+CInverseUpdate::CInverseUpdate(void) {
+}
 
-CInverseUpdate::~CInverseUpdate(void) {}
+CInverseUpdate::~CInverseUpdate(void) {
+}
 
 static void CInverseUpdate::RMatrixInvUpdateSimple(CMatrixDouble &inva,
                                                    const int n,
@@ -16017,9 +16047,11 @@ public:
   static bool RMatrixSchur(CMatrixDouble &a, const int n, CMatrixDouble &s);
 };
 
-CSchur::CSchur(void) {}
+CSchur::CSchur(void) {
+}
 
-CSchur::~CSchur(void) {}
+CSchur::~CSchur(void) {
+}
 
 static bool CSchur::RMatrixSchur(CMatrixDouble &a, const int n,
                                  CMatrixDouble &s) {

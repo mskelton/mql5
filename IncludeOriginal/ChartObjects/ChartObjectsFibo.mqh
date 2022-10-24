@@ -17,9 +17,11 @@ public:
   }
 };
 
-CChartObjectFibo::CChartObjectFibo(void) {}
+CChartObjectFibo::CChartObjectFibo(void) {
+}
 
-CChartObjectFibo::~CChartObjectFibo(void) {}
+CChartObjectFibo::~CChartObjectFibo(void) {
+}
 
 bool CChartObjectFibo::Create(long chart_id, const string name,
                               const int window, const datetime time1,
@@ -48,9 +50,11 @@ public:
   }
 };
 
-CChartObjectFiboTimes::CChartObjectFiboTimes(void) {}
+CChartObjectFiboTimes::CChartObjectFiboTimes(void) {
+}
 
-CChartObjectFiboTimes::~CChartObjectFiboTimes(void) {}
+CChartObjectFiboTimes::~CChartObjectFiboTimes(void) {
+}
 
 bool CChartObjectFiboTimes::Create(long chart_id, const string name,
                                    const int window, const datetime time1,
@@ -79,9 +83,11 @@ public:
   }
 };
 
-CChartObjectFiboFan::CChartObjectFiboFan(void) {}
+CChartObjectFiboFan::CChartObjectFiboFan(void) {
+}
 
-CChartObjectFiboFan::~CChartObjectFiboFan(void) {}
+CChartObjectFiboFan::~CChartObjectFiboFan(void) {
+}
 
 bool CChartObjectFiboFan::Create(long chart_id, const string name,
                                  const int window, const datetime time1,
@@ -118,9 +124,11 @@ public:
   virtual bool Load(const int file_handle);
 };
 
-CChartObjectFiboArc::CChartObjectFiboArc(void) {}
+CChartObjectFiboArc::CChartObjectFiboArc(void) {
+}
 
-CChartObjectFiboArc::~CChartObjectFiboArc(void) {}
+CChartObjectFiboArc::~CChartObjectFiboArc(void) {
+}
 
 bool CChartObjectFiboArc::Create(long chart_id, const string name,
                                  const int window, const datetime time1,
@@ -224,9 +232,11 @@ public:
   }
 };
 
-CChartObjectFiboChannel::CChartObjectFiboChannel(void) {}
+CChartObjectFiboChannel::CChartObjectFiboChannel(void) {
+}
 
-CChartObjectFiboChannel::~CChartObjectFiboChannel(void) {}
+CChartObjectFiboChannel::~CChartObjectFiboChannel(void) {
+}
 
 bool CChartObjectFiboChannel::Create(long chart_id, const string name,
                                      const int window, const datetime time1,
@@ -256,9 +266,11 @@ public:
   }
 };
 
-CChartObjectFiboExpansion::CChartObjectFiboExpansion(void) {}
+CChartObjectFiboExpansion::CChartObjectFiboExpansion(void) {
+}
 
-CChartObjectFiboExpansion::~CChartObjectFiboExpansion(void) {}
+CChartObjectFiboExpansion::~CChartObjectFiboExpansion(void) {
+}
 
 bool CChartObjectFiboExpansion::Create(
     long chart_id, const string name, const int window, const datetime time1,

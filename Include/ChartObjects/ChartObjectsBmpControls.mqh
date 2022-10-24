@@ -18,11 +18,22 @@ public:
   bool Create(long chart_id, const string name, const int window,
               const datetime time, const double price);
 
-  virtual int Type(void) const;
+  virtual int Type(void) const ;
 
   virtual bool Save(const int file_handle);
   virtual bool Load(const int file_handle);
 };
+
+
+
+
+
+
+
+
+
+
+
 
 class CChartObjectBmpLabel : public CChartObject {
 public:
@@ -48,16 +59,39 @@ public:
   int Y_Offset(void) const;
   bool Y_Offset(const int Y) const;
 
-  bool Time(const datetime time) const;
-  bool Price(const double price) const;
+  bool Time(const datetime time) const ;
+  bool Price(const double price) const ;
 
   bool Create(long chart_id, const string name, const int window, const int X,
               const int Y);
 
-  virtual int Type(void) const;
+  virtual int Type(void) const ;
 
   virtual bool Save(const int file_handle);
   virtual bool Load(const int file_handle);
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #endif

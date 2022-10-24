@@ -199,7 +199,7 @@
 // #include <Math/Stat/T.mqh>
 // #include <Math/Stat/Uniform.mqh>
 // #include <Math/Stat/Weibull.mqh>
-// #include <MovingAverages.mqh>
+#include <MovingAverages.mqh>
 #include <Object.mqh>
 #include <OpenCL/OpenCL.mqh>
 #include <StdLibErr.mqh>

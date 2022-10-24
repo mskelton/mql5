@@ -11,8 +11,8 @@ public:
   CHistoryOrderInfo(void);
   ~CHistoryOrderInfo(void);
 
-  void Ticket(const ulong ticket);
-  ulong Ticket(void) const;
+  void Ticket(const ulong ticket) ;
+  ulong Ticket(void) const ;
 
   datetime TimeSetup(void) const;
   ulong TimeSetupMsc(void) const;
@@ -57,5 +57,43 @@ public:
 
   bool SelectByIndex(const int index);
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #endif

@@ -27,32 +27,32 @@ public:
   virtual bool OnEvent(const int id, const long &lparam, const double &dparam,
                        const string &sparam);
 
-  int MinPos(void) const;
+  int MinPos(void) const ;
   void MinPos(const int value);
-  int MaxPos(void) const;
+  int MaxPos(void) const ;
   void MaxPos(const int value);
 
-  int CurrPos(void) const;
+  int CurrPos(void) const ;
   bool CurrPos(int value);
 
 protected:
   virtual bool CreateBack(void);
-  virtual bool CreateInc(void);
-  virtual bool CreateDec(void);
-  virtual bool CreateThumb(void);
+  virtual bool CreateInc(void) ;
+  virtual bool CreateDec(void) ;
+  virtual bool CreateThumb(void) ;
 
   virtual bool OnClickInc(void);
   virtual bool OnClickDec(void);
 
   virtual bool OnShow(void);
   virtual bool OnHide(void);
-  virtual bool OnChangePos(void);
+  virtual bool OnChangePos(void) ;
 
-  virtual bool OnThumbDragStart(void);
-  virtual bool OnThumbDragProcess(void);
-  virtual bool OnThumbDragEnd(void);
+  virtual bool OnThumbDragStart(void) ;
+  virtual bool OnThumbDragProcess(void) ;
+  virtual bool OnThumbDragEnd(void) ;
 
-  virtual int CalcPos(const int coord);
+  virtual int CalcPos(const int coord) ;
 };
 
 EVENT_MAP_BEGIN(CScroll)
@@ -62,6 +62,17 @@ ON_EVENT(ON_DRAG_START, m_thumb, OnThumbDragStart)
 ON_EVENT_PTR(ON_DRAG_PROCESS, m_drag_object, OnThumbDragProcess)
 ON_EVENT_PTR(ON_DRAG_END, m_drag_object, OnThumbDragEnd)
 EVENT_MAP_END(CWndContainer)
+
+
+
+
+
+
+
+
+
+
+
 
 class CScrollV : public CScroll {
 public:
@@ -83,6 +94,17 @@ protected:
   virtual int CalcPos(const int coord);
 };
 
+
+
+
+
+
+
+
+
+
+
+
 class CScrollH : public CScroll {
 public:
   CScrollH(void);
@@ -102,5 +124,16 @@ protected:
 
   virtual int CalcPos(const int coord);
 };
+
+
+
+
+
+
+
+
+
+
+
 
 #endif

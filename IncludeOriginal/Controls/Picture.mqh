@@ -35,9 +35,11 @@ protected:
   virtual bool OnChange(void);
 };
 
-CPicture::CPicture(void) : m_border(0), m_bmp_name(NULL) {}
+CPicture::CPicture(void) : m_border(0), m_bmp_name(NULL) {
+}
 
-CPicture::~CPicture(void) {}
+CPicture::~CPicture(void) {
+}
 
 bool CPicture::Create(const long chart, const string name, const int subwin,
                       const int x1, const int y1, const int x2, const int y2) {

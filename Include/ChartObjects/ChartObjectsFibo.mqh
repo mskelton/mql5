@@ -12,8 +12,11 @@ public:
               const datetime time1, const double price1, const datetime time2,
               const double price2);
 
-  virtual int Type(void) const;
+  virtual int Type(void) const ;
 };
+
+
+
 
 class CChartObjectFiboTimes : public CChartObject {
 public:
@@ -24,8 +27,11 @@ public:
               const datetime time1, const double price1, const datetime time2,
               const double price2);
 
-  virtual int Type(void) const;
+  virtual int Type(void) const ;
 };
+
+
+
 
 class CChartObjectFiboFan : public CChartObject {
 public:
@@ -36,8 +42,11 @@ public:
               const datetime time1, const double price1, const datetime time2,
               const double price2);
 
-  virtual int Type(void) const;
+  virtual int Type(void) const ;
 };
+
+
+
 
 class CChartObjectFiboArc : public CChartObject {
 public:
@@ -53,11 +62,20 @@ public:
               const datetime time1, const double price1, const datetime time2,
               const double price2, const double scale);
 
-  virtual int Type(void) const;
+  virtual int Type(void) const ;
 
   virtual bool Save(const int file_handle);
   virtual bool Load(const int file_handle);
 };
+
+
+
+
+
+
+
+
+
 
 class CChartObjectFiboChannel : public CChartObjectTrend {
 public:
@@ -68,8 +86,11 @@ public:
               const datetime time1, const double price1, const datetime time2,
               const double price2, const datetime time3, const double price3);
 
-  virtual int Type(void) const;
+  virtual int Type(void) const ;
 };
+
+
+
 
 class CChartObjectFiboExpansion : public CChartObjectTrend {
 public:
@@ -80,7 +101,10 @@ public:
               const datetime time1, const double price1, const datetime time2,
               const double price2, const datetime time3, const double price3);
 
-  virtual int Type(void) const;
+  virtual int Type(void) const ;
 };
+
+
+
 
 #endif

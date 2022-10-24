@@ -53,9 +53,11 @@ ON_EVENT(ON_CLICK, m_button, OnClickButton)
 ON_EVENT(ON_CLICK, m_label, OnClickLabel)
 EVENT_MAP_END(CWndContainer)
 
-CRadioButton::CRadioButton(void) {}
+CRadioButton::CRadioButton(void) {
+}
 
-CRadioButton::~CRadioButton(void) {}
+CRadioButton::~CRadioButton(void) {
+}
 
 bool CRadioButton::Create(const long chart, const string name, const int subwin,
                           const int x1, const int y1, const int x2,

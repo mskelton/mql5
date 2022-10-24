@@ -72,7 +72,8 @@ CSignalTriX::CSignalTriX(void)
   m_used_series = USE_SERIES_HIGH + USE_SERIES_LOW;
 }
 
-CSignalTriX::~CSignalTriX(void) {}
+CSignalTriX::~CSignalTriX(void) {
+}
 
 bool CSignalTriX::ValidationSettings(void) {
   if (!CExpertSignal::ValidationSettings())

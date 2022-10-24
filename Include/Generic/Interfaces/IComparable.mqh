@@ -3,6 +3,9 @@
 
 #include "IEqualityComparable.mqh"
 
-template <typename T> interface IComparable;
+template <typename T> class IComparable : public IEqualityComparable<T> {
+
+  int Compare(T value);
+};
 
 #endif

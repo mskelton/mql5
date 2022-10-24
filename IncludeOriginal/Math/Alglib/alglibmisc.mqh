@@ -38,9 +38,11 @@ public:
   void Copy(CKDTree &obj);
 };
 
-CKDTree::CKDTree(void) {}
+CKDTree::CKDTree(void) {
+}
 
-CKDTree::~CKDTree(void) {}
+CKDTree::~CKDTree(void) {
+}
 
 void CKDTree::Copy(CKDTree &obj) {
 
@@ -83,14 +85,16 @@ public:
   CKDTree *GetInnerObj(void);
 };
 
-CKDTreeShell::CKDTreeShell(void) {}
+CKDTreeShell::CKDTreeShell(void) {
+}
 
 CKDTreeShell::CKDTreeShell(CKDTree &obj) {
 
   m_innerobj.Copy(obj);
 }
 
-CKDTreeShell::~CKDTreeShell(void) {}
+CKDTreeShell::~CKDTreeShell(void) {
+}
 
 CKDTree *CKDTreeShell::GetInnerObj(void) {
   return (GetPointer(m_innerobj));
@@ -147,9 +151,11 @@ private:
 const int CNearestNeighbor::m_splitnodesize = 6;
 const int CNearestNeighbor::m_kdtreefirstversion = 0;
 
-CNearestNeighbor::CNearestNeighbor(void) {}
+CNearestNeighbor::CNearestNeighbor(void) {
+}
 
-CNearestNeighbor::~CNearestNeighbor(void) {}
+CNearestNeighbor::~CNearestNeighbor(void) {
+}
 
 static void CNearestNeighbor::KDTreeBuild(CMatrixDouble &xy, const int n,
                                           const int nx, const int ny,

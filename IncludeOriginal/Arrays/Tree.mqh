@@ -38,7 +38,8 @@ protected:
   void Balance(CTreeNode *node);
 };
 
-CTree::CTree(void) : m_root_node(NULL) {}
+CTree::CTree(void) : m_root_node(NULL) {
+}
 
 CTree::~CTree(void) {
   Clear();

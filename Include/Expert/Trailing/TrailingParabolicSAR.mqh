@@ -14,8 +14,8 @@ public:
   CTrailingPSAR(void);
   ~CTrailingPSAR(void);
 
-  void Step(double step);
-  void Maximum(double maximum);
+  void Step(double step) ;
+  void Maximum(double maximum) ;
 
   virtual bool InitIndicators(CIndicators *indicators);
 
@@ -24,5 +24,10 @@ public:
   virtual bool CheckTrailingStopShort(CPositionInfo *position, double &sl,
                                       double &tp);
 };
+
+
+
+
+
 
 #endif

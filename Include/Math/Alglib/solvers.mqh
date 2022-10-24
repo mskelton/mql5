@@ -177,7 +177,9 @@ public:
                              CDenseSolverLSReport rep, double &x[]);
 };
 
-class CNlEqState {
+static void
+
+    class CNlEqState {
 public:
   int m_n;
   int m_m;

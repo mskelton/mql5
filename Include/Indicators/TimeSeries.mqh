@@ -22,6 +22,15 @@ public:
   virtual void Refresh(const int flags = OBJ_ALL_PERIODS);
 };
 
+
+
+
+
+
+
+
+
+
 class COpenBuffer : public CDoubleBuffer {
 public:
   COpenBuffer(void);
@@ -31,6 +40,10 @@ public:
   virtual bool RefreshCurrent(void);
 };
 
+
+
+
+
 class CiOpen : public CPriceSeries {
 public:
   CiOpen(void);
@@ -38,13 +51,19 @@ public:
 
   bool Create(const string symbol, const ENUM_TIMEFRAMES period);
 
-  double GetData(const int index) const;
+  double GetData(const int index) const ;
   int GetData(const int start_pos, const int count, double buffer[]) const;
   int GetData(const datetime start_time, const int count,
               double buffer[]) const;
   int GetData(const datetime start_time, const datetime stop_time,
               double buffer[]) const;
 };
+
+
+
+
+
+
 
 class CHighBuffer : public CDoubleBuffer {
 public:
@@ -55,6 +74,10 @@ public:
   virtual bool RefreshCurrent(void);
 };
 
+
+
+
+
 class CiHigh : public CPriceSeries {
 public:
   CiHigh(void);
@@ -62,13 +85,19 @@ public:
 
   bool Create(const string symbol, const ENUM_TIMEFRAMES period);
 
-  double GetData(const int index) const;
+  double GetData(const int index) const ;
   int GetData(const int start_pos, const int count, double buffer[]) const;
   int GetData(const datetime start_time, const int count,
               double buffer[]) const;
   int GetData(const datetime start_time, const datetime stop_time,
               double buffer[]) const;
 };
+
+
+
+
+
+
 
 class CLowBuffer : public CDoubleBuffer {
 public:
@@ -79,6 +108,10 @@ public:
   virtual bool RefreshCurrent(void);
 };
 
+
+
+
+
 class CiLow : public CPriceSeries {
 public:
   CiLow(void);
@@ -86,13 +119,19 @@ public:
 
   bool Create(const string symbol, const ENUM_TIMEFRAMES period);
 
-  double GetData(const int index) const;
+  double GetData(const int index) const ;
   int GetData(const int start_pos, const int count, double buffer[]) const;
   int GetData(const datetime start_time, const int count,
               double buffer[]) const;
   int GetData(const datetime start_time, const datetime stop_time,
               double buffer[]) const;
 };
+
+
+
+
+
+
 
 class CCloseBuffer : public CDoubleBuffer {
 public:
@@ -103,6 +142,10 @@ public:
   virtual bool RefreshCurrent(void);
 };
 
+
+
+
+
 class CiClose : public CPriceSeries {
 public:
   CiClose(void);
@@ -110,13 +153,19 @@ public:
 
   bool Create(const string symbol, const ENUM_TIMEFRAMES period);
 
-  double GetData(const int index) const;
+  double GetData(const int index) const ;
   int GetData(const int start_pos, const int count, double buffer[]) const;
   int GetData(const datetime start_time, const int count,
               double buffer[]) const;
   int GetData(const datetime start_time, const datetime stop_time,
               double buffer[]) const;
 };
+
+
+
+
+
+
 
 class CSpreadBuffer : public CArrayInt {
 protected:
@@ -129,7 +178,7 @@ public:
   CSpreadBuffer(void);
   ~CSpreadBuffer(void);
 
-  void Size(const int size);
+  void Size(const int size) ;
 
   int At(const int index) const;
 
@@ -138,6 +187,12 @@ public:
 
   void SetSymbolPeriod(const string symbol, const ENUM_TIMEFRAMES period);
 };
+
+
+
+
+
+
 
 class CiSpread : public CSeries {
 public:
@@ -156,6 +211,15 @@ public:
   virtual void Refresh(const int flags = OBJ_ALL_PERIODS);
 };
 
+
+
+
+
+
+
+
+
+
 class CTimeBuffer : public CArrayLong {
 protected:
   string m_symbol;
@@ -167,7 +231,7 @@ public:
   CTimeBuffer(void);
   ~CTimeBuffer(void);
 
-  void Size(const int size);
+  void Size(const int size) ;
 
   long At(const int index) const;
 
@@ -176,6 +240,12 @@ public:
 
   void SetSymbolPeriod(const string symbol, const ENUM_TIMEFRAMES period);
 };
+
+
+
+
+
+
 
 class CiTime : public CSeries {
 public:
@@ -195,6 +265,15 @@ public:
   virtual void Refresh(const int flags = OBJ_ALL_PERIODS);
 };
 
+
+
+
+
+
+
+
+
+
 class CTickVolumeBuffer : public CArrayLong {
 protected:
   string m_symbol;
@@ -206,7 +285,7 @@ public:
   CTickVolumeBuffer(void);
   ~CTickVolumeBuffer(void);
 
-  void Size(const int size);
+  void Size(const int size) ;
 
   long At(const int index) const;
 
@@ -215,6 +294,12 @@ public:
 
   void SetSymbolPeriod(const string symbol, const ENUM_TIMEFRAMES period);
 };
+
+
+
+
+
+
 
 class CiTickVolume : public CSeries {
 public:
@@ -233,6 +318,15 @@ public:
   virtual void Refresh(const int flags = OBJ_ALL_PERIODS);
 };
 
+
+
+
+
+
+
+
+
+
 class CRealVolumeBuffer : public CArrayLong {
 protected:
   string m_symbol;
@@ -244,7 +338,7 @@ public:
   CRealVolumeBuffer(void);
   ~CRealVolumeBuffer(void);
 
-  void Size(const int size);
+  void Size(const int size) ;
 
   long At(const int index) const;
 
@@ -253,6 +347,12 @@ public:
 
   void SetSymbolPeriod(const string symbol, const ENUM_TIMEFRAMES period);
 };
+
+
+
+
+
+
 
 class CiRealVolume : public CSeries {
 public:
@@ -270,5 +370,14 @@ public:
 
   virtual void Refresh(const int flags = OBJ_ALL_PERIODS);
 };
+
+
+
+
+
+
+
+
+
 
 #endif

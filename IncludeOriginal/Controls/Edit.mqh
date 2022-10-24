@@ -85,7 +85,8 @@ CEdit::CEdit(void) : m_read_only(false), m_align_mode(ALIGN_LEFT) {
   m_color_border = CONTROLS_EDIT_COLOR_BORDER;
 }
 
-CEdit::~CEdit(void) {}
+CEdit::~CEdit(void) {
+}
 
 bool CEdit::Create(const long chart, const string name, const int subwin,
                    const int x1, const int y1, const int x2, const int y2) {

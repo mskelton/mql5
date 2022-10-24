@@ -52,9 +52,11 @@ public:
                      const double price, const double percent = 100) const;
 };
 
-CAccountInfo::CAccountInfo(void) {}
+CAccountInfo::CAccountInfo(void) {
+}
 
-CAccountInfo::~CAccountInfo(void) {}
+CAccountInfo::~CAccountInfo(void) {
+}
 
 long CAccountInfo::Login(void) const {
   return (AccountInfoInteger(ACCOUNT_LOGIN));

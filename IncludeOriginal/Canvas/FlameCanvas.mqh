@@ -97,7 +97,8 @@ CFlameCanvas::CFlameCanvas(void)
       m_chart_price_max(0.0), m_timeframe(PERIOD_CURRENT), m_symbol(NULL),
       m_future_bars(0), m_back_bars(0), m_rates_total(0), m_time_redraw(0),
       m_delay(50), m_tb1(0), m_pb1(0), m_te1(0), m_pe1(0), m_tb2(0), m_pb2(0),
-      m_te2(0), m_pe2(0) {}
+      m_te2(0), m_pe2(0) {
+}
 
 CFlameCanvas::~CFlameCanvas(void) {
   Destroy();

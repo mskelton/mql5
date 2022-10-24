@@ -9,9 +9,11 @@ public:
   ~CExpertTrailing(void);
 
   virtual bool CheckTrailingStopLong(CPositionInfo *position, double &sl,
-                                     double &tp);
+                                     double &tp) ;
   virtual bool CheckTrailingStopShort(CPositionInfo *position, double &sl,
-                                      double &tp);
+                                      double &tp) ;
 };
+
+
 
 #endif

@@ -42,16 +42,16 @@ public:
     return (m_input_scene);
   }
 
-  virtual bool
-  Create(const string name, const int width, const int height,
-         ENUM_COLOR_FORMAT clrfmt = COLOR_FORMAT_XRGB_NOALPHA) override;
-  virtual bool
-  Attach(const long chart_id, const string objname,
-         ENUM_COLOR_FORMAT clrfmt = COLOR_FORMAT_XRGB_NOALPHA) override;
-  virtual bool
-  Attach(const long chart_id, const string objname, const int width,
-         const int height,
-         ENUM_COLOR_FORMAT clrfmt = COLOR_FORMAT_XRGB_NOALPHA) override;
+  virtual bool Create(
+      const string name, const int width, const int height,
+      ENUM_COLOR_FORMAT clrfmt = COLOR_FORMAT_XRGB_NOALPHA) override;
+  virtual bool Attach(
+      const long chart_id, const string objname,
+      ENUM_COLOR_FORMAT clrfmt = COLOR_FORMAT_XRGB_NOALPHA) override;
+  virtual bool Attach(
+      const long chart_id, const string objname, const int width,
+      const int height,
+      ENUM_COLOR_FORMAT clrfmt = COLOR_FORMAT_XRGB_NOALPHA) override;
   virtual void Destroy(void) override;
 
   bool ObjectAdd(CDXObject *object);

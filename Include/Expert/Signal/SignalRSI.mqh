@@ -26,15 +26,15 @@ public:
   CSignalRSI(void);
   ~CSignalRSI(void);
 
-  void PeriodRSI(int value);
-  void Applied(ENUM_APPLIED_PRICE value);
+  void PeriodRSI(int value) ;
+  void Applied(ENUM_APPLIED_PRICE value) ;
 
-  void Pattern_0(int value);
-  void Pattern_1(int value);
-  void Pattern_2(int value);
-  void Pattern_3(int value);
-  void Pattern_4(int value);
-  void Pattern_5(int value);
+  void Pattern_0(int value) ;
+  void Pattern_1(int value) ;
+  void Pattern_2(int value) ;
+  void Pattern_3(int value) ;
+  void Pattern_4(int value) ;
+  void Pattern_5(int value) ;
 
   virtual bool ValidationSettings(void);
 
@@ -46,11 +46,21 @@ public:
 protected:
   bool InitRSI(CIndicators *indicators);
 
-  double RSI(int ind);
-  double DiffRSI(int ind);
+  double RSI(int ind) ;
+  double DiffRSI(int ind) ;
   int StateRSI(int ind);
   bool ExtStateRSI(int ind);
   bool CompareMaps(int map, int count, bool minimax = false, int start = 0);
 };
+
+
+
+
+
+
+
+
+
+
 
 #endif

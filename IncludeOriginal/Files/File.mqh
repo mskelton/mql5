@@ -52,7 +52,8 @@ public:
   void FileFindClose(const long search_handle);
 };
 
-CFile::CFile(void) : m_handle(INVALID_HANDLE), m_name(""), m_flags(FILE_ANSI) {}
+CFile::CFile(void) : m_handle(INVALID_HANDLE), m_name(""), m_flags(FILE_ANSI) {
+}
 
 CFile::~CFile(void) {
 

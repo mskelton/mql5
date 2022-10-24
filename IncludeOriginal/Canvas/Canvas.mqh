@@ -278,9 +278,11 @@ CCanvas::CCanvas(void)
     : m_chart_id(0), m_objname(NULL), m_objtype(WRONG_VALUE), m_rcname(NULL),
       m_width(0), m_height(0), m_format(COLOR_FORMAT_XRGB_NOALPHA),
       m_fontname("arial"), m_fontsize(-120), m_fontflags(0), m_fontangle(0),
-      m_style(UINT_MAX), m_style_idx(0) {}
+      m_style(UINT_MAX), m_style_idx(0) {
+}
 
-CCanvas::~CCanvas(void) {}
+CCanvas::~CCanvas(void) {
+}
 
 bool CCanvas::Create(const string name, const int width, const int height,
                      ENUM_COLOR_FORMAT clrfmt) {

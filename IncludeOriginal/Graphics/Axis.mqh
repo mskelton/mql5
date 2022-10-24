@@ -184,9 +184,11 @@ CAxis::CAxis(void)
       m_name_size(0), m_values_size(12), m_values_fontname("arial"),
       m_values_fontflags(0), m_values_fontangle(0), m_values_func(NULL),
       m_values_cbdata(NULL), m_values_dt_mode(TIME_MINUTES),
-      m_type(AXIS_TYPE_DOUBLE), m_values_width(30) {}
+      m_type(AXIS_TYPE_DOUBLE), m_values_width(30) {
+}
 
-CAxis::~CAxis(void) {}
+CAxis::~CAxis(void) {
+}
 
 void CAxis::SelectAxisScale(void) {
   if (m_min > m_max)

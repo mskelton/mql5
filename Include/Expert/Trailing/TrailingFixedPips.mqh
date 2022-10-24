@@ -12,8 +12,8 @@ public:
   CTrailingFixedPips(void);
   ~CTrailingFixedPips(void);
 
-  void StopLevel(int stop_level);
-  void ProfitLevel(int profit_level);
+  void StopLevel(int stop_level) ;
+  void ProfitLevel(int profit_level) ;
   virtual bool ValidationSettings(void);
 
   virtual bool CheckTrailingStopLong(CPositionInfo *position, double &sl,
@@ -21,5 +21,10 @@ public:
   virtual bool CheckTrailingStopShort(CPositionInfo *position, double &sl,
                                       double &tp);
 };
+
+
+
+
+
 
 #endif

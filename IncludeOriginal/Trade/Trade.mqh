@@ -264,7 +264,8 @@ CTrade::CTrade(void)
     m_log_level = LOG_LEVEL_NO;
 }
 
-CTrade::~CTrade(void) {}
+CTrade::~CTrade(void) {
+}
 
 void CTrade::Request(MqlTradeRequest &request) const {
   request.action = m_request.action;

@@ -65,9 +65,11 @@ ON_EVENT(ON_CLICK, m_button, OnClickButton)
 ON_EVENT(ON_CLICK, m_label, OnClickLabel)
 EVENT_MAP_END(CWndContainer)
 
-CCheckBox::CCheckBox(void) : m_value(0) {}
+CCheckBox::CCheckBox(void) : m_value(0) {
+}
 
-CCheckBox::~CCheckBox(void) {}
+CCheckBox::~CCheckBox(void) {
+}
 
 bool CCheckBox::Create(const long chart, const string name, const int subwin,
                        const int x1, const int y1, const int x2, const int y2) {

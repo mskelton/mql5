@@ -28,17 +28,17 @@ public:
   CSignalMACD(void);
   ~CSignalMACD(void);
 
-  void PeriodFast(int value);
-  void PeriodSlow(int value);
-  void PeriodSignal(int value);
-  void Applied(ENUM_APPLIED_PRICE value);
+  void PeriodFast(int value) ;
+  void PeriodSlow(int value) ;
+  void PeriodSignal(int value) ;
+  void Applied(ENUM_APPLIED_PRICE value) ;
 
-  void Pattern_0(int value);
-  void Pattern_1(int value);
-  void Pattern_2(int value);
-  void Pattern_3(int value);
-  void Pattern_4(int value);
-  void Pattern_5(int value);
+  void Pattern_0(int value) ;
+  void Pattern_1(int value) ;
+  void Pattern_2(int value) ;
+  void Pattern_3(int value) ;
+  void Pattern_4(int value) ;
+  void Pattern_5(int value) ;
 
   virtual bool ValidationSettings(void);
 
@@ -50,13 +50,23 @@ public:
 protected:
   bool InitMACD(CIndicators *indicators);
 
-  double Main(int ind);
-  double Signal(int ind);
-  double DiffMain(int ind);
+  double Main(int ind) ;
+  double Signal(int ind) ;
+  double DiffMain(int ind) ;
   int StateMain(int ind);
-  double State(int ind);
+  double State(int ind) ;
   bool ExtState(int ind);
   bool CompareMaps(int map, int count, bool minimax = false, int start = 0);
 };
+
+
+
+
+
+
+
+
+
+
 
 #endif

@@ -31,9 +31,11 @@ protected:
                   const int ma_period);
 };
 
-CiATR::CiATR(void) : m_ma_period(-1) {}
+CiATR::CiATR(void) : m_ma_period(-1) {
+}
 
-CiATR::~CiATR(void) {}
+CiATR::~CiATR(void) {
+}
 
 bool CiATR::Create(const string symbol, const ENUM_TIMEFRAMES period,
                    const int ma_period) {
@@ -116,9 +118,11 @@ protected:
                   const int ma_period);
 };
 
-CiBearsPower::CiBearsPower(void) : m_ma_period(-1) {}
+CiBearsPower::CiBearsPower(void) : m_ma_period(-1) {
+}
 
-CiBearsPower::~CiBearsPower(void) {}
+CiBearsPower::~CiBearsPower(void) {
+}
 
 bool CiBearsPower::Create(const string symbol, const ENUM_TIMEFRAMES period,
                           const int ma_period) {
@@ -201,9 +205,11 @@ protected:
                   const int ma_period);
 };
 
-CiBullsPower::CiBullsPower(void) : m_ma_period(-1) {}
+CiBullsPower::CiBullsPower(void) : m_ma_period(-1) {
+}
 
-CiBullsPower::~CiBullsPower(void) {}
+CiBullsPower::~CiBullsPower(void) {
+}
 
 bool CiBullsPower::Create(const string symbol, const ENUM_TIMEFRAMES period,
                           const int ma_period) {
@@ -290,9 +296,11 @@ protected:
                   const int ma_period, const int applied);
 };
 
-CiCCI::CiCCI(void) : m_ma_period(-1), m_applied(-1) {}
+CiCCI::CiCCI(void) : m_ma_period(-1), m_applied(-1) {
+}
 
-CiCCI::~CiCCI(void) {}
+CiCCI::~CiCCI(void) {
+}
 
 bool CiCCI::Create(const string symbol, const ENUM_TIMEFRAMES period,
                    const int ma_period, const int applied) {
@@ -396,9 +404,11 @@ protected:
 
 CiChaikin::CiChaikin(void)
     : m_fast_ma_period(-1), m_slow_ma_period(-1), m_ma_method(WRONG_VALUE),
-      m_applied(WRONG_VALUE) {}
+      m_applied(WRONG_VALUE) {
+}
 
-CiChaikin::~CiChaikin(void) {}
+CiChaikin::~CiChaikin(void) {
+}
 
 bool CiChaikin::Create(const string symbol, const ENUM_TIMEFRAMES period,
                        const int fast_ma_period, const int slow_ma_period,
@@ -496,9 +506,11 @@ protected:
                   const int ma_period);
 };
 
-CiDeMarker::CiDeMarker(void) : m_ma_period(-1) {}
+CiDeMarker::CiDeMarker(void) : m_ma_period(-1) {
+}
 
-CiDeMarker::~CiDeMarker(void) {}
+CiDeMarker::~CiDeMarker(void) {
+}
 
 bool CiDeMarker::Create(const string symbol, const ENUM_TIMEFRAMES period,
                         const int ma_period) {
@@ -592,9 +604,11 @@ protected:
 };
 
 CiForce::CiForce(void)
-    : m_ma_period(-1), m_ma_method(WRONG_VALUE), m_applied(WRONG_VALUE) {}
+    : m_ma_period(-1), m_ma_method(WRONG_VALUE), m_applied(WRONG_VALUE) {
+}
 
-CiForce::~CiForce(void) {}
+CiForce::~CiForce(void) {
+}
 
 bool CiForce::Create(const string symbol, const ENUM_TIMEFRAMES period,
                      const int ma_period, const ENUM_MA_METHOD ma_method,
@@ -702,9 +716,11 @@ protected:
 
 CiMACD::CiMACD(void)
     : m_fast_ema_period(-1), m_slow_ema_period(-1), m_signal_period(-1),
-      m_applied(-1) {}
+      m_applied(-1) {
+}
 
-CiMACD::~CiMACD(void) {}
+CiMACD::~CiMACD(void) {
+}
 
 bool CiMACD::Create(const string symbol, const ENUM_TIMEFRAMES period,
                     const int fast_ema_period, const int slow_ema_period,
@@ -814,9 +830,11 @@ protected:
                   const int ma_period, const int applied);
 };
 
-CiMomentum::CiMomentum(void) : m_ma_period(-1), m_applied(-1) {}
+CiMomentum::CiMomentum(void) : m_ma_period(-1), m_applied(-1) {
+}
 
-CiMomentum::~CiMomentum(void) {}
+CiMomentum::~CiMomentum(void) {
+}
 
 bool CiMomentum::Create(const string symbol, const ENUM_TIMEFRAMES period,
                         const int ma_period, const int applied) {
@@ -918,9 +936,11 @@ protected:
 
 CiOsMA::CiOsMA(void)
     : m_fast_ema_period(-1), m_slow_ema_period(-1), m_signal_period(-1),
-      m_applied(-1) {}
+      m_applied(-1) {
+}
 
-CiOsMA::~CiOsMA(void) {}
+CiOsMA::~CiOsMA(void) {
+}
 
 bool CiOsMA::Create(const string symbol, const ENUM_TIMEFRAMES period,
                     const int fast_ema_period, const int slow_ema_period,
@@ -1020,9 +1040,11 @@ protected:
                   const int ma_period, const int applied);
 };
 
-CiRSI::CiRSI(void) : m_ma_period(-1), m_applied(-1) {}
+CiRSI::CiRSI(void) : m_ma_period(-1), m_applied(-1) {
+}
 
-CiRSI::~CiRSI(void) {}
+CiRSI::~CiRSI(void) {
+}
 
 bool CiRSI::Create(const string symbol, const ENUM_TIMEFRAMES period,
                    const int ma_period, const int applied) {
@@ -1109,9 +1131,11 @@ protected:
                   const int ma_period);
 };
 
-CiRVI::CiRVI(void) : m_ma_period(-1) {}
+CiRVI::CiRVI(void) : m_ma_period(-1) {
+}
 
-CiRVI::~CiRVI(void) {}
+CiRVI::~CiRVI(void) {
+}
 
 bool CiRVI::Create(const string symbol, const ENUM_TIMEFRAMES period,
                    const int ma_period) {
@@ -1226,9 +1250,11 @@ protected:
 
 CiStochastic::CiStochastic(void)
     : m_Kperiod(-1), m_Dperiod(-1), m_slowing(-1), m_ma_method(WRONG_VALUE),
-      m_price_field(WRONG_VALUE) {}
+      m_price_field(WRONG_VALUE) {
+}
 
-CiStochastic::~CiStochastic(void) {}
+CiStochastic::~CiStochastic(void) {
+}
 
 bool CiStochastic::Create(const string symbol, const ENUM_TIMEFRAMES period,
                           const int Kperiod, const int Dperiod,
@@ -1337,9 +1363,11 @@ protected:
                   const int calc_period);
 };
 
-CiWPR::CiWPR(void) : m_calc_period(-1) {}
+CiWPR::CiWPR(void) : m_calc_period(-1) {
+}
 
-CiWPR::~CiWPR(void) {}
+CiWPR::~CiWPR(void) {
+}
 
 bool CiWPR::Create(const string symbol, const ENUM_TIMEFRAMES period,
                    const int calc_period) {
@@ -1427,9 +1455,11 @@ protected:
                   const int ma_period, const int applied);
 };
 
-CiTriX::CiTriX(void) : m_ma_period(-1), m_applied(-1) {}
+CiTriX::CiTriX(void) : m_ma_period(-1), m_applied(-1) {
+}
 
-CiTriX::~CiTriX(void) {}
+CiTriX::~CiTriX(void) {
+}
 
 bool CiTriX::Create(const string symbol, const ENUM_TIMEFRAMES period,
                     const int ma_period, const int applied) {

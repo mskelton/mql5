@@ -24,8 +24,8 @@ public:
   virtual bool OnEvent(const int id, const long &lparam, const double &dparam,
                        const string &sparam);
 
-  datetime Value(void) const;
-  void Value(datetime value);
+  datetime Value(void) const ;
+  void Value(datetime value) ;
 
   virtual bool Show(void);
 
@@ -53,5 +53,20 @@ ON_EVENT(ON_CHANGE, m_list, OnChangeList)
 CheckListHide(id, (int)lparam, (int)dparam);
 
 EVENT_MAP_END(CWndContainer)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #endif

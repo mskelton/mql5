@@ -41,13 +41,17 @@ public:
   al_complex operator/(const double rhs);
 };
 
-al_complex::al_complex(void) : re(0), im(0) {}
+al_complex::al_complex(void) : re(0), im(0) {
+}
 
-al_complex::al_complex(const double x) : re(x), im(0) {}
+al_complex::al_complex(const double x) : re(x), im(0) {
+}
 
-al_complex::al_complex(const double x, const double y) : re(x), im(y) {}
+al_complex::al_complex(const double x, const double y) : re(x), im(y) {
+}
 
-al_complex::~al_complex(void) {}
+al_complex::~al_complex(void) {
+}
 
 void al_complex::Copy(const al_complex &rhs) {
   re = rhs.re;

@@ -11,9 +11,9 @@ public:
   CChart(void);
   ~CChart(void);
 
-  long ChartId(void) const;
+  long ChartId(void) const ;
 
-  virtual int Type(void) const;
+  virtual int Type(void) const ;
 
   ENUM_CHART_MODE Mode(void) const;
   bool Mode(const ENUM_CHART_MODE mode) const;
@@ -105,19 +105,19 @@ public:
   double PriceMax(const int num) const;
   bool IsObject(void) const;
 
-  void Attach(void);
-  void Attach(const long chart);
-  void FirstChart(void);
-  void NextChart(void);
+  void Attach(void) ;
+  void Attach(const long chart) ;
+  void FirstChart(void) ;
+  void NextChart(void) ;
   long Open(const string symbol_name, const ENUM_TIMEFRAMES timeframe);
-  void Detach(void);
+  void Detach(void) ;
   void Close(void);
 
   bool Navigate(const ENUM_CHART_POSITION position, const int shift = 0) const;
 
-  string Symbol(void) const;
-  ENUM_TIMEFRAMES Period(void) const;
-  void Redraw(void) const;
+  string Symbol(void) const ;
+  ENUM_TIMEFRAMES Period(void) const ;
+  void Redraw(void) const ;
   long GetInteger(const ENUM_CHART_PROPERTY_INTEGER prop_id,
                   const int sub_window = 0) const;
   bool GetInteger(const ENUM_CHART_PROPERTY_INTEGER prop_id,
@@ -152,5 +152,118 @@ public:
   virtual bool Save(const int file_handle);
   virtual bool Load(const int file_handle);
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #endif

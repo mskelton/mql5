@@ -15,23 +15,30 @@ public:
   static bool IsLittleEndian(void);
 };
 
-void ArrayReverse(uchar array[]);
 
-void ArrayReverse(bool array[]);
 
-string GetSelectionString(char buf[], int startIndex, int lenght);
 
-double MathSign(const double x);
+
+
+
+
+void ArrayReverse(uchar array[]) ;
+
+void ArrayReverse(bool array[]) ;
+
+string GetSelectionString(char buf[], int startIndex, int lenght) ;
+
+double MathSign(const double x) ;
 #ifndef __MQL5__
 
-double MathSinh(const double x);
+double MathSinh(const double x) ;
 
-double MathCosh(const double x);
+double MathCosh(const double x) ;
 
-double MathTanh(const double x);
+double MathTanh(const double x) ;
 #endif
 
-union UDoubleValue;
+union UDoubleValue ;
 
 class CInfOrNaN {
 public:
@@ -47,5 +54,14 @@ public:
   static double NegativeInfinity(void);
   static double NaN(void);
 };
+
+
+
+
+
+
+
+
+
 
 #endif

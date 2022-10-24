@@ -14,4 +14,9 @@ public:
   string ReadString(void);
 };
 
+
+
+
+
+
 #endif

@@ -23,12 +23,12 @@ public:
   CSignalDeM(void);
   ~CSignalDeM(void);
 
-  void PeriodDeM(int value);
+  void PeriodDeM(int value) ;
 
-  void Pattern_0(int value);
-  void Pattern_1(int value);
-  void Pattern_2(int value);
-  void Pattern_3(int value);
+  void Pattern_0(int value) ;
+  void Pattern_1(int value) ;
+  void Pattern_2(int value) ;
+  void Pattern_3(int value) ;
 
   virtual bool ValidationSettings(void);
 
@@ -40,11 +40,21 @@ public:
 protected:
   bool InitStoch(CIndicators *indicators);
 
-  double DeM(int ind);
-  double DiffDeM(int ind);
+  double DeM(int ind) ;
+  double DiffDeM(int ind) ;
   int StateDeM(int ind);
   bool ExtStateDeM(int ind);
   bool CompareMaps(int map, int count, bool minimax = false, int start = 0);
 };
+
+
+
+
+
+
+
+
+
+
 
 #endif

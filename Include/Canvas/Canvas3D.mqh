@@ -32,9 +32,9 @@ public:
   CCanvas3D(void);
   ~CCanvas3D(void);
 
-  int DXContext(void) const;
-  CDXDispatcher *DXDispatcher(void);
-  CDXInput *InputScene(void);
+  int DXContext(void) const ;
+  CDXDispatcher *DXDispatcher(void) ;
+  CDXInput *InputScene(void) ;
 
   virtual bool
   Create(const string name, const int width, const int height,
@@ -72,5 +72,29 @@ public:
   void AmbientColorSet(const DXColor &ambient_color);
   void AmbientColorGet(DXColor &ambient_color);
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #endif

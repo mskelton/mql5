@@ -41,10 +41,11 @@ protected:
   }
 };
 
-CSignalAC::CSignalAC(void)
-    : m_pattern_0(90), m_pattern_1(50), m_pattern_2(30) {}
+CSignalAC::CSignalAC(void) : m_pattern_0(90), m_pattern_1(50), m_pattern_2(30) {
+}
 
-CSignalAC::~CSignalAC(void) {}
+CSignalAC::~CSignalAC(void) {
+}
 
 bool CSignalAC::InitIndicators(CIndicators *indicators) {
 

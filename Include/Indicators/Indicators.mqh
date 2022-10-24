@@ -27,4 +27,10 @@ protected:
   int TimeframesFlags(const MqlDateTime &time);
 };
 
+
+
+
+
+
+
 #endif

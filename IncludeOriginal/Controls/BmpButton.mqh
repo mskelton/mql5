@@ -74,9 +74,11 @@ protected:
 
 CBmpButton::CBmpButton(void)
     : m_border(0), m_bmp_off_name(NULL), m_bmp_on_name(NULL),
-      m_bmp_passive_name(NULL), m_bmp_active_name(NULL) {}
+      m_bmp_passive_name(NULL), m_bmp_active_name(NULL) {
+}
 
-CBmpButton::~CBmpButton(void) {}
+CBmpButton::~CBmpButton(void) {
+}
 
 bool CBmpButton::Create(const long chart, const string name, const int subwin,
                         const int x1, const int y1, const int x2,

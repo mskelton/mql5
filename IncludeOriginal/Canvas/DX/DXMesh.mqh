@@ -28,7 +28,8 @@ public:
   CDXMesh(void)
       : m_buffer_vertex(NULL), m_buffer_index(NULL), m_buffer_object(NULL),
         m_buffer_scene(NULL), m_shader_vertex(NULL), m_shader_pixel(NULL),
-        m_topology(WRONG_VALUE) {}
+        m_topology(WRONG_VALUE) {
+  }
 
   ~CDXMesh(void) {
     Shutdown();

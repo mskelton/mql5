@@ -6,7 +6,7 @@
 
 typedef int color;
 typedef char *string;
-typedef int datetime;
+typedef string datetime;
 typedef unsigned char uchar;
 typedef unsigned int uint;
 typedef unsigned long ulong;

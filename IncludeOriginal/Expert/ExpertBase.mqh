@@ -149,7 +149,8 @@ void CExpertBase::CExpertBase(void)
       m_open(NULL), m_high(NULL), m_low(NULL), m_close(NULL), m_spread(NULL),
       m_time(NULL), m_tick_volume(NULL), m_real_volume(NULL)
 
-{}
+{
+}
 
 void CExpertBase::~CExpertBase(void) {
 

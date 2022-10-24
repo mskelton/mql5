@@ -51,7 +51,8 @@ int GetProcessWorkingSetSizeEx(HANDLE hProcess, ulong &lpMinimumWorkingSetSize,
 int GetSystemFileCacheSize(ulong &lpMinimumFileCacheSize,
                            ulong &lpMaximumFileCacheSize, uint &lpFlags);
 uint GetWriteWatch(uint dwFlags, PVOID lpBaseAddress, ulong dwRegionSize,
-                   PVOID lpAddresses[], uint &lpdwCount, uint &lpdwGranularity);
+                   PVOID lpAddresses[], uint &lpdwCount,
+                   uint &lpdwGranularity);
 int MapUserPhysicalPages(PVOID VirtualAddress, ulong &NumberOfPages,
                          ulong PageArray[]);
 PVOID MapViewOfFile(HANDLE hFileMappingObject, uint dwDesiredAccess,
@@ -109,8 +110,9 @@ int WriteProcessMemory(HANDLE hProcess, PVOID lpBaseAddress, uchar lpBuffer[],
                        ulong nSize, ulong &lpNumberOfBytesWritten);
 int WriteProcessMemory(HANDLE hProcess, uchar lpBaseAddress[], PVOID lpBuffer,
                        ulong nSize, ulong &lpNumberOfBytesWritten);
-int WriteProcessMemory(HANDLE hProcess, uchar lpBaseAddress[], uchar lpBuffer[],
-                       ulong nSize, ulong &lpNumberOfBytesWritten);
+int WriteProcessMemory(HANDLE hProcess, uchar lpBaseAddress[],
+                       uchar lpBuffer[], ulong nSize,
+                       ulong &lpNumberOfBytesWritten);
 #import
 
 #endif

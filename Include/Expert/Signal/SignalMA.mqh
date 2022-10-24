@@ -21,15 +21,15 @@ public:
   CSignalMA(void);
   ~CSignalMA(void);
 
-  void PeriodMA(int value);
-  void Shift(int value);
-  void Method(ENUM_MA_METHOD value);
-  void Applied(ENUM_APPLIED_PRICE value);
+  void PeriodMA(int value) ;
+  void Shift(int value) ;
+  void Method(ENUM_MA_METHOD value) ;
+  void Applied(ENUM_APPLIED_PRICE value) ;
 
-  void Pattern_0(int value);
-  void Pattern_1(int value);
-  void Pattern_2(int value);
-  void Pattern_3(int value);
+  void Pattern_0(int value) ;
+  void Pattern_1(int value) ;
+  void Pattern_2(int value) ;
+  void Pattern_3(int value) ;
 
   virtual bool ValidationSettings(void);
 
@@ -41,12 +41,19 @@ public:
 protected:
   bool InitMA(CIndicators *indicators);
 
-  double MA(int ind);
-  double DiffMA(int ind);
-  double DiffOpenMA(int ind);
-  double DiffHighMA(int ind);
-  double DiffLowMA(int ind);
-  double DiffCloseMA(int ind);
+  double MA(int ind) ;
+  double DiffMA(int ind) ;
+  double DiffOpenMA(int ind) ;
+  double DiffHighMA(int ind) ;
+  double DiffLowMA(int ind) ;
+  double DiffCloseMA(int ind) ;
 };
+
+
+
+
+
+
+
 
 #endif

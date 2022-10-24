@@ -11,7 +11,8 @@
 template <typename TKey, typename TValue> struct Entry : public Slot<TValue> {
 public:
   TKey key;
-  Entry(void) : key((TKey)NULL) {}
+  Entry(void) : key((TKey)NULL) {
+  }
 };
 
 template <typename TKey, typename TValue>
@@ -21,9 +22,12 @@ protected:
   TValue m_value;
 
 public:
-  CKeyValuePair(void) {}
-  CKeyValuePair(TKey key, TValue value) : m_key(key), m_value(value) {}
-  ~CKeyValuePair(void) {}
+  CKeyValuePair(void) {
+  }
+  CKeyValuePair(TKey key, TValue value) : m_key(key), m_value(value) {
+  }
+  ~CKeyValuePair(void) {
+  }
 
   TKey Key(void) {
     return (m_key);

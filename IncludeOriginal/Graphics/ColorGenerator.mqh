@@ -25,7 +25,8 @@ CColorGenerator::CColorGenerator(void) : m_index(0), m_generate(false) {
   ArrayCopy(m_current_palette, s_default_palette);
 }
 
-CColorGenerator::~CColorGenerator(void) {}
+CColorGenerator::~CColorGenerator(void) {
+}
 
 uint CColorGenerator::Next(void) {
 

@@ -29,16 +29,16 @@ public:
   CSignalStoch(void);
   ~CSignalStoch(void);
 
-  void PeriodK(int value);
-  void PeriodD(int value);
-  void PeriodSlow(int value);
-  void Applied(ENUM_STO_PRICE value);
+  void PeriodK(int value) ;
+  void PeriodD(int value) ;
+  void PeriodSlow(int value) ;
+  void Applied(ENUM_STO_PRICE value) ;
 
-  void Pattern_0(int value);
-  void Pattern_1(int value);
-  void Pattern_2(int value);
-  void Pattern_3(int value);
-  void Pattern_4(int value);
+  void Pattern_0(int value) ;
+  void Pattern_1(int value) ;
+  void Pattern_2(int value) ;
+  void Pattern_3(int value) ;
+  void Pattern_4(int value) ;
 
   virtual bool ValidationSettings(void);
 
@@ -50,15 +50,25 @@ public:
 protected:
   bool InitStoch(CIndicators *indicators);
 
-  double Main(int ind);
-  double DiffMain(int ind);
-  double Signal(int ind);
-  double DiffSignal(int ind);
-  double DiffMainSignal(int ind);
+  double Main(int ind) ;
+  double DiffMain(int ind) ;
+  double Signal(int ind) ;
+  double DiffSignal(int ind) ;
+  double DiffMainSignal(int ind) ;
   int StateStoch(int ind);
   bool ExtStateStoch(int ind);
   bool CompareMaps(int map, int count, bool minimax = false, int start = 0);
   void DiverDebugPrint();
 };
+
+
+
+
+
+
+
+
+
+
 
 #endif

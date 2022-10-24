@@ -18,7 +18,8 @@ public:
   virtual bool Create(const string name, const int width, const int height,
                       ENUM_COLOR_FORMAT clrfmt = COLOR_FORMAT_XRGB_NOALPHA);
 
-  bool SeriesSet(const double value[], const string text[], const uint clr[]);
+  bool SeriesSet(const double value[], const string text[],
+                 const uint clr[]);
   bool ValueAdd(const double value, const string descr = "",
                 const uint clr = 0);
   bool ValueInsert(const uint pos, const double value, const string descr = "",
@@ -32,5 +33,16 @@ protected:
   void DrawPie(double fi3, double fi4, int idx, CPoint p[], const uint clr);
   string LabelMake(const string text, const double value, const bool to_left);
 };
+
+
+
+
+
+
+
+
+
+
+
 
 #endif

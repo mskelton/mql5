@@ -16,10 +16,10 @@ public:
   CSignalRVI(void);
   ~CSignalRVI(void);
 
-  void PeriodRVI(int value);
+  void PeriodRVI(int value) ;
 
-  void Pattern_0(int value);
-  void Pattern_1(int value);
+  void Pattern_0(int value) ;
+  void Pattern_1(int value) ;
 
   virtual bool ValidationSettings(void);
 
@@ -31,11 +31,18 @@ public:
 protected:
   bool InitRVI(CIndicators *indicators);
 
-  double Main(int ind);
-  double DiffMain(int ind);
-  double Signal(int ind);
-  double DiffSignal(int ind);
-  double DiffMainSignal(int ind);
+  double Main(int ind) ;
+  double DiffMain(int ind) ;
+  double Signal(int ind) ;
+  double DiffSignal(int ind) ;
+  double DiffMainSignal(int ind) ;
 };
+
+
+
+
+
+
+
 
 #endif

@@ -12,13 +12,13 @@ struct DXVertex {
 };
 struct DXInputScene {
 
-  struct DXInputObject {
-    DXMatrix transform;
-    DXColor diffuse_color;
-    DXColor emission_color;
-    DXColor specular_color;
-    float specular_power;
-    float dummy[3];
-  };
+struct DXInputObject {
+  DXMatrix transform;
+  DXColor diffuse_color;
+  DXColor emission_color;
+  DXColor specular_color;
+  float specular_power;
+  float dummy[3];
+};
 
 #endif

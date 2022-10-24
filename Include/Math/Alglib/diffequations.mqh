@@ -41,6 +41,9 @@ public:
   void Copy(CODESolverState &obj);
 };
 
+
+
+
 class CODESolverStateShell {
 private:
   CODESolverState m_innerobj;
@@ -57,6 +60,14 @@ public:
   CODESolverState *GetInnerObj(void);
 };
 
+
+
+
+
+
+
+
+
 class CODESolverReport {
 public:
   int m_nfev;
@@ -67,6 +78,9 @@ public:
 
   void Copy(CODESolverReport &obj);
 };
+
+
+
 
 class CODESolverReportShell {
 private:
@@ -84,11 +98,19 @@ public:
   CODESolverReport *GetInnerObj(void);
 };
 
+
+
+
+
+
+
+
+
 class CODESolver {
 private:
-  static void ODESolverInit(int solvertype, double y[], const int n, double x[],
-                            const int m, const double eps, double h,
-                            CODESolverState &state);
+  static void ODESolverInit(int solvertype, double y[], const int n,
+                            double x[], const int m, const double eps,
+                            double h, CODESolverState &state);
 
   static void Func_lbl_rcomm(CODESolverState &state, int n, int m, int i, int j,
                              int k, int klimit, bool gridpoint, double xc,
@@ -121,5 +143,15 @@ public:
                                CMatrixDouble &ytbl, CODESolverReport &rep);
   static bool ODESolverIteration(CODESolverState &state);
 };
+
+
+
+
+
+
+
+
+
+
 
 #endif

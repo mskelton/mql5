@@ -22,9 +22,11 @@ protected:
   bool Initialize(const string symbol, const ENUM_TIMEFRAMES period);
 };
 
-CiAC::CiAC(void) {}
+CiAC::CiAC(void) {
+}
 
-CiAC::~CiAC(void) {}
+CiAC::~CiAC(void) {
+}
 
 bool CiAC::Create(const string symbol, const ENUM_TIMEFRAMES period) {
 
@@ -142,9 +144,11 @@ protected:
 CiAlligator::CiAlligator(void)
     : m_jaw_period(-1), m_jaw_shift(-1), m_teeth_period(-1), m_teeth_shift(-1),
       m_lips_period(-1), m_lips_shift(-1), m_ma_method(WRONG_VALUE),
-      m_applied(-1) {}
+      m_applied(-1) {
+}
 
-CiAlligator::~CiAlligator(void) {}
+CiAlligator::~CiAlligator(void) {
+}
 
 bool CiAlligator::Create(const string symbol, const ENUM_TIMEFRAMES period,
                          const int jaw_period, const int jaw_shift,
@@ -268,9 +272,11 @@ protected:
   bool Initialize(const string symbol, const ENUM_TIMEFRAMES period);
 };
 
-CiAO::CiAO(void) {}
+CiAO::CiAO(void) {
+}
 
-CiAO::~CiAO(void) {}
+CiAO::~CiAO(void) {
+}
 
 bool CiAO::Create(const string symbol, const ENUM_TIMEFRAMES period) {
 
@@ -340,9 +346,11 @@ protected:
   bool Initialize(const string symbol, const ENUM_TIMEFRAMES period);
 };
 
-CiFractals::CiFractals(void) {}
+CiFractals::CiFractals(void) {
+}
 
-CiFractals::~CiFractals(void) {}
+CiFractals::~CiFractals(void) {
+}
 
 bool CiFractals::Create(const string symbol, const ENUM_TIMEFRAMES period) {
 
@@ -469,9 +477,11 @@ protected:
 CiGator::CiGator(void)
     : m_jaw_period(-1), m_jaw_shift(-1), m_teeth_period(-1), m_teeth_shift(-1),
       m_lips_period(-1), m_lips_shift(-1), m_ma_method(WRONG_VALUE),
-      m_applied(-1) {}
+      m_applied(-1) {
+}
 
-CiGator::~CiGator(void) {}
+CiGator::~CiGator(void) {
+}
 
 bool CiGator::Create(const string symbol, const ENUM_TIMEFRAMES period,
                      const int jaw_period, const int jaw_shift,
@@ -591,9 +601,11 @@ protected:
                   const ENUM_APPLIED_VOLUME applied);
 };
 
-CiBWMFI::CiBWMFI(void) : m_applied(WRONG_VALUE) {}
+CiBWMFI::CiBWMFI(void) : m_applied(WRONG_VALUE) {
+}
 
-CiBWMFI::~CiBWMFI(void) {}
+CiBWMFI::~CiBWMFI(void) {
+}
 
 bool CiBWMFI::Create(const string symbol, const ENUM_TIMEFRAMES period,
                      const ENUM_APPLIED_VOLUME applied) {

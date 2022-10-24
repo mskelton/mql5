@@ -21,9 +21,11 @@ public:
   void operator=(const CRowDouble &r);
 };
 
-CRowDouble::CRowDouble(void) {}
+CRowDouble::CRowDouble(void) {
+}
 
-CRowDouble::~CRowDouble(void) {}
+CRowDouble::~CRowDouble(void) {
+}
 
 int CRowDouble::Size(void) const {
   return (ArraySize(m_array));
@@ -80,9 +82,11 @@ public:
   void operator=(const CRowInt &r);
 };
 
-CRowInt::CRowInt(void) {}
+CRowInt::CRowInt(void) {
+}
 
-CRowInt::~CRowInt(void) {}
+CRowInt::~CRowInt(void) {
+}
 
 int CRowInt::Size(void) const {
   return (ArraySize(m_array));
@@ -142,9 +146,11 @@ public:
   void operator=(const CRowComplex &r);
 };
 
-CRowComplex::CRowComplex(void) {}
+CRowComplex::CRowComplex(void) {
+}
 
-CRowComplex::~CRowComplex(void) {}
+CRowComplex::~CRowComplex(void) {
+}
 
 int CRowComplex::Size(void) const {
   return (ArraySize(m_array));
@@ -214,7 +220,8 @@ public:
   void operator=(const CMatrixDouble &m);
 };
 
-CMatrixDouble::CMatrixDouble(void) {}
+CMatrixDouble::CMatrixDouble(void) {
+}
 
 CMatrixDouble::CMatrixDouble(const int rows) {
   ArrayResizeAL(m_rows, rows);
@@ -226,7 +233,8 @@ CMatrixDouble::CMatrixDouble(const int rows, const int cols) {
     m_rows[i].Resize(cols);
 }
 
-CMatrixDouble::~CMatrixDouble(void) {}
+CMatrixDouble::~CMatrixDouble(void) {
+}
 
 int CMatrixDouble::Size(void) const {
   return (ArraySize(m_rows));
@@ -281,7 +289,8 @@ public:
   void operator=(const CMatrixInt &m);
 };
 
-CMatrixInt::CMatrixInt(void) {}
+CMatrixInt::CMatrixInt(void) {
+}
 
 CMatrixInt::CMatrixInt(const int rows) {
   ArrayResizeAL(m_rows, rows);
@@ -293,7 +302,8 @@ CMatrixInt::CMatrixInt(const int rows, const int cols) {
     m_rows[i].Resize(cols);
 }
 
-CMatrixInt::~CMatrixInt(void) {}
+CMatrixInt::~CMatrixInt(void) {
+}
 
 int CMatrixInt::Size(void) const {
   return (ArraySize(m_rows));
@@ -348,7 +358,8 @@ public:
   void operator=(const CMatrixComplex &m);
 };
 
-CMatrixComplex::CMatrixComplex(void) {}
+CMatrixComplex::CMatrixComplex(void) {
+}
 
 CMatrixComplex::CMatrixComplex(const int rows) {
   ArrayResizeAL(m_rows, rows);
@@ -360,7 +371,8 @@ CMatrixComplex::CMatrixComplex(const int rows, const int cols) {
     m_rows[i].Resize(cols);
 }
 
-CMatrixComplex::~CMatrixComplex(void) {}
+CMatrixComplex::~CMatrixComplex(void) {
+}
 
 int CMatrixComplex::Size(void) const {
   return (ArraySize(m_rows));

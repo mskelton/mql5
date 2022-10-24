@@ -45,9 +45,11 @@ public:
                                         const int n);
 };
 
-CBaseStat::CBaseStat(void) {}
+CBaseStat::CBaseStat(void) {
+}
 
-CBaseStat::~CBaseStat(void) {}
+CBaseStat::~CBaseStat(void) {
+}
 
 static bool CBaseStat::SampleMoments(const double &cx[], const int n,
                                      double &mean, double &variance,
@@ -1095,9 +1097,11 @@ public:
                                        double &rightTail);
 };
 
-CCorrTests::CCorrTests(void) {}
+CCorrTests::CCorrTests(void) {
+}
 
-CCorrTests::~CCorrTests(void) {}
+CCorrTests::~CCorrTests(void) {
+}
 
 static double CCorrTests::SpearmanTail(const double t, const int n) {
   if (!CAp::Assert(t < 0, __FUNCTION__ + ": the error variable"))
@@ -1504,9 +1508,11 @@ public:
   static bool JarqueBeraTest(const double &x[], const int n, double &p);
 };
 
-CJarqueBera::CJarqueBera(void) {}
+CJarqueBera::CJarqueBera(void) {
+}
 
-CJarqueBera::~CJarqueBera(void) {}
+CJarqueBera::~CJarqueBera(void) {
+}
 
 static bool CJarqueBera::JarqueBeraTest(const double &x[], const int n,
                                         double &p) {
@@ -3659,9 +3665,11 @@ public:
                                 double &rightTail);
 };
 
-CMannWhitneyU::CMannWhitneyU(void) {}
+CMannWhitneyU::CMannWhitneyU(void) {
+}
 
-CMannWhitneyU::~CMannWhitneyU(void) {}
+CMannWhitneyU::~CMannWhitneyU(void) {
+}
 
 static void CMannWhitneyU::CMannWhitneyUTest(const double &x[], const int n,
                                              const double &y[], const int m,
@@ -7444,9 +7452,11 @@ public:
                                 double &leftTail, double &rightTail);
 };
 
-CSignTest::CSignTest(void) {}
+CSignTest::CSignTest(void) {
+}
 
-CSignTest::~CSignTest(void) {}
+CSignTest::~CSignTest(void) {
+}
 
 static void CSignTest::OneSampleSignTest(const double &x[], const int n,
                                          const double median, double &bothTails,
@@ -7503,9 +7513,11 @@ public:
                                   double &rightTail);
 };
 
-CStudentTests::CStudentTests(void) {}
+CStudentTests::CStudentTests(void) {
+}
 
-CStudentTests::~CStudentTests(void) {}
+CStudentTests::~CStudentTests(void) {
+}
 
 static void CStudentTests::StudentTest1(const double &x[], const int n,
                                         const double mean, double &bothTails,
@@ -7689,9 +7701,11 @@ public:
                                     double &leftTail, double &rightTail);
 };
 
-CVarianceTests::CVarianceTests(void) {}
+CVarianceTests::CVarianceTests(void) {
+}
 
-CVarianceTests::~CVarianceTests(void) {}
+CVarianceTests::~CVarianceTests(void) {
+}
 
 static void CVarianceTests::FTest(const double &x[], const int n,
                                   const double &y[], const int m,
@@ -7747,10 +7761,9 @@ static void CVarianceTests::FTest(const double &x[], const int n,
   rightTail = 1 - leftTail;
 }
 
-static void
-CVarianceTests::OneSampleVarianceTest(const double &x[], const int n,
-                                      const double variance, double &bothTails,
-                                      double &leftTail, double &rightTail) {
+static void CVarianceTests::OneSampleVarianceTest(
+    const double &x[], const int n, const double variance, double &bothTails,
+    double &leftTail, double &rightTail) {
 
   int i;
   double xmean = 0;
@@ -7836,9 +7849,11 @@ public:
                                      double &leftTail, double &rightTail);
 };
 
-CWilcoxonSignedRank::CWilcoxonSignedRank(void) {}
+CWilcoxonSignedRank::CWilcoxonSignedRank(void) {
+}
 
-CWilcoxonSignedRank::~CWilcoxonSignedRank(void) {}
+CWilcoxonSignedRank::~CWilcoxonSignedRank(void) {
+}
 
 static void CWilcoxonSignedRank::WilcoxonSignedRankTest(
     const double &cx[], const int n, const double e, double &bothTails,

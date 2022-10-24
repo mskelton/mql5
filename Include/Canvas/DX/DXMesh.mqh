@@ -25,59 +25,60 @@ protected:
   ENUM_DX_PRIMITIVE_TOPOLOGY m_topology;
 
 public:
-  CDXMesh(void);
-  m_buffer_scene(NULL), m_shader_vertex(NULL), m_shader_pixel(NULL),
-      m_topology(WRONG_VALUE);
+  CDXMesh(void)
+      ;
+        m_buffer_scene(NULL), m_shader_vertex(NULL), m_shader_pixel(NULL),
+        m_topology(WRONG_VALUE) ;
 
-  ~CDXMesh(void);
+  ~CDXMesh(void) ;
 
-  bool Create(
-      CDXDispatcher &dispatcher, CDXInput *buffer_scene,
-      const DXVertex vertices[], const uint indices[],
-      ENUM_DX_PRIMITIVE_TOPOLOGY topology = DX_PRIMITIVE_TOPOLOGY_TRIANGLELIST);
+  bool Create(CDXDispatcher &dispatcher, CDXInput *buffer_scene,
+              const DXVertex vertices[], const uint indices[],
+              ENUM_DX_PRIMITIVE_TOPOLOGY topology =
+                  DX_PRIMITIVE_TOPOLOGY_TRIANGLELIST) ;
 
   bool Create(CDXDispatcher &dispatcher, CDXInput *buffer_scene,
               string obj_path, float scale = 1.0f,
-              bool inverse_winding = false);
+              bool inverse_winding = false) ;
 
-  bool VerticesSet(const DXVertex vertices[]);
+  bool VerticesSet(const DXVertex vertices[]) ;
 
-  bool IndicesSet(const uint indices[]);
+  bool IndicesSet(const uint indices[]) ;
 
-  bool TopologySet(ENUM_DX_PRIMITIVE_TOPOLOGY topology);
+  bool TopologySet(ENUM_DX_PRIMITIVE_TOPOLOGY topology) ;
 
-  void TransformMatrixGet(DXMatrix &mat) const;
+  void TransformMatrixGet(DXMatrix &mat) const ;
 
-  void TransformMatrixSet(const DXMatrix &mat);
+  void TransformMatrixSet(const DXMatrix &mat) ;
 
-  void DiffuseColorGet(DXColor &clr) const;
+  void DiffuseColorGet(DXColor &clr) const ;
 
-  void DiffuseColorSet(const DXColor &clr);
+  void DiffuseColorSet(const DXColor &clr) ;
 
-  void SpecularColorGet(DXColor &clr) const;
+  void SpecularColorGet(DXColor &clr) const ;
 
-  void SpecularColorSet(const DXColor &clr);
+  void SpecularColorSet(const DXColor &clr) ;
 
-  void SpecularPowerGet(float &power) const;
+  void SpecularPowerGet(float &power) const ;
 
-  void SpecularPowerSet(float power);
+  void SpecularPowerSet(float power) ;
 
-  void EmissionColorGet(DXColor &clr) const;
+  void EmissionColorGet(DXColor &clr) const ;
 
-  void EmissionColorSet(const DXColor &clr);
+  void EmissionColorSet(const DXColor &clr) ;
 
-  virtual bool Render(void) override;
+  virtual bool Render(void) override ;
 
   bool TextureSet(CDXDispatcher &dispatcher, string path, uint data_x = 0,
-                  uint data_y = 0, uint data_width = 0, uint data_height = 0);
+                  uint data_y = 0, uint data_width = 0, uint data_height = 0) ;
 
   bool TextureSet(CDXDispatcher &dispatcher, ENUM_DX_FORMAT format, uint width,
                   uint height, const uint data[], uint data_x = 0,
-                  uint data_y = 0, uint data_width = 0, uint data_height = 0);
+                  uint data_y = 0, uint data_width = 0, uint data_height = 0) ;
 
-  void TextureDelete();
+  void TextureDelete() ;
 
-  virtual void Shutdown(void);
+  virtual void Shutdown(void) ;
 };
 
 #endif

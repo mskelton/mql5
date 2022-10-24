@@ -430,7 +430,8 @@ CCurve::CCurve(CurveFunction function, const double from, const double to,
   }
 }
 
-CCurve::~CCurve(void) {}
+CCurve::~CCurve(void) {
+}
 
 void CCurve::Update(const double &y[]) {
   m_trend_calc = false;

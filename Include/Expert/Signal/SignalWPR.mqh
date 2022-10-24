@@ -22,11 +22,11 @@ public:
   CSignalWPR(void);
   ~CSignalWPR(void);
 
-  void PeriodWPR(int value);
+  void PeriodWPR(int value) ;
 
-  void Pattern_0(int value);
-  void Pattern_1(int value);
-  void Pattern_2(int value);
+  void Pattern_0(int value) ;
+  void Pattern_1(int value) ;
+  void Pattern_2(int value) ;
 
   virtual bool ValidationSettings(void);
 
@@ -38,11 +38,21 @@ public:
 protected:
   bool InitWPR(CIndicators *indicators);
 
-  double WPR(int ind);
-  double Diff(int ind);
+  double WPR(int ind) ;
+  double Diff(int ind) ;
   int State(int ind);
   bool ExtState(int ind);
   bool CompareMaps(int map, int count, bool minimax = false, int start = 0);
 };
+
+
+
+
+
+
+
+
+
+
 
 #endif

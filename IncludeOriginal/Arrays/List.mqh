@@ -76,7 +76,8 @@ protected:
 
 CList::CList(void)
     : m_first_node(NULL), m_last_node(NULL), m_curr_node(NULL), m_curr_idx(-1),
-      m_data_total(0), m_free_mode(true), m_data_sort(false), m_sort_mode(0) {}
+      m_data_total(0), m_free_mode(true), m_data_sort(false), m_sort_mode(0) {
+}
 
 CList::~CList(void) {
   Clear();

@@ -11,8 +11,8 @@ public:
   CDealInfo(void);
   ~CDealInfo(void);
 
-  void Ticket(const ulong ticket);
-  ulong Ticket(void) const;
+  void Ticket(const ulong ticket) ;
+  ulong Ticket(void) const ;
 
   long Order(void) const;
   datetime Time(void) const;
@@ -44,5 +44,31 @@ public:
 
   bool SelectByIndex(const int index);
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #endif

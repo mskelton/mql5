@@ -17,11 +17,11 @@ public:
   CSignalSAR(void);
   ~CSignalSAR(void);
 
-  void Step(double value);
-  void Maximum(double value);
+  void Step(double value) ;
+  void Maximum(double value) ;
 
-  void Pattern_0(int value);
-  void Pattern_1(int value);
+  void Pattern_0(int value) ;
+  void Pattern_1(int value) ;
 
   virtual bool ValidationSettings(void);
 
@@ -33,9 +33,16 @@ public:
 protected:
   bool InitSAR(CIndicators *indicators);
 
-  double SAR(int ind);
-  double Close(int ind);
-  double DiffClose(int ind);
+  double SAR(int ind) ;
+  double Close(int ind) ;
+  double DiffClose(int ind) ;
 };
+
+
+
+
+
+
+
 
 #endif

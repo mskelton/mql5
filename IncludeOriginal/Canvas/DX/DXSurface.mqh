@@ -46,9 +46,11 @@ private:
                      const DXVector3 &to);
 };
 
-void CDXSurface::CDXSurface() : CDXMesh() {}
+void CDXSurface::CDXSurface() : CDXMesh() {
+}
 
-void CDXSurface::~CDXSurface(void) {}
+void CDXSurface::~CDXSurface(void) {
+}
 
 bool CDXSurface::Create(CDXDispatcher &dispatcher, CDXInput *buffer_scene,
                         double &data[], uint data_width, uint data_height,

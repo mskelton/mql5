@@ -18,9 +18,9 @@ public:
   virtual bool Create(const long chart, const string name, const int subwin,
                       const int x1, const int y1, const int x2, const int y2);
 
-  int Border(void) const;
+  int Border(void) const ;
   bool Border(const int value);
-  string BmpName(void) const;
+  string BmpName(void) const ;
   bool BmpName(const string name);
 
 protected:
@@ -30,5 +30,15 @@ protected:
   virtual bool OnMove(void);
   virtual bool OnChange(void);
 };
+
+
+
+
+
+
+
+
+
+
 
 #endif

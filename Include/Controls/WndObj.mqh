@@ -25,19 +25,19 @@ public:
   virtual bool OnEvent(const int id, const long &lparam, const double &dparam,
                        const string &sparam);
 
-  string Text(void) const;
+  string Text(void) const ;
   bool Text(const string value);
-  color Color(void) const;
+  color Color(void) const ;
   bool Color(const color value);
-  color ColorBackground(void) const;
+  color ColorBackground(void) const ;
   bool ColorBackground(const color value);
-  color ColorBorder(void) const;
+  color ColorBorder(void) const ;
   bool ColorBorder(const color value);
-  string Font(void) const;
+  string Font(void) const ;
   bool Font(const string value);
-  int FontSize(void) const;
+  int FontSize(void) const ;
   bool FontSize(const int value);
-  long ZOrder(void) const;
+  long ZOrder(void) const ;
   bool ZOrder(const long value);
 
 protected:
@@ -46,16 +46,31 @@ protected:
   virtual bool OnObjectDelete(void);
   virtual bool OnObjectDrag(void);
 
-  virtual bool OnSetText(void);
-  virtual bool OnSetColor(void);
-  virtual bool OnSetColorBackground(void);
-  virtual bool OnSetColorBorder(void);
-  virtual bool OnSetFont(void);
-  virtual bool OnSetFontSize(void);
-  virtual bool OnSetZOrder(void);
+  virtual bool OnSetText(void) ;
+  virtual bool OnSetColor(void) ;
+  virtual bool OnSetColorBackground(void) ;
+  virtual bool OnSetColorBorder(void) ;
+  virtual bool OnSetFont(void) ;
+  virtual bool OnSetFontSize(void) ;
+  virtual bool OnSetZOrder(void) ;
 
-  virtual bool OnDestroy(void);
+  virtual bool OnDestroy(void) ;
   virtual bool OnChange(void);
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #endif

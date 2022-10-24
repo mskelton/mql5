@@ -17,7 +17,8 @@ public:
   }
 };
 
-CDXHandle::CDXHandle(void) : m_handle(-1) {}
+CDXHandle::CDXHandle(void) : m_handle(-1) {
+}
 
 CDXHandle::~CDXHandle(void) {
   if (m_handle != -1) {
@@ -45,7 +46,8 @@ public:
   }
 };
 
-CDXHandleShared::CDXHandleShared(void) : m_references(1) {}
+CDXHandleShared::CDXHandleShared(void) : m_references(1) {
+}
 
 CDXHandleShared::~CDXHandleShared(void) {
 

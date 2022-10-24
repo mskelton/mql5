@@ -660,6 +660,11 @@ uint COPY_TICKS_TRADE;
 uint COPY_TICKS_ALL;
 
 /**
+ * The object is drawn in all timeframes
+ */
+int OBJ_ALL_PERIODS;
+
+/**
  * The _Period variable contains the value of the timeframe of the current
  * chart.
  *

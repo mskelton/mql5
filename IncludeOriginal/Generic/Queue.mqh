@@ -42,7 +42,8 @@ public:
   T Peek(void) const;
 };
 
-template <typename T> CQueue::CQueue(void) : m_size(0), m_head(0), m_tail(0) {}
+template <typename T> CQueue::CQueue(void) : m_size(0), m_head(0), m_tail(0) {
+}
 
 template <typename T>
 CQueue::CQueue(const int capacity) : m_size(0), m_head(0), m_tail(0) {
@@ -67,7 +68,8 @@ template <typename T> CQueue::CQueue(const CQueue &queue) {
   this = queue;
 }
 
-template <typename T> CQueue::~CQueue(void) {}
+template <typename T> CQueue::~CQueue(void) {
+}
 
 template <typename T> bool CQueue::operator=(const CQueue &queue) {
   if (&this != &queue) {

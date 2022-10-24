@@ -11,3 +11,7 @@ public:
   static int GetPrime(const int min);
   static int ExpandPrime(const int old_size);
 };
+
+
+
+#endif

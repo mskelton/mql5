@@ -18,8 +18,10 @@ public:
   }
 };
 
-CExpertTrailing::CExpertTrailing(void) {}
+CExpertTrailing::CExpertTrailing(void) {
+}
 
-CExpertTrailing::~CExpertTrailing(void) {}
+CExpertTrailing::~CExpertTrailing(void) {
+}
 
 #endif

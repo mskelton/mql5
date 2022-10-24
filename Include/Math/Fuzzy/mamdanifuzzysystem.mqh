@@ -20,18 +20,18 @@ public:
   CMamdaniFuzzySystem(void);
   ~CMamdaniFuzzySystem(void);
 
-  CList *Output();
+  CList *Output() ;
 
-  CList *Rules();
+  CList *Rules() ;
 
-  ImplicationMethod ImplicationMethod();
-  void ImplicationMethod(ImplicationMethod value);
+  ImplicationMethod ImplicationMethod() ;
+  void ImplicationMethod(ImplicationMethod value) ;
 
-  AggregationMethod AggregationMethod();
-  void AggregationMethod(AggregationMethod value);
+  AggregationMethod AggregationMethod() ;
+  void AggregationMethod(AggregationMethod value) ;
 
-  DefuzzificationMethod DefuzzificationMethod();
-  void DefuzzificationMethod(DefuzzificationMethod value);
+  DefuzzificationMethod DefuzzificationMethod() ;
+  void DefuzzificationMethod(DefuzzificationMethod value) ;
 
   CFuzzyVariable *OutputByName(const string name);
 
@@ -46,5 +46,16 @@ public:
   CList *Defuzzify(CList *fuzzyResult);
   double Defuzzify(IMembershipFunction *mf, const double min, const double max);
 };
+
+
+
+
+
+
+
+
+
+
+
 
 #endif

@@ -12,9 +12,11 @@ public:
   virtual double CheckOpenShort(double price, double sl);
 };
 
-void CMoneyFixedMargin::CMoneyFixedMargin(void) {}
+void CMoneyFixedMargin::CMoneyFixedMargin(void) {
+}
 
-void CMoneyFixedMargin::~CMoneyFixedMargin(void) {}
+void CMoneyFixedMargin::~CMoneyFixedMargin(void) {
+}
 
 double CMoneyFixedMargin::CheckOpenLong(double price, double sl) {
   if (m_symbol == NULL)

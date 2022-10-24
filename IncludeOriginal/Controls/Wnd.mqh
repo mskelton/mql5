@@ -320,9 +320,11 @@ CWnd::CWnd(void)
       m_prop_flags(0), m_align_flags(WND_ALIGN_NONE), m_align_left(0),
       m_align_top(0), m_align_right(0), m_align_bottom(0), m_mouse_x(0),
       m_mouse_y(0), m_mouse_flags(MOUSE_INVALID_FLAGS), m_last_click(0),
-      m_drag_object(NULL) {}
+      m_drag_object(NULL) {
+}
 
-CWnd::~CWnd(void) {}
+CWnd::~CWnd(void) {
+}
 
 bool CWnd::Create(const long chart, const string name, const int subwin,
                   const int x1, const int y1, const int x2, const int y2) {
@@ -647,9 +649,11 @@ protected:
   virtual bool OnDragProcess(const int x, const int y);
 };
 
-CDragWnd::CDragWnd(void) {}
+CDragWnd::CDragWnd(void) {
+}
 
-CDragWnd::~CDragWnd(void) {}
+CDragWnd::~CDragWnd(void) {
+}
 
 void CDragWnd::Limits(const int l, const int t, const int r, const int b) {
 

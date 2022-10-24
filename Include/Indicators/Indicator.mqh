@@ -12,10 +12,10 @@ public:
   CIndicatorBuffer(void);
   ~CIndicatorBuffer(void);
 
-  int Offset(void) const;
-  void Offset(const int offset);
-  string Name(void) const;
-  void Name(const string name);
+  int Offset(void) const ;
+  void Offset(const int offset) ;
+  string Name(void) const ;
+  void Name(const string name) ;
 
   double At(const int index) const;
 
@@ -23,9 +23,14 @@ public:
   bool RefreshCurrent(const int handle, const int num);
 
 private:
-  virtual bool Refresh(void);
-  virtual bool RefreshCurrent(void);
+  virtual bool Refresh(void) ;
+  virtual bool RefreshCurrent(void) ;
 };
+
+
+
+
+
 
 class CIndicator : public CSeries {
 protected:
@@ -38,10 +43,10 @@ public:
   CIndicator(void);
   ~CIndicator(void);
 
-  int Handle(void) const;
-  string Status(void) const;
-  void FullRelease(const bool flag = true);
-  void Redrawer(const bool flag = true);
+  int Handle(void) const ;
+  string Status(void) const ;
+  void FullRelease(const bool flag = true) ;
+  void Redrawer(const bool flag = true) ;
 
   bool Create(const string symbol, const ENUM_TIMEFRAMES period,
               const ENUM_INDICATOR type, const int num_params,
@@ -77,7 +82,27 @@ protected:
   bool CreateBuffers(const string symbol, const ENUM_TIMEFRAMES period,
                      const int buffers);
   virtual bool Initialize(const string symbol, const ENUM_TIMEFRAMES period,
-                          const int num_params, const MqlParam params[]);
+                          const int num_params, const MqlParam params[]) ;
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #endif

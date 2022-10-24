@@ -67,9 +67,11 @@ protected:
   virtual int Compare(const CObject *node, const int mode = 0) const;
 };
 
-CString::CString(void) : m_string("") {}
+CString::CString(void) : m_string("") {
+}
 
-CString::~CString(void) {}
+CString::~CString(void) {
+}
 
 void CString::Copy(string &copy) const {
   copy = m_string;

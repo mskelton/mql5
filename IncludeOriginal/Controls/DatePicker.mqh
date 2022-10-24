@@ -58,9 +58,11 @@ CheckListHide(id, (int)lparam, (int)dparam);
 
 EVENT_MAP_END(CWndContainer)
 
-CDatePicker::CDatePicker(void) : m_value(0) {}
+CDatePicker::CDatePicker(void) : m_value(0) {
+}
 
-CDatePicker::~CDatePicker(void) {}
+CDatePicker::~CDatePicker(void) {
+}
 
 bool CDatePicker::Create(const long chart, const string name, const int subwin,
                          const int x1, const int y1, const int x2,

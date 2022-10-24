@@ -7,7 +7,7 @@
 
 class ISugenoFunction : public CNamedValueImpl {
 public:
-  virtual bool IsTypeOf(EnType type);
+  virtual bool IsTypeOf(EnType type) ;
 };
 
 class CLinearSugenoFunction : public ISugenoFunction {
@@ -23,16 +23,23 @@ public:
   CLinearSugenoFunction(const string name, CList *in, const double coeffs[]);
   ~CLinearSugenoFunction(void);
 
-  virtual bool IsTypeOf(EnType type);
+  virtual bool IsTypeOf(EnType type) ;
 
-  double ConstValue();
-  void ConstValue(const double value);
+  double ConstValue() ;
+  void ConstValue(const double value) ;
 
   double GetCoefficient(CFuzzyVariable *var);
   void SetCoefficient(CFuzzyVariable *var, const double coeff);
 
   double Evaluate(CList *inputValues);
 };
+
+
+
+
+
+
+
 
 class CSugenoVariable : public CNamedVariableImpl {
 private:
@@ -42,13 +49,16 @@ public:
   CSugenoVariable(const string name);
   ~CSugenoVariable(void);
 
-  virtual bool IsTypeOf(EnType type);
+  virtual bool IsTypeOf(EnType type) ;
 
-  CList *Functions();
+  CList *Functions() ;
 
-  CList *Values();
+  CList *Values() ;
 
   ISugenoFunction *GetFuncByName(const string name);
 };
+
+
+
 
 #endif

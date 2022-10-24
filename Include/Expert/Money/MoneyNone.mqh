@@ -14,4 +14,9 @@ public:
   virtual double CheckOpenShort(double price, double sl);
 };
 
+
+
+
+
+
 #endif

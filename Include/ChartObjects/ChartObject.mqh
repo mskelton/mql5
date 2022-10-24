@@ -14,13 +14,13 @@ public:
   CChartObject(void);
   ~CChartObject(void);
 
-  virtual int Type(void) const;
+  virtual int Type(void) const ;
 
-  long ChartId(void) const;
-  int Window(void) const;
-  string Name(void) const;
+  long ChartId(void) const ;
+  int Window(void) const ;
+  string Name(void) const ;
   bool Name(const string name);
-  int NumPoints(void) const;
+  int NumPoints(void) const ;
 
   bool Attach(long chart_id, const string name, const int window,
               const int points);
@@ -102,5 +102,67 @@ public:
   virtual bool Save(const int file_handle);
   virtual bool Load(const int file_handle);
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #endif

@@ -62,7 +62,8 @@ public:
 };
 
 template <typename T>
-CRedBlackTreeNode::CRedBlackTreeNode(void) : m_clr(RED_BLACK_TREE_NODE_RED) {}
+CRedBlackTreeNode::CRedBlackTreeNode(void) : m_clr(RED_BLACK_TREE_NODE_RED) {
+}
 
 template <typename T> CRedBlackTreeNode::CRedBlackTreeNode(T value) {
   m_value = value;

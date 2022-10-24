@@ -37,7 +37,7 @@ public:
   CSymbolInfo(void);
   ~CSymbolInfo(void);
 
-  string Name(void) const;
+  string Name(void) const ;
   bool Name(const string name);
   bool Refresh(void);
   bool RefreshRates(void);
@@ -46,11 +46,11 @@ public:
   bool Select(const bool select);
   bool IsSynchronized(void) const;
 
-  ulong Volume(void) const;
+  ulong Volume(void) const ;
   ulong VolumeHigh(void) const;
   ulong VolumeLow(void) const;
 
-  datetime Time(void) const;
+  datetime Time(void) const ;
   int Spread(void) const;
   bool SpreadFloat(void) const;
   int TicksBookDepth(void) const;
@@ -58,65 +58,65 @@ public:
   int StopsLevel(void) const;
   int FreezeLevel(void) const;
 
-  double Bid(void) const;
+  double Bid(void) const ;
   double BidHigh(void) const;
   double BidLow(void) const;
 
-  double Ask(void) const;
+  double Ask(void) const ;
   double AskHigh(void) const;
   double AskLow(void) const;
 
-  double Last(void) const;
+  double Last(void) const ;
   double LastHigh(void) const;
   double LastLow(void) const;
 
-  int OrderMode(void) const;
+  int OrderMode(void) const ;
 
-  ENUM_SYMBOL_CALC_MODE TradeCalcMode(void) const;
+  ENUM_SYMBOL_CALC_MODE TradeCalcMode(void) const ;
   string TradeCalcModeDescription(void) const;
-  ENUM_SYMBOL_TRADE_MODE TradeMode(void) const;
+  ENUM_SYMBOL_TRADE_MODE TradeMode(void) const ;
   string TradeModeDescription(void) const;
 
-  ENUM_SYMBOL_TRADE_EXECUTION TradeExecution(void) const;
+  ENUM_SYMBOL_TRADE_EXECUTION TradeExecution(void) const ;
   string TradeExecutionDescription(void) const;
 
-  ENUM_SYMBOL_SWAP_MODE SwapMode(void) const;
+  ENUM_SYMBOL_SWAP_MODE SwapMode(void) const ;
   string SwapModeDescription(void) const;
-  ENUM_DAY_OF_WEEK SwapRollover3days(void) const;
+  ENUM_DAY_OF_WEEK SwapRollover3days(void) const ;
   string SwapRollover3daysDescription(void) const;
 
   datetime StartTime(void) const;
   datetime ExpirationTime(void) const;
 
-  double MarginInitial(void) const;
-  double MarginMaintenance(void) const;
-  bool MarginHedgedUseLeg(void) const;
-  double MarginHedged(void) const;
+  double MarginInitial(void) const ;
+  double MarginMaintenance(void) const ;
+  bool MarginHedgedUseLeg(void) const ;
+  double MarginHedged(void) const ;
 
-  double MarginLong(void) const;
-  double MarginShort(void) const;
-  double MarginLimit(void) const;
-  double MarginStop(void) const;
-  double MarginStopLimit(void) const;
+  double MarginLong(void) const ;
+  double MarginShort(void) const ;
+  double MarginLimit(void) const ;
+  double MarginStop(void) const ;
+  double MarginStopLimit(void) const ;
 
-  int TradeTimeFlags(void) const;
-  int TradeFillFlags(void) const;
+  int TradeTimeFlags(void) const ;
+  int TradeFillFlags(void) const ;
 
-  int Digits(void) const;
-  double Point(void) const;
-  double TickValue(void) const;
-  double TickValueProfit(void) const;
-  double TickValueLoss(void) const;
-  double TickSize(void) const;
+  int Digits(void) const ;
+  double Point(void) const ;
+  double TickValue(void) const ;
+  double TickValueProfit(void) const ;
+  double TickValueLoss(void) const ;
+  double TickSize(void) const ;
 
-  double ContractSize(void) const;
-  double LotsMin(void) const;
-  double LotsMax(void) const;
-  double LotsStep(void) const;
-  double LotsLimit(void) const;
+  double ContractSize(void) const ;
+  double LotsMin(void) const ;
+  double LotsMax(void) const ;
+  double LotsStep(void) const ;
+  double LotsLimit(void) const ;
 
-  double SwapLong(void) const;
-  double SwapShort(void) const;
+  double SwapLong(void) const ;
+  double SwapShort(void) const ;
 
   string CurrencyBase(void) const;
   string CurrencyProfit(void) const;
@@ -149,5 +149,58 @@ public:
   double NormalizePrice(const double price) const;
   bool CheckMarketWatch(void);
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #endif

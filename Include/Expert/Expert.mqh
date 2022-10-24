@@ -78,7 +78,7 @@ public:
   bool Init(string symbol, ENUM_TIMEFRAMES period, bool every_tick,
             ulong magic = 0);
   void Magic(ulong value);
-  void CheckVolumeBeforeTrade(const bool flag);
+  void CheckVolumeBeforeTrade(const bool flag) ;
 
   virtual bool InitSignal(CExpertSignal *signal = NULL);
   virtual bool InitTrailing(CExpertTrailing *trailing = NULL);
@@ -87,15 +87,15 @@ public:
 
   virtual void Deinit(void);
 
-  void OnTickProcess(bool value);
-  void OnTradeProcess(bool value);
-  void OnTimerProcess(bool value);
-  void OnChartEventProcess(bool value);
-  void OnBookEventProcess(bool value);
-  int MaxOrders(void) const;
-  void MaxOrders(int value);
+  void OnTickProcess(bool value) ;
+  void OnTradeProcess(bool value) ;
+  void OnTimerProcess(bool value) ;
+  void OnChartEventProcess(bool value) ;
+  void OnBookEventProcess(bool value) ;
+  int MaxOrders(void) const ;
+  void MaxOrders(int value) ;
 
-  CExpertSignal *Signal(void) const;
+  CExpertSignal *Signal(void) const ;
 
   virtual bool ValidationSettings();
 
@@ -109,7 +109,7 @@ public:
   virtual void OnBookEvent(const string &symbol);
 
 protected:
-  virtual bool InitParameters(void);
+  virtual bool InitParameters(void) ;
 
   virtual void DeinitTrade(void);
   virtual void DeinitSignal(void);
@@ -178,22 +178,89 @@ protected:
   void HistoryPoint(bool from_check_trade = false);
   bool CheckTradeState(void);
 
-  void WaitEvent(ENUM_TRADE_EVENTS event);
-  void NoWaitEvent(ENUM_TRADE_EVENTS event);
+  void WaitEvent(ENUM_TRADE_EVENTS event) ;
+  void NoWaitEvent(ENUM_TRADE_EVENTS event) ;
 
-  virtual bool TradeEventPositionStopTake(void);
-  virtual bool TradeEventOrderTriggered(void);
-  virtual bool TradeEventPositionOpened(void);
-  virtual bool TradeEventPositionVolumeChanged(void);
-  virtual bool TradeEventPositionModified(void);
-  virtual bool TradeEventPositionClosed(void);
-  virtual bool TradeEventOrderPlaced(void);
-  virtual bool TradeEventOrderModified(void);
-  virtual bool TradeEventOrderDeleted(void);
-  virtual bool TradeEventNotIdentified(void);
+  virtual bool TradeEventPositionStopTake(void) ;
+  virtual bool TradeEventOrderTriggered(void) ;
+  virtual bool TradeEventPositionOpened(void) ;
+  virtual bool TradeEventPositionVolumeChanged(void) ;
+  virtual bool TradeEventPositionModified(void) ;
+  virtual bool TradeEventPositionClosed(void) ;
+  virtual bool TradeEventOrderPlaced(void) ;
+  virtual bool TradeEventOrderModified(void) ;
+  virtual bool TradeEventOrderDeleted(void) ;
+  virtual bool TradeEventNotIdentified(void) ;
 
   void TimeframeAdd(ENUM_TIMEFRAMES period);
   int TimeframesFlags(MqlDateTime &time);
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #endif

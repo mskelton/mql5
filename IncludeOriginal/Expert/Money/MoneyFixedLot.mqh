@@ -24,9 +24,11 @@ public:
   }
 };
 
-void CMoneyFixedLot::CMoneyFixedLot(void) : m_lots(0.1) {}
+void CMoneyFixedLot::CMoneyFixedLot(void) : m_lots(0.1) {
+}
 
-void CMoneyFixedLot::~CMoneyFixedLot(void) {}
+void CMoneyFixedLot::~CMoneyFixedLot(void) {
+}
 
 bool CMoneyFixedLot::ValidationSettings(void) {
   if (!CExpertMoney::ValidationSettings())

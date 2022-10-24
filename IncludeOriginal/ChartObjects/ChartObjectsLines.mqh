@@ -16,9 +16,11 @@ public:
   }
 };
 
-CChartObjectVLine::CChartObjectVLine(void) {}
+CChartObjectVLine::CChartObjectVLine(void) {
+}
 
-CChartObjectVLine::~CChartObjectVLine(void) {}
+CChartObjectVLine::~CChartObjectVLine(void) {
+}
 
 bool CChartObjectVLine::Create(long chart_id, const string name,
                                const int window, const datetime time) {
@@ -43,9 +45,11 @@ public:
   }
 };
 
-CChartObjectHLine::CChartObjectHLine(void) {}
+CChartObjectHLine::CChartObjectHLine(void) {
+}
 
-CChartObjectHLine::~CChartObjectHLine(void) {}
+CChartObjectHLine::~CChartObjectHLine(void) {
+}
 
 bool CChartObjectHLine::Create(long chart_id, const string name,
                                const int window, const double price) {
@@ -79,9 +83,11 @@ public:
   virtual bool Load(const int file_handle);
 };
 
-CChartObjectTrend::CChartObjectTrend(void) {}
+CChartObjectTrend::CChartObjectTrend(void) {
+}
 
-CChartObjectTrend::~CChartObjectTrend(void) {}
+CChartObjectTrend::~CChartObjectTrend(void) {
+}
 
 bool CChartObjectTrend::Create(long chart_id, const string name,
                                const int window, const datetime time1,
@@ -187,9 +193,11 @@ public:
   }
 };
 
-CChartObjectTrendByAngle::CChartObjectTrendByAngle(void) {}
+CChartObjectTrendByAngle::CChartObjectTrendByAngle(void) {
+}
 
-CChartObjectTrendByAngle::~CChartObjectTrendByAngle(void) {}
+CChartObjectTrendByAngle::~CChartObjectTrendByAngle(void) {
+}
 
 bool CChartObjectTrendByAngle::Create(long chart_id, const string name,
                                       const int window, const datetime time1,
@@ -234,9 +242,11 @@ public:
   }
 };
 
-CChartObjectCycles::CChartObjectCycles(void) {}
+CChartObjectCycles::CChartObjectCycles(void) {
+}
 
-CChartObjectCycles::~CChartObjectCycles(void) {}
+CChartObjectCycles::~CChartObjectCycles(void) {
+}
 
 bool CChartObjectCycles::Create(long chart_id, const string name,
                                 const int window, const datetime time1,

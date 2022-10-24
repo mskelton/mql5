@@ -7,9 +7,9 @@
 
 class CDXSurface : public CDXMesh {
 public:
-  enum EN_SURFACE_FLAGS;
+  enum EN_SURFACE_FLAGS ;
 
-  enum EN_COLOR_SCHEME;
+  enum EN_COLOR_SCHEME ;
 
 protected:
   uint m_data_width;
@@ -36,5 +36,10 @@ private:
   void PrepareColors(DXVertex vertices[], const DXVector3 &from,
                      const DXVector3 &to);
 };
+
+
+
+
+
 
 #endif

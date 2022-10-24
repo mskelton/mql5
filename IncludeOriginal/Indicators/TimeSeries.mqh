@@ -22,9 +22,11 @@ public:
   virtual void Refresh(const int flags = OBJ_ALL_PERIODS);
 };
 
-CPriceSeries::CPriceSeries(void) {}
+CPriceSeries::CPriceSeries(void) {
+}
 
-CPriceSeries::~CPriceSeries(void) {}
+CPriceSeries::~CPriceSeries(void) {
+}
 
 bool CPriceSeries::BufferResize(const int size) {
   if (size > m_buffer_size && !CSeries::BufferResize(size))
@@ -119,9 +121,11 @@ public:
   virtual bool RefreshCurrent(void);
 };
 
-COpenBuffer::COpenBuffer(void) {}
+COpenBuffer::COpenBuffer(void) {
+}
 
-COpenBuffer::~COpenBuffer(void) {}
+COpenBuffer::~COpenBuffer(void) {
+}
 
 bool COpenBuffer::Refresh(void) {
   m_data_total = CopyOpen(m_symbol, m_period, 0, m_size, m_data);
@@ -161,7 +165,8 @@ CiOpen::CiOpen(void) {
   m_name = "Open";
 }
 
-CiOpen::~CiOpen(void) {}
+CiOpen::~CiOpen(void) {
+}
 
 bool CiOpen::Create(const string symbol, const ENUM_TIMEFRAMES period) {
   CDoubleBuffer *buff;
@@ -206,9 +211,11 @@ public:
   virtual bool RefreshCurrent(void);
 };
 
-CHighBuffer::CHighBuffer(void) {}
+CHighBuffer::CHighBuffer(void) {
+}
 
-CHighBuffer::~CHighBuffer(void) {}
+CHighBuffer::~CHighBuffer(void) {
+}
 
 bool CHighBuffer::Refresh(void) {
   m_data_total = CopyHigh(m_symbol, m_period, 0, m_size, m_data);
@@ -248,7 +255,8 @@ CiHigh::CiHigh(void) {
   m_name = "High";
 }
 
-CiHigh::~CiHigh(void) {}
+CiHigh::~CiHigh(void) {
+}
 
 bool CiHigh::Create(const string symbol, const ENUM_TIMEFRAMES period) {
   CDoubleBuffer *buff;
@@ -293,9 +301,11 @@ public:
   virtual bool RefreshCurrent(void);
 };
 
-CLowBuffer::CLowBuffer(void) {}
+CLowBuffer::CLowBuffer(void) {
+}
 
-CLowBuffer::~CLowBuffer(void) {}
+CLowBuffer::~CLowBuffer(void) {
+}
 
 bool CLowBuffer::Refresh(void) {
   m_data_total = CopyLow(m_symbol, m_period, 0, m_size, m_data);
@@ -335,7 +345,8 @@ CiLow::CiLow(void) {
   m_name = "Low";
 }
 
-CiLow::~CiLow(void) {}
+CiLow::~CiLow(void) {
+}
 
 bool CiLow::Create(const string symbol, const ENUM_TIMEFRAMES period) {
   CDoubleBuffer *buff;
@@ -380,9 +391,11 @@ public:
   virtual bool RefreshCurrent(void);
 };
 
-CCloseBuffer::CCloseBuffer(void) {}
+CCloseBuffer::CCloseBuffer(void) {
+}
 
-CCloseBuffer::~CCloseBuffer(void) {}
+CCloseBuffer::~CCloseBuffer(void) {
+}
 
 bool CCloseBuffer::Refresh(void) {
   m_data_total = CopyClose(m_symbol, m_period, 0, m_size, m_data);
@@ -422,7 +435,8 @@ CiClose::CiClose(void) {
   m_name = "Close";
 }
 
-CiClose::~CiClose(void) {}
+CiClose::~CiClose(void) {
+}
 
 bool CiClose::Create(const string symbol, const ENUM_TIMEFRAMES period) {
   CDoubleBuffer *buff;
@@ -487,7 +501,8 @@ CSpreadBuffer::CSpreadBuffer(void)
   ArraySetAsSeries(m_data, true);
 }
 
-CSpreadBuffer::~CSpreadBuffer(void) {}
+CSpreadBuffer::~CSpreadBuffer(void) {
+}
 
 int CSpreadBuffer::At(const int index) const {
 
@@ -546,7 +561,8 @@ CiSpread::CiSpread(void) {
   m_name = "Spread";
 }
 
-CiSpread::~CiSpread(void) {}
+CiSpread::~CiSpread(void) {
+}
 
 bool CiSpread::Create(const string symbol, const ENUM_TIMEFRAMES period) {
   CSpreadBuffer *buff;
@@ -649,7 +665,8 @@ CTimeBuffer::CTimeBuffer(void)
   ArraySetAsSeries(m_data, true);
 }
 
-CTimeBuffer::~CTimeBuffer(void) {}
+CTimeBuffer::~CTimeBuffer(void) {
+}
 
 long CTimeBuffer::At(const int index) const {
 
@@ -709,7 +726,8 @@ CiTime::CiTime(void) {
   m_name = "Time";
 }
 
-CiTime::~CiTime(void) {}
+CiTime::~CiTime(void) {
+}
 
 bool CiTime::Create(const string symbol, const ENUM_TIMEFRAMES period) {
   CTimeBuffer *buff;
@@ -812,7 +830,8 @@ CTickVolumeBuffer::CTickVolumeBuffer(void)
   ArraySetAsSeries(m_data, true);
 }
 
-CTickVolumeBuffer::~CTickVolumeBuffer(void) {}
+CTickVolumeBuffer::~CTickVolumeBuffer(void) {
+}
 
 long CTickVolumeBuffer::At(const int index) const {
 
@@ -872,7 +891,8 @@ CiTickVolume::CiTickVolume(void) {
   m_name = "Volume";
 }
 
-CiTickVolume::~CiTickVolume(void) {}
+CiTickVolume::~CiTickVolume(void) {
+}
 
 bool CiTickVolume::Create(const string symbol, const ENUM_TIMEFRAMES period) {
   CTickVolumeBuffer *buff;
@@ -975,7 +995,8 @@ CRealVolumeBuffer::CRealVolumeBuffer(void)
   ArraySetAsSeries(m_data, true);
 }
 
-CRealVolumeBuffer::~CRealVolumeBuffer(void) {}
+CRealVolumeBuffer::~CRealVolumeBuffer(void) {
+}
 
 long CRealVolumeBuffer::At(const int index) const {
 
@@ -1035,7 +1056,8 @@ CiRealVolume::CiRealVolume(void) {
   m_name = "RealVolume";
 }
 
-CiRealVolume::~CiRealVolume(void) {}
+CiRealVolume::~CiRealVolume(void) {
+}
 
 bool CiRealVolume::Create(const string symbol, const ENUM_TIMEFRAMES period) {
   CRealVolumeBuffer *buff;

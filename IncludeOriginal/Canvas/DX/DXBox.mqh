@@ -19,9 +19,11 @@ private:
   void PrepareVertices(const DXVector3 &from, const DXVector3 &to);
 };
 
-void CDXBox::CDXBox() : CDXMesh() {}
+void CDXBox::CDXBox() : CDXMesh() {
+}
 
-void CDXBox::~CDXBox(void) {}
+void CDXBox::~CDXBox(void) {
+}
 
 bool CDXBox::Create(CDXDispatcher &dispatcher, CDXInput *buffer_scene,
                     const DXVector3 &from, const DXVector3 &to) {

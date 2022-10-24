@@ -11,7 +11,7 @@ public:
   CArrayString(void);
   ~CArrayString(void);
 
-  virtual int Type(void) const;
+  virtual int Type(void) const ;
 
   virtual bool Save(const int file_handle);
   virtual bool Load(const int file_handle);
@@ -30,7 +30,7 @@ public:
   bool AssignArray(const CArrayString *src);
 
   string At(const int index) const;
-  string operator[](const int index) const;
+  string operator[](const int index) const ;
 
   bool Update(const int index, const string element);
   bool Shift(const int index, const int shift);
@@ -56,5 +56,39 @@ protected:
   int QuickSearch(const string element) const;
   int MemMove(const int dest, const int src, int count);
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #endif

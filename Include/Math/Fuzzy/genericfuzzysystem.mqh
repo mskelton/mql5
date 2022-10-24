@@ -18,13 +18,13 @@ protected:
   ~CGenericFuzzySystem(void);
 
 public:
-  CList *Input(void);
+  CList *Input(void) ;
 
-  void AndMethod(AndMethod value);
-  AndMethod AndMethod(void);
+  void AndMethod(AndMethod value) ;
+  AndMethod AndMethod(void) ;
 
-  void OrMethod(OrMethod value);
-  OrMethod OrMethod(void);
+  void OrMethod(OrMethod value) ;
+  OrMethod OrMethod(void) ;
 
   CFuzzyVariable *InputByName(const string name);
 
@@ -38,5 +38,12 @@ protected:
 private:
   bool ValidateInputValues(CList *inputValues, string &msg);
 };
+
+
+
+
+
+
+
 
 #endif

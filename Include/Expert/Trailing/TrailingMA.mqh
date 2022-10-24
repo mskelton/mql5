@@ -16,11 +16,11 @@ public:
   CTrailingMA(void);
   ~CTrailingMA(void);
 
-  void Period(int period);
-  void Shift(int shift);
+  void Period(int period) ;
+  void Shift(int shift) ;
 
-  void Method(ENUM_MA_METHOD method);
-  void Applied(ENUM_APPLIED_PRICE applied);
+  void Method(ENUM_MA_METHOD method) ;
+  void Applied(ENUM_APPLIED_PRICE applied) ;
   virtual bool InitIndicators(CIndicators *indicators);
   virtual bool ValidationSettings(void);
 
@@ -29,5 +29,11 @@ public:
   virtual bool CheckTrailingStopShort(CPositionInfo *position, double &sl,
                                       double &tp);
 };
+
+
+
+
+
+
 
 #endif

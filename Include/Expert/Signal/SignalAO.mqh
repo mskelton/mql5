@@ -21,10 +21,10 @@ public:
   CSignalAO(void);
   ~CSignalAO(void);
 
-  void Pattern_0(int value);
-  void Pattern_1(int value);
-  void Pattern_2(int value);
-  void Pattern_3(int value);
+  void Pattern_0(int value) ;
+  void Pattern_1(int value) ;
+  void Pattern_2(int value) ;
+  void Pattern_3(int value) ;
 
   virtual bool InitIndicators(CIndicators *indicators);
 
@@ -34,10 +34,18 @@ public:
 protected:
   bool InitAO(CIndicators *indicators);
 
-  double AO(int ind);
-  double DiffAO(int ind);
+  double AO(int ind) ;
+  double DiffAO(int ind) ;
   int StateAO(int ind);
   bool ExtStateAO(int ind);
 };
+
+
+
+
+
+
+
+
 
 #endif

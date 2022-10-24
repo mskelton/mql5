@@ -15,9 +15,9 @@ public:
   CSignalAC(void);
   ~CSignalAC(void);
 
-  void Pattern_0(int value);
-  void Pattern_1(int value);
-  void Pattern_2(int value);
+  void Pattern_0(int value) ;
+  void Pattern_1(int value) ;
+  void Pattern_2(int value) ;
 
   virtual bool InitIndicators(CIndicators *indicators);
 
@@ -27,8 +27,14 @@ public:
 protected:
   bool InitAC(CIndicators *indicators);
 
-  double AC(int ind);
-  double DiffAC(int ind);
+  double AC(int ind) ;
+  double DiffAC(int ind) ;
 };
+
+
+
+
+
+
 
 #endif

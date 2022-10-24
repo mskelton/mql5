@@ -25,9 +25,11 @@ public:
   virtual bool Load(const int file_handle);
 };
 
-CChartObjectElliottWave3::CChartObjectElliottWave3(void) {}
+CChartObjectElliottWave3::CChartObjectElliottWave3(void) {
+}
 
-CChartObjectElliottWave3::~CChartObjectElliottWave3(void) {}
+CChartObjectElliottWave3::~CChartObjectElliottWave3(void) {
+}
 
 bool CChartObjectElliottWave3::Create(long chart_id, const string name,
                                       const int window, const datetime time1,
@@ -139,9 +141,11 @@ public:
   }
 };
 
-CChartObjectElliottWave5::CChartObjectElliottWave5(void) {}
+CChartObjectElliottWave5::CChartObjectElliottWave5(void) {
+}
 
-CChartObjectElliottWave5::~CChartObjectElliottWave5(void) {}
+CChartObjectElliottWave5::~CChartObjectElliottWave5(void) {
+}
 
 bool CChartObjectElliottWave5::Create(long chart_id, const string name,
                                       const int window, const datetime time1,

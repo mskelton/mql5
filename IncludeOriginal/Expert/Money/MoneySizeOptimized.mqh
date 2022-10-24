@@ -24,9 +24,11 @@ protected:
   double Optimize(double lots);
 };
 
-void CMoneySizeOptimized::CMoneySizeOptimized(void) : m_decrease_factor(3.0) {}
+void CMoneySizeOptimized::CMoneySizeOptimized(void) : m_decrease_factor(3.0) {
+}
 
-void CMoneySizeOptimized::~CMoneySizeOptimized(void) {}
+void CMoneySizeOptimized::~CMoneySizeOptimized(void) {
+}
 
 bool CMoneySizeOptimized::ValidationSettings(void) {
   if (!CExpertMoney::ValidationSettings())

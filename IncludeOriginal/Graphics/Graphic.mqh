@@ -342,7 +342,8 @@ CGraphic::CGraphic(void) : m_height(0.0), m_width(0.0) {
   SetDefaultParameters();
 }
 
-CGraphic::~CGraphic(void) {}
+CGraphic::~CGraphic(void) {
+}
 
 void CGraphic::CreateWorkspace(void) {
 

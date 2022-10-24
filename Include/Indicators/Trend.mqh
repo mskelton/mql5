@@ -11,7 +11,7 @@ public:
   CiADX(void);
   ~CiADX(void);
 
-  int MaPeriod(void) const;
+  int MaPeriod(void) const ;
 
   bool Create(const string symbol, const ENUM_TIMEFRAMES period,
               const int ma_period);
@@ -20,7 +20,7 @@ public:
   double Plus(const int index) const;
   double Minus(const int index) const;
 
-  virtual int Type(void) const;
+  virtual int Type(void) const ;
 
 protected:
   virtual bool Initialize(const string symbol, const ENUM_TIMEFRAMES period,
@@ -28,6 +28,14 @@ protected:
   bool Initialize(const string symbol, const ENUM_TIMEFRAMES period,
                   const int ma_period);
 };
+
+
+
+
+
+
+
+
 
 class CiADXWilder : public CIndicator {
 protected:
@@ -37,7 +45,7 @@ public:
   CiADXWilder(void);
   ~CiADXWilder(void);
 
-  int MaPeriod(void) const;
+  int MaPeriod(void) const ;
 
   bool Create(const string symbol, const ENUM_TIMEFRAMES period,
               const int ma_period);
@@ -46,7 +54,7 @@ public:
   double Plus(const int index) const;
   double Minus(const int index) const;
 
-  virtual int Type(void) const;
+  virtual int Type(void) const ;
 
 protected:
   virtual bool Initialize(const string symbol, const ENUM_TIMEFRAMES period,
@@ -54,6 +62,14 @@ protected:
   bool Initialize(const string symbol, const ENUM_TIMEFRAMES period,
                   const int ma_period);
 };
+
+
+
+
+
+
+
+
 
 class CiBands : public CIndicator {
 protected:
@@ -66,10 +82,10 @@ public:
   CiBands(void);
   ~CiBands(void);
 
-  int MaPeriod(void) const;
-  int MaShift(void) const;
-  double Deviation(void) const;
-  int Applied(void) const;
+  int MaPeriod(void) const ;
+  int MaShift(void) const ;
+  double Deviation(void) const ;
+  int Applied(void) const ;
 
   bool Create(const string symbol, const ENUM_TIMEFRAMES period,
               const int ma_period, const int ma_shift, const double deviation,
@@ -79,7 +95,7 @@ public:
   double Upper(const int index) const;
   double Lower(const int index) const;
 
-  virtual int Type(void) const;
+  virtual int Type(void) const ;
 
 protected:
   virtual bool Initialize(const string symbol, const ENUM_TIMEFRAMES period,
@@ -88,6 +104,14 @@ protected:
                   const int ma_period, const int ma_shift,
                   const double deviation, const int applied);
 };
+
+
+
+
+
+
+
+
 
 class CiEnvelopes : public CIndicator {
 protected:
@@ -101,11 +125,11 @@ public:
   CiEnvelopes(void);
   ~CiEnvelopes(void);
 
-  int MaPeriod(void) const;
-  int MaShift(void) const;
-  ENUM_MA_METHOD MaMethod(void) const;
-  int Applied(void) const;
-  double Deviation(void) const;
+  int MaPeriod(void) const ;
+  int MaShift(void) const ;
+  ENUM_MA_METHOD MaMethod(void) const ;
+  int Applied(void) const ;
+  double Deviation(void) const ;
 
   bool Create(const string symbol, const ENUM_TIMEFRAMES period,
               const int ma_period, const int ma_shift,
@@ -115,7 +139,7 @@ public:
   double Upper(const int index) const;
   double Lower(const int index) const;
 
-  virtual int Type(void) const;
+  virtual int Type(void) const ;
 
 protected:
   virtual bool Initialize(const string symbol, const ENUM_TIMEFRAMES period,
@@ -125,6 +149,13 @@ protected:
                   const ENUM_MA_METHOD ma_method, const int applied,
                   const double deviation);
 };
+
+
+
+
+
+
+
 
 class CiIchimoku : public CIndicator {
 protected:
@@ -136,9 +167,9 @@ public:
   CiIchimoku(void);
   ~CiIchimoku(void);
 
-  int TenkanSenPeriod(void) const;
-  int KijunSenPeriod(void) const;
-  int SenkouSpanBPeriod(void) const;
+  int TenkanSenPeriod(void) const ;
+  int KijunSenPeriod(void) const ;
+  int SenkouSpanBPeriod(void) const ;
 
   bool Create(const string symbol, const ENUM_TIMEFRAMES period,
               const int tenkan_sen, const int kijun_sen,
@@ -150,7 +181,7 @@ public:
   double SenkouSpanB(const int index) const;
   double ChinkouSpan(const int index) const;
 
-  virtual int Type(void) const;
+  virtual int Type(void) const ;
 
 protected:
   virtual bool Initialize(const string symbol, const ENUM_TIMEFRAMES period,
@@ -159,6 +190,16 @@ protected:
                   const int tenkan_sen, const int kijun_sen,
                   const int senkou_span_b);
 };
+
+
+
+
+
+
+
+
+
+
 
 class CiMA : public CIndicator {
 protected:
@@ -171,10 +212,10 @@ public:
   CiMA(void);
   ~CiMA(void);
 
-  int MaPeriod(void) const;
-  int MaShift(void) const;
-  ENUM_MA_METHOD MaMethod(void) const;
-  int Applied(void) const;
+  int MaPeriod(void) const ;
+  int MaShift(void) const ;
+  ENUM_MA_METHOD MaMethod(void) const ;
+  int Applied(void) const ;
 
   bool Create(const string symbol, const ENUM_TIMEFRAMES period,
               const int ma_period, const int ma_shift,
@@ -182,7 +223,7 @@ public:
 
   double Main(const int index) const;
 
-  virtual int Type(void) const;
+  virtual int Type(void) const ;
 
 protected:
   virtual bool Initialize(const string symbol, const ENUM_TIMEFRAMES period,
@@ -191,6 +232,12 @@ protected:
                   const int ma_period, const int ma_shift,
                   const ENUM_MA_METHOD ma_method, const int applied);
 };
+
+
+
+
+
+
 
 class CiSAR : public CIndicator {
 protected:
@@ -201,15 +248,15 @@ public:
   CiSAR(void);
   ~CiSAR(void);
 
-  double SarStep(void) const;
-  double Maximum(void) const;
+  double SarStep(void) const ;
+  double Maximum(void) const ;
 
   bool Create(const string symbol, const ENUM_TIMEFRAMES period,
               const double step, const double maximum);
 
   double Main(const int index) const;
 
-  virtual int Type(void) const;
+  virtual int Type(void) const ;
 
 protected:
   virtual bool Initialize(const string symbol, const ENUM_TIMEFRAMES period,
@@ -217,6 +264,12 @@ protected:
   bool Initialize(const string symbol, const ENUM_TIMEFRAMES period,
                   const double step, const double maximum);
 };
+
+
+
+
+
+
 
 class CiStdDev : public CIndicator {
 protected:
@@ -229,10 +282,10 @@ public:
   CiStdDev(void);
   ~CiStdDev(void);
 
-  int MaPeriod(void) const;
-  int MaShift(void) const;
-  ENUM_MA_METHOD MaMethod(void) const;
-  int Applied(void) const;
+  int MaPeriod(void) const ;
+  int MaShift(void) const ;
+  ENUM_MA_METHOD MaMethod(void) const ;
+  int Applied(void) const ;
 
   bool Create(const string symbol, const ENUM_TIMEFRAMES period,
               const int ma_period, const int ma_shift,
@@ -240,7 +293,7 @@ public:
 
   double Main(const int index) const;
 
-  virtual int Type(void) const;
+  virtual int Type(void) const ;
 
 protected:
   virtual bool Initialize(const string symbol, const ENUM_TIMEFRAMES period,
@@ -249,6 +302,12 @@ protected:
                   const int ma_period, const int ma_shift,
                   const ENUM_MA_METHOD ma_method, const int applied);
 };
+
+
+
+
+
+
 
 class CiDEMA : public CIndicator {
 protected:
@@ -260,16 +319,16 @@ public:
   CiDEMA(void);
   ~CiDEMA(void);
 
-  int MaPeriod(void) const;
-  int IndShift(void) const;
-  int Applied(void) const;
+  int MaPeriod(void) const ;
+  int IndShift(void) const ;
+  int Applied(void) const ;
 
   bool Create(const string symbol, const ENUM_TIMEFRAMES period,
               const int ma_period, const int ind_shift, const int applied);
 
   double Main(const int index) const;
 
-  virtual int Type(void) const;
+  virtual int Type(void) const ;
 
 protected:
   virtual bool Initialize(const string symbol, const ENUM_TIMEFRAMES period,
@@ -277,6 +336,12 @@ protected:
   bool Initialize(const string symbol, const ENUM_TIMEFRAMES period,
                   const int ma_period, const int ind_shift, const int applied);
 };
+
+
+
+
+
+
 
 class CiTEMA : public CIndicator {
 protected:
@@ -288,16 +353,16 @@ public:
   CiTEMA(void);
   ~CiTEMA(void);
 
-  int MaPeriod(void) const;
-  int IndShift(void) const;
-  int Applied(void) const;
+  int MaPeriod(void) const ;
+  int IndShift(void) const ;
+  int Applied(void) const ;
 
   bool Create(const string symbol, const ENUM_TIMEFRAMES period,
               const int ma_period, const int ma_shift, const int applied);
 
   double Main(const int index) const;
 
-  virtual int Type(void) const;
+  virtual int Type(void) const ;
 
 protected:
   virtual bool Initialize(const string symbol, const ENUM_TIMEFRAMES period,
@@ -305,6 +370,12 @@ protected:
   bool Initialize(const string symbol, const ENUM_TIMEFRAMES period,
                   const int ma_period, const int ma_shift, const int applied);
 };
+
+
+
+
+
+
 
 class CiFrAMA : public CIndicator {
 protected:
@@ -316,16 +387,16 @@ public:
   CiFrAMA(void);
   ~CiFrAMA(void);
 
-  int MaPeriod(void) const;
-  int IndShift(void) const;
-  int Applied(void) const;
+  int MaPeriod(void) const ;
+  int IndShift(void) const ;
+  int Applied(void) const ;
 
   bool Create(const string symbol, const ENUM_TIMEFRAMES period,
               const int ma_period, const int ind_shift, const int applied);
 
   double Main(const int index) const;
 
-  virtual int Type(void) const;
+  virtual int Type(void) const ;
 
 protected:
   virtual bool Initialize(const string symbol, const ENUM_TIMEFRAMES period,
@@ -333,6 +404,12 @@ protected:
   bool Initialize(const string symbol, const ENUM_TIMEFRAMES period,
                   const int ma_period, const int ind_shift, const int applied);
 };
+
+
+
+
+
+
 
 class CiAMA : public CIndicator {
 protected:
@@ -346,11 +423,11 @@ public:
   CiAMA(void);
   ~CiAMA(void);
 
-  int MaPeriod(void) const;
-  int FastEmaPeriod(void) const;
-  int SlowEmaPeriod(void) const;
-  int IndShift(void) const;
-  int Applied(void) const;
+  int MaPeriod(void) const ;
+  int FastEmaPeriod(void) const ;
+  int SlowEmaPeriod(void) const ;
+  int IndShift(void) const ;
+  int Applied(void) const ;
 
   bool Create(const string symbol, const ENUM_TIMEFRAMES period,
               const int ma_period, const int fast_ema_period,
@@ -359,7 +436,7 @@ public:
 
   double Main(const int index) const;
 
-  virtual int Type(void) const;
+  virtual int Type(void) const ;
 
 protected:
   virtual bool Initialize(const string symbol, const ENUM_TIMEFRAMES period,
@@ -369,6 +446,12 @@ protected:
                   const int slow_ema_period, const int ind_shift,
                   const int applied);
 };
+
+
+
+
+
+
 
 class CiVIDyA : public CIndicator {
 protected:
@@ -381,10 +464,10 @@ public:
   CiVIDyA(void);
   ~CiVIDyA(void);
 
-  int CmoPeriod(void) const;
-  int EmaPeriod(void) const;
-  int IndShift(void) const;
-  int Applied(void) const;
+  int CmoPeriod(void) const ;
+  int EmaPeriod(void) const ;
+  int IndShift(void) const ;
+  int Applied(void) const ;
 
   bool Create(const string symbol, const ENUM_TIMEFRAMES period,
               const int cmo_period, const int ema_period, const int ind_shift,
@@ -392,7 +475,7 @@ public:
 
   double Main(const int index) const;
 
-  virtual int Type(void) const;
+  virtual int Type(void) const ;
 
 protected:
   virtual bool Initialize(const string symbol, const ENUM_TIMEFRAMES period,
@@ -401,5 +484,11 @@ protected:
                   const int cmo_period, const int ema_period,
                   const int ind_shift, const int applied);
 };
+
+
+
+
+
+
 
 #endif

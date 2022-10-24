@@ -18,18 +18,18 @@ public:
   CList(void);
   ~CList(void);
 
-  bool FreeMode(void) const;
-  void FreeMode(bool mode);
-  int Total(void) const;
-  bool IsSorted(void) const;
-  int SortMode(void) const;
+  bool FreeMode(void) const ;
+  void FreeMode(bool mode) ;
+  int Total(void) const ;
+  bool IsSorted(void) const ;
+  int SortMode(void) const ;
 
-  virtual int Type(void) const;
+  virtual int Type(void) const ;
 
   virtual bool Save(const int file_handle);
   virtual bool Load(const int file_handle);
 
-  virtual CObject *CreateElement(void);
+  virtual CObject *CreateElement(void) ;
 
   int Add(CObject *new_node);
   int Insert(CObject *new_node, int index);
@@ -59,5 +59,29 @@ protected:
   void QuickSort(int beg, int end, int mode);
   CObject *QuickSearch(CObject *element);
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #endif

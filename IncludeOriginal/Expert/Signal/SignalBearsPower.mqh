@@ -57,7 +57,8 @@ CSignalBearsPower::CSignalBearsPower(void)
   m_used_series = USE_SERIES_HIGH + USE_SERIES_LOW;
 }
 
-CSignalBearsPower::~CSignalBearsPower(void) {}
+CSignalBearsPower::~CSignalBearsPower(void) {
+}
 
 bool CSignalBearsPower::ValidationSettings(void) {
 
