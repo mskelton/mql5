@@ -2871,8 +2871,8 @@ int iBarShift(const string symbol, ENUM_TIMEFRAMES timeframe, datetime time,
 double iClose(const string symbol, ENUM_TIMEFRAMES timeframe, int shift);
 
 /**
- * Returns the Close price of the bar (indicated by the 'shift' parameter) on
- * the corresponding chart.
+ * Returns the High price of the bar (indicated by the 'shift' parameter) on the
+ * corresponding chart.
  *
  * @param symbol The symbol name of the financial instrument. NULL means the
  * current symbol.
@@ -2880,11 +2880,11 @@ double iClose(const string symbol, ENUM_TIMEFRAMES timeframe, int shift);
  * enumeration. 0 means the current chart period.
  * @param shift The index of the received value from the timeseries (backward
  * shift by specified number of bars relative to the current bar).
- * @returns The Close price of the bar (indicated by the 'shift' parameter) on
+ * @returns The High price of the bar (indicated by the 'shift' parameter) on
  * the corresponding chart or 0 in case of an error. For error details, call the
  * GetLastError() function.
  */
-double iClose(const string symbol, ENUM_TIMEFRAMES timeframe, int shift);
+double iHigh(const string symbol, ENUM_TIMEFRAMES timeframe, int shift);
 
 /**
  * Returns the index of the highest value found on the corresponding chart
